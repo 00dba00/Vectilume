@@ -1,0 +1,14 @@
+{
+  "name": "@vectilume/tooling",
+  "version": "0.0.0",
+  "private": true,
+  "description": "SVG validation, optimization and build tooling for Vectilume",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5"
+  }
+}

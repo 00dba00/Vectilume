@@ -1,0 +1,9 @@
+{
+  "name": "@vectilume/icons-svg",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Source SVG files for Vectilume Icons",
+  "license": "MIT",
+  "type": "module",
+  "files": ["src"]
+}
