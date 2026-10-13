@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Icon } from "./Icon";
 import styles from "./Lab.module.css";
-import { DIRECTIONS, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
+import { DIRECTIONS, STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
 import { themeVars, type Background, type Theme } from "@/lib/theme";
 
 interface ContextPreviewProps {
@@ -26,8 +26,10 @@ const STATS = [
 
 /** Mock app UI showing one direction's icons at real UI sizes. */
 export function ContextPreview({ lookup, theme }: ContextPreviewProps) {
-  const [direction, setDirection] = useState(DIRECTIONS[0]?.id ?? "");
-  const icon = (style: IconStyle, name: string) => lookup[iconId(direction, style, name)];
+  const direction = DIRECTIONS[0]?.id ?? "";
+  // null = mixed: each spot uses the style it would have in a real app
+  const [only, setOnly] = useState<IconStyle | null>(null);
+  const icon = (style: IconStyle, name: string) => lookup[iconId(direction, only ?? style, name)];
 
   const app = (background: Background) => (
     <div
@@ -39,7 +41,7 @@ export function ContextPreview({ lookup, theme }: ContextPreviewProps) {
       <nav className={styles.appNav} aria-label={`Sample navigation (${background})`}>
         {NAV.map((item, index) => (
           <span key={item.name} className={styles.appNavItem} data-active={index === 0 || undefined}>
-            <Icon svg={index === 0 ? (icon("solid", item.name) ?? icon("duotone", item.name)) : icon("outline", item.name)} size={20} />
+            <Icon svg={icon(index === 0 ? "solid" : "outline", item.name)} size={20} />
             {item.label}
           </span>
         ))}
@@ -79,10 +81,10 @@ export function ContextPreview({ lookup, theme }: ContextPreviewProps) {
         <h2 id="context-heading" className={styles.sectionTitle}>
           In context
         </h2>
-        <div className={styles.segmented} role="group" aria-label="Direction">
-          {DIRECTIONS.map((item) => (
-            <button key={item.id} type="button" aria-pressed={direction === item.id} onClick={() => setDirection(item.id)}>
-              {item.label}
+        <div className={styles.segmented} role="group" aria-label="Icon style">
+          {[null, ...STYLES].map((style) => (
+            <button key={style ?? "mixed"} type="button" aria-pressed={only === style} onClick={() => setOnly(style)}>
+              {style ? style[0].toUpperCase() + style.slice(1) : "Mixed"}
             </button>
           ))}
         </div>
