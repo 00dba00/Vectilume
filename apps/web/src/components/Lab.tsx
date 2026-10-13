@@ -22,7 +22,7 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
           <h1 className={styles.title}>Vectilume</h1>
         </div>
         <p className={styles.lede}>
-          Three directions, three styles, four icons. Click any cell to inspect it on the 24 × 24 grid.
+          The Gloss direction across styles and sizes. Click any cell to inspect it on the 24 × 24 grid.
           <span className={styles.count}>{drawn} SVGs drawn</span>
         </p>
       </header>

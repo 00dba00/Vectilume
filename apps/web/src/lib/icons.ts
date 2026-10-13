@@ -19,29 +19,17 @@ export interface Direction {
 
 export const DIRECTIONS: Direction[] = [
   {
-    id: "soft-geometric",
-    label: "Soft Geometric",
-    summary: "Minimal, precise construction with gently rounded corners.",
+    id: "distinctive-gloss",
+    label: "Distinctive · Gloss",
+    summary: "A short highlight inside the top-left corner of every icon.",
   },
-  {
-    id: "modern-duotone",
-    label: "Modern Duotone",
-    summary: "Balanced two-tone planes; the secondary layer carries the shape.",
-  },
-  {
-    id: "distinctive",
-    label: "Distinctive · Spark",
-    summary: "The top-right corner becomes a dot.",
-  },
-  { id: "distinctive-cut", label: "Distinctive · Cut", summary: "One corner sliced off; pointed tips are flattened." },
-  { id: "distinctive-break", label: "Distinctive · Break", summary: "The top-right corner is left open." },
-  { id: "distinctive-leaf", label: "Distinctive · Leaf", summary: "Top-left and bottom-right round, the other corners tight." },
-  { id: "distinctive-gloss", label: "Distinctive · Gloss", summary: "A short highlight inside the top-left corner." },
-  { id: "distinctive-overshoot", label: "Distinctive · Overshoot", summary: "One line runs past its corner like a construction line." },
 ];
 
-/** Icons drawn in the first comparison round. */
-export const PROTOTYPE_ICONS = ["home", "wallet", "calendar", "shield"];
+/** The 12 prototype icons from the plan. */
+export const PROTOTYPE_ICONS = [
+  "home", "car", "wallet", "calendar", "user", "settings",
+  "search", "bell", "shield", "document", "chart", "heart",
+];
 
 export const SIZES = [16, 20, 24, 32, 48];
 

@@ -39,7 +39,7 @@ export function ContextPreview({ lookup, theme }: ContextPreviewProps) {
       <nav className={styles.appNav} aria-label={`Sample navigation (${background})`}>
         {NAV.map((item, index) => (
           <span key={item.name} className={styles.appNavItem} data-active={index === 0 || undefined}>
-            <Icon svg={icon(index === 0 ? "solid" : "outline", item.name)} size={20} />
+            <Icon svg={index === 0 ? (icon("solid", item.name) ?? icon("duotone", item.name)) : icon("outline", item.name)} size={20} />
             {item.label}
           </span>
         ))}

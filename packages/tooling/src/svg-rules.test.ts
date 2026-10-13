@@ -13,8 +13,8 @@ const rules = (issues: Issue[], severity: Issue["severity"] = "error") =>
 
 describe("parseIconPath", () => {
   it("accepts direction/style/name and style/name", () => {
-    assert.deepEqual(parseIconPath("soft-geometric/outline/calendar-add.svg"), {
-      direction: "soft-geometric",
+    assert.deepEqual(parseIconPath("distinctive-gloss/outline/calendar-add.svg"), {
+      direction: "distinctive-gloss",
       style: "outline",
       name: "calendar-add",
     });
@@ -22,7 +22,7 @@ describe("parseIconPath", () => {
   });
 
   it("rejects unknown styles, directions and non-kebab names", () => {
-    for (const bad of ["soft-geometric/thin/home.svg", "retro/outline/home.svg", "outline/CalendarAdd.svg", "home.svg"]) {
+    for (const bad of ["distinctive-gloss/thin/home.svg", "retro/outline/home.svg", "outline/CalendarAdd.svg", "home.svg"]) {
       assert.equal((parseIconPath(bad) as Issue).severity, "error", bad);
     }
   });

@@ -1,4 +1,4 @@
-# Design guidelines — Phase 0 draft
+# Design guidelines
 
 Rules shared by all directions (enforced by `pnpm validate`):
 
@@ -10,17 +10,25 @@ Rules shared by all directions (enforced by `pnpm validate`):
   (outline centerline offset by 0.875); no strokes, details are cut-outs.
 - Dots are zero-length strokes (`M x y h.01`) so they follow the stroke width.
 
-## Directions under comparison
+## Directions un## Signature: Gloss
 
-| Direction | Idea |
-|---|---|
-| Soft Geometric | Closed, calm shapes with 1.5–2.5 px corner radii. Duotone fills the main mass. |
-| Modern Duotone | Each icon is built from separate planes with a visible gap (roof/walls, header/body, two shield halves). The secondary colour fills one plane. |
-| Distinctive | The top-right corner of every icon is replaced by a "spark" dot (vector + illuminate). Solid cuts a notch around the spark. |
+Chosen direction (`distinctive-gloss`). Every icon carries a short highlight, like light
+catching the surface:
 
-The winning direction's rules will replace this section.
+- Placed inside the **top-left** of the icon's main body.
+- Follows that corner's shape: an L with a 1 px radius for rectangles, a 90° arc for
+  circles and curves, a line parallel to the edge for slopes.
+- Inset **3 units** from the outer edge (centerline to centerline); **2.5** on small round
+  shapes (head, heart lobe) so the gap stays visible.
+- 2.5–4 units long; it must not touch any other detail (keep ≥ 0.5 visible gap at 24 px).
+- Base shapes: 3 px corner radius on rectangles, 2.5 px on smaller frames, round caps and joins.
+- Duotone: the secondary colour fills the main silhouette, the gloss stays a primary stroke.
+- Solid: the gloss becomes a cut-out of the same shape.
 
-## Open questions
+Rejected directions (Soft Geometric, Modern Duotone, Spark, Cut, Break, Leaf, Overshoot)
+are in git history (`git log -- packages/icons-svg/src`).
+
+s
 
 - Duotone fallback: without CSS variables the secondary layer falls back to `currentColor`
   at full opacity, so the icon looks solid. Options: a reduced-opacity fallback or a
