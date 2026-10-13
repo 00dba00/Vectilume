@@ -32,6 +32,7 @@ Requires Node.js 22+ and pnpm 10.
 ```sh
 pnpm install
 pnpm typecheck
+pnpm test
 pnpm validate
 pnpm dev
 ```
