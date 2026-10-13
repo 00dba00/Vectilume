@@ -5,5 +5,19 @@
   "description": "Source SVG files for Vectilume Icons",
   "license": "MIT",
   "type": "module",
-  "files": ["src"]
+  "files": [
+    "src",
+    "dist"
+  ],
+  "exports": {
+    "./manifest.json": "./dist/manifest.json",
+    "./src/*": "./src/*"
+  },
+  "scripts": {
+    "build": "tsx ../tooling/src/build-manifest.ts src dist/manifest.json"
+  },
+  "devDependencies": {
+    "@vectilume/tooling": "workspace:*",
+    "tsx": "^4.23.15"
+  }
 }
