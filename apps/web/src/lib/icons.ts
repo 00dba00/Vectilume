@@ -30,9 +30,14 @@ export const DIRECTIONS: Direction[] = [
   },
   {
     id: "distinctive",
-    label: "Distinctive",
-    summary: "Bolder original details that make the set recognisable.",
+    label: "Distinctive · Spark",
+    summary: "The top-right corner becomes a dot.",
   },
+  { id: "distinctive-cut", label: "Distinctive · Cut", summary: "One corner sliced off; pointed tips are flattened." },
+  { id: "distinctive-break", label: "Distinctive · Break", summary: "The top-right corner is left open." },
+  { id: "distinctive-leaf", label: "Distinctive · Leaf", summary: "Top-left and bottom-right round, the other corners tight." },
+  { id: "distinctive-gloss", label: "Distinctive · Gloss", summary: "A short highlight inside the top-left corner." },
+  { id: "distinctive-overshoot", label: "Distinctive · Overshoot", summary: "One line runs past its corner like a construction line." },
 ];
 
 /** Icons drawn in the first comparison round. */

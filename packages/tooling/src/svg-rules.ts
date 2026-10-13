@@ -4,7 +4,16 @@ export const STYLES = ["outline", "duotone", "solid"] as const;
 export type IconStyle = (typeof STYLES)[number];
 
 /** Phase 0 visual directions. Removed from the path once a direction is chosen. */
-export const DIRECTIONS = ["soft-geometric", "modern-duotone", "distinctive"] as const;
+export const DIRECTIONS = [
+  "soft-geometric",
+  "modern-duotone",
+  "distinctive",
+  "distinctive-cut",
+  "distinctive-break",
+  "distinctive-leaf",
+  "distinctive-gloss",
+  "distinctive-overshoot",
+] as const;
 
 export const VIEW_BOX = "0 0 24 24";
 export const STROKE_WIDTH = "1.75";
