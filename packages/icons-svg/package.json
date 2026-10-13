@@ -14,7 +14,8 @@
     "./src/*": "./src/*"
   },
   "scripts": {
-    "build": "tsx ../tooling/src/build-manifest.ts src dist/manifest.json"
+    "build": "tsx ../tooling/src/build-manifest.ts src dist/manifest.json",
+    "validate": "tsx ../tooling/src/validate.ts src"
   },
   "devDependencies": {
     "@vectilume/tooling": "workspace:*",
