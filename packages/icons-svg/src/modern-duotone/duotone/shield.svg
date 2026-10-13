@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3c2.5 1.4 5 2 7.5 2v6.5c0 4.7-3.1 8.1-7.5 9.5Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M12 3c2.5 1.4 5 2 7.5 2v6.5c0 4.7-3.1 8.1-7.5 9.5-4.4-1.4-7.5-4.8-7.5-9.5V5c2.5 0 5-.6 7.5-2Z"/>
+  <path d="M12 3v18"/>
+</svg>
