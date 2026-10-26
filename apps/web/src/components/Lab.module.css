@@ -1,7 +1,7 @@
 .page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 32px 24px 64px;
+  padding: 64px 32px 96px;
 }
 
 /* Header */
@@ -11,36 +11,36 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 16px 48px;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .eyebrow {
   margin: 0;
-  color: var(--text-muted);
-  font-size: 12px;
+  color: var(--accent);
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .title {
-  margin: 2px 0 0;
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  margin: 4px 0 0;
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .lede {
-  max-width: 460px;
+  max-width: 480px;
   margin: 0;
   color: var(--text-muted);
+  font-size: 17px;
 }
 
 .count {
   display: block;
   margin-top: 4px;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 12px;
+  color: var(--text-body);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Toolbar */
@@ -51,11 +51,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 20px;
-  margin: 0 -24px 32px;
-  padding: 12px 24px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(8px);
+  gap: 12px 24px;
+  margin: 0 -32px 48px;
+  padding: 12px 32px;
+  padding-top: max(12px, env(safe-area-inset-top));
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -64,6 +65,7 @@
   align-items: center;
   gap: 8px;
   color: var(--text-muted);
+  font-size: 14px;
 }
 
 .control input[type="color"] {
@@ -71,57 +73,69 @@
   height: 28px;
   padding: 0;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 50%;
   background: none;
   cursor: pointer;
 }
 
+.control input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.control input[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: 50%;
+}
+
 .control input[type="range"] {
-  width: 110px;
+  width: 112px;
   accent-color: var(--accent);
 }
 
 .value {
   min-width: 3ch;
   color: var(--text);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 12px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
 }
 
 .segmented {
   display: inline-flex;
-  padding: 2px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  padding: 4px;
+  border-radius: var(--radius);
   background: var(--surface-2);
 }
 
 .segmented button {
-  padding: 4px 12px;
+  padding: 4px 16px;
   border: 0;
-  border-radius: 6px;
+  border-radius: var(--radius);
   background: none;
   color: var(--text-muted);
+  font-size: 14px;
   cursor: pointer;
 }
 
 .segmented button[aria-pressed="true"] {
   background: var(--surface);
   color: var(--text);
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.12);
 }
 
 .reset {
-  padding: 5px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  padding: 4px 16px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
   background: var(--surface);
+  color: var(--accent);
+  font-size: 14px;
   cursor: pointer;
 }
 
-.reset:disabled {
-  opacity: 0.5;
-  cursor: default;
+.reset:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
 }
 
 .linkButton {
@@ -129,19 +143,13 @@
   border: 0;
   background: none;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
-}
-
-button:focus-visible,
-input:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
 }
 
 /* Sections */
 .section {
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 }
 
 .sectionHeader {
@@ -150,13 +158,13 @@ input:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .sectionTitle {
-  margin: 0 0 16px;
-  font-size: 18px;
-  font-weight: 600;
+  margin: 0 0 20px;
+  font-size: 27px;
+  font-weight: 700;
 }
 
 .sectionHeader .sectionTitle {
@@ -175,38 +183,38 @@ input:focus-visible {
 .directions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .direction {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: var(--surface-2);
   overflow: hidden;
 }
 
 .directionHeader {
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--border);
+  padding: 20px 24px 16px;
 }
 
 .directionHeader h3 {
   margin: 0;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .directionHeader p {
-  margin: 2px 0 0;
+  margin: 4px 0 0;
   color: var(--text-muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .canvas {
   flex: 1;
+  margin: 0 8px 8px;
   padding: 8px 12px 12px;
+  border-radius: 16px;
 }
 
 .sheet {
@@ -218,22 +226,18 @@ input:focus-visible {
 .columnLabel,
 .rowLabel {
   color: var(--canvas-muted);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .columnLabel {
   padding: 4px 0;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .rowLabel {
   align-self: center;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 12px;
 }
 
 .cell {
@@ -241,9 +245,9 @@ input:focus-visible {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding: 14px 6px 10px;
+  padding: 16px 8px 12px;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 16px;
   background: none;
   cursor: pointer;
   color: inherit;
@@ -251,36 +255,35 @@ input:focus-visible {
 
 .cell:hover {
   background: var(--canvas-2);
-  border-color: var(--canvas-line);
 }
 
 .ladder {
   display: flex;
   align-items: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Inspector */
 .inspector {
   width: min(560px, calc(100vw - 32px));
-  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
   padding: 0;
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  border: 0;
+  border-radius: var(--radius);
   background: var(--surface);
-  color: var(--text);
-  box-shadow: 0 24px 64px rgb(0 0 0 / 0.25);
+  color: var(--text-body);
+  box-shadow: 0 24px 64px rgb(0 0 0 / 0.2);
 }
 
 .inspector::backdrop {
-  background: rgb(0 0 0 / 0.4);
+  background: rgb(0 0 0 / 0.3);
 }
 
 .inspectorBody {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 20px;
+  gap: 16px;
+  padding: 24px;
 }
 
 .inspectorHeader {
@@ -291,8 +294,8 @@ input:focus-visible {
 
 .inspectorHeader h2 {
   margin: 0;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 27px;
+  font-weight: 700;
 }
 
 .zoom {
@@ -302,7 +305,7 @@ input:focus-visible {
   width: 288px;
   height: 288px;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: var(--radius);
 }
 
 .grid {
@@ -331,7 +334,11 @@ input:focus-visible {
   justify-content: center;
   gap: 8px;
   color: var(--text-muted);
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.checkbox input {
+  accent-color: var(--accent);
 }
 
 .sizeStrip {
@@ -339,26 +346,26 @@ input:focus-visible {
   align-items: flex-end;
   justify-content: space-around;
   padding: 16px;
-  border-radius: 10px;
+  border-radius: var(--radius);
 }
 
 .sizeStrip figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin: 0;
 }
 
 .sizeStrip figcaption {
   color: var(--canvas-muted);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 11px;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
 }
 
 .source {
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
   overflow: hidden;
 }
 
@@ -366,18 +373,16 @@ input:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 8px 8px 12px;
-  border-bottom: 1px solid var(--border);
+  padding: 12px 12px 8px 20px;
   color: var(--text-muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .source pre {
   max-height: 160px;
   margin: 0;
-  padding: 12px;
+  padding: 8px 20px 16px;
   overflow: auto;
-  background: var(--surface-2);
   font-size: 12px;
   white-space: pre-wrap;
   word-break: break-all;
@@ -387,14 +392,14 @@ input:focus-visible {
 .apps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .app {
   display: grid;
   grid-template-columns: 168px 1fr;
   min-height: 300px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--canvas-line);
   border-radius: var(--radius);
   overflow: hidden;
   font-size: 13px;
@@ -403,8 +408,8 @@ input:focus-visible {
 .appNav {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 16px 10px;
+  gap: 4px;
+  padding: 16px 8px;
   background: var(--canvas-2);
   border-right: 1px solid var(--canvas-line);
 }
@@ -412,9 +417,9 @@ input:focus-visible {
 .appNavItem {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 7px 10px;
-  border-radius: 7px;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
   color: var(--canvas-muted);
 }
 
@@ -450,9 +455,9 @@ input:focus-visible {
 .appButton {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 7px;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: var(--radius);
   background: var(--icon-primary);
   color: #fff;
   font-size: 13px;
@@ -462,7 +467,7 @@ input:focus-visible {
 .appStats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
 
 .appCard {
@@ -471,11 +476,11 @@ input:focus-visible {
   gap: 4px;
   padding: 12px;
   border: 1px solid var(--canvas-line);
-  border-radius: 9px;
+  border-radius: 12px;
 }
 
 .appCard > span:first-child {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .appCardLabel {
@@ -494,7 +499,7 @@ input:focus-visible {
 .appList li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 8px 0;
   border-top: 1px solid var(--canvas-line);
   color: var(--canvas-muted);
@@ -506,12 +511,16 @@ input:focus-visible {
 
 @media (max-width: 640px) {
   .page {
-    padding: 24px 16px 48px;
+    padding: 32px 16px 48px;
+  }
+
+  .title {
+    font-size: 40px;
   }
 
   .toolbar {
-    margin: 0 -16px 24px;
-    padding: 10px 16px;
+    margin: 0 -16px 32px;
+    padding: 12px 16px;
   }
 
   .directions,
