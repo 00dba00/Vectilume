@@ -1,5 +1,9 @@
 # NBA — popis ikona za kolekciju "Općenito"
 
+> **Status: nacrtano** (71 ikona × 3 stila, u `general.json`). Bez odsjaja zbog gustih
+> detalja ili premalog tijela: ban, key, cpu, dice, bank, shield-user, brain, grid, columns,
+> stadium, flag-checkered, scoreboard, bandage, plane, bed, sofa, table, scale, percent.
+
 Izvor: https://github.com/00dba00/nba_react_frontend (`@mui/icons-material`, 273 ikone;
 `lucide-react`, 49 ikona) i https://github.com/00dba00/nba_backend (bez biblioteke ikona; u
 e-mail predlošcima samo emoji ❌ ✅ 📋).

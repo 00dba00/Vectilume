@@ -48,10 +48,10 @@ Preview sheets for all three styles are in `docs/hobbies-*-preview.png`.
 
 ## General collection
 
-121 interface icons in 8 groups (navigation, actions, status, people,
-competition, analytics, time, AI), first used by Scout AI. Labels and groups
-live in `packages/icons-svg/general.json`; the source list from Scout AI is in
-`docs/scout-ai-icons.md`.
+192 interface icons in 8 groups (navigation, actions, status, people,
+competition, analytics, time, AI), first used by Scout AI and the NBA app. Labels and groups
+live in `packages/icons-svg/general.json`; the source lists are in
+`docs/scout-ai-icons.md` and `docs/nba-icons.md`.
 
 ## Publishing to npm
 

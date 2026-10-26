@@ -60,6 +60,60 @@
     "groupLabel": "Navigacija"
   },
   {
+    "id": "arrow-up",
+    "label": "Strelica gore",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "arrow-down",
+    "label": "Strelica dolje",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "arrow-right",
+    "label": "Strelica desno",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "arrow-up-right",
+    "label": "Otvori",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "chevrons-up",
+    "label": "Nagli rast",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "more-horizontal",
+    "label": "Više opcija",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "grip-vertical",
+    "label": "Povuci",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "swap-horizontal",
+    "label": "Usporedi",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
+    "id": "swap-vertical",
+    "label": "Promijeni redoslijed",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
     "id": "close",
     "label": "Zatvori",
     "group": "actions",
@@ -176,6 +230,78 @@
   {
     "id": "search",
     "label": "Pretraži",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "plus-circle",
+    "label": "Dodaj",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "minus-circle",
+    "label": "Oduzmi",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "play-circle",
+    "label": "Reproduciraj",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "repeat",
+    "label": "Ponovi",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "upload",
+    "label": "Objavi",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "link",
+    "label": "Poveznica",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "paperclip",
+    "label": "Privitak",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "bookmark",
+    "label": "Oznaka",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "flag",
+    "label": "Zastava",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "broom",
+    "label": "Očisti",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "wand",
+    "label": "Automatski popravak",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "merge",
+    "label": "Spoji",
     "group": "actions",
     "groupLabel": "Akcije"
   },
@@ -312,6 +438,78 @@
     "groupLabel": "Status i sustav"
   },
   {
+    "id": "ban",
+    "label": "Zabranjeno",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "circle-dot",
+    "label": "Odabrano",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "circle-ellipsis",
+    "label": "Na čekanju",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "bell-ring",
+    "label": "Obavijest stiže",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "shield-alert",
+    "label": "Upozorenje sigurnosti",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "shield-user",
+    "label": "Administrator",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "badge-check",
+    "label": "Verificirano",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "key",
+    "label": "Ključ",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "cloud-check",
+    "label": "Spremljeno u oblak",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "cpu",
+    "label": "Procesor",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "monitor",
+    "label": "Računalo",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "sliders",
+    "label": "Podešavanje",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
     "id": "users",
     "label": "Korisnici",
     "group": "people",
@@ -402,6 +600,30 @@
     "groupLabel": "Korisnici i komunikacija"
   },
   {
+    "id": "user-x",
+    "label": "Neaktivan korisnik",
+    "group": "people",
+    "groupLabel": "Korisnici i komunikacija"
+  },
+  {
+    "id": "user-search",
+    "label": "Pronađi korisnika",
+    "group": "people",
+    "groupLabel": "Korisnici i komunikacija"
+  },
+  {
+    "id": "id-card",
+    "label": "Iskaznica",
+    "group": "people",
+    "groupLabel": "Korisnici i komunikacija"
+  },
+  {
+    "id": "handshake",
+    "label": "Dogovor",
+    "group": "people",
+    "groupLabel": "Korisnici i komunikacija"
+  },
+  {
     "id": "trophy",
     "label": "Trofej",
     "group": "competition",
@@ -470,6 +692,72 @@
   {
     "id": "cross",
     "label": "Križ",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "whistle",
+    "label": "Sudac",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "flag-checkered",
+    "label": "Kraj utakmice",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "scoreboard",
+    "label": "Semafor",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "stadium",
+    "label": "Dvorana",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "dice",
+    "label": "Klađenje",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "first-aid",
+    "label": "Ozljeda",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "bandage",
+    "label": "Oporavak",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "snowflake",
+    "label": "Hladan niz",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "plane",
+    "label": "Gostovanje",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "bed",
+    "label": "Odmor",
+    "group": "competition",
+    "groupLabel": "Natjecanje i sport"
+  },
+  {
+    "id": "sofa",
+    "label": "Slobodan dan",
     "group": "competition",
     "groupLabel": "Natjecanje i sport"
   },
@@ -570,6 +858,72 @@
     "groupLabel": "Analitika i novac"
   },
   {
+    "id": "chart-line",
+    "label": "Linijski graf",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "insights",
+    "label": "Uvidi",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "percent",
+    "label": "Postotak",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "table",
+    "label": "Tablica",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "scale",
+    "label": "Usporedba",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "bank",
+    "label": "Banka",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "piggy-bank",
+    "label": "Štednja",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "shopping-bag",
+    "label": "Kupnja",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "briefcase",
+    "label": "Posao",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "function",
+    "label": "Formula",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "infinity",
+    "label": "Beskonačno",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
     "id": "clock",
     "label": "Vrijeme",
     "group": "time",
@@ -596,6 +950,12 @@
   {
     "id": "calendar",
     "label": "Kalendar",
+    "group": "time",
+    "groupLabel": "Vrijeme"
+  },
+  {
+    "id": "timer",
+    "label": "Štoperica",
     "group": "time",
     "groupLabel": "Vrijeme"
   },
@@ -722,6 +1082,72 @@
   {
     "id": "car",
     "label": "Automobil",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "brain",
+    "label": "AI analiza",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "dashboard",
+    "label": "Nadzorna ploča",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "grid",
+    "label": "Mreža",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "columns",
+    "label": "Stupci",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "list",
+    "label": "Popis",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "list-ordered",
+    "label": "Numerirani popis",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "clipboard",
+    "label": "Zadatak",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "file-pdf",
+    "label": "PDF",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "map-pin",
+    "label": "Lokacija",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "hash",
+    "label": "Oznaka",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "gavel",
+    "label": "Pravila",
     "group": "ai",
     "groupLabel": "AI i razno"
   }
