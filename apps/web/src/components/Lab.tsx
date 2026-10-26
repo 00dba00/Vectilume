@@ -80,11 +80,9 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
         </button>
       </div>
 
-      <HobbyCatalog lookup={lookup} theme={theme} onSelect={setSelection} />
-
       <section aria-labelledby="compare-heading" className={styles.section}>
         <h2 id="compare-heading" className={styles.sectionTitle}>
-          Original prototype · Distinctive Gloss
+          Distinctive Gloss · 12 icons
         </h2>
         <div className={styles.directions}>
           {DIRECTIONS.map((direction) => (
@@ -116,6 +114,8 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
           ))}
         </div>
       </section>
+
+      <HobbyCatalog lookup={lookup} theme={theme} onSelect={setSelection} />
 
       <ContextPreview lookup={lookup} theme={theme} />
 
