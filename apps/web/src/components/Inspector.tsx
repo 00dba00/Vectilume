@@ -12,6 +12,7 @@ export interface Selection {
   style: IconStyle;
   name: string;
   label: string;
+  keywords: string[];
 }
 
 interface InspectorProps {
@@ -62,6 +63,9 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
                 {selection.collection} · {selection.name}
               </p>
               <h2 id="inspector-title">{selection.label}</h2>
+              <ul className={styles.keywords} aria-label="Keywords">
+                {selection.keywords.map((keyword) => <li key={keyword}>{keyword}</li>)}
+              </ul>
             </div>
             <button type="button" className={styles.reset} onClick={onClose} autoFocus>
               Close

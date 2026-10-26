@@ -3,1152 +3,2328 @@
     "id": "chevron-left",
     "label": "Chevron left",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "back",
+      "previous",
+      "left",
+      "caret",
+      "arrow"
+    ]
   },
   {
     "id": "chevron-right",
     "label": "Chevron right",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "next",
+      "forward",
+      "right",
+      "caret",
+      "arrow"
+    ]
   },
   {
     "id": "chevron-up",
     "label": "Chevron up",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "collapse",
+      "up",
+      "caret",
+      "less",
+      "arrow"
+    ]
   },
   {
     "id": "chevron-down",
     "label": "Chevron down",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "expand",
+      "down",
+      "caret",
+      "more",
+      "dropdown",
+      "arrow"
+    ]
   },
   {
     "id": "arrow-left",
     "label": "Arrow left",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "back",
+      "previous",
+      "return",
+      "left",
+      "direction"
+    ]
   },
   {
     "id": "external-link",
     "label": "External link",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "open",
+      "new",
+      "tab",
+      "window",
+      "outside",
+      "link"
+    ]
   },
   {
     "id": "menu",
     "label": "Menu",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "hamburger",
+      "navigation",
+      "lines",
+      "sidebar"
+    ]
   },
   {
     "id": "more-vertical",
     "label": "More vertical",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "options",
+      "kebab",
+      "dots",
+      "overflow",
+      "actions"
+    ]
   },
   {
     "id": "maximize",
     "label": "Maximize",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "fullscreen",
+      "expand",
+      "enlarge",
+      "resize"
+    ]
   },
   {
     "id": "home",
     "label": "Home",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "house",
+      "start",
+      "main",
+      "dashboard"
+    ]
   },
   {
     "id": "arrow-up",
     "label": "Arrow up",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "up",
+      "increase",
+      "rise",
+      "top",
+      "direction"
+    ]
   },
   {
     "id": "arrow-down",
     "label": "Arrow down",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "down",
+      "decrease",
+      "fall",
+      "bottom",
+      "direction"
+    ]
   },
   {
     "id": "arrow-right",
     "label": "Arrow right",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "next",
+      "forward",
+      "continue",
+      "right",
+      "direction"
+    ]
   },
   {
     "id": "arrow-up-right",
     "label": "Arrow up right",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "open",
+      "diagonal",
+      "outward",
+      "details",
+      "link"
+    ]
   },
   {
     "id": "chevrons-up",
     "label": "Chevrons up",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "double",
+      "up",
+      "surge",
+      "boost",
+      "priority",
+      "scroll",
+      "top"
+    ]
   },
   {
     "id": "more-horizontal",
     "label": "More horizontal",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "options",
+      "ellipsis",
+      "dots",
+      "overflow",
+      "actions"
+    ]
   },
   {
     "id": "grip-vertical",
     "label": "Grip vertical",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "drag",
+      "handle",
+      "reorder",
+      "move",
+      "dots"
+    ]
   },
   {
     "id": "swap-horizontal",
     "label": "Swap horizontal",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "compare",
+      "exchange",
+      "switch",
+      "transfer",
+      "arrows"
+    ]
   },
   {
     "id": "swap-vertical",
     "label": "Swap vertical",
     "group": "navigation",
-    "groupLabel": "Navigation"
+    "groupLabel": "Navigation",
+    "keywords": [
+      "sort",
+      "reorder",
+      "exchange",
+      "switch",
+      "arrows"
+    ]
   },
   {
     "id": "close",
     "label": "Close",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "x",
+      "cancel",
+      "dismiss",
+      "exit",
+      "remove"
+    ]
   },
   {
     "id": "check",
     "label": "Check",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "done",
+      "confirm",
+      "ok",
+      "tick",
+      "success",
+      "yes"
+    ]
   },
   {
     "id": "check-double",
     "label": "Double check",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "read",
+      "seen",
+      "delivered",
+      "all",
+      "done"
+    ]
   },
   {
     "id": "plus",
     "label": "Plus",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "add",
+      "new",
+      "create",
+      "more"
+    ]
   },
   {
     "id": "minus",
     "label": "Minus",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "remove",
+      "subtract",
+      "less",
+      "decrease"
+    ]
   },
   {
     "id": "trash",
     "label": "Trash",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "delete",
+      "remove",
+      "bin",
+      "garbage",
+      "discard"
+    ]
   },
   {
     "id": "copy",
     "label": "Copy",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "duplicate",
+      "clone",
+      "clipboard"
+    ]
   },
   {
     "id": "send",
     "label": "Send",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "submit",
+      "paper",
+      "plane",
+      "message",
+      "share"
+    ]
   },
   {
     "id": "share",
     "label": "Share",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "network",
+      "connect",
+      "social",
+      "send"
+    ]
   },
   {
     "id": "save",
     "label": "Save",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "floppy",
+      "disk",
+      "store",
+      "keep"
+    ]
   },
   {
     "id": "edit",
     "label": "Edit",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "pencil",
+      "write",
+      "modify",
+      "change"
+    ]
   },
   {
     "id": "download",
     "label": "Download",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "save",
+      "export",
+      "get",
+      "arrow",
+      "tray"
+    ]
   },
   {
     "id": "refresh",
     "label": "Refresh",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "reload",
+      "sync",
+      "update",
+      "rotate"
+    ]
   },
   {
     "id": "undo",
     "label": "Undo",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "back",
+      "revert",
+      "return",
+      "previous"
+    ]
   },
   {
     "id": "filter",
     "label": "Filter",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "funnel",
+      "sort",
+      "refine",
+      "narrow"
+    ]
   },
   {
     "id": "search-x",
     "label": "No results",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "no",
+      "results",
+      "not",
+      "found",
+      "empty",
+      "search"
+    ]
   },
   {
     "id": "log-in",
     "label": "Log in",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "sign",
+      "in",
+      "enter",
+      "login",
+      "access"
+    ]
   },
   {
     "id": "log-out",
     "label": "Log out",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "sign",
+      "out",
+      "exit",
+      "logout",
+      "leave"
+    ]
   },
   {
     "id": "play",
     "label": "Play",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "start",
+      "run",
+      "video",
+      "media",
+      "begin"
+    ]
   },
   {
     "id": "search",
     "label": "Search",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "find",
+      "magnifier",
+      "lookup",
+      "query"
+    ]
   },
   {
     "id": "plus-circle",
     "label": "Plus circle",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "add",
+      "new",
+      "create",
+      "circle"
+    ]
   },
   {
     "id": "minus-circle",
     "label": "Minus circle",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "remove",
+      "subtract",
+      "circle"
+    ]
   },
   {
     "id": "play-circle",
     "label": "Play circle",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "play",
+      "video",
+      "media",
+      "start",
+      "circle"
+    ]
   },
   {
     "id": "repeat",
     "label": "Repeat",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "loop",
+      "again",
+      "replay",
+      "cycle"
+    ]
   },
   {
     "id": "upload",
     "label": "Upload",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "publish",
+      "import",
+      "send",
+      "arrow",
+      "up"
+    ]
   },
   {
     "id": "link",
     "label": "Link",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "chain",
+      "url",
+      "hyperlink",
+      "connect"
+    ]
   },
   {
     "id": "paperclip",
     "label": "Paperclip",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "attachment",
+      "attach",
+      "file",
+      "clip"
+    ]
   },
   {
     "id": "bookmark",
     "label": "Bookmark",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "save",
+      "favorite",
+      "mark",
+      "later"
+    ]
   },
   {
     "id": "flag",
     "label": "Flag",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "report",
+      "mark",
+      "milestone",
+      "banner"
+    ]
   },
   {
     "id": "broom",
     "label": "Broom",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "clean",
+      "clear",
+      "sweep",
+      "tidy"
+    ]
   },
   {
     "id": "wand",
     "label": "Wand",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "magic",
+      "auto",
+      "fix",
+      "enhance"
+    ]
   },
   {
     "id": "merge",
     "label": "Merge",
     "group": "actions",
-    "groupLabel": "Actions"
+    "groupLabel": "Actions",
+    "keywords": [
+      "combine",
+      "join",
+      "git",
+      "branch"
+    ]
   },
   {
     "id": "lock",
     "label": "Lock",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "secure",
+      "private",
+      "password",
+      "locked",
+      "closed"
+    ]
   },
   {
     "id": "eye",
     "label": "Eye",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "show",
+      "view",
+      "visible",
+      "see",
+      "preview"
+    ]
   },
   {
     "id": "eye-off",
     "label": "Eye off",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "hide",
+      "hidden",
+      "invisible",
+      "private"
+    ]
   },
   {
     "id": "shield-check",
     "label": "Shield check",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "secure",
+      "protected",
+      "verified",
+      "safe"
+    ]
   },
   {
     "id": "bell-off",
     "label": "Bell off",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "mute",
+      "silence",
+      "notifications",
+      "off"
+    ]
   },
   {
     "id": "alert-triangle",
     "label": "Alert triangle",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "warning",
+      "caution",
+      "danger",
+      "attention"
+    ]
   },
   {
     "id": "alert-circle",
     "label": "Alert circle",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "error",
+      "problem",
+      "attention",
+      "exclamation"
+    ]
   },
   {
     "id": "check-circle",
     "label": "Check circle",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "success",
+      "done",
+      "complete",
+      "approved"
+    ]
   },
   {
     "id": "x-circle",
     "label": "X circle",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "error",
+      "failed",
+      "cancel",
+      "rejected"
+    ]
   },
   {
     "id": "circle",
     "label": "Circle",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "radio",
+      "empty",
+      "dot",
+      "shape",
+      "unselected"
+    ]
   },
   {
     "id": "info",
     "label": "Info",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "information",
+      "details",
+      "about",
+      "help"
+    ]
   },
   {
     "id": "help-circle",
     "label": "Help circle",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "question",
+      "support",
+      "faq",
+      "help"
+    ]
   },
   {
     "id": "loader",
     "label": "Loader",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "loading",
+      "spinner",
+      "progress",
+      "wait",
+      "busy"
+    ]
   },
   {
     "id": "wifi",
     "label": "Wi-Fi",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "wireless",
+      "internet",
+      "connection",
+      "network",
+      "online"
+    ]
   },
   {
     "id": "wifi-off",
     "label": "Wi-Fi off",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "offline",
+      "disconnected",
+      "no",
+      "connection"
+    ]
   },
   {
     "id": "toggle-on",
     "label": "Toggle on",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "switch",
+      "enabled",
+      "on",
+      "active"
+    ]
   },
   {
     "id": "toggle-off",
     "label": "Toggle off",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "switch",
+      "disabled",
+      "off",
+      "inactive"
+    ]
   },
   {
     "id": "moon",
     "label": "Moon",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "dark",
+      "mode",
+      "night",
+      "theme"
+    ]
   },
   {
     "id": "sun",
     "label": "Sun",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "light",
+      "mode",
+      "day",
+      "brightness",
+      "theme"
+    ]
   },
   {
     "id": "settings",
     "label": "Settings",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "gear",
+      "cog",
+      "preferences",
+      "options",
+      "configuration"
+    ]
   },
   {
     "id": "bell",
     "label": "Bell",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "notifications",
+      "alert",
+      "reminder"
+    ]
   },
   {
     "id": "shield",
     "label": "Shield",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "security",
+      "protection",
+      "safety"
+    ]
   },
   {
     "id": "ban",
     "label": "Ban",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "forbidden",
+      "block",
+      "prohibited",
+      "not",
+      "allowed"
+    ]
   },
   {
     "id": "circle-dot",
     "label": "Circle dot",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "radio",
+      "selected",
+      "option",
+      "record"
+    ]
   },
   {
     "id": "circle-ellipsis",
     "label": "Circle ellipsis",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "pending",
+      "waiting",
+      "processing",
+      "more"
+    ]
   },
   {
     "id": "bell-ring",
     "label": "Bell ring",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "notification",
+      "alarm",
+      "ringing",
+      "active",
+      "alert"
+    ]
   },
   {
     "id": "shield-alert",
     "label": "Shield alert",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "security",
+      "warning",
+      "threat",
+      "risk"
+    ]
   },
   {
     "id": "shield-user",
     "label": "Shield user",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "admin",
+      "administrator",
+      "role",
+      "permissions"
+    ]
   },
   {
     "id": "badge-check",
     "label": "Badge check",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "verified",
+      "approved",
+      "official",
+      "certified"
+    ]
   },
   {
     "id": "key",
     "label": "Key",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "password",
+      "access",
+      "credentials",
+      "unlock",
+      "api"
+    ]
   },
   {
     "id": "cloud-check",
     "label": "Cloud check",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "synced",
+      "saved",
+      "backup",
+      "cloud"
+    ]
   },
   {
     "id": "cpu",
     "label": "CPU",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "processor",
+      "chip",
+      "ai",
+      "model",
+      "hardware"
+    ]
   },
   {
     "id": "monitor",
     "label": "Monitor",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "computer",
+      "screen",
+      "desktop",
+      "display"
+    ]
   },
   {
     "id": "sliders",
     "label": "Sliders",
     "group": "status",
-    "groupLabel": "Status & system"
+    "groupLabel": "Status & system",
+    "keywords": [
+      "adjust",
+      "tune",
+      "settings",
+      "controls",
+      "equalizer"
+    ]
   },
   {
     "id": "users",
     "label": "Users",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "people",
+      "group",
+      "team",
+      "members"
+    ]
   },
   {
     "id": "user-plus",
     "label": "User plus",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "add",
+      "user",
+      "invite",
+      "new",
+      "member"
+    ]
   },
   {
     "id": "user-check",
     "label": "User check",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "verified",
+      "user",
+      "approved",
+      "member"
+    ]
   },
   {
     "id": "user-minus",
     "label": "User minus",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "remove",
+      "user",
+      "unfollow"
+    ]
   },
   {
     "id": "user-circle",
     "label": "User circle",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "profile",
+      "account",
+      "avatar"
+    ]
   },
   {
     "id": "at-sign",
     "label": "At sign",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "email",
+      "address",
+      "mention",
+      "at"
+    ]
   },
   {
     "id": "mail",
     "label": "Mail",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "email",
+      "envelope",
+      "message",
+      "letter"
+    ]
   },
   {
     "id": "inbox",
     "label": "Inbox",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "mail",
+      "tray",
+      "received",
+      "messages"
+    ]
   },
   {
     "id": "message-circle",
     "label": "Message circle",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "chat",
+      "comment",
+      "bubble",
+      "conversation"
+    ]
   },
   {
     "id": "message-square",
     "label": "Message square",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "chat",
+      "comment",
+      "feedback",
+      "bubble"
+    ]
   },
   {
     "id": "message-square-plus",
     "label": "Message square plus",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "new",
+      "comment",
+      "add",
+      "message"
+    ]
   },
   {
     "id": "thumbs-up",
     "label": "Thumbs up",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "like",
+      "approve",
+      "vote",
+      "positive"
+    ]
   },
   {
     "id": "thumbs-down",
     "label": "Thumbs down",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "dislike",
+      "disapprove",
+      "vote",
+      "negative"
+    ]
   },
   {
     "id": "user",
     "label": "User",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "person",
+      "profile",
+      "account"
+    ]
   },
   {
     "id": "heart",
     "label": "Heart",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "favorite",
+      "like",
+      "love"
+    ]
   },
   {
     "id": "user-x",
     "label": "User X",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "inactive",
+      "injured",
+      "blocked",
+      "remove",
+      "user"
+    ]
   },
   {
     "id": "user-search",
     "label": "User search",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "find",
+      "user",
+      "lookup",
+      "people"
+    ]
   },
   {
     "id": "id-card",
     "label": "ID card",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "identity",
+      "badge",
+      "profile",
+      "card"
+    ]
   },
   {
     "id": "handshake",
     "label": "Handshake",
     "group": "people",
-    "groupLabel": "People & communication"
+    "groupLabel": "People & communication",
+    "keywords": [
+      "deal",
+      "agreement",
+      "partnership"
+    ]
   },
   {
     "id": "trophy",
     "label": "Trophy",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "winner",
+      "cup",
+      "champion",
+      "prize"
+    ]
   },
   {
     "id": "podium",
     "label": "Podium",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "leaderboard",
+      "ranking",
+      "places",
+      "winners"
+    ]
   },
   {
     "id": "target",
     "label": "Target",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "goal",
+      "aim",
+      "bullseye",
+      "accuracy"
+    ]
   },
   {
     "id": "goal",
     "label": "Goal",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "football",
+      "soccer",
+      "net",
+      "score"
+    ]
   },
   {
     "id": "award",
     "label": "Award",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "badge",
+      "rosette",
+      "achievement",
+      "prize"
+    ]
   },
   {
     "id": "medal",
     "label": "Medal",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "winner",
+      "achievement",
+      "first",
+      "place"
+    ]
   },
   {
     "id": "crown",
     "label": "Crown",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "king",
+      "premium",
+      "vip",
+      "best"
+    ]
   },
   {
     "id": "swords",
     "label": "Swords",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "battle",
+      "versus",
+      "duel",
+      "fight"
+    ]
   },
   {
     "id": "star",
     "label": "Star",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "favorite",
+      "rating",
+      "rate",
+      "best"
+    ]
   },
   {
     "id": "flame",
     "label": "Flame",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "hot",
+      "fire",
+      "streak",
+      "trending"
+    ]
   },
   {
     "id": "zap",
     "label": "Zap",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "lightning",
+      "fast",
+      "power",
+      "energy",
+      "quick"
+    ]
   },
   {
     "id": "cross",
     "label": "Cross",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "religion",
+      "church",
+      "christian"
+    ]
   },
   {
     "id": "whistle",
     "label": "Whistle",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "referee",
+      "coach",
+      "sport",
+      "foul"
+    ]
   },
   {
     "id": "flag-checkered",
     "label": "Flag checkered",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "finish",
+      "race",
+      "end",
+      "game",
+      "final"
+    ]
   },
   {
     "id": "scoreboard",
     "label": "Scoreboard",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "score",
+      "result",
+      "match",
+      "points"
+    ]
   },
   {
     "id": "stadium",
     "label": "Stadium",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "arena",
+      "venue",
+      "field",
+      "sport"
+    ]
   },
   {
     "id": "dice",
     "label": "Dice",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "bet",
+      "random",
+      "game",
+      "chance",
+      "gambling"
+    ]
   },
   {
     "id": "first-aid",
     "label": "First aid",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "medical",
+      "injury",
+      "health",
+      "kit"
+    ]
   },
   {
     "id": "bandage",
     "label": "Bandage",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "plaster",
+      "injury",
+      "recovery",
+      "healing"
+    ]
   },
   {
     "id": "snowflake",
     "label": "Snowflake",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "cold",
+      "freeze",
+      "winter",
+      "streak"
+    ]
   },
   {
     "id": "plane",
     "label": "Plane",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "flight",
+      "travel",
+      "away",
+      "trip",
+      "airport"
+    ]
   },
   {
     "id": "bed",
     "label": "Bed",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "rest",
+      "sleep",
+      "hotel",
+      "recovery"
+    ]
   },
   {
     "id": "sofa",
     "label": "Sofa",
     "group": "competition",
-    "groupLabel": "Competition & sports"
+    "groupLabel": "Competition & sports",
+    "keywords": [
+      "couch",
+      "rest",
+      "day",
+      "off",
+      "relax"
+    ]
   },
   {
     "id": "trending-up",
     "label": "Trending up",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "growth",
+      "increase",
+      "rise",
+      "trend"
+    ]
   },
   {
     "id": "trending-down",
     "label": "Trending down",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "decline",
+      "decrease",
+      "fall",
+      "trend"
+    ]
   },
   {
     "id": "pie-chart",
     "label": "Pie chart",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "share",
+      "proportion",
+      "statistics",
+      "chart"
+    ]
   },
   {
     "id": "activity",
     "label": "Activity",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "pulse",
+      "heartbeat",
+      "monitor",
+      "live"
+    ]
   },
   {
     "id": "gauge",
     "label": "Gauge",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "speed",
+      "meter",
+      "performance",
+      "dashboard"
+    ]
   },
   {
     "id": "layers",
     "label": "Layers",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "stack",
+      "levels",
+      "multiple"
+    ]
   },
   {
     "id": "database",
     "label": "Database",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "storage",
+      "data",
+      "server"
+    ]
   },
   {
     "id": "history",
     "label": "History",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "recent",
+      "past",
+      "time",
+      "log"
+    ]
   },
   {
     "id": "ticket",
     "label": "Ticket",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "betting",
+      "slip",
+      "pass",
+      "coupon"
+    ]
   },
   {
     "id": "receipt",
     "label": "Receipt",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "bill",
+      "invoice",
+      "payment"
+    ]
   },
   {
     "id": "dollar",
     "label": "Dollar",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "money",
+      "currency",
+      "usd",
+      "price"
+    ]
   },
   {
     "id": "coins",
     "label": "Coins",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "money",
+      "tokens",
+      "credits",
+      "currency"
+    ]
   },
   {
     "id": "calculator",
     "label": "Calculator",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "math",
+      "compute",
+      "calculate",
+      "numbers"
+    ]
   },
   {
     "id": "shopping-cart",
     "label": "Shopping cart",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "cart",
+      "buy",
+      "checkout",
+      "basket"
+    ]
   },
   {
     "id": "chart",
     "label": "Chart",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "bar",
+      "statistics",
+      "analytics",
+      "graph"
+    ]
   },
   {
     "id": "wallet",
     "label": "Wallet",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "money",
+      "payment",
+      "balance",
+      "funds"
+    ]
   },
   {
     "id": "chart-line",
     "label": "Chart line",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "graph",
+      "trend",
+      "timeline",
+      "statistics"
+    ]
   },
   {
     "id": "insights",
     "label": "Insights",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "analytics",
+      "ai",
+      "discovery",
+      "trend",
+      "sparkle"
+    ]
   },
   {
     "id": "percent",
     "label": "Percent",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "percentage",
+      "rate",
+      "ratio",
+      "discount"
+    ]
   },
   {
     "id": "table",
     "label": "Table",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "grid",
+      "spreadsheet",
+      "data",
+      "rows"
+    ]
   },
   {
     "id": "scale",
     "label": "Scale",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "balance",
+      "compare",
+      "weigh",
+      "justice"
+    ]
   },
   {
     "id": "bank",
     "label": "Bank",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "finance",
+      "building",
+      "institution"
+    ]
   },
   {
     "id": "piggy-bank",
     "label": "Piggy bank",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "savings",
+      "money",
+      "deposit"
+    ]
   },
   {
     "id": "shopping-bag",
     "label": "Shopping bag",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "shop",
+      "purchase",
+      "store"
+    ]
   },
   {
     "id": "briefcase",
     "label": "Briefcase",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "work",
+      "business",
+      "job",
+      "portfolio"
+    ]
   },
   {
     "id": "function",
     "label": "Function",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "formula",
+      "math",
+      "fx",
+      "calculation"
+    ]
   },
   {
     "id": "infinity",
     "label": "Infinity",
     "group": "analytics",
-    "groupLabel": "Analytics & money"
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "unlimited",
+      "forever",
+      "endless",
+      "loop"
+    ]
   },
   {
     "id": "clock",
     "label": "Clock",
     "group": "time",
-    "groupLabel": "Time"
+    "groupLabel": "Time",
+    "keywords": [
+      "time",
+      "hour",
+      "watch",
+      "schedule"
+    ]
   },
   {
     "id": "calendar-x",
     "label": "Calendar x",
     "group": "time",
-    "groupLabel": "Time"
+    "groupLabel": "Time",
+    "keywords": [
+      "cancelled",
+      "event",
+      "unavailable"
+    ]
   },
   {
     "id": "calendar-clock",
     "label": "Calendar clock",
     "group": "time",
-    "groupLabel": "Time"
+    "groupLabel": "Time",
+    "keywords": [
+      "schedule",
+      "appointment",
+      "deadline"
+    ]
   },
   {
     "id": "hourglass",
     "label": "Hourglass",
     "group": "time",
-    "groupLabel": "Time"
+    "groupLabel": "Time",
+    "keywords": [
+      "wait",
+      "pending",
+      "deadline",
+      "time"
+    ]
   },
   {
     "id": "calendar",
     "label": "Calendar",
     "group": "time",
-    "groupLabel": "Time"
+    "groupLabel": "Time",
+    "keywords": [
+      "date",
+      "event",
+      "schedule",
+      "day"
+    ]
   },
   {
     "id": "timer",
     "label": "Timer",
     "group": "time",
-    "groupLabel": "Time"
+    "groupLabel": "Time",
+    "keywords": [
+      "stopwatch",
+      "countdown",
+      "time"
+    ]
   },
   {
     "id": "sparkles",
     "label": "Sparkles",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "ai",
+      "magic",
+      "generate",
+      "new",
+      "shine"
+    ]
   },
   {
     "id": "bot",
     "label": "Bot",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "robot",
+      "assistant",
+      "ai",
+      "chat"
+    ]
   },
   {
     "id": "flask",
     "label": "Flask",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "experiment",
+      "lab",
+      "test",
+      "science",
+      "beta"
+    ]
   },
   {
     "id": "lightbulb",
     "label": "Lightbulb",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "idea",
+      "tip",
+      "suggestion",
+      "insight"
+    ]
   },
   {
     "id": "telescope",
     "label": "Telescope",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "explore",
+      "discover",
+      "research"
+    ]
   },
   {
     "id": "rocket",
     "label": "Rocket",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "launch",
+      "start",
+      "boost",
+      "deploy"
+    ]
   },
   {
     "id": "puzzle",
     "label": "Puzzle",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "extension",
+      "plugin",
+      "integration"
+    ]
   },
   {
     "id": "bug",
     "label": "Bug",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "issue",
+      "error",
+      "defect",
+      "debug"
+    ]
   },
   {
     "id": "code",
     "label": "Code",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "developer",
+      "brackets",
+      "html",
+      "programming"
+    ]
   },
   {
     "id": "book-open",
     "label": "Book open",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "guide",
+      "docs",
+      "read",
+      "manual",
+      "learn"
+    ]
   },
   {
     "id": "list-checks",
     "label": "List checks",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "tasks",
+      "todo",
+      "checklist",
+      "done"
+    ]
   },
   {
     "id": "layout-template",
     "label": "Layout template",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "template",
+      "layout",
+      "page",
+      "design"
+    ]
   },
   {
     "id": "palette",
     "label": "Palette",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "colors",
+      "theme",
+      "design",
+      "paint"
+    ]
   },
   {
     "id": "image",
     "label": "Image",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "picture",
+      "photo",
+      "media"
+    ]
   },
   {
     "id": "camera",
     "label": "Camera",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "photo",
+      "picture",
+      "capture"
+    ]
   },
   {
     "id": "folder-open",
     "label": "Folder open",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "files",
+      "directory",
+      "open"
+    ]
   },
   {
     "id": "globe",
     "label": "Globe",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "world",
+      "public",
+      "internet",
+      "language"
+    ]
   },
   {
     "id": "map",
     "label": "Map",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "location",
+      "navigation",
+      "route"
+    ]
   },
   {
     "id": "smartphone",
     "label": "Smartphone",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "mobile",
+      "phone",
+      "device"
+    ]
   },
   {
     "id": "document",
     "label": "Document",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "file",
+      "page",
+      "text",
+      "paper"
+    ]
   },
   {
     "id": "car",
     "label": "Car",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "vehicle",
+      "auto",
+      "transport",
+      "drive"
+    ]
   },
   {
     "id": "brain",
     "label": "Brain",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "ai",
+      "intelligence",
+      "analysis",
+      "mind"
+    ]
   },
   {
     "id": "dashboard",
     "label": "Dashboard",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "overview",
+      "panels",
+      "widgets"
+    ]
   },
   {
     "id": "grid",
     "label": "Grid",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "tiles",
+      "apps",
+      "layout",
+      "modules"
+    ]
   },
   {
     "id": "columns",
     "label": "Columns",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "layout",
+      "split",
+      "view"
+    ]
   },
   {
     "id": "list",
     "label": "List",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "items",
+      "bullets",
+      "rows"
+    ]
   },
   {
     "id": "list-ordered",
     "label": "List ordered",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "numbered",
+      "steps",
+      "ranking"
+    ]
   },
   {
     "id": "clipboard",
     "label": "Clipboard",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "task",
+      "assignment",
+      "notes"
+    ]
   },
   {
     "id": "file-pdf",
     "label": "PDF file",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "pdf",
+      "document",
+      "export"
+    ]
   },
   {
     "id": "map-pin",
     "label": "Map pin",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "location",
+      "place",
+      "marker"
+    ]
   },
   {
     "id": "hash",
     "label": "Hash",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "tag",
+      "hashtag",
+      "number",
+      "pound"
+    ]
   },
   {
     "id": "gavel",
     "label": "Gavel",
     "group": "ai",
-    "groupLabel": "AI & misc"
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "rules",
+      "law",
+      "judge",
+      "verdict"
+    ]
   }
 ]

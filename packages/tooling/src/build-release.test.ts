@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { checkAgainstPublished, selectReleaseIcons } from "./build-release.ts";
 
-const entry = (id: string) => ({ id, label: id, group: "g", groupLabel: "G" });
+const entry = (id: string) => ({ id, label: id, group: "g", groupLabel: "G", keywords: ["k"] });
 const catalogs = { general: [entry("check"), entry("close")], hobbies: [entry("chess")] };
 
 describe("selectReleaseIcons", () => {
@@ -15,6 +15,11 @@ describe("selectReleaseIcons", () => {
     assert.throws(() => selectReleaseIcons({ version: "0.1.0", collections: ["sports"] }, catalogs), /unknown collection/);
     const clash = { ...catalogs, extra: [entry("check")] };
     assert.throws(() => selectReleaseIcons({ version: "0.1.0", collections: ["general", "extra"] }, clash), /in both/);
+  });
+
+  it("requires keywords on every icon", () => {
+    const bare = { general: [{ ...entry("check"), keywords: [] }] };
+    assert.throws(() => selectReleaseIcons({ version: "0.1.0", collections: ["general"] }, bare), /no keywords/);
   });
 });
 

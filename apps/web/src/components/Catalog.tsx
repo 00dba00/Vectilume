@@ -12,6 +12,7 @@ export interface CatalogItem {
   label: string;
   group: string;
   groupLabel: string;
+  keywords: string[];
 }
 
 interface CatalogProps {
@@ -35,11 +36,13 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
   const [style, setStyle] = useState<IconStyle>("outline");
   const groups = useMemo(() => [...new Map(items.map((item) => [item.group, item.groupLabel])).entries()], [items]);
   const visible = useMemo(() => {
-    const search = fold(query.trim());
-    return items.filter((item) =>
-      (group === "all" || item.group === group) &&
-      (!search || fold(`${item.label} ${item.id} ${item.groupLabel}`).includes(search))
-    );
+    // every word of the query must match the name, label, group or a keyword
+    const terms = fold(query).split(/\s+/).filter(Boolean);
+    return items.filter((item) => {
+      if (group !== "all" && item.group !== group) return false;
+      const haystack = fold(`${item.label} ${item.id} ${item.groupLabel} ${item.keywords.join(" ")}`);
+      return terms.every((term) => haystack.includes(term));
+    });
   }, [items, query, group]);
 
   return (
@@ -80,7 +83,7 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
             key={item.id}
             type="button"
             className={styles.card}
-            onClick={() => onSelect({ collection: title, style, name: item.id, label: item.label })}
+            onClick={() => onSelect({ collection: title, style, name: item.id, label: item.label, keywords: item.keywords })}
             aria-label={`Preview ${item.label}, ${style}`}
           >
             <Icon svg={lookup[iconId(style, item.id)]} size={40} />

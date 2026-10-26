@@ -69,9 +69,12 @@ is a breaking bump (major, or minor while on 0.x).
 2. **Phase 1** — 50 icons, Outline + Duotone, catalog with search, SVG/JSX copy, npm package.
 3. **Phase 2** — 150 icons, Solid style, semantic states, theme generator, ZIP export.
 4. **Phase 3** — community workflow, more framework packages, Figma plugin.
-5. **Next — adopt in Scout AI and NBA** (after the hobby redesign): React package, first npm
+5. **Per-icon definition of done** — metadata (keywords ✅, `since`, `deprecated`/alias), React
+   and React Native components, accessibility, SVGO, sprite/PNG, visual regression tests, catalog
+   Copy JSX / Download. Checklist in [`docs/icon-definition-of-done.md`](./docs/icon-definition-of-done.md).
+6. **Next — adopt in Scout AI and NBA** (after the hobby redesign): React package, first npm
    release, then swap the apps' icons. Steps in [`docs/adoption-plan.md`](./docs/adoption-plan.md).
-6. **Later — web contributions** (not scheduled; details in [`docs/web-features.md`](./docs/web-features.md)):
+7. **Later — web contributions** (not scheduled; details in [`docs/web-features.md`](./docs/web-features.md)):
    - edit an existing icon in a web form → admin approval → collection and npm, author notified;
    - submit a brand-new icon through the same approval flow;
    - request a custom icon, we draw it and notify the requester when it ships;

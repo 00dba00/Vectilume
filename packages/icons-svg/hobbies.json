@@ -3,840 +3,1543 @@
     "id": "football",
     "label": "Football",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "soccer",
+      "ball",
+      "team",
+      "sport"
+    ]
   },
   {
     "id": "futsal",
     "label": "Futsal",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "indoor",
+      "football",
+      "soccer",
+      "small"
+    ]
   },
   {
     "id": "basketball",
     "label": "Basketball",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "nba",
+      "hoop",
+      "ball",
+      "court"
+    ]
   },
   {
     "id": "volleyball",
     "label": "Volleyball",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "ball",
+      "net",
+      "beach",
+      "team"
+    ]
   },
   {
     "id": "handball",
     "label": "Handball",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "ball",
+      "team",
+      "throw",
+      "goal"
+    ]
   },
   {
     "id": "rugby",
     "label": "Rugby",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "ball",
+      "oval",
+      "team",
+      "tackle"
+    ]
   },
   {
     "id": "american-football",
     "label": "American football",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "nfl",
+      "ball",
+      "oval",
+      "touchdown"
+    ]
   },
   {
     "id": "baseball",
     "label": "Baseball",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "bat",
+      "ball",
+      "mlb",
+      "pitch"
+    ]
   },
   {
     "id": "cricket",
     "label": "Cricket",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "bat",
+      "ball",
+      "wicket"
+    ]
   },
   {
     "id": "field-hockey",
     "label": "Field hockey",
     "group": "team-sports",
-    "groupLabel": "Team sports"
+    "groupLabel": "Team sports",
+    "keywords": [
+      "stick",
+      "ball",
+      "pitch"
+    ]
   },
   {
     "id": "tennis",
     "label": "Tennis",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "racket",
+      "ball",
+      "court"
+    ]
   },
   {
     "id": "table-tennis",
     "label": "Table tennis",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "ping",
+      "pong",
+      "paddle",
+      "ball"
+    ]
   },
   {
     "id": "badminton",
     "label": "Badminton",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "shuttlecock",
+      "racket"
+    ]
   },
   {
     "id": "squash",
     "label": "Squash",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "racket",
+      "ball",
+      "wall"
+    ]
   },
   {
     "id": "padel",
     "label": "Padel",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "racket",
+      "paddle",
+      "court"
+    ]
   },
   {
     "id": "golf",
     "label": "Golf",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "club",
+      "ball",
+      "flag",
+      "hole"
+    ]
   },
   {
     "id": "bowling",
     "label": "Bowling",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "pins",
+      "ball",
+      "strike"
+    ]
   },
   {
     "id": "darts",
     "label": "Darts",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "dartboard",
+      "target",
+      "throw"
+    ]
   },
   {
     "id": "billiards",
     "label": "Billiards",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "pool",
+      "snooker",
+      "cue",
+      "ball"
+    ]
   },
   {
     "id": "shooting",
     "label": "Shooting",
     "group": "precision-sports",
-    "groupLabel": "Rackets & precision"
+    "groupLabel": "Rackets & precision",
+    "keywords": [
+      "target",
+      "aim",
+      "range"
+    ]
   },
   {
     "id": "swimming",
     "label": "Swimming",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "pool",
+      "swim",
+      "water"
+    ]
   },
   {
     "id": "water-polo",
     "label": "Water polo",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "pool",
+      "ball",
+      "water",
+      "team"
+    ]
   },
   {
     "id": "diving",
     "label": "Diving",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "scuba",
+      "underwater",
+      "dive"
+    ]
   },
   {
     "id": "snorkeling",
     "label": "Snorkeling",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "mask",
+      "underwater",
+      "sea"
+    ]
   },
   {
     "id": "surfing",
     "label": "Surfing",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "surf",
+      "wave",
+      "board"
+    ]
   },
   {
     "id": "sailing",
     "label": "Sailing",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "boat",
+      "sail",
+      "sea"
+    ]
   },
   {
     "id": "kayaking",
     "label": "Kayaking",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "kayak",
+      "paddle",
+      "river"
+    ]
   },
   {
     "id": "rowing",
     "label": "Rowing",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "boat",
+      "oars",
+      "river"
+    ]
   },
   {
     "id": "paddleboarding",
     "label": "Paddleboarding",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "sup",
+      "paddle",
+      "board"
+    ]
   },
   {
     "id": "fishing",
     "label": "Fishing",
     "group": "water",
-    "groupLabel": "Water"
+    "groupLabel": "Water",
+    "keywords": [
+      "rod",
+      "fish",
+      "angling"
+    ]
   },
   {
     "id": "boxing",
     "label": "Boxing",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "gloves",
+      "fight",
+      "ring"
+    ]
   },
   {
     "id": "kickboxing",
     "label": "Kickboxing",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "kick",
+      "fight",
+      "gloves"
+    ]
   },
   {
     "id": "karate",
     "label": "Karate",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "martial",
+      "arts",
+      "kick",
+      "dojo"
+    ]
   },
   {
     "id": "judo",
     "label": "Judo",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "martial",
+      "arts",
+      "throw"
+    ]
   },
   {
     "id": "taekwondo",
     "label": "Taekwondo",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "martial",
+      "arts",
+      "kick"
+    ]
   },
   {
     "id": "jiu-jitsu",
     "label": "Jiu-jitsu",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "bjj",
+      "grappling",
+      "martial",
+      "arts"
+    ]
   },
   {
     "id": "wrestling",
     "label": "Wrestling",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "grappling",
+      "fight",
+      "mat"
+    ]
   },
   {
     "id": "muay-thai",
     "label": "Muay Thai",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "thai",
+      "boxing",
+      "martial",
+      "arts"
+    ]
   },
   {
     "id": "fencing",
     "label": "Fencing",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "sword",
+      "epee",
+      "foil"
+    ]
   },
   {
     "id": "aikido",
     "label": "Aikido",
     "group": "martial-arts",
-    "groupLabel": "Martial arts"
+    "groupLabel": "Martial arts",
+    "keywords": [
+      "martial",
+      "arts",
+      "dojo"
+    ]
   },
   {
     "id": "running",
     "label": "Running",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "run",
+      "jogging",
+      "marathon"
+    ]
   },
   {
     "id": "walking",
     "label": "Walking",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "walk",
+      "steps",
+      "stroll"
+    ]
   },
   {
     "id": "gym",
     "label": "Gym",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "fitness",
+      "workout",
+      "dumbbell"
+    ]
   },
   {
     "id": "weightlifting",
     "label": "Weightlifting",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "barbell",
+      "lift",
+      "strength"
+    ]
   },
   {
     "id": "yoga",
     "label": "Yoga",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "pose",
+      "stretch",
+      "mindfulness"
+    ]
   },
   {
     "id": "pilates",
     "label": "Pilates",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "core",
+      "exercise",
+      "mat"
+    ]
   },
   {
     "id": "calisthenics",
     "label": "Calisthenics",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "bodyweight",
+      "pull",
+      "up",
+      "workout"
+    ]
   },
   {
     "id": "aerobics",
     "label": "Aerobics",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "cardio",
+      "dance",
+      "fitness"
+    ]
   },
   {
     "id": "stretching",
     "label": "Stretching",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "flexibility",
+      "warm",
+      "up"
+    ]
   },
   {
     "id": "jump-rope",
     "label": "Jump rope",
     "group": "fitness",
-    "groupLabel": "Fitness & movement"
+    "groupLabel": "Fitness & movement",
+    "keywords": [
+      "skipping",
+      "cardio",
+      "rope"
+    ]
   },
   {
     "id": "hiking",
     "label": "Hiking",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "trail",
+      "mountain",
+      "walk"
+    ]
   },
   {
     "id": "trekking",
     "label": "Trekking",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "trail",
+      "backpack",
+      "mountain"
+    ]
   },
   {
     "id": "camping",
     "label": "Camping",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "tent",
+      "outdoor",
+      "nature"
+    ]
   },
   {
     "id": "climbing",
     "label": "Climbing",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "rock",
+      "wall",
+      "rope"
+    ]
   },
   {
     "id": "bouldering",
     "label": "Bouldering",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "climbing",
+      "wall",
+      "holds"
+    ]
   },
   {
     "id": "orienteering",
     "label": "Orienteering",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "compass",
+      "map",
+      "navigation"
+    ]
   },
   {
     "id": "birdwatching",
     "label": "Birdwatching",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "birds",
+      "binoculars",
+      "nature"
+    ]
   },
   {
     "id": "mushroom-foraging",
     "label": "Mushroom foraging",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "mushrooms",
+      "forest",
+      "gather"
+    ]
   },
   {
     "id": "hunting",
     "label": "Hunting",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "hunt",
+      "rifle",
+      "forest"
+    ]
   },
   {
     "id": "geocaching",
     "label": "Geocaching",
     "group": "outdoors",
-    "groupLabel": "Outdoors & mountains"
+    "groupLabel": "Outdoors & mountains",
+    "keywords": [
+      "treasure",
+      "gps",
+      "hunt"
+    ]
   },
   {
     "id": "cycling",
     "label": "Cycling",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "bike",
+      "bicycle",
+      "ride"
+    ]
   },
   {
     "id": "mountain-biking",
     "label": "Mountain biking",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "mtb",
+      "bike",
+      "trail"
+    ]
   },
   {
     "id": "bmx",
     "label": "BMX",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "bike",
+      "tricks",
+      "ramp"
+    ]
   },
   {
     "id": "skateboarding",
     "label": "Skateboarding",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "skate",
+      "board",
+      "tricks"
+    ]
   },
   {
     "id": "roller-skating",
     "label": "Roller skating",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "skates",
+      "rollers"
+    ]
   },
   {
     "id": "scooter",
     "label": "Scooter",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "kick",
+      "scooter",
+      "ride"
+    ]
   },
   {
     "id": "motorcycling",
     "label": "Motorcycling",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "motorbike",
+      "ride",
+      "bike"
+    ]
   },
   {
     "id": "karting",
     "label": "Karting",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "go",
+      "kart",
+      "race"
+    ]
   },
   {
     "id": "motorsport",
     "label": "Motorsport",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "racing",
+      "car",
+      "formula"
+    ]
   },
   {
     "id": "quad-biking",
     "label": "Quad biking",
     "group": "wheels",
-    "groupLabel": "Wheels"
+    "groupLabel": "Wheels",
+    "keywords": [
+      "atv",
+      "quad",
+      "offroad"
+    ]
   },
   {
     "id": "skiing",
     "label": "Skiing",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "ski",
+      "snow",
+      "slope"
+    ]
   },
   {
     "id": "snowboarding",
     "label": "Snowboarding",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "snowboard",
+      "snow",
+      "slope"
+    ]
   },
   {
     "id": "ice-skating",
     "label": "Ice skating",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "skates",
+      "ice",
+      "rink"
+    ]
   },
   {
     "id": "ice-hockey",
     "label": "Ice hockey",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "hockey",
+      "puck",
+      "stick",
+      "ice"
+    ]
   },
   {
     "id": "sledding",
     "label": "Sledding",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "sled",
+      "snow",
+      "winter"
+    ]
   },
   {
     "id": "cross-country-skiing",
     "label": "Cross country skiing",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "nordic",
+      "ski",
+      "snow"
+    ]
   },
   {
     "id": "paragliding",
     "label": "Paragliding",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "glide",
+      "wing",
+      "fly"
+    ]
   },
   {
     "id": "skydiving",
     "label": "Skydiving",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "parachute",
+      "jump",
+      "sky"
+    ]
   },
   {
     "id": "zipline",
     "label": "Zipline",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "cable",
+      "adventure",
+      "ride"
+    ]
   },
   {
     "id": "rafting",
     "label": "Rafting",
     "group": "winter-adventure",
-    "groupLabel": "Winter & adrenaline"
+    "groupLabel": "Winter & adrenaline",
+    "keywords": [
+      "raft",
+      "river",
+      "rapids"
+    ]
   },
   {
     "id": "ballet",
     "label": "Ballet",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "dance",
+      "classical"
+    ]
   },
   {
     "id": "salsa",
     "label": "Salsa",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "latin",
+      "dance"
+    ]
   },
   {
     "id": "tango",
     "label": "Tango",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "dance",
+      "couple"
+    ]
   },
   {
     "id": "hip-hop-dance",
     "label": "Hip-hop dance",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "street",
+      "dance",
+      "breakdance"
+    ]
   },
   {
     "id": "contemporary-dance",
     "label": "Contemporary dance",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "modern",
+      "dance"
+    ]
   },
   {
     "id": "folk-dance",
     "label": "Folk dance",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "traditional",
+      "dance"
+    ]
   },
   {
     "id": "social-dance",
     "label": "Social dance",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "ballroom",
+      "couple",
+      "dance"
+    ]
   },
   {
     "id": "acting",
     "label": "Acting",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "theater",
+      "drama",
+      "stage"
+    ]
   },
   {
     "id": "stand-up",
     "label": "Stand-up comedy",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "comedy",
+      "microphone",
+      "stage"
+    ]
   },
   {
     "id": "magic",
     "label": "Magic",
     "group": "performance",
-    "groupLabel": "Dance & performance"
+    "groupLabel": "Dance & performance",
+    "keywords": [
+      "magician",
+      "tricks",
+      "hat"
+    ]
   },
   {
     "id": "singing",
     "label": "Singing",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "vocals",
+      "microphone",
+      "song"
+    ]
   },
   {
     "id": "guitar",
     "label": "Guitar",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "music",
+      "strings",
+      "instrument"
+    ]
   },
   {
     "id": "piano",
     "label": "Piano",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "keys",
+      "music",
+      "instrument"
+    ]
   },
   {
     "id": "drums",
     "label": "Drums",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "percussion",
+      "music",
+      "instrument"
+    ]
   },
   {
     "id": "violin",
     "label": "Violin",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "strings",
+      "music",
+      "instrument"
+    ]
   },
   {
     "id": "bass-guitar",
     "label": "Bass guitar",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "bass",
+      "music",
+      "strings"
+    ]
   },
   {
     "id": "saxophone",
     "label": "Saxophone",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "sax",
+      "jazz",
+      "music"
+    ]
   },
   {
     "id": "dj",
     "label": "DJ",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "turntable",
+      "mix",
+      "music"
+    ]
   },
   {
     "id": "composing",
     "label": "Composing",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "music",
+      "notes",
+      "write"
+    ]
   },
   {
     "id": "choir",
     "label": "Choir",
     "group": "music",
-    "groupLabel": "Music"
+    "groupLabel": "Music",
+    "keywords": [
+      "singing",
+      "group",
+      "voices"
+    ]
   },
   {
     "id": "drawing",
     "label": "Drawing",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "sketch",
+      "pencil",
+      "art"
+    ]
   },
   {
     "id": "painting",
     "label": "Painting",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "brush",
+      "paint",
+      "art"
+    ]
   },
   {
     "id": "photography",
     "label": "Photography",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "camera",
+      "photo"
+    ]
   },
   {
     "id": "filming",
     "label": "Filming",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "video",
+      "camera",
+      "movie"
+    ]
   },
   {
     "id": "video-editing",
     "label": "Video editing",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "editing",
+      "film",
+      "timeline"
+    ]
   },
   {
     "id": "digital-illustration",
     "label": "Digital illustration",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "tablet",
+      "stylus",
+      "art"
+    ]
   },
   {
     "id": "graphic-design",
     "label": "Graphic design",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "design",
+      "layout",
+      "vector"
+    ]
   },
   {
     "id": "calligraphy",
     "label": "Calligraphy",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "lettering",
+      "pen",
+      "writing"
+    ]
   },
   {
     "id": "pottery",
     "label": "Pottery",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "clay",
+      "ceramics",
+      "wheel"
+    ]
   },
   {
     "id": "sculpting",
     "label": "Sculpting",
     "group": "visual-arts",
-    "groupLabel": "Visual arts"
+    "groupLabel": "Visual arts",
+    "keywords": [
+      "sculpture",
+      "clay",
+      "chisel"
+    ]
   },
   {
     "id": "knitting",
     "label": "Knitting",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "yarn",
+      "needles",
+      "wool"
+    ]
   },
   {
     "id": "crochet",
     "label": "Crochet",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "yarn",
+      "hook"
+    ]
   },
   {
     "id": "sewing",
     "label": "Sewing",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "needle",
+      "thread",
+      "machine"
+    ]
   },
   {
     "id": "embroidery",
     "label": "Embroidery",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "stitch",
+      "thread",
+      "hoop"
+    ]
   },
   {
     "id": "jewelry-making",
     "label": "Jewelry making",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "beads",
+      "jewelry",
+      "craft"
+    ]
   },
   {
     "id": "woodworking",
     "label": "Woodworking",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "wood",
+      "carpentry",
+      "saw"
+    ]
   },
   {
     "id": "origami",
     "label": "Origami",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "paper",
+      "fold",
+      "crane"
+    ]
   },
   {
     "id": "model-making",
     "label": "Model making",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "models",
+      "kit",
+      "build"
+    ]
   },
   {
     "id": "furniture-restoration",
     "label": "Furniture restoration",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "furniture",
+      "restore",
+      "wood"
+    ]
   },
   {
     "id": "3d-printing",
     "label": "3D printing",
     "group": "crafts",
-    "groupLabel": "Crafts"
+    "groupLabel": "Crafts",
+    "keywords": [
+      "printer",
+      "maker",
+      "plastic"
+    ]
   },
   {
     "id": "video-games",
     "label": "Video games",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "gaming",
+      "controller",
+      "console"
+    ]
   },
   {
     "id": "board-games",
     "label": "Board games",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "board",
+      "game",
+      "dice"
+    ]
   },
   {
     "id": "chess",
     "label": "Chess",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "board",
+      "strategy",
+      "king"
+    ]
   },
   {
     "id": "puzzles",
     "label": "Puzzles",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "jigsaw",
+      "pieces"
+    ]
   },
   {
     "id": "quizzes",
     "label": "Quizzes",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "trivia",
+      "questions"
+    ]
   },
   {
     "id": "card-games",
     "label": "Card games",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "cards",
+      "poker",
+      "deck"
+    ]
   },
   {
     "id": "coding",
     "label": "Coding",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "programming",
+      "code",
+      "computer"
+    ]
   },
   {
     "id": "robotics",
     "label": "Robotics",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "robot",
+      "engineering"
+    ]
   },
   {
     "id": "astronomy",
     "label": "Astronomy",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "stars",
+      "telescope",
+      "space"
+    ]
   },
   {
     "id": "reading",
     "label": "Reading",
     "group": "games-tech",
-    "groupLabel": "Games & tech"
+    "groupLabel": "Games & tech",
+    "keywords": [
+      "book",
+      "read"
+    ]
   },
   {
     "id": "cooking",
     "label": "Cooking",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "kitchen",
+      "chef",
+      "food"
+    ]
   },
   {
     "id": "baking",
     "label": "Baking",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "oven",
+      "bread",
+      "cake"
+    ]
   },
   {
     "id": "gardening",
     "label": "Gardening",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "garden",
+      "plants",
+      "soil"
+    ]
   },
   {
     "id": "plant-growing",
     "label": "Plant growing",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "plants",
+      "seedling",
+      "grow"
+    ]
   },
   {
     "id": "flower-arranging",
     "label": "Flower arranging",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "flowers",
+      "bouquet"
+    ]
   },
   {
     "id": "writing",
     "label": "Writing",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "write",
+      "pen",
+      "author"
+    ]
   },
   {
     "id": "language-learning",
     "label": "Language learning",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "languages",
+      "study",
+      "speak"
+    ]
   },
   {
     "id": "travel",
     "label": "Travel",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "trip",
+      "journey",
+      "suitcase"
+    ]
   },
   {
     "id": "volunteering",
     "label": "Volunteering",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "help",
+      "charity",
+      "community"
+    ]
   },
   {
     "id": "collecting",
     "label": "Collecting",
     "group": "everyday",
-    "groupLabel": "Home & everyday"
+    "groupLabel": "Home & everyday",
+    "keywords": [
+      "collection",
+      "stamps",
+      "coins"
+    ]
   }
 ]

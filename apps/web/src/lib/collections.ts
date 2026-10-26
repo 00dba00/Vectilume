@@ -6,6 +6,7 @@ export interface CollectionItem {
   label: string;
   group: string;
   groupLabel: string;
+  keywords: string[];
 }
 
 export interface Collection {

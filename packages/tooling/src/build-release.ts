@@ -14,6 +14,7 @@ export interface CatalogEntry {
   label: string;
   group: string;
   groupLabel: string;
+  keywords: string[];
 }
 
 export interface ReleaseIcon extends CatalogEntry {
@@ -28,6 +29,7 @@ export function selectReleaseIcons(release: Release, catalogs: Record<string, Ca
     const entries = catalogs[collection];
     if (!entries) throw new Error(`unknown collection "${collection}" (expected ${collection}.json)`);
     for (const entry of entries) {
+      if (!entry.keywords?.length) throw new Error(`icon "${entry.id}" has no keywords`);
       const other = seen.get(entry.id);
       if (other) throw new Error(`icon "${entry.id}" is in both "${other}" and "${collection}"`);
       seen.set(entry.id, collection);
