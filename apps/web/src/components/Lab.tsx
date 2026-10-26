@@ -4,11 +4,11 @@ import { useState } from "react";
 import { ContextPreview } from "./ContextPreview";
 import { Icon } from "./Icon";
 import { Inspector, type Selection } from "./Inspector";
-import general from "@vectilume/icons-svg/general.json";
-import hobbies from "@vectilume/icons-svg/hobbies.json";
 import { Catalog } from "./Catalog";
+import { ReleasePanel } from "./ReleasePanel";
 import styles from "./Lab.module.css";
 import { DIRECTIONS, PROTOTYPE_ICONS, STYLES, iconId, type IconLookup } from "@/lib/icons";
+import { COLLECTIONS } from "@/lib/collections";
 import { DEFAULT_THEME, themeVars, type Theme } from "@/lib/theme";
 
 export function Lab({ lookup }: { lookup: IconLookup }) {
@@ -117,31 +117,23 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
         </div>
       </section>
 
-      <Catalog
-        id="hobbies"
-        eyebrow={`Kolekcija 01 · ${hobbies.length} ikona`}
-        title="Hobiji"
-        description="Sport, glazba, stvaralaštvo i svakodnevne aktivnosti u tri Vectilume stila."
-        searchLabel="Pretraži hobije"
-        placeholder="Npr. plivanje, karate, crtanje..."
-        items={hobbies}
-        lookup={lookup}
-        theme={theme}
-        onSelect={setSelection}
-      />
+      <ReleasePanel />
 
-      <Catalog
-        id="general"
-        eyebrow={`Kolekcija 02 · ${general.length} ikona`}
-        title="Općenito"
-        description="Navigacija, akcije, statusi, korisnici, analitika i ostale ikone sučelja."
-        searchLabel="Pretraži ikone"
-        placeholder="Npr. zatvori, kalendar, pošta..."
-        items={general}
-        lookup={lookup}
-        theme={theme}
-        onSelect={setSelection}
-      />
+      {COLLECTIONS.map((collection, index) => (
+        <Catalog
+          key={collection.id}
+          id={collection.id}
+          eyebrow={`Kolekcija ${String(index + 1).padStart(2, "0")} · ${collection.items.length} ikona`}
+          title={collection.title}
+          description={collection.description}
+          searchLabel={collection.searchLabel}
+          placeholder={collection.placeholder}
+          items={collection.items}
+          lookup={lookup}
+          theme={theme}
+          onSelect={setSelection}
+        />
+      ))}
 
       <ContextPreview lookup={lookup} theme={theme} />
 

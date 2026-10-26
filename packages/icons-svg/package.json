@@ -15,6 +15,7 @@
     "./manifest.json": "./dist/manifest.json",
     "./hobbies.json": "./hobbies.json",
     "./general.json": "./general.json",
+    "./release.json": "./release.json",
     "./src/*": "./src/*"
   },
   "scripts": {
