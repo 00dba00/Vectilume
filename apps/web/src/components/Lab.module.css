@@ -201,7 +201,7 @@
 
 /* Inspector */
 .inspector {
-  width: min(560px, calc(100vw - 32px));
+  width: min(1080px, calc(100vw - 32px));
   max-height: calc(100dvh - 32px);
   padding: 0;
   border: 0;
@@ -220,6 +220,43 @@
   flex-direction: column;
   gap: 16px;
   padding: 24px;
+}
+
+.inspectorColumns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.inspectorMain,
+.inspectorUse {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.inspectorMain > .segmented {
+  align-self: center;
+}
+
+.useHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.useHeader h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .inspectorColumns {
+    grid-template-columns: 1fr;
+  }
 }
 
 .inspectorHeader {

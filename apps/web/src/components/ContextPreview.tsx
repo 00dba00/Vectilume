@@ -78,7 +78,7 @@ export function ContextPreview({ lookup, theme }: ContextPreviewProps) {
     <section aria-labelledby="context-heading" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h2 id="context-heading" className={styles.sectionTitle}>
-          U sučelju
+          In context
         </h2>
         <div className={styles.segmented} role="group" aria-label="Icon style">
           {[null, ...STYLES].map((style) => (

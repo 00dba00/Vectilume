@@ -20,18 +20,18 @@ export interface Collection {
 export const COLLECTIONS: Collection[] = [
   {
     id: "hobbies",
-    title: "Hobiji",
-    description: "Sport, glazba, stvaralaštvo i svakodnevne aktivnosti u tri Vectilume stila.",
-    searchLabel: "Pretraži hobije",
-    placeholder: "Npr. plivanje, karate, crtanje...",
+    title: "Hobbies",
+    description: "Sports, music, crafts and everyday activities in three Vectilume styles.",
+    searchLabel: "Search hobbies",
+    placeholder: "e.g. swimming, karate, drawing…",
     items: hobbies,
   },
   {
     id: "general",
-    title: "Općenito",
-    description: "Navigacija, akcije, statusi, korisnici, analitika i ostale ikone sučelja.",
-    searchLabel: "Pretraži ikone",
-    placeholder: "Npr. zatvori, kalendar, pošta...",
+    title: "General",
+    description: "Navigation, actions, status, people, analytics and other interface icons.",
+    searchLabel: "Search icons",
+    placeholder: "e.g. close, calendar, mail…",
     items: general,
   },
 ];

@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Vectilume",
-  description: "Vectilume ikone: kolekcije, stilovi i pregled u sučelju.",
+  description: "Vectilume icons: collections, styles and in-context previews.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

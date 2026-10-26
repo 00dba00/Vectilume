@@ -1,1154 +1,1154 @@
 [
   {
     "id": "chevron-left",
-    "label": "Strelica lijevo",
+    "label": "Chevron left",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "chevron-right",
-    "label": "Strelica desno",
+    "label": "Chevron right",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "chevron-up",
-    "label": "Strelica gore",
+    "label": "Chevron up",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "chevron-down",
-    "label": "Strelica dolje",
+    "label": "Chevron down",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "arrow-left",
-    "label": "Natrag",
+    "label": "Arrow left",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "external-link",
-    "label": "Vanjska poveznica",
+    "label": "External link",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "menu",
-    "label": "Izbornik",
+    "label": "Menu",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "more-vertical",
-    "label": "Više",
+    "label": "More vertical",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "maximize",
-    "label": "Povećaj",
+    "label": "Maximize",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "home",
-    "label": "Početna",
+    "label": "Home",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "arrow-up",
-    "label": "Strelica gore",
+    "label": "Arrow up",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "arrow-down",
-    "label": "Strelica dolje",
+    "label": "Arrow down",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "arrow-right",
-    "label": "Strelica desno",
+    "label": "Arrow right",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "arrow-up-right",
-    "label": "Otvori",
+    "label": "Arrow up right",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "chevrons-up",
-    "label": "Nagli rast",
+    "label": "Chevrons up",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "more-horizontal",
-    "label": "Više opcija",
+    "label": "More horizontal",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "grip-vertical",
-    "label": "Povuci",
+    "label": "Grip vertical",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "swap-horizontal",
-    "label": "Usporedi",
+    "label": "Swap horizontal",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "swap-vertical",
-    "label": "Promijeni redoslijed",
+    "label": "Swap vertical",
     "group": "navigation",
-    "groupLabel": "Navigacija"
+    "groupLabel": "Navigation"
   },
   {
     "id": "close",
-    "label": "Zatvori",
+    "label": "Close",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "check",
-    "label": "Potvrdi",
+    "label": "Check",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "check-double",
-    "label": "Dvostruka kvačica",
+    "label": "Double check",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "plus",
-    "label": "Dodaj",
+    "label": "Plus",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "minus",
-    "label": "Ukloni",
+    "label": "Minus",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "trash",
-    "label": "Obriši",
+    "label": "Trash",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "copy",
-    "label": "Kopiraj",
+    "label": "Copy",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "send",
-    "label": "Pošalji",
+    "label": "Send",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "share",
-    "label": "Podijeli",
+    "label": "Share",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "save",
-    "label": "Spremi",
+    "label": "Save",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "edit",
-    "label": "Uredi",
+    "label": "Edit",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "download",
-    "label": "Preuzmi",
+    "label": "Download",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "refresh",
-    "label": "Osvježi",
+    "label": "Refresh",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "undo",
-    "label": "Poništi",
+    "label": "Undo",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "filter",
-    "label": "Filtar",
+    "label": "Filter",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "search-x",
-    "label": "Nema rezultata",
+    "label": "No results",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "log-in",
-    "label": "Prijava",
+    "label": "Log in",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "log-out",
-    "label": "Odjava",
+    "label": "Log out",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "play",
-    "label": "Pokreni",
+    "label": "Play",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "search",
-    "label": "Pretraži",
+    "label": "Search",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "plus-circle",
-    "label": "Dodaj",
+    "label": "Plus circle",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "minus-circle",
-    "label": "Oduzmi",
+    "label": "Minus circle",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "play-circle",
-    "label": "Reproduciraj",
+    "label": "Play circle",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "repeat",
-    "label": "Ponovi",
+    "label": "Repeat",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "upload",
-    "label": "Objavi",
+    "label": "Upload",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "link",
-    "label": "Poveznica",
+    "label": "Link",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "paperclip",
-    "label": "Privitak",
+    "label": "Paperclip",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "bookmark",
-    "label": "Oznaka",
+    "label": "Bookmark",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "flag",
-    "label": "Zastava",
+    "label": "Flag",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "broom",
-    "label": "Očisti",
+    "label": "Broom",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "wand",
-    "label": "Automatski popravak",
+    "label": "Wand",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "merge",
-    "label": "Spoji",
+    "label": "Merge",
     "group": "actions",
-    "groupLabel": "Akcije"
+    "groupLabel": "Actions"
   },
   {
     "id": "lock",
-    "label": "Zaključano",
+    "label": "Lock",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "eye",
-    "label": "Prikaži",
+    "label": "Eye",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "eye-off",
-    "label": "Sakrij",
+    "label": "Eye off",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "shield-check",
-    "label": "Zaštićeno",
+    "label": "Shield check",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "bell-off",
-    "label": "Obavijesti isključene",
+    "label": "Bell off",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "alert-triangle",
-    "label": "Upozorenje",
+    "label": "Alert triangle",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "alert-circle",
-    "label": "Greška",
+    "label": "Alert circle",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "check-circle",
-    "label": "Uspjeh",
+    "label": "Check circle",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "x-circle",
-    "label": "Pogreška",
+    "label": "X circle",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "circle",
-    "label": "Krug",
+    "label": "Circle",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "info",
-    "label": "Informacija",
+    "label": "Info",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "help-circle",
-    "label": "Pomoć",
+    "label": "Help circle",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "loader",
-    "label": "Učitavanje",
+    "label": "Loader",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "wifi",
     "label": "Wi-Fi",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "wifi-off",
-    "label": "Bez veze",
+    "label": "Wi-Fi off",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "toggle-on",
-    "label": "Uključeno",
+    "label": "Toggle on",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "toggle-off",
-    "label": "Isključeno",
+    "label": "Toggle off",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "moon",
-    "label": "Tamna tema",
+    "label": "Moon",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "sun",
-    "label": "Svijetla tema",
+    "label": "Sun",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "settings",
-    "label": "Postavke",
+    "label": "Settings",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "bell",
-    "label": "Obavijesti",
+    "label": "Bell",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "shield",
-    "label": "Zaštita",
+    "label": "Shield",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "ban",
-    "label": "Zabranjeno",
+    "label": "Ban",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "circle-dot",
-    "label": "Odabrano",
+    "label": "Circle dot",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "circle-ellipsis",
-    "label": "Na čekanju",
+    "label": "Circle ellipsis",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "bell-ring",
-    "label": "Obavijest stiže",
+    "label": "Bell ring",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "shield-alert",
-    "label": "Upozorenje sigurnosti",
+    "label": "Shield alert",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "shield-user",
-    "label": "Administrator",
+    "label": "Shield user",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "badge-check",
-    "label": "Verificirano",
+    "label": "Badge check",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "key",
-    "label": "Ključ",
+    "label": "Key",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "cloud-check",
-    "label": "Spremljeno u oblak",
+    "label": "Cloud check",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "cpu",
-    "label": "Procesor",
+    "label": "CPU",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "monitor",
-    "label": "Računalo",
+    "label": "Monitor",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "sliders",
-    "label": "Podešavanje",
+    "label": "Sliders",
     "group": "status",
-    "groupLabel": "Status i sustav"
+    "groupLabel": "Status & system"
   },
   {
     "id": "users",
-    "label": "Korisnici",
+    "label": "Users",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "user-plus",
-    "label": "Dodaj korisnika",
+    "label": "User plus",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "user-check",
-    "label": "Potvrđen korisnik",
+    "label": "User check",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "user-minus",
-    "label": "Ukloni korisnika",
+    "label": "User minus",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "user-circle",
-    "label": "Profil",
+    "label": "User circle",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "at-sign",
-    "label": "E-mail adresa",
+    "label": "At sign",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "mail",
-    "label": "Pošta",
+    "label": "Mail",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "inbox",
-    "label": "Pristigla pošta",
+    "label": "Inbox",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "message-circle",
-    "label": "Poruka",
+    "label": "Message circle",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "message-square",
-    "label": "Komentar",
+    "label": "Message square",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "message-square-plus",
-    "label": "Novi komentar",
+    "label": "Message square plus",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "thumbs-up",
-    "label": "Sviđa mi se",
+    "label": "Thumbs up",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "thumbs-down",
-    "label": "Ne sviđa mi se",
+    "label": "Thumbs down",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "user",
-    "label": "Korisnik",
+    "label": "User",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "heart",
-    "label": "Omiljeno",
+    "label": "Heart",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "user-x",
-    "label": "Neaktivan korisnik",
+    "label": "User X",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "user-search",
-    "label": "Pronađi korisnika",
+    "label": "User search",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "id-card",
-    "label": "Iskaznica",
+    "label": "ID card",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "handshake",
-    "label": "Dogovor",
+    "label": "Handshake",
     "group": "people",
-    "groupLabel": "Korisnici i komunikacija"
+    "groupLabel": "People & communication"
   },
   {
     "id": "trophy",
-    "label": "Trofej",
+    "label": "Trophy",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "podium",
-    "label": "Postolje",
+    "label": "Podium",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "target",
-    "label": "Meta",
+    "label": "Target",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "goal",
-    "label": "Gol",
+    "label": "Goal",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "award",
-    "label": "Nagrada",
+    "label": "Award",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "medal",
-    "label": "Medalja",
+    "label": "Medal",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "crown",
-    "label": "Kruna",
+    "label": "Crown",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "swords",
-    "label": "Dvoboj",
+    "label": "Swords",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "star",
-    "label": "Zvjezdica",
+    "label": "Star",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "flame",
-    "label": "Vatreno",
+    "label": "Flame",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "zap",
-    "label": "Brzo",
+    "label": "Zap",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "cross",
-    "label": "Križ",
+    "label": "Cross",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "whistle",
-    "label": "Sudac",
+    "label": "Whistle",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "flag-checkered",
-    "label": "Kraj utakmice",
+    "label": "Flag checkered",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "scoreboard",
-    "label": "Semafor",
+    "label": "Scoreboard",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "stadium",
-    "label": "Dvorana",
+    "label": "Stadium",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "dice",
-    "label": "Klađenje",
+    "label": "Dice",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "first-aid",
-    "label": "Ozljeda",
+    "label": "First aid",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "bandage",
-    "label": "Oporavak",
+    "label": "Bandage",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "snowflake",
-    "label": "Hladan niz",
+    "label": "Snowflake",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "plane",
-    "label": "Gostovanje",
+    "label": "Plane",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "bed",
-    "label": "Odmor",
+    "label": "Bed",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "sofa",
-    "label": "Slobodan dan",
+    "label": "Sofa",
     "group": "competition",
-    "groupLabel": "Natjecanje i sport"
+    "groupLabel": "Competition & sports"
   },
   {
     "id": "trending-up",
-    "label": "Rast",
+    "label": "Trending up",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "trending-down",
-    "label": "Pad",
+    "label": "Trending down",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "pie-chart",
-    "label": "Udjeli",
+    "label": "Pie chart",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "activity",
-    "label": "Aktivnost",
+    "label": "Activity",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "gauge",
-    "label": "Mjerač",
+    "label": "Gauge",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "layers",
-    "label": "Slojevi",
+    "label": "Layers",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "database",
-    "label": "Baza podataka",
+    "label": "Database",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "history",
-    "label": "Povijest",
+    "label": "History",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "ticket",
-    "label": "Listić",
+    "label": "Ticket",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "receipt",
-    "label": "Račun",
+    "label": "Receipt",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "dollar",
-    "label": "Novac",
+    "label": "Dollar",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "coins",
-    "label": "Žetoni",
+    "label": "Coins",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "calculator",
-    "label": "Kalkulator",
+    "label": "Calculator",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "shopping-cart",
-    "label": "Košarica",
+    "label": "Shopping cart",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "chart",
-    "label": "Grafikon",
+    "label": "Chart",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "wallet",
-    "label": "Novčanik",
+    "label": "Wallet",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "chart-line",
-    "label": "Linijski graf",
+    "label": "Chart line",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "insights",
-    "label": "Uvidi",
+    "label": "Insights",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "percent",
-    "label": "Postotak",
+    "label": "Percent",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "table",
-    "label": "Tablica",
+    "label": "Table",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "scale",
-    "label": "Usporedba",
+    "label": "Scale",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "bank",
-    "label": "Banka",
+    "label": "Bank",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "piggy-bank",
-    "label": "Štednja",
+    "label": "Piggy bank",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "shopping-bag",
-    "label": "Kupnja",
+    "label": "Shopping bag",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "briefcase",
-    "label": "Posao",
+    "label": "Briefcase",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "function",
-    "label": "Formula",
+    "label": "Function",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "infinity",
-    "label": "Beskonačno",
+    "label": "Infinity",
     "group": "analytics",
-    "groupLabel": "Analitika i novac"
+    "groupLabel": "Analytics & money"
   },
   {
     "id": "clock",
-    "label": "Vrijeme",
+    "label": "Clock",
     "group": "time",
-    "groupLabel": "Vrijeme"
+    "groupLabel": "Time"
   },
   {
     "id": "calendar-x",
-    "label": "Otkazano",
+    "label": "Calendar x",
     "group": "time",
-    "groupLabel": "Vrijeme"
+    "groupLabel": "Time"
   },
   {
     "id": "calendar-clock",
-    "label": "Raspored",
+    "label": "Calendar clock",
     "group": "time",
-    "groupLabel": "Vrijeme"
+    "groupLabel": "Time"
   },
   {
     "id": "hourglass",
-    "label": "Rok",
+    "label": "Hourglass",
     "group": "time",
-    "groupLabel": "Vrijeme"
+    "groupLabel": "Time"
   },
   {
     "id": "calendar",
-    "label": "Kalendar",
+    "label": "Calendar",
     "group": "time",
-    "groupLabel": "Vrijeme"
+    "groupLabel": "Time"
   },
   {
     "id": "timer",
-    "label": "Štoperica",
+    "label": "Timer",
     "group": "time",
-    "groupLabel": "Vrijeme"
+    "groupLabel": "Time"
   },
   {
     "id": "sparkles",
-    "label": "AI",
+    "label": "Sparkles",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "bot",
-    "label": "Asistent",
+    "label": "Bot",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "flask",
-    "label": "Eksperiment",
+    "label": "Flask",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "lightbulb",
-    "label": "Ideja",
+    "label": "Lightbulb",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "telescope",
-    "label": "Istraživanje",
+    "label": "Telescope",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "rocket",
-    "label": "Pokretanje",
+    "label": "Rocket",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "puzzle",
-    "label": "Integracija",
+    "label": "Puzzle",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "bug",
-    "label": "Greška u kodu",
+    "label": "Bug",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "code",
-    "label": "Kod",
+    "label": "Code",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "book-open",
-    "label": "Vodič",
+    "label": "Book open",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "list-checks",
-    "label": "Popis zadataka",
+    "label": "List checks",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "layout-template",
-    "label": "Predložak",
+    "label": "Layout template",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "palette",
-    "label": "Tema",
+    "label": "Palette",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "image",
-    "label": "Slika",
+    "label": "Image",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "camera",
-    "label": "Kamera",
+    "label": "Camera",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "folder-open",
-    "label": "Mapa",
+    "label": "Folder open",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "globe",
-    "label": "Javno",
+    "label": "Globe",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "map",
-    "label": "Karta",
+    "label": "Map",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "smartphone",
-    "label": "Mobitel",
+    "label": "Smartphone",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "document",
-    "label": "Dokument",
+    "label": "Document",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "car",
-    "label": "Automobil",
+    "label": "Car",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "brain",
-    "label": "AI analiza",
+    "label": "Brain",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "dashboard",
-    "label": "Nadzorna ploča",
+    "label": "Dashboard",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "grid",
-    "label": "Mreža",
+    "label": "Grid",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "columns",
-    "label": "Stupci",
+    "label": "Columns",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "list",
-    "label": "Popis",
+    "label": "List",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "list-ordered",
-    "label": "Numerirani popis",
+    "label": "List ordered",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "clipboard",
-    "label": "Zadatak",
+    "label": "Clipboard",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "file-pdf",
-    "label": "PDF",
+    "label": "PDF file",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "map-pin",
-    "label": "Lokacija",
+    "label": "Map pin",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "hash",
-    "label": "Oznaka",
+    "label": "Hash",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   },
   {
     "id": "gavel",
-    "label": "Pravila",
+    "label": "Gavel",
     "group": "ai",
-    "groupLabel": "AI i razno"
+    "groupLabel": "AI & misc"
   }
 ]

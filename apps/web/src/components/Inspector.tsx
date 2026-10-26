@@ -2,14 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
+import { IconShowcase } from "./IconShowcase";
 import styles from "./Lab.module.css";
-import { SIZES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
-import { themeVars, type Theme } from "@/lib/theme";
+import { SIZES, STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
+import { themeVars, type Background, type Theme } from "@/lib/theme";
 
 export interface Selection {
   collection: string;
   style: IconStyle;
   name: string;
+  label: string;
 }
 
 interface InspectorProps {
@@ -25,6 +27,8 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [showGrid, setShowGrid] = useState(true);
   const [copied, setCopied] = useState(false);
+  const [style, setStyle] = useState<IconStyle>(selection?.style ?? "outline");
+  const [surface, setSurface] = useState<Background>(theme.background);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -34,7 +38,7 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
     setCopied(false);
   }, [selection]);
 
-  const svg = selection ? lookup[iconId(selection.style, selection.name)] : undefined;
+  const svg = selection ? lookup[iconId(style, selection.name)] : undefined;
 
   const copy = async () => {
     if (!svg) return;
@@ -55,15 +59,24 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
           <header className={styles.inspectorHeader}>
             <div>
               <p className={styles.eyebrow}>
-                {selection.collection} · {selection.style}
+                {selection.collection} · {selection.name}
               </p>
-              <h2 id="inspector-title">{selection.name}</h2>
+              <h2 id="inspector-title">{selection.label}</h2>
             </div>
             <button type="button" className={styles.reset} onClick={onClose} autoFocus>
-              Zatvori
+              Close
             </button>
           </header>
 
+          <div className={styles.inspectorColumns}>
+          <div className={styles.inspectorMain}>
+          <div className={styles.segmented} role="group" aria-label="Icon style">
+            {STYLES.map((option) => (
+              <button key={option} type="button" aria-pressed={style === option} onClick={() => setStyle(option)}>
+                {option[0].toUpperCase() + option.slice(1)}
+              </button>
+            ))}
+          </div>
           <div className={styles.zoom} data-bg={theme.background} style={themeVars(theme)}>
             <Icon svg={svg} size={240} label={selection.name} />
             {showGrid && (
@@ -108,6 +121,22 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
               </button>
             </div>
             <pre>{svg ?? "Not drawn yet."}</pre>
+          </div>
+          </div>
+
+          <div className={styles.inspectorUse}>
+            <div className={styles.useHeader}>
+              <h3>In use</h3>
+              <div className={styles.segmented} role="group" aria-label="Preview background">
+                {(["light", "dark"] as const).map((option) => (
+                  <button key={option} type="button" aria-pressed={surface === option} onClick={() => setSurface(option)}>
+                    {option === "light" ? "Light" : "Dark"}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <IconShowcase name={selection.name} label={selection.label} style={style} lookup={lookup} theme={theme} background={surface} />
+          </div>
           </div>
         </div>
       )}

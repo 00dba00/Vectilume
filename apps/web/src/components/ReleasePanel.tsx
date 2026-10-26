@@ -20,17 +20,17 @@ export function ReleasePanel() {
       try {
         const saved = await saveRelease({ version, collections: selected });
         const titles = COLLECTIONS.filter((collection) => saved.collections.includes(collection.id)).map((collection) => collection.title);
-        setStatus(titles.length ? `Spremljeno: ${titles.join(", ")} · v${saved.version}` : "Spremljeno: nijedna kolekcija nije potvrđena.");
+        setStatus(titles.length ? `Saved: ${titles.join(", ")} · v${saved.version}` : "Saved: no collection confirmed.");
       } catch (error) {
-        setStatus(error instanceof Error ? error.message : "Spremanje nije uspjelo.");
+        setStatus(error instanceof Error ? error.message : "Saving failed.");
       }
     });
 
   return (
     <section className={styles.panel} aria-labelledby="release-heading">
       <div>
-        <h2 id="release-heading">Objava na npm</h2>
-        <p>Potvrđene kolekcije idu cijele u paket <code>@vectilume/icons</code>.</p>
+        <h2 id="release-heading">npm release</h2>
+        <p>Confirmed collections ship whole in the <code>@vectilume/icons</code> package.</p>
       </div>
 
       <div className={styles.collections}>
@@ -38,22 +38,22 @@ export function ReleasePanel() {
           <label key={collection.id} className={styles.collection}>
             <input type="checkbox" checked={selected.includes(collection.id)} onChange={() => toggle(collection.id)} />
             <span>{collection.title}</span>
-            <small>{collection.items.length} ikona</small>
+            <small>{collection.items.length} icons</small>
           </label>
         ))}
       </div>
 
       <div className={styles.actions}>
         <label className={styles.version}>
-          <span>Verzija</span>
+          <span>Version</span>
           <input value={version} onChange={(event) => setVersion(event.target.value)} spellCheck={false} />
         </label>
-        <button type="button" onClick={save} disabled={pending}>{pending ? "Spremam..." : "Spremi"}</button>
+        <button type="button" onClick={save} disabled={pending}>{pending ? "Saving…" : "Save"}</button>
       </div>
 
       <p className={styles.status} role="status">{status}</p>
       <p className={styles.hint}>
-        Zatim u terminalu: <code>pnpm --filter @vectilume/icons-svg release</code>, pa <code>npm publish --access public</code> iz <code>packages/icons-svg/dist/npm</code>.
+        Then in a terminal: <code>pnpm --filter @vectilume/icons-svg release</code>, and <code>npm publish --access public</code> from <code>packages/icons-svg/dist/npm</code>.
       </p>
     </section>
   );

@@ -1,842 +1,842 @@
 [
   {
     "id": "football",
-    "label": "Nogomet",
+    "label": "Football",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "futsal",
-    "label": "Mali nogomet",
+    "label": "Futsal",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "basketball",
-    "label": "Košarka",
+    "label": "Basketball",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "volleyball",
-    "label": "Odbojka",
+    "label": "Volleyball",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "handball",
-    "label": "Rukomet",
+    "label": "Handball",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "rugby",
-    "label": "Ragbi",
+    "label": "Rugby",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "american-football",
-    "label": "Američki nogomet",
+    "label": "American football",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "baseball",
-    "label": "Bejzbol",
+    "label": "Baseball",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "cricket",
-    "label": "Kriket",
+    "label": "Cricket",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "field-hockey",
-    "label": "Hokej na travi",
+    "label": "Field hockey",
     "group": "team-sports",
-    "groupLabel": "Ekipni sportovi"
+    "groupLabel": "Team sports"
   },
   {
     "id": "tennis",
-    "label": "Tenis",
+    "label": "Tennis",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "table-tennis",
-    "label": "Stolni tenis",
+    "label": "Table tennis",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "badminton",
     "label": "Badminton",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "squash",
     "label": "Squash",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "padel",
     "label": "Padel",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "golf",
     "label": "Golf",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "bowling",
-    "label": "Kuglanje",
+    "label": "Bowling",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "darts",
-    "label": "Pikado",
+    "label": "Darts",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "billiards",
-    "label": "Biljar",
+    "label": "Billiards",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "shooting",
-    "label": "Streljaštvo",
+    "label": "Shooting",
     "group": "precision-sports",
-    "groupLabel": "Reketi i preciznost"
+    "groupLabel": "Rackets & precision"
   },
   {
     "id": "swimming",
-    "label": "Plivanje",
+    "label": "Swimming",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "water-polo",
-    "label": "Vaterpolo",
+    "label": "Water polo",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "diving",
-    "label": "Ronjenje",
+    "label": "Diving",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "snorkeling",
     "label": "Snorkeling",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "surfing",
-    "label": "Surfanje",
+    "label": "Surfing",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "sailing",
-    "label": "Jedrenje",
+    "label": "Sailing",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "kayaking",
-    "label": "Kajak",
+    "label": "Kayaking",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "rowing",
-    "label": "Veslanje",
+    "label": "Rowing",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "paddleboarding",
-    "label": "SUP",
+    "label": "Paddleboarding",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "fishing",
-    "label": "Ribolov",
+    "label": "Fishing",
     "group": "water",
-    "groupLabel": "Voda"
+    "groupLabel": "Water"
   },
   {
     "id": "boxing",
-    "label": "Boks",
+    "label": "Boxing",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "kickboxing",
     "label": "Kickboxing",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "karate",
     "label": "Karate",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "judo",
     "label": "Judo",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "taekwondo",
     "label": "Taekwondo",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "jiu-jitsu",
     "label": "Jiu-jitsu",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "wrestling",
-    "label": "Hrvanje",
+    "label": "Wrestling",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "muay-thai",
-    "label": "Muay thai",
+    "label": "Muay Thai",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "fencing",
-    "label": "Mačevanje",
+    "label": "Fencing",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "aikido",
     "label": "Aikido",
     "group": "martial-arts",
-    "groupLabel": "Borilačke vještine"
+    "groupLabel": "Martial arts"
   },
   {
     "id": "running",
-    "label": "Trčanje",
+    "label": "Running",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "walking",
-    "label": "Hodanje",
+    "label": "Walking",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "gym",
-    "label": "Teretana",
+    "label": "Gym",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "weightlifting",
-    "label": "Dizanje utega",
+    "label": "Weightlifting",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "yoga",
-    "label": "Joga",
+    "label": "Yoga",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "pilates",
     "label": "Pilates",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "calisthenics",
-    "label": "Kalistenika",
+    "label": "Calisthenics",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "aerobics",
-    "label": "Aerobik",
+    "label": "Aerobics",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "stretching",
-    "label": "Istezanje",
+    "label": "Stretching",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "jump-rope",
-    "label": "Preskakanje užeta",
+    "label": "Jump rope",
     "group": "fitness",
-    "groupLabel": "Fitness i kretanje"
+    "groupLabel": "Fitness & movement"
   },
   {
     "id": "hiking",
-    "label": "Planinarenje",
+    "label": "Hiking",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "trekking",
     "label": "Trekking",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "camping",
-    "label": "Kampiranje",
+    "label": "Camping",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "climbing",
-    "label": "Penjanje",
+    "label": "Climbing",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "bouldering",
     "label": "Bouldering",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "orienteering",
-    "label": "Orijentacijsko trčanje",
+    "label": "Orienteering",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "birdwatching",
-    "label": "Promatranje ptica",
+    "label": "Birdwatching",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "mushroom-foraging",
-    "label": "Skupljanje gljiva",
+    "label": "Mushroom foraging",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "hunting",
-    "label": "Lov",
+    "label": "Hunting",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "geocaching",
     "label": "Geocaching",
     "group": "outdoors",
-    "groupLabel": "Priroda i planine"
+    "groupLabel": "Outdoors & mountains"
   },
   {
     "id": "cycling",
-    "label": "Biciklizam",
+    "label": "Cycling",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "mountain-biking",
-    "label": "Brdski biciklizam",
+    "label": "Mountain biking",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "bmx",
     "label": "BMX",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "skateboarding",
-    "label": "Skateboard",
+    "label": "Skateboarding",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "roller-skating",
-    "label": "Rolanje",
+    "label": "Roller skating",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "scooter",
-    "label": "Romobil",
+    "label": "Scooter",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "motorcycling",
-    "label": "Motociklizam",
+    "label": "Motorcycling",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "karting",
     "label": "Karting",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "motorsport",
-    "label": "Automobilizam",
+    "label": "Motorsport",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "quad-biking",
-    "label": "Vožnja quadom",
+    "label": "Quad biking",
     "group": "wheels",
-    "groupLabel": "Kotači"
+    "groupLabel": "Wheels"
   },
   {
     "id": "skiing",
-    "label": "Skijanje",
+    "label": "Skiing",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "snowboarding",
-    "label": "Snowboard",
+    "label": "Snowboarding",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "ice-skating",
-    "label": "Klizanje",
+    "label": "Ice skating",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "ice-hockey",
-    "label": "Hokej na ledu",
+    "label": "Ice hockey",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "sledding",
-    "label": "Sanjkanje",
+    "label": "Sledding",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "cross-country-skiing",
-    "label": "Skijaško trčanje",
+    "label": "Cross country skiing",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "paragliding",
     "label": "Paragliding",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "skydiving",
-    "label": "Padobranstvo",
+    "label": "Skydiving",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "zipline",
     "label": "Zipline",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "rafting",
     "label": "Rafting",
     "group": "winter-adventure",
-    "groupLabel": "Zima i adrenalin"
+    "groupLabel": "Winter & adrenaline"
   },
   {
     "id": "ballet",
-    "label": "Balet",
+    "label": "Ballet",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "salsa",
     "label": "Salsa",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "tango",
     "label": "Tango",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "hip-hop-dance",
-    "label": "Hip-hop ples",
+    "label": "Hip-hop dance",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "contemporary-dance",
-    "label": "Suvremeni ples",
+    "label": "Contemporary dance",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "folk-dance",
-    "label": "Folklor",
+    "label": "Folk dance",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "social-dance",
-    "label": "Društveni ples",
+    "label": "Social dance",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "acting",
-    "label": "Gluma",
+    "label": "Acting",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "stand-up",
-    "label": "Stand-up komedija",
+    "label": "Stand-up comedy",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "magic",
-    "label": "Mađioničarstvo",
+    "label": "Magic",
     "group": "performance",
-    "groupLabel": "Ples i izvedba"
+    "groupLabel": "Dance & performance"
   },
   {
     "id": "singing",
-    "label": "Pjevanje",
+    "label": "Singing",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "guitar",
-    "label": "Gitara",
+    "label": "Guitar",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "piano",
-    "label": "Klavir",
+    "label": "Piano",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "drums",
-    "label": "Bubnjevi",
+    "label": "Drums",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "violin",
-    "label": "Violina",
+    "label": "Violin",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "bass-guitar",
-    "label": "Bas-gitara",
+    "label": "Bass guitar",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "saxophone",
-    "label": "Saksofon",
+    "label": "Saxophone",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "dj",
-    "label": "DJ-ing",
+    "label": "DJ",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "composing",
-    "label": "Skladanje",
+    "label": "Composing",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "choir",
-    "label": "Zborsko pjevanje",
+    "label": "Choir",
     "group": "music",
-    "groupLabel": "Glazba"
+    "groupLabel": "Music"
   },
   {
     "id": "drawing",
-    "label": "Crtanje",
+    "label": "Drawing",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "painting",
-    "label": "Slikanje",
+    "label": "Painting",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "photography",
-    "label": "Fotografija",
+    "label": "Photography",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "filming",
-    "label": "Snimanje videa",
+    "label": "Filming",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "video-editing",
-    "label": "Montaža videa",
+    "label": "Video editing",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "digital-illustration",
-    "label": "Digitalna ilustracija",
+    "label": "Digital illustration",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "graphic-design",
-    "label": "Grafički dizajn",
+    "label": "Graphic design",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "calligraphy",
-    "label": "Kaligrafija",
+    "label": "Calligraphy",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "pottery",
-    "label": "Keramika",
+    "label": "Pottery",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "sculpting",
-    "label": "Kiparstvo",
+    "label": "Sculpting",
     "group": "visual-arts",
-    "groupLabel": "Vizualno stvaralaštvo"
+    "groupLabel": "Visual arts"
   },
   {
     "id": "knitting",
-    "label": "Pletenje",
+    "label": "Knitting",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "crochet",
-    "label": "Heklanje",
+    "label": "Crochet",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "sewing",
-    "label": "Šivanje",
+    "label": "Sewing",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "embroidery",
-    "label": "Vezenje",
+    "label": "Embroidery",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "jewelry-making",
-    "label": "Izrada nakita",
+    "label": "Jewelry making",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "woodworking",
-    "label": "Obrada drva",
+    "label": "Woodworking",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "origami",
     "label": "Origami",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "model-making",
-    "label": "Modelarstvo",
+    "label": "Model making",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "furniture-restoration",
-    "label": "Restauracija namještaja",
+    "label": "Furniture restoration",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "3d-printing",
-    "label": "3D printanje",
+    "label": "3D printing",
     "group": "crafts",
-    "groupLabel": "Rukotvorine"
+    "groupLabel": "Crafts"
   },
   {
     "id": "video-games",
-    "label": "Videoigre",
+    "label": "Video games",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "board-games",
-    "label": "Društvene igre",
+    "label": "Board games",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "chess",
-    "label": "Šah",
+    "label": "Chess",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "puzzles",
-    "label": "Slagalice",
+    "label": "Puzzles",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "quizzes",
-    "label": "Kvizovi",
+    "label": "Quizzes",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "card-games",
-    "label": "Kartaške igre",
+    "label": "Card games",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "coding",
-    "label": "Programiranje",
+    "label": "Coding",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "robotics",
-    "label": "Robotika",
+    "label": "Robotics",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "astronomy",
-    "label": "Astronomija",
+    "label": "Astronomy",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "reading",
-    "label": "Čitanje",
+    "label": "Reading",
     "group": "games-tech",
-    "groupLabel": "Igre i tehnologija"
+    "groupLabel": "Games & tech"
   },
   {
     "id": "cooking",
-    "label": "Kuhanje",
+    "label": "Cooking",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "baking",
-    "label": "Pečenje kolača",
+    "label": "Baking",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "gardening",
-    "label": "Vrtlarstvo",
+    "label": "Gardening",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "plant-growing",
-    "label": "Uzgoj biljaka",
+    "label": "Plant growing",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "flower-arranging",
-    "label": "Aranžiranje cvijeća",
+    "label": "Flower arranging",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "writing",
-    "label": "Pisanje",
+    "label": "Writing",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "language-learning",
-    "label": "Učenje jezika",
+    "label": "Language learning",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "travel",
-    "label": "Putovanja",
+    "label": "Travel",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "volunteering",
-    "label": "Volontiranje",
+    "label": "Volunteering",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   },
   {
     "id": "collecting",
-    "label": "Skupljanje predmeta",
+    "label": "Collecting",
     "group": "everyday",
-    "groupLabel": "Dom i svakodnevni hobiji"
+    "groupLabel": "Home & everyday"
   }
 ]

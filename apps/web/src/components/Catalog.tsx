@@ -58,7 +58,7 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
           <span>{searchLabel}</span>
           <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder={placeholder} />
         </label>
-        <div className={styles.styles} role="group" aria-label="Stil ikona">
+        <div className={styles.styles} role="group" aria-label="Icon style">
           {STYLES.map((option) => (
             <button key={option} type="button" aria-pressed={style === option} onClick={() => setStyle(option)}>
               {option}
@@ -67,8 +67,8 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
         </div>
       </div>
 
-      <div className={styles.groups} role="group" aria-label={`Skupine: ${title}`}>
-        <button type="button" aria-pressed={group === "all"} onClick={() => setGroup("all")}>Sve</button>
+      <div className={styles.groups} role="group" aria-label={`${title} groups`}>
+        <button type="button" aria-pressed={group === "all"} onClick={() => setGroup("all")}>All</button>
         {groups.map(([groupId, label]) => (
           <button key={groupId} type="button" aria-pressed={group === groupId} onClick={() => setGroup(groupId)}>{label}</button>
         ))}
@@ -80,14 +80,14 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
             key={item.id}
             type="button"
             className={styles.card}
-            onClick={() => onSelect({ collection: title, style, name: item.id })}
-            aria-label={`Pregled ikone ${item.label}, ${style}`}
+            onClick={() => onSelect({ collection: title, style, name: item.id, label: item.label })}
+            aria-label={`Preview ${item.label}, ${style}`}
           >
             <Icon svg={lookup[iconId(style, item.id)]} size={40} />
             <span>{item.label}</span>
           </button>
         ))}
-        {visible.length === 0 && <p className={styles.empty}>Nema ikona za ovaj upit.</p>}
+        {visible.length === 0 && <p className={styles.empty}>No icons match this search.</p>}
       </div>
     </section>
   );

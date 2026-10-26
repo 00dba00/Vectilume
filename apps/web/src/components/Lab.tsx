@@ -20,24 +20,24 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
     <div className={styles.page}>
       <header className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>Biblioteka ikona</p>
+          <p className={styles.eyebrow}>Icon library</p>
           <h1 className={styles.title}>Vectilume</h1>
         </div>
         <p className={styles.lede}>
-          Pretraži kolekcije, promijeni stil i boje, a klikom na ikonu otvori je na mreži 24 × 24.
-          <span className={styles.count}>{total} ikona · outline, duotone, solid</span>
+          Search the collections, switch styles and colors, and open any icon to see it on the 24 × 24 grid and in real UI.
+          <span className={styles.count}>{total} icons · outline, duotone, solid</span>
         </p>
-        <nav className={styles.jump} aria-label="Sadržaj">
+        <nav className={styles.jump} aria-label="Contents">
           {COLLECTIONS.map((collection) => (
             <a key={collection.id} href={`#${collection.id}`}>{collection.title}</a>
           ))}
-          <a href="#context-heading">U sučelju</a>
-          <a href="#release-heading">Objava na npm</a>
+          <a href="#context-heading">In context</a>
+          <a href="#release-heading">npm release</a>
         </nav>
       </header>
 
-      <div className={styles.toolbar} role="toolbar" aria-label="Postavke prikaza">
-        <div className={styles.segmented} role="group" aria-label="Pozadina">
+      <div className={styles.toolbar} role="toolbar" aria-label="Preview settings">
+        <div className={styles.segmented} role="group" aria-label="Background">
           {(["light", "dark"] as const).map((background) => (
             <button
               key={background}
@@ -45,13 +45,13 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
               aria-pressed={theme.background === background}
               onClick={() => update({ background })}
             >
-              {background === "light" ? "Svijetlo" : "Tamno"}
+              {background === "light" ? "Light" : "Dark"}
             </button>
           ))}
         </div>
 
         <label className={styles.control}>
-          <span>Boja</span>
+          <span>Ink</span>
           <input
             type="color"
             value={theme.ink ?? (theme.background === "light" ? "#1b1b1f" : "#ececf0")}
@@ -64,15 +64,15 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
           )}
         </label>
         <label className={styles.control}>
-          <span>Primarna</span>
+          <span>Primary</span>
           <input type="color" value={theme.primary} onChange={(event) => update({ primary: event.target.value })} />
         </label>
         <label className={styles.control}>
-          <span>Sekundarna</span>
+          <span>Secondary</span>
           <input type="color" value={theme.secondary} onChange={(event) => update({ secondary: event.target.value })} />
         </label>
         <label className={styles.control}>
-          <span>Debljina</span>
+          <span>Stroke</span>
           <input
             type="range"
             min={1}
@@ -84,7 +84,7 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
           <output className={styles.value}>{theme.stroke.toFixed(2)}</output>
         </label>
         <button type="button" className={styles.reset} onClick={() => setTheme(DEFAULT_THEME)}>
-          Vrati
+          Reset
         </button>
       </div>
 
@@ -92,7 +92,7 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
         <Catalog
           key={collection.id}
           id={collection.id}
-          eyebrow={`Kolekcija ${String(index + 1).padStart(2, "0")} · ${collection.items.length} ikona`}
+          eyebrow={`Collection ${String(index + 1).padStart(2, "0")} · ${collection.items.length} icons`}
           title={collection.title}
           description={collection.description}
           searchLabel={collection.searchLabel}
@@ -108,7 +108,7 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
 
       <ReleasePanel />
 
-      <Inspector selection={selection} lookup={lookup} theme={theme} onClose={() => setSelection(null)} />
+      <Inspector key={selection ? `${selection.collection}/${selection.name}` : "closed"} selection={selection} lookup={lookup} theme={theme} onClose={() => setSelection(null)} />
     </div>
   );
 }
