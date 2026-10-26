@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
 import styles from "./Lab.module.css";
-import { DIRECTIONS, SIZES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
+import { SIZES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
 import { themeVars, type Theme } from "@/lib/theme";
 
 export interface Selection {
-  direction: string | null;
+  collection: string;
   style: IconStyle;
   name: string;
 }
@@ -35,9 +35,6 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
   }, [selection]);
 
   const svg = selection ? lookup[iconId(selection.style, selection.name)] : undefined;
-  const directionLabel = selection?.direction === null
-    ? 'Hobiji'
-    : DIRECTIONS.find((direction) => direction.id === selection?.direction)?.label;
 
   const copy = async () => {
     if (!svg) return;
@@ -58,12 +55,12 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
           <header className={styles.inspectorHeader}>
             <div>
               <p className={styles.eyebrow}>
-                {directionLabel} · {selection.style}
+                {selection.collection} · {selection.style}
               </p>
               <h2 id="inspector-title">{selection.name}</h2>
             </div>
             <button type="button" className={styles.reset} onClick={onClose} autoFocus>
-              Close
+              Zatvori
             </button>
           </header>
 

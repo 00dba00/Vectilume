@@ -2,36 +2,42 @@
 
 import { useState } from "react";
 import { ContextPreview } from "./ContextPreview";
-import { Icon } from "./Icon";
 import { Inspector, type Selection } from "./Inspector";
 import { Catalog } from "./Catalog";
 import { ReleasePanel } from "./ReleasePanel";
 import styles from "./Lab.module.css";
-import { DIRECTIONS, PROTOTYPE_ICONS, STYLES, iconId, type IconLookup } from "@/lib/icons";
+import type { IconLookup } from "@/lib/icons";
 import { COLLECTIONS } from "@/lib/collections";
-import { DEFAULT_THEME, themeVars, type Theme } from "@/lib/theme";
+import { DEFAULT_THEME, type Theme } from "@/lib/theme";
 
 export function Lab({ lookup }: { lookup: IconLookup }) {
   const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
   const [selection, setSelection] = useState<Selection | null>(null);
   const update = (patch: Partial<Theme>) => setTheme((current) => ({ ...current, ...patch }));
-  const drawn = Object.keys(lookup).length;
+  const total = COLLECTIONS.reduce((sum, collection) => sum + collection.items.length, 0);
 
   return (
     <div className={styles.page}>
       <header className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>Icon collections</p>
+          <p className={styles.eyebrow}>Biblioteka ikona</p>
           <h1 className={styles.title}>Vectilume</h1>
         </div>
         <p className={styles.lede}>
-          Explore icon sets across styles and sizes. Click an icon to inspect it on the 24 × 24 grid.
-          <span className={styles.count}>{drawn} SVGs drawn</span>
+          Pretraži kolekcije, promijeni stil i boje, a klikom na ikonu otvori je na mreži 24 × 24.
+          <span className={styles.count}>{total} ikona · outline, duotone, solid</span>
         </p>
+        <nav className={styles.jump} aria-label="Sadržaj">
+          {COLLECTIONS.map((collection) => (
+            <a key={collection.id} href={`#${collection.id}`}>{collection.title}</a>
+          ))}
+          <a href="#context-heading">U sučelju</a>
+          <a href="#release-heading">Objava na npm</a>
+        </nav>
       </header>
 
-      <div className={styles.toolbar} role="toolbar" aria-label="Preview settings">
-        <div className={styles.segmented} role="group" aria-label="Background">
+      <div className={styles.toolbar} role="toolbar" aria-label="Postavke prikaza">
+        <div className={styles.segmented} role="group" aria-label="Pozadina">
           {(["light", "dark"] as const).map((background) => (
             <button
               key={background}
@@ -39,13 +45,13 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
               aria-pressed={theme.background === background}
               onClick={() => update({ background })}
             >
-              {background === "light" ? "Light" : "Dark"}
+              {background === "light" ? "Svijetlo" : "Tamno"}
             </button>
           ))}
         </div>
 
         <label className={styles.control}>
-          <span>Ink</span>
+          <span>Boja</span>
           <input
             type="color"
             value={theme.ink ?? (theme.background === "light" ? "#1b1b1f" : "#ececf0")}
@@ -58,15 +64,15 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
           )}
         </label>
         <label className={styles.control}>
-          <span>Primary</span>
+          <span>Primarna</span>
           <input type="color" value={theme.primary} onChange={(event) => update({ primary: event.target.value })} />
         </label>
         <label className={styles.control}>
-          <span>Secondary</span>
+          <span>Sekundarna</span>
           <input type="color" value={theme.secondary} onChange={(event) => update({ secondary: event.target.value })} />
         </label>
         <label className={styles.control}>
-          <span>Stroke</span>
+          <span>Debljina</span>
           <input
             type="range"
             min={1}
@@ -78,46 +84,9 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
           <output className={styles.value}>{theme.stroke.toFixed(2)}</output>
         </label>
         <button type="button" className={styles.reset} onClick={() => setTheme(DEFAULT_THEME)}>
-          Reset
+          Vrati
         </button>
       </div>
-
-      <section aria-labelledby="compare-heading" className={styles.section}>
-        <h2 id="compare-heading" className={styles.sectionTitle}>
-          Distinctive Gloss · 12 icons
-        </h2>
-        <div className={styles.directions}>
-          {DIRECTIONS.map((direction) => (
-            <article key={direction.id} className={styles.direction}>
-              <header className={styles.directionHeader}>
-                <h3>{direction.label}</h3>
-                <p>{direction.summary}</p>
-              </header>
-              <div className={styles.canvas} data-bg={theme.background} style={themeVars(theme)}>
-                <div className={styles.sheet}>
-                  <span />
-                  {STYLES.map((style) => (
-                    <span key={style} className={styles.columnLabel}>
-                      {style}
-                    </span>
-                  ))}
-                  {PROTOTYPE_ICONS.map((name) => (
-                    <Row
-                      key={name}
-                      name={name}
-                      direction={direction.id}
-                      lookup={lookup}
-                      onSelect={setSelection}
-                    />
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <ReleasePanel />
 
       {COLLECTIONS.map((collection, index) => (
         <Catalog
@@ -137,41 +106,10 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
 
       <ContextPreview lookup={lookup} theme={theme} />
 
+      <ReleasePanel />
+
       <Inspector selection={selection} lookup={lookup} theme={theme} onClose={() => setSelection(null)} />
     </div>
   );
 }
 
-interface RowProps {
-  name: string;
-  direction: string;
-  lookup: IconLookup;
-  onSelect: (selection: Selection) => void;
-}
-
-function Row({ name, direction, lookup, onSelect }: RowProps) {
-  return (
-    <>
-      <span className={styles.rowLabel}>{name}</span>
-      {STYLES.map((style) => {
-        const svg = lookup[iconId(style, name)];
-        return (
-          <button
-            key={style}
-            type="button"
-            className={styles.cell}
-            aria-label={`Inspect ${name} ${style}`}
-            onClick={() => onSelect({ direction, style, name })}
-          >
-            <Icon svg={svg} size={48} />
-            <span className={styles.ladder}>
-              <Icon svg={svg} size={16} />
-              <Icon svg={svg} size={24} />
-              <Icon svg={svg} size={32} />
-            </span>
-          </button>
-        );
-      })}
-    </>
-  );
-}

@@ -80,7 +80,7 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
             key={item.id}
             type="button"
             className={styles.card}
-            onClick={() => onSelect({ direction: null, style, name: item.id })}
+            onClick={() => onSelect({ collection: title, style, name: item.id })}
             aria-label={`Pregled ikone ${item.label}, ${style}`}
           >
             <Icon svg={lookup[iconId(style, item.id)]} size={40} />

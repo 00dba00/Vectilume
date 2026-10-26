@@ -43,6 +43,27 @@
   font-variant-numeric: tabular-nums;
 }
 
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-basis: 100%;
+}
+
+.jump a {
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.jump a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* Toolbar */
 .toolbar {
   position: sticky;
@@ -171,96 +192,11 @@
   margin: 0;
 }
 
-.canvas,
 .zoom,
 .sizeStrip,
 .app {
   background: var(--canvas);
   color: var(--ink, var(--canvas-text));
-}
-
-/* Compare directions */
-.directions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 20px;
-}
-
-.direction {
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--radius);
-  background: var(--surface-2);
-  overflow: hidden;
-}
-
-.directionHeader {
-  padding: 20px 24px 16px;
-}
-
-.directionHeader h3 {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.directionHeader p {
-  margin: 4px 0 0;
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-.canvas {
-  flex: 1;
-  margin: 0 8px 8px;
-  padding: 8px 12px 12px;
-  border-radius: 16px;
-}
-
-.sheet {
-  display: grid;
-  grid-template-columns: 64px repeat(3, 1fr);
-  gap: 4px;
-}
-
-.columnLabel,
-.rowLabel {
-  color: var(--canvas-muted);
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.columnLabel {
-  padding: 4px 0;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.rowLabel {
-  align-self: center;
-}
-
-.cell {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 8px 12px;
-  border: 1px solid transparent;
-  border-radius: 16px;
-  background: none;
-  cursor: pointer;
-  color: inherit;
-}
-
-.cell:hover {
-  background: var(--canvas-2);
-}
-
-.ladder {
-  display: flex;
-  align-items: flex-end;
-  gap: 12px;
 }
 
 /* Inspector */
@@ -523,7 +459,6 @@
     padding: 12px 16px;
   }
 
-  .directions,
   .apps {
     grid-template-columns: 1fr;
   }

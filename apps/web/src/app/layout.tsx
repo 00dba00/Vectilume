@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Vectilume Lab",
-  description: "Compare Vectilume icon directions across styles, sizes and themes.",
+  title: "Vectilume",
+  description: "Vectilume ikone: kolekcije, stilovi i pregled u sučelju.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
