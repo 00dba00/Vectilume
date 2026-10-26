@@ -7,14 +7,15 @@
   "type": "module",
   "files": [
     "src",
+    "hobbies.json",
     "dist"
   ],
   "exports": {
     "./manifest.json": "./dist/manifest.json",
+    "./hobbies.json": "./hobbies.json",
     "./src/*": "./src/*"
   },
   "scripts": {
-    "generate:hobbies": "node generate-hobbies.mjs",
     "build": "tsx ../tooling/src/build-manifest.ts src dist/manifest.json",
     "validate": "tsx ../tooling/src/validate.ts src"
   },

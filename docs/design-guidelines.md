@@ -21,6 +21,8 @@ catching the surface:
 - Inset **3 units** from the outer edge (centerline to centerline); **2.5** on small round
   shapes (head, heart lobe) so the gap stays visible.
 - 2.5–4 units long; it must not touch any other detail (keep ≥ 0.5 visible gap at 24 px).
+  Exception: `basketball` keeps its deep side seams, so its gloss sits 1.95 from the seams
+  (~0.2 visible gap).
 - Base shapes: 3 px corner radius on rectangles, 2.5 px on smaller frames, round caps and joins.
 - Duotone: the secondary colour fills the main silhouette, the gloss stays a primary stroke.
 - Solid: the gloss becomes a cut-out of the same shape.

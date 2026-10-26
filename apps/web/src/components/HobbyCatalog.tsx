@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import hobbies from "@vectilume/icons-svg/src/hobbies.json";
+import hobbies from "@vectilume/icons-svg/hobbies.json";
 import { Icon } from "./Icon";
 import type { Selection } from "./Inspector";
 import { STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";

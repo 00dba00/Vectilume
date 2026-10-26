@@ -40,10 +40,10 @@ pnpm dev
 ## Hobbies collection
 
 The catalog includes 140 hobby icons in 14 groups. Each icon has Outline,
-Duotone, and Solid SVG sources on the same 24 × 24 grid. The source drawings
-and Croatian catalog labels live in `packages/icons-svg/generate-hobbies.mjs`.
-Run `pnpm --filter @vectilume/icons-svg generate:hobbies` after editing them,
-then `pnpm --filter @vectilume/icons-svg build` to refresh the catalog manifest.
+Duotone, and Solid SVG sources on the same 24 × 24 grid, hand-drawn to the
+Gloss rules in `docs/design-guidelines.md`. Croatian catalog labels and groups
+live in `packages/icons-svg/hobbies.json`. Run
+`pnpm --filter @vectilume/icons-svg build` to refresh the catalog manifest.
 Preview sheets for all three styles are in `docs/hobbies-*-preview.png`.
 
 ## Roadmap
