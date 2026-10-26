@@ -7,7 +7,7 @@ import { DIRECTIONS, SIZES, iconId, type IconLookup, type IconStyle } from "@/li
 import { themeVars, type Theme } from "@/lib/theme";
 
 export interface Selection {
-  direction: string;
+  direction: string | null;
   style: IconStyle;
   name: string;
 }
@@ -35,7 +35,9 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
   }, [selection]);
 
   const svg = selection ? lookup[iconId(selection.direction, selection.style, selection.name)] : undefined;
-  const directionLabel = DIRECTIONS.find((direction) => direction.id === selection?.direction)?.label;
+  const directionLabel = selection?.direction === null
+    ? 'Hobiji'
+    : DIRECTIONS.find((direction) => direction.id === selection?.direction)?.label;
 
   const copy = async () => {
     if (!svg) return;

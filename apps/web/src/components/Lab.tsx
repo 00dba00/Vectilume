@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ContextPreview } from "./ContextPreview";
 import { Icon } from "./Icon";
 import { Inspector, type Selection } from "./Inspector";
+import { HobbyCatalog } from "./HobbyCatalog";
 import styles from "./Lab.module.css";
 import { DIRECTIONS, PROTOTYPE_ICONS, STYLES, iconId, type IconLookup } from "@/lib/icons";
 import { DEFAULT_THEME, themeVars, type Theme } from "@/lib/theme";
@@ -18,11 +19,11 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
     <div className={styles.page}>
       <header className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>Phase 0 · Direction lab</p>
+          <p className={styles.eyebrow}>Icon collections</p>
           <h1 className={styles.title}>Vectilume</h1>
         </div>
         <p className={styles.lede}>
-          The Gloss direction across styles and sizes. Click any cell to inspect it on the 24 × 24 grid.
+          Explore icon sets across styles and sizes. Click an icon to inspect it on the 24 × 24 grid.
           <span className={styles.count}>{drawn} SVGs drawn</span>
         </p>
       </header>
@@ -79,9 +80,11 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
         </button>
       </div>
 
+      <HobbyCatalog lookup={lookup} theme={theme} onSelect={setSelection} />
+
       <section aria-labelledby="compare-heading" className={styles.section}>
         <h2 id="compare-heading" className={styles.sectionTitle}>
-          Compare directions
+          Original prototype · Distinctive Gloss
         </h2>
         <div className={styles.directions}>
           {DIRECTIONS.map((direction) => (

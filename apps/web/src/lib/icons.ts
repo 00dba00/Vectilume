@@ -41,6 +41,6 @@ export function buildLookup(list: ManifestIcon[]): IconLookup {
   return Object.fromEntries(list.map((icon) => [icon.id, icon.svg]));
 }
 
-export function iconId(direction: string, style: IconStyle, name: string): string {
-  return `${direction}/${style}/${name}`;
+export function iconId(direction: string | null, style: IconStyle, name: string): string {
+  return direction ? `${direction}/${style}/${name}` : `${style}/${name}`;
 }

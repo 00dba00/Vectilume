@@ -4,7 +4,7 @@
 
 A free, beautifully consistent icon system with powerful theming and practical icons for modern apps.
 
-**Status:** Phase 0 — defining the design system. Not published yet.
+**Status:** Design lab with a 140-icon Hobbies collection. Not published yet.
 
 ## Principles
 
@@ -20,7 +20,7 @@ A free, beautifully consistent icon system with powerful theming and practical i
 apps/
   web/              # Catalog and live editor (Next.js) — coming in Phase 0
 packages/
-  icons-svg/        # Source SVG files
+  icons-svg/        # Source SVG files and Hobbies generator
   tooling/          # SVG validation, optimization and build scripts
 docs/               # Design guidelines, naming, contributing
 ```
@@ -36,6 +36,15 @@ pnpm test
 pnpm validate
 pnpm dev
 ```
+
+## Hobbies collection
+
+The catalog includes 140 hobby icons in 14 groups. Each icon has Outline,
+Duotone, and Solid SVG sources on the same 24 × 24 grid. The source drawings
+and Croatian catalog labels live in `packages/icons-svg/generate-hobbies.mjs`.
+Run `pnpm --filter @vectilume/icons-svg generate:hobbies` after editing them,
+then `pnpm --filter @vectilume/icons-svg build` to refresh the catalog manifest.
+Preview sheets for all three styles are in `docs/hobbies-*-preview.png`.
 
 ## Roadmap
 
