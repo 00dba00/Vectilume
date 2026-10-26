@@ -28,6 +28,17 @@ catching the surface:
 - Base shapes: 3 px corner radius on rectangles, 2.5 px on smaller frames, round caps and joins.
 - Duotone: the secondary colour fills the main silhouette, the gloss stays a primary stroke.
 - Solid: the gloss becomes a cut-out of the same shape.
+
+### Small sports details
+
+- Tennis and squash use 1-unit filled string paths inside the 1.75-unit frame.
+  Their solid versions retain open mesh cells so the rackets read as strung rackets.
+  The tennis ball seam is a 0.75-unit filled path; these details do not override
+  the root stroke width.
+- Billiards uses a filled, font-independent numeral 8, with an offset number panel.
+- Classic nine-pin bowling keeps the ball smooth; the gloss sits on the pin.
+- Shooting uses uninterrupted concentric target rings and four short outer marks.
+  It omits the gloss to keep the rings clear at small sizes.
 - Line-only glyphs (chevrons, close, check, plus, arrows, menu, code…) have no body, so they
   carry no gloss and their duotone is the outline in the primary colour.
 - Bodies too busy for a 0.5 gap skip the gloss: `target` (rings), `medal` (star), `globe`

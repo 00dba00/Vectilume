@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 7 6l6-3 8 8-2 9Z"/><g stroke="var(--icon-secondary, currentColor)"><path d="M8 13l3-2"/><path d="M15 15l3-2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M15.8 3L20.8 6V20.8H13.4L15.3 16.5L13.8 12L16 8Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M7 6.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M8.4 10L11.2 10.8L9.5 14.3L7.5 13Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M15.8 3L20.8 6V20.8H13.4L15.3 16.5L13.8 12L16 8Z"/>
+  <path d="M7 6.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0Z"/>
+  <path d="M8.4 10L11.2 10.8L9.5 14.3L7.5 13Z"/>
+  <path d="M8.8 10.1L6 10.7L4 8.7"/>
+  <path d="M10.8 10.8L13 8.2H16"/>
+  <path d="M9.5 14.3L12.5 16L12 18.8"/>
+  <path d="M7.5 13L5.7 17.3L3 18.3"/>
+</svg>

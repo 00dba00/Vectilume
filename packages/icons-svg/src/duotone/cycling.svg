@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path d="M18 14a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path d="M6 18l4-9 4 9 4-8"/><path d="M10 9h5"/><g stroke="var(--icon-secondary, currentColor)"><path d="M8 7h4"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2.9 16.8a2.9 2.9 0 1 0 5.8 0a2.9 2.9 0 1 0 -5.8 0Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M15.3 16.8a2.9 2.9 0 1 0 5.8 0a2.9 2.9 0 1 0 -5.8 0Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M2.9 16.8a2.9 2.9 0 1 0 5.8 0a2.9 2.9 0 1 0 -5.8 0Z"/>
+  <path d="M15.3 16.8a2.9 2.9 0 1 0 5.8 0a2.9 2.9 0 1 0 -5.8 0Z"/>
+  <path d="M5.8 16.8L9 9.5L13 16.8H5.8M9 9.5H16L13 16.8"/>
+  <path d="M18.2 16.8L15.3 6H18.5Q20 6 19.5 7.5"/>
+  <path d="M7.5 7.2H10.5M9 7.2V9.5"/>
+</svg>
