@@ -1,49 +1,62 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import hobbies from "@vectilume/icons-svg/hobbies.json";
 import { Icon } from "./Icon";
 import type { Selection } from "./Inspector";
 import { STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
 import { themeVars, type Theme } from "@/lib/theme";
-import styles from "./HobbyCatalog.module.css";
+import styles from "./Catalog.module.css";
 
-interface HobbyCatalogProps {
+export interface CatalogItem {
+  id: string;
+  label: string;
+  group: string;
+  groupLabel: string;
+}
+
+interface CatalogProps {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  searchLabel: string;
+  placeholder: string;
+  items: CatalogItem[];
   lookup: IconLookup;
   theme: Theme;
   onSelect: (selection: Selection) => void;
 }
 
-const groups = [...new Map(hobbies.map((item) => [item.group, item.groupLabel])).entries()];
-const fold = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const fold = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
-export function HobbyCatalog({ lookup, theme, onSelect }: HobbyCatalogProps) {
+export function Catalog({ id, eyebrow, title, description, searchLabel, placeholder, items, lookup, theme, onSelect }: CatalogProps) {
   const [query, setQuery] = useState("");
   const [group, setGroup] = useState("all");
   const [style, setStyle] = useState<IconStyle>("outline");
+  const groups = useMemo(() => [...new Map(items.map((item) => [item.group, item.groupLabel])).entries()], [items]);
   const visible = useMemo(() => {
     const search = fold(query.trim());
-    return hobbies.filter((item) =>
+    return items.filter((item) =>
       (group === "all" || item.group === group) &&
       (!search || fold(`${item.label} ${item.id} ${item.groupLabel}`).includes(search))
     );
-  }, [query, group]);
+  }, [items, query, group]);
 
   return (
-    <section id="hobbies" className={styles.section} aria-labelledby="hobbies-heading">
+    <section id={id} className={styles.section} aria-labelledby={`${id}-heading`}>
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>Kolekcija 01 · 140 ikona</p>
-          <h2 id="hobbies-heading">Hobiji</h2>
-          <p>Sport, glazba, stvaralaštvo i svakodnevne aktivnosti u tri Vectilume stila.</p>
+          <p className={styles.eyebrow}>{eyebrow}</p>
+          <h2 id={`${id}-heading`}>{title}</h2>
+          <p>{description}</p>
         </div>
-        <span className={styles.total}>{visible.length} / {hobbies.length}</span>
+        <span className={styles.total}>{visible.length} / {items.length}</span>
       </div>
 
       <div className={styles.controls}>
         <label className={styles.search}>
-          <span>Pretraži hobije</span>
-          <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Npr. plivanje, karate, crtanje..." />
+          <span>{searchLabel}</span>
+          <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder={placeholder} />
         </label>
         <div className={styles.styles} role="group" aria-label="Stil ikona">
           {STYLES.map((option) => (
@@ -54,10 +67,10 @@ export function HobbyCatalog({ lookup, theme, onSelect }: HobbyCatalogProps) {
         </div>
       </div>
 
-      <div className={styles.groups} role="group" aria-label="Skupina hobija">
+      <div className={styles.groups} role="group" aria-label={`Skupine: ${title}`}>
         <button type="button" aria-pressed={group === "all"} onClick={() => setGroup("all")}>Sve</button>
-        {groups.map(([id, label]) => (
-          <button key={id} type="button" aria-pressed={group === id} onClick={() => setGroup(id)}>{label}</button>
+        {groups.map(([groupId, label]) => (
+          <button key={groupId} type="button" aria-pressed={group === groupId} onClick={() => setGroup(groupId)}>{label}</button>
         ))}
       </div>
 
@@ -74,7 +87,7 @@ export function HobbyCatalog({ lookup, theme, onSelect }: HobbyCatalogProps) {
             <span>{item.label}</span>
           </button>
         ))}
-        {visible.length === 0 && <p className={styles.empty}>Nema hobija za ovaj upit.</p>}
+        {visible.length === 0 && <p className={styles.empty}>Nema ikona za ovaj upit.</p>}
       </div>
     </section>
   );

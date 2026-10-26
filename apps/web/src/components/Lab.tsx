@@ -4,7 +4,9 @@ import { useState } from "react";
 import { ContextPreview } from "./ContextPreview";
 import { Icon } from "./Icon";
 import { Inspector, type Selection } from "./Inspector";
-import { HobbyCatalog } from "./HobbyCatalog";
+import general from "@vectilume/icons-svg/general.json";
+import hobbies from "@vectilume/icons-svg/hobbies.json";
+import { Catalog } from "./Catalog";
 import styles from "./Lab.module.css";
 import { DIRECTIONS, PROTOTYPE_ICONS, STYLES, iconId, type IconLookup } from "@/lib/icons";
 import { DEFAULT_THEME, themeVars, type Theme } from "@/lib/theme";
@@ -115,7 +117,31 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
         </div>
       </section>
 
-      <HobbyCatalog lookup={lookup} theme={theme} onSelect={setSelection} />
+      <Catalog
+        id="hobbies"
+        eyebrow={`Kolekcija 01 · ${hobbies.length} ikona`}
+        title="Hobiji"
+        description="Sport, glazba, stvaralaštvo i svakodnevne aktivnosti u tri Vectilume stila."
+        searchLabel="Pretraži hobije"
+        placeholder="Npr. plivanje, karate, crtanje..."
+        items={hobbies}
+        lookup={lookup}
+        theme={theme}
+        onSelect={setSelection}
+      />
+
+      <Catalog
+        id="general"
+        eyebrow={`Kolekcija 02 · ${general.length} ikona`}
+        title="Općenito"
+        description="Navigacija, akcije, statusi, korisnici, analitika i ostale ikone sučelja."
+        searchLabel="Pretraži ikone"
+        placeholder="Npr. zatvori, kalendar, pošta..."
+        items={general}
+        lookup={lookup}
+        theme={theme}
+        onSelect={setSelection}
+      />
 
       <ContextPreview lookup={lookup} theme={theme} />
 

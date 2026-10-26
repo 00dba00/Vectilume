@@ -59,8 +59,10 @@ describe("validateSvg", () => {
     );
   });
 
-  it("requires both duotone layers", () => {
-    assert.deepEqual(rules(validateSvg(`<svg ${DUOTONE_ROOT}><path d="M1 1h2"/></svg>`, "duotone")), ["duotone"]);
+  it("requires the primary duotone layer and allows line-only glyphs without a secondary one", () => {
+    assert.deepEqual(rules(validateSvg(`<svg ${DUOTONE_ROOT}><path d="M1 1h2"/></svg>`, "duotone")), []);
+    const noPrimary = DUOTONE_ROOT.replace(/stroke="var\(--icon-primary[^"]*"/, 'stroke="currentColor"');
+    assert.deepEqual(rules(validateSvg(`<svg ${noPrimary}><path d="M1 1h2"/></svg>`, "duotone")), ["root-style", "duotone"]);
   });
 
   it("enforces root stroke settings and forbids per-element stroke-width", () => {

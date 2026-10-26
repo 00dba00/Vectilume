@@ -219,9 +219,8 @@ export function validateSvg(source: string, style: IconStyle): Issue[] {
   });
 
   if (style === "duotone") {
-    for (const name of ["primary", "secondary"]) {
-      if (!usedVars.has(name)) error("duotone", `duotone icon must use var(--icon-${name})`);
-    }
+    // Line-only glyphs (chevron, close…) have no surface to fill, so the secondary layer is optional.
+    if (!usedVars.has("primary")) error("duotone", "duotone icon must use var(--icon-primary)");
   }
 
   return issues;

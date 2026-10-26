@@ -8,11 +8,13 @@
   "files": [
     "src",
     "hobbies.json",
+    "general.json",
     "dist"
   ],
   "exports": {
     "./manifest.json": "./dist/manifest.json",
     "./hobbies.json": "./hobbies.json",
+    "./general.json": "./general.json",
     "./src/*": "./src/*"
   },
   "scripts": {

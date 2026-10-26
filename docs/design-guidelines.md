@@ -28,6 +28,11 @@ catching the surface:
 - Base shapes: 3 px corner radius on rectangles, 2.5 px on smaller frames, round caps and joins.
 - Duotone: the secondary colour fills the main silhouette, the gloss stays a primary stroke.
 - Solid: the gloss becomes a cut-out of the same shape.
+- Line-only glyphs (chevrons, close, check, plus, arrows, menu, code…) have no body, so they
+  carry no gloss and their duotone is the outline in the primary colour.
+- Bodies too busy for a 0.5 gap skip the gloss: `target` (rings), `medal` (star), `globe`
+  (meridians), and `circle` by design (a bare contour).
+- Slashed icons (`eye-off`, `bell-off`, `wifi-off`) cut a 1.75 gap around the slash in Solid.
 
 Rejected directions (Soft Geometric, Modern Duotone, Spark, Cut, Break, Leaf, Overshoot)
 are in git history (`git log -- packages/icons-svg/src`).
