@@ -53,6 +53,13 @@ competition, analytics, time, AI), first used by Scout AI. Labels and groups
 live in `packages/icons-svg/general.json`; the source list from Scout AI is in
 `docs/scout-ai-icons.md`.
 
+## Publishing to npm
+
+Only collections confirmed in `packages/icons-svg/release.json` go to npm, each one
+whole. `pnpm --filter @vectilume/icons-svg release` assembles the `@vectilume/icons`
+package in `packages/icons-svg/dist/npm`; publish it from there with `npm publish`.
+The source package stays private, so unconfirmed collections never leave the repo.
+
 ## Roadmap
 
 1. **Phase 0** — compare three visual directions (Soft Geometric, Modern Duotone,

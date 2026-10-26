@@ -19,7 +19,8 @@
   },
   "scripts": {
     "build": "tsx ../tooling/src/build-manifest.ts src dist/manifest.json",
-    "validate": "tsx ../tooling/src/validate.ts src"
+    "validate": "tsx ../tooling/src/validate.ts src",
+    "release": "tsx ../tooling/src/build-release.ts ."
   },
   "devDependencies": {
     "@vectilume/tooling": "workspace:*",
