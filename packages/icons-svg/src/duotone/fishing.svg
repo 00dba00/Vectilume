@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V8a6 6 0 0 1 12 0v7"/><path d="M17 15c0 3-3 4-5 2"/><g stroke="var(--icon-secondary, currentColor)"><path d="M15 8h4"/><path d="M5 20l-2 2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19.75 17.75A4 2.6 0 0 1 11.75 17.75A4 2.6 0 0 1 19.75 17.75Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M11.85 17.75L9.25 15.6L9.25 19.9Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M19.75 17.75A4 2.6 0 0 1 11.75 17.75A4 2.6 0 0 1 19.75 17.75Z"/>
+  <path d="M11.85 17.75L9.25 15.6L9.25 19.9Z"/>
+  <path d="M18.25 17L18.26 17"/>
+  <path d="M3.5 20.5A22 22 0 0 1 17.5 3.5"/>
+  <path d="M4.5 17.5a1.25 1.25 0 1 0 2.5 0 1.25 1.25 0 1 0 -2.5 0Z"/>
+  <path d="M17.5 3.5L17.5 9.25"/>
+  <path d="M17.5 9.25L17.5 10.5A1.25 1.25 0 0 1 15.08 10.93"/>
+</svg>
