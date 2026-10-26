@@ -1,5 +1,7 @@
 # Web funkcije za korisnike
 
+> **Status: roadmap, još se ne radi.** Zapisano da ostane; krećemo kad se dogovorimo.
+
 Funkcije koje korisnicima omogućujemo kroz web. Sve što ide u kolekciju prolazi
 admin odobrenje; na npm ide tek kad je kolekcija potvrđena za objavu
 (`packages/icons-svg/release.json`).

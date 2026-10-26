@@ -69,9 +69,16 @@ is a breaking bump (major, or minor while on 0.x).
 2. **Phase 1** — 50 icons, Outline + Duotone, catalog with search, SVG/JSX copy, npm package.
 3. **Phase 2** — 150 icons, Solid style, semantic states, theme generator, ZIP export.
 4. **Phase 3** — community workflow, more framework packages, Figma plugin.
+5. **Later — web contributions** (not scheduled; details in [`docs/web-features.md`](./docs/web-features.md)):
+   - edit an existing icon in a web form → admin approval → collection and npm, author notified;
+   - submit a brand-new icon through the same approval flow;
+   - request a custom icon, we draw it and notify the requester when it ships;
+   - public request list with voting, meaning-based search (Croatian + English),
+     custom project sets (ZIP, sprite, own package), live Gloss checks in the editor,
+     in-context preview, version history with visual diffs and rename aliases,
+     subscriptions, author credits, AI drafts from a description.
 
 See [`open_source_icon_library_plan.md`](./open_source_icon_library_plan.md) for the full plan (in Croatian).
-Planned web features for users (edits, new icons, requests) are in [`docs/web-features.md`](./docs/web-features.md).
 
 ## License
 
