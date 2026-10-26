@@ -58,7 +58,9 @@ live in `packages/icons-svg/general.json`; the source list from Scout AI is in
 Only collections confirmed in `packages/icons-svg/release.json` go to npm, each one
 whole. `pnpm --filter @vectilume/icons-svg release` assembles the `@vectilume/icons`
 package in `packages/icons-svg/dist/npm`; publish it from there with `npm publish`.
-The source package stays private, so unconfirmed collections never leave the repo.
+The source package stays private, so unconfirmed collections never leave the repo. Icon names are the public API: the release script compares them with the latest
+published version and refuses a build that drops or renames an icon unless the version
+is a breaking bump (major, or minor while on 0.x).
 
 ## Roadmap
 
