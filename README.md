@@ -71,6 +71,7 @@ is a breaking bump (major, or minor while on 0.x).
 4. **Phase 3** — community workflow, more framework packages, Figma plugin.
 
 See [`open_source_icon_library_plan.md`](./open_source_icon_library_plan.md) for the full plan (in Croatian).
+Planned web features for users (edits, new icons, requests) are in [`docs/web-features.md`](./docs/web-features.md).
 
 ## License
 
