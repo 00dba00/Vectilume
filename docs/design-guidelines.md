@@ -23,6 +23,8 @@ catching the surface:
 - 2.5–4 units long; it must not touch any other detail (keep ≥ 0.5 visible gap at 24 px).
   Exception: `basketball` keeps its deep side seams, so its gloss sits 1.95 from the seams
   (~0.2 visible gap).
+  `billiards` uses a 2.5 inset so the centred white circle fits. Rackets (`tennis`, `squash`)
+  leave out the strings that would run within 2.25 of the gloss, like light washing them out.
 - Base shapes: 3 px corner radius on rectangles, 2.5 px on smaller frames, round caps and joins.
 - Duotone: the secondary colour fills the main silhouette, the gloss stays a primary stroke.
 - Solid: the gloss becomes a cut-out of the same shape.
