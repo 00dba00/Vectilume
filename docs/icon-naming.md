@@ -3,11 +3,11 @@
 Source files live in `packages/icons-svg/src`:
 
 ```text
-src/<direction>/<style>/<name>.svg
+src/<style>/<name>.svg
 ```
 
-- `direction` — Phase 0 only: `soft-geometric`, `modern-duotone`, `distinctive`.
-  After a direction is chosen, the `<direction>` level is removed.
+- The Phase 0 `<direction>` level is gone: Gloss was chosen and every icon now lives
+  directly under its style.
 - `style` — `outline`, `duotone`, `solid`.
 - `name` — kebab-case, noun first, modifier after: `calendar`, `calendar-add`,
   `wallet-minus`, `budget-warning`.

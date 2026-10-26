@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Icon } from "./Icon";
 import styles from "./Lab.module.css";
-import { DIRECTIONS, STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
+import { STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
 import { themeVars, type Background, type Theme } from "@/lib/theme";
 
 interface ContextPreviewProps {
@@ -24,12 +24,11 @@ const STATS = [
   { name: "shield", label: "Protection", value: "Active" },
 ];
 
-/** Mock app UI showing one direction's icons at real UI sizes. */
+/** Mock app UI showing the icons at real UI sizes. */
 export function ContextPreview({ lookup, theme }: ContextPreviewProps) {
-  const direction = DIRECTIONS[0]?.id ?? "";
   // null = mixed: each spot uses the style it would have in a real app
   const [only, setOnly] = useState<IconStyle | null>(null);
-  const icon = (style: IconStyle, name: string) => lookup[iconId(direction, only ?? style, name)];
+  const icon = (style: IconStyle, name: string) => lookup[iconId(only ?? style, name)];
 
   const app = (background: Background) => (
     <div

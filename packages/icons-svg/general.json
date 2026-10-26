@@ -54,6 +54,12 @@
     "groupLabel": "Navigacija"
   },
   {
+    "id": "home",
+    "label": "Početna",
+    "group": "navigation",
+    "groupLabel": "Navigacija"
+  },
+  {
     "id": "close",
     "label": "Zatvori",
     "group": "actions",
@@ -164,6 +170,12 @@
   {
     "id": "play",
     "label": "Pokreni",
+    "group": "actions",
+    "groupLabel": "Akcije"
+  },
+  {
+    "id": "search",
+    "label": "Pretraži",
     "group": "actions",
     "groupLabel": "Akcije"
   },
@@ -282,6 +294,24 @@
     "groupLabel": "Status i sustav"
   },
   {
+    "id": "settings",
+    "label": "Postavke",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "bell",
+    "label": "Obavijesti",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
+    "id": "shield",
+    "label": "Zaštita",
+    "group": "status",
+    "groupLabel": "Status i sustav"
+  },
+  {
     "id": "users",
     "label": "Korisnici",
     "group": "people",
@@ -356,6 +386,18 @@
   {
     "id": "thumbs-down",
     "label": "Ne sviđa mi se",
+    "group": "people",
+    "groupLabel": "Korisnici i komunikacija"
+  },
+  {
+    "id": "user",
+    "label": "Korisnik",
+    "group": "people",
+    "groupLabel": "Korisnici i komunikacija"
+  },
+  {
+    "id": "heart",
+    "label": "Omiljeno",
     "group": "people",
     "groupLabel": "Korisnici i komunikacija"
   },
@@ -516,6 +558,18 @@
     "groupLabel": "Analitika i novac"
   },
   {
+    "id": "chart",
+    "label": "Grafikon",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
+    "id": "wallet",
+    "label": "Novčanik",
+    "group": "analytics",
+    "groupLabel": "Analitika i novac"
+  },
+  {
     "id": "clock",
     "label": "Vrijeme",
     "group": "time",
@@ -536,6 +590,12 @@
   {
     "id": "hourglass",
     "label": "Rok",
+    "group": "time",
+    "groupLabel": "Vrijeme"
+  },
+  {
+    "id": "calendar",
+    "label": "Kalendar",
     "group": "time",
     "groupLabel": "Vrijeme"
   },
@@ -650,6 +710,18 @@
   {
     "id": "smartphone",
     "label": "Mobitel",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "document",
+    "label": "Dokument",
+    "group": "ai",
+    "groupLabel": "AI i razno"
+  },
+  {
+    "id": "car",
+    "label": "Automobil",
     "group": "ai",
     "groupLabel": "AI i razno"
   }

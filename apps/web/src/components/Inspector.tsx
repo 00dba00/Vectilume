@@ -34,7 +34,7 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
     setCopied(false);
   }, [selection]);
 
-  const svg = selection ? lookup[iconId(selection.direction, selection.style, selection.name)] : undefined;
+  const svg = selection ? lookup[iconId(selection.style, selection.name)] : undefined;
   const directionLabel = selection?.direction === null
     ? 'Hobiji'
     : DIRECTIONS.find((direction) => direction.id === selection?.direction)?.label;

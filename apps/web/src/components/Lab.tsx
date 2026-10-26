@@ -154,7 +154,7 @@ function Row({ name, direction, lookup, onSelect }: RowProps) {
     <>
       <span className={styles.rowLabel}>{name}</span>
       {STYLES.map((style) => {
-        const svg = lookup[iconId(direction, style, name)];
+        const svg = lookup[iconId(style, name)];
         return (
           <button
             key={style}
