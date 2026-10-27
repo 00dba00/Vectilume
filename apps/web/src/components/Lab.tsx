@@ -32,7 +32,7 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
             <a key={collection.id} href={`#${collection.id}`}>{collection.title}</a>
           ))}
           <a href="#context-heading">In context</a>
-          <a href="#release-heading">npm release</a>
+          {process.env.NODE_ENV === "development" && <a href="#release-heading">npm release</a>}
         </nav>
       </header>
 
@@ -108,7 +108,8 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
 
         <ContextPreview lookup={lookup} theme={theme} />
 
-        <ReleasePanel />
+        {/* Saving release settings writes to the repo, so the panel only exists on the local dev server. */}
+        {process.env.NODE_ENV === "development" && <ReleasePanel />}
 
         <Inspector key={selection ? `${selection.collection}/${selection.name}` : "closed"} selection={selection} lookup={lookup} theme={theme} onClose={() => setSelection(null)} />
       </div>
