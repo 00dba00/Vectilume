@@ -37,7 +37,7 @@
 - ✅ Pregled na mreži, veličine 16–48, svijetlo/tamno, prikaz u sučelju („In use”).
 - ✅ Copy SVG.
 - ✅ Pretraga po ključnim riječima.
-- ⏳ Copy JSX i import naredba (`import { Trash } from "@vectilume/react"`).
+- ✅ Copy JSX i import naredba (`import { Trash } from "@vectilume/react"`).
 - ⏳ Download SVG / PNG.
 - ⏳ Prikaz verzije dodavanja (`since`).
 

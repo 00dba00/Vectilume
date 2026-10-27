@@ -1,6 +1,8 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { buildReactSources, componentName } from "./react.ts";
+import { STYLES } from "./svg-rules.ts";
+import { componentName as catalogName } from "../../../apps/web/src/lib/react-snippet.ts";
 
 const svg = (body: string) =>
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><!-- c -->${body}</svg>`;
@@ -10,6 +12,12 @@ describe("componentName", () => {
     assert.equal(componentName("trash", "outline"), "Trash");
     assert.equal(componentName("trending-up", "duotone"), "TrendingUpDuotone");
     assert.equal(componentName("3d-printing", "solid"), "Icon3dPrintingSolid");
+  });
+
+  it("matches the name the catalog shows", () => {
+    for (const id of ["trash", "trending-up", "3d-printing", "letter-a"]) {
+      for (const style of STYLES) assert.equal(catalogName(id, style), componentName(id, style));
+    }
   });
 });
 

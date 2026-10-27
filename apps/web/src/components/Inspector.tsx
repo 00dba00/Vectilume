@@ -6,6 +6,7 @@ import { IconShowcase } from "./IconShowcase";
 import styles from "./Lab.module.css";
 import { SIZES, STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
 import { themeVars, type Background, type Theme } from "@/lib/theme";
+import { reactSnippet } from "@/lib/react-snippet";
 
 export interface Selection {
   collection: string;
@@ -27,7 +28,7 @@ const GRID_LINES = Array.from({ length: 23 }, (_, i) => i + 1);
 export function Inspector({ selection, lookup, theme, onClose }: InspectorProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [showGrid, setShowGrid] = useState(true);
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<string | null>(null);
   const [style, setStyle] = useState<IconStyle>(selection?.style ?? "outline");
   const [surface, setSurface] = useState<Background>(theme.background);
 
@@ -36,15 +37,17 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
     if (!dialog) return;
     if (selection && !dialog.open) dialog.showModal();
     if (!selection && dialog.open) dialog.close();
-    setCopied(false);
+    setCopied(null);
   }, [selection]);
 
   const svg = selection ? lookup[iconId(style, selection.name)] : undefined;
 
-  const copy = async () => {
-    if (!svg) return;
-    await navigator.clipboard.writeText(svg);
-    setCopied(true);
+  const react = selection ? reactSnippet(selection.name, style) : undefined;
+
+  const copy = async (what: string, text: string | undefined) => {
+    if (!text) return;
+    await navigator.clipboard.writeText(text);
+    setCopied(what);
   };
 
   return (
@@ -120,11 +123,26 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
           <div className={styles.source}>
             <div className={styles.sourceHeader}>
               <span>SVG source</span>
-              <button type="button" className={styles.reset} onClick={copy} disabled={!svg}>
-                {copied ? "Copied" : "Copy SVG"}
+              <button type="button" className={styles.reset} onClick={() => copy("svg", svg)} disabled={!svg}>
+                {copied === "svg" ? "Copied" : "Copy SVG"}
               </button>
             </div>
             <pre>{svg ?? "Not drawn yet."}</pre>
+          </div>
+
+          <div className={styles.source}>
+            <div className={styles.sourceHeader}>
+              <span>React</span>
+              <div className={styles.sourceActions}>
+                <button type="button" className={styles.reset} onClick={() => copy("import", react?.importLine)}>
+                  {copied === "import" ? "Copied" : "Copy import"}
+                </button>
+                <button type="button" className={styles.reset} onClick={() => copy("jsx", react?.jsx)}>
+                  {copied === "jsx" ? "Copied" : "Copy JSX"}
+                </button>
+              </div>
+            </div>
+            <pre>{react && `${react.importLine}\n\n${react.jsx}`}</pre>
           </div>
           </div>
 

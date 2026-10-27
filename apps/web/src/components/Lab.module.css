@@ -407,6 +407,11 @@
   font-size: 14px;
 }
 
+.sourceActions {
+  display: flex;
+  gap: 8px;
+}
+
 .source pre {
   max-height: 160px;
   margin: 0;
