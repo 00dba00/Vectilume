@@ -1,6 +1,6 @@
 # Plan uvođenja Vectilume ikona u Scout AI i NBA
 
-> **Status: čeka redizajn Hobija.** Kad su hobiji gotovi, krećemo redom po koracima ispod.
+> **Status (2026-10-27):** `@vectilume/icons` i `@vectilume/react` `0.1.0` objavljeni na npm (sve kolekcije, 835 ikona). Sljedeće: korak 5, Scout AI web.
 
 ## Stanje (2026-10-26)
 

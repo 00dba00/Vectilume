@@ -18,7 +18,9 @@ Objavljuju se dva paketa iz istih potvrđenih kolekcija i s istom verzijom:
 ## Objava
 
 5. `npm login` — račun mora biti član organizacije `vectilume` (2FA kod pri objavi).
-6. Prvo SVG paket, pa React (release skripta sljedeći put čita manifest od `@vectilume/icons`):
+6. Objavu pokreni **u vlastitom terminalu** (passkey u Chromeu ne daje OTP kod, pa `npm publish`
+   iz Claude Codea pada s `EOTP`). npm koristi staged publishing: verzija postane javna nakon
+   potvrde i par minuta čekanja (za `0.1.0` ≈ 5 min). Prvo SVG paket, pa React (release skripta sljedeći put čita manifest od `@vectilume/icons`):
    ```sh
    cd packages/icons-svg/dist/npm   && npm publish --access public
    cd ../react                      && npm publish --access public
