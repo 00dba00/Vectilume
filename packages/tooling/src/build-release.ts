@@ -16,11 +16,15 @@ export interface CatalogEntry {
   group: string;
   groupLabel: string;
   keywords: string[];
+  /** Former names of a renamed icon; they ship as deprecated aliases until the next breaking release. */
+  aliases?: string[];
 }
 
 export interface ReleaseIcon extends CatalogEntry {
   collection: string;
 }
+
+const NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 /** Icons of the confirmed collections, in catalog order; throws on unknown collections or duplicate names. */
 export function selectReleaseIcons(release: Release, catalogs: Record<string, CatalogEntry[]>): ReleaseIcon[] {
@@ -34,6 +38,12 @@ export function selectReleaseIcons(release: Release, catalogs: Record<string, Ca
       const other = seen.get(entry.id);
       if (other) throw new Error(`icon "${entry.id}" is in both "${other}" and "${collection}"`);
       seen.set(entry.id, collection);
+      for (const alias of entry.aliases ?? []) {
+        if (!NAME.test(alias)) throw new Error(`alias "${alias}" of "${entry.id}" is not a kebab-case name`);
+        const owner = seen.get(alias);
+        if (owner) throw new Error(`alias "${alias}" of "${entry.id}" is already a name in "${owner}"`);
+        seen.set(alias, `${collection}, as an alias of ${entry.id}`);
+      }
       icons.push({ ...entry, collection });
     }
   }
@@ -43,7 +53,15 @@ export function selectReleaseIcons(release: Release, catalogs: Record<string, Ca
 export interface Published {
   version: string;
   names: string[];
+  /** Version each published name first shipped in. */
+  since: Record<string, string>;
 }
+
+/** Every name the package exports: icon ids and their deprecated aliases. */
+export const releaseNames = (icons: ReleaseIcon[]) => icons.flatMap((icon) => [icon.id, ...(icon.aliases ?? [])]);
+
+/** A name keeps the version it first shipped in; anything new ships in this release. */
+export const sinceOf = (name: string, version: string, published: Published | null) => published?.since[name] ?? version;
 
 const parseVersion = (version: string) => {
   const match = /^(\d+)\.(\d+)\.(\d+)/.exec(version);
@@ -88,8 +106,9 @@ async function fetchPublished(): Promise<Published | null> {
   const version = ((await meta.json()) as { "dist-tags": { latest: string } })["dist-tags"].latest;
   const file = await fetch(`https://unpkg.com/${PACKAGE}@${version}/manifest.json`);
   if (!file.ok) throw new Error(`cannot read manifest.json of ${PACKAGE}@${version} (${file.status})`);
-  const manifest = (await file.json()) as { icons: { id: string }[] };
-  return { version, names: [...new Set(manifest.icons.map((icon) => icon.id))] };
+  const manifest = (await file.json()) as { icons: { id: string; since?: string }[] };
+  const since = Object.fromEntries(manifest.icons.map((icon) => [icon.id, icon.since ?? version]));
+  return { version, names: Object.keys(since), since };
 }
 
 async function main(): Promise<void> {
@@ -107,19 +126,25 @@ async function main(): Promise<void> {
 
   const published = await fetchPublished();
   if (published) {
-    const { removed } = checkAgainstPublished(published, release.version, icons.map((icon) => icon.id));
+    const { removed } = checkAgainstPublished(published, release.version, releaseNames(icons));
     if (removed.length > 0) console.warn(`breaking release: removes ${removed.join(", ")}`);
   }
 
   await rm(out, { recursive: true, force: true });
-  const manifest: (ReleaseIcon & { style: IconStyle })[] = [];
+  type ManifestEntry = Omit<ReleaseIcon, "aliases"> & { style: IconStyle; since: string; deprecated?: true; replacedBy?: string };
+  const manifest: ManifestEntry[] = [];
   for (const style of STYLES) {
     await mkdir(path.join(out, style), { recursive: true });
-    for (const icon of icons) {
+    for (const { aliases = [], ...icon } of icons) {
       const source = path.join(root, "src", style, `${icon.id}.svg`);
       if (!existsSync(source)) throw new Error(`missing ${style}/${icon.id}.svg`);
       await copyFile(source, path.join(out, style, `${icon.id}.svg`));
-      manifest.push({ ...icon, style });
+      manifest.push({ ...icon, style, since: sinceOf(icon.id, release.version, published) });
+      for (const alias of aliases) {
+        await copyFile(source, path.join(out, style, `${alias}.svg`));
+        const since = sinceOf(alias, release.version, published);
+        manifest.push({ ...icon, id: alias, style, since, deprecated: true, replacedBy: icon.id });
+      }
     }
   }
 
@@ -154,7 +179,8 @@ async function main(): Promise<void> {
       "```",
       "",
       "Outline and solid use `currentColor`; duotone uses `--icon-primary` and `--icon-secondary`.",
-      "`manifest.json` lists every icon with its style, collection, group and label.",
+      "`manifest.json` lists every icon with its style, collection, group, label and `since` version.",
+      "Renamed icons keep their old file name until the next breaking release (`deprecated`, `replacedBy`).",
       "",
     ].join("\n"),
   );
@@ -164,7 +190,7 @@ async function main(): Promise<void> {
   await rm(react, { recursive: true, force: true });
   await mkdir(react, { recursive: true });
   const sources = buildReactSources(
-    icons.map((icon) => icon.id),
+    icons,
     (style, id) => readFileSync(path.join(root, "src", style, `${id}.svg`), "utf8"),
   );
   await writeFile(path.join(react, "index.js"), sources.js);
@@ -204,6 +230,7 @@ async function main(): Promise<void> {
       "```",
       "",
       "- Names are the icon id in PascalCase plus `Duotone` / `Solid`; ids starting with a digit get an `Icon` prefix.",
+      "- Renamed icons keep their old name as a `@deprecated` alias until the next breaking release.",
       "- `size` sets width and height (default 24); `color` sets `currentColor`; every other SVG prop is passed through.",
       "- Without `title` or `aria-label` an icon is decorative (`aria-hidden`).",
       "- Duotone colours come from CSS variables, e.g. `.brand { --icon-primary: #2563eb; --icon-secondary: #bfdbfe; }`;",

@@ -9,8 +9,8 @@
 | `id` (`trash`) | javni API, ne mijenja se nakon objave | ✅ |
 | `label`, `group` | katalog, filtriranje | ✅ |
 | `keywords` (`delete`, `remove`, `bin`) | pretraga po značenju | ✅ |
-| `since` (`0.1.0`) | changelog, oznaka „novo” | ⏳ |
-| `deprecated`, `replacedBy` | preimenovanje bez pucanja koda (alias do iduće breaking verzije) | ⏳ |
+| `since` (`0.1.0`) | changelog, oznaka „novo” — release ga sam upisuje u `manifest.json` (prva objavljena verzija imena) | ✅ |
+| `aliases` → `deprecated`, `replacedBy` | preimenovanje bez pucanja koda (alias do iduće breaking verzije) | ✅ |
 | `author` | zasluge doprinositeljima | ⏳ |
 
 ## Isporuka
@@ -46,7 +46,7 @@
 1. Ključne riječi ✅
 2. React paket s pristupačnošću ✅
 3. Katalog: Copy JSX, import naredba, Download
-4. `since`, `deprecated`, alias — prije prve objave na npm
+4. `since`, `deprecated`, alias — prije prve objave na npm ✅
 5. SVGO
 6. Sprite, PNG, vizualni regresijski testovi
 7. Figma

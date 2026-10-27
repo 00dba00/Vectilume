@@ -56,23 +56,33 @@ export interface IconProps extends Omit<SVGProps<SVGSVGElement>, "ref" | "style"
 export type Icon = ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>;
 `;
 
-/** The `index.js` and `index.d.ts` of @vectilume/react: one component per icon and style. */
-export function buildReactSources(ids: string[], readSvg: (style: IconStyle, id: string) => string) {
+/** The `index.js` and `index.d.ts` of @vectilume/react: one component per icon and style, plus deprecated aliases. */
+export function buildReactSources(icons: { id: string; aliases?: string[] }[], readSvg: (style: IconStyle, id: string) => string) {
   const owners = new Map<string, string>();
+  const claim = (name: string, owner: string) => {
+    const other = owners.get(name);
+    if (other) throw new Error(`"${owner}" and "${other}" both become the component ${name}`);
+    owners.set(name, owner);
+  };
   const js = [RUNTIME];
   const dts = [TYPES];
-  for (const id of ids) {
+  for (const { id, aliases = [] } of icons) {
     for (const style of STYLES) {
       const name = componentName(id, style);
-      const other = owners.get(name);
-      if (other) throw new Error(`"${style}/${id}" and "${other}" both become the component ${name}`);
-      owners.set(name, `${style}/${id}`);
+      claim(name, `${style}/${id}`);
 
       const [root, ...rest] = parseSvg(readSvg(style, id));
       if (root?.tag !== "svg" || rest.length) throw new Error(`${style}/${id}.svg must have a single <svg> root`);
       const nodes = JSON.stringify(root.children.map(toNode));
       js.push(`export const ${name} = /*#__PURE__*/ icon(${JSON.stringify(name)}, ${JSON.stringify(toProps(root.attrs))}, ${nodes});`);
       dts.push(`export declare const ${name}: Icon;`);
+
+      for (const alias of aliases) {
+        const old = componentName(alias, style);
+        claim(old, `${style}/${alias} (alias of ${id})`);
+        js.push(`export const ${old} = ${name};`);
+        dts.push(`/** @deprecated Renamed to ${name}; removed in the next breaking release. */`, `export declare const ${old}: Icon;`);
+      }
     }
   }
   return { js: `${js.join("\n")}\n`, dts: `${dts.join("\n")}\n` };

@@ -40,7 +40,7 @@ describe("componentName", () => {
 
 describe("buildReactSources", () => {
   it("emits a component per style with React prop names and nested groups", () => {
-    const { js, dts } = buildReactSources(["check"], () => svg('<g transform="x"><path fill-rule="evenodd" d="M1 1"/></g>'));
+    const { js, dts } = buildReactSources([{ id: "check" }], () => svg('<g transform="x"><path fill-rule="evenodd" d="M1 1"/></g>'));
     assert.match(
       js,
       /export const CheckDuotone = \/\*#__PURE__\*\/ icon\("CheckDuotone", \{"xmlns":"http:\/\/www.w3.org\/2000\/svg","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"1.75"\}, \[\["g",\{"transform":"x"\},\[\["path",\{"fillRule":"evenodd","d":"M1 1"\}\]\]\]\]\);/,
@@ -49,6 +49,14 @@ describe("buildReactSources", () => {
   });
 
   it("rejects ids that collide as component names", () => {
-    assert.throws(() => buildReactSources(["check", "check-solid"], () => svg("")), /both become the component CheckSolid/);
+    assert.throws(() => buildReactSources([{ id: "check" }, { id: "check-solid" }], () => svg("")), /both become the component CheckSolid/);
+  });
+});
+
+describe("aliases", () => {
+  it("exports the old name as a deprecated reference to the new component", () => {
+    const { js, dts } = buildReactSources([{ id: "trash", aliases: ["bin"] }], () => svg(""));
+    assert.match(js, /^export const BinSolid = TrashSolid;$/m);
+    assert.match(dts, /@deprecated Renamed to TrashDuotone[^\n]*\nexport declare const BinDuotone: Icon;/);
   });
 });

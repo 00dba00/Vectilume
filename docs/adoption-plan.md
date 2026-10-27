@@ -40,6 +40,10 @@
 
 ## Pravila nakon prve objave
 
-- Ime ikone je javni API: preimenovanje ili uklanjanje je breaking verzija (release skripta to
-  provjerava prema zadnjoj objavljenoj verziji).
+- Ime ikone je javni API: uklanjanje je breaking verzija (release skripta to provjerava prema
+  zadnjoj objavljenoj verziji).
+- Preimenovanje nije breaking ako novi unos zadrži staro ime u `aliases`, npr.
+  `{ "id": "trash", "aliases": ["bin"], … }`. Staro ime se i dalje objavljuje (SVG datoteka,
+  `@deprecated` React komponenta, `deprecated`/`replacedBy` u manifestu); alias se briše tek u
+  breaking verziji.
 - Premještanje ikone između objavljenih kolekcija i kategorija je sigurno.
