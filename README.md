@@ -5,6 +5,9 @@
 Free, consistent, themeable icons in three styles — **Outline**, **Duotone** and **Solid** — drawn on
 one 24 × 24 grid. 835 icons, MIT licensed.
 
+**[Browse the catalog → vectilume.vercel.app](https://vectilume.vercel.app)** — search, preview in every style and size,
+try the React props and copy SVG or JSX.
+
 [![npm @vectilume/react](https://img.shields.io/npm/v/@vectilume/react?label=%40vectilume%2Freact)](https://www.npmjs.com/package/@vectilume/react)
 [![npm @vectilume/icons](https://img.shields.io/npm/v/@vectilume/icons?label=%40vectilume%2Ficons)](https://www.npmjs.com/package/@vectilume/icons)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
