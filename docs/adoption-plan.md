@@ -37,6 +37,7 @@
 6. **NBA frontend** — zamjena MUI i lucide ikona po tablici iz `docs/nba-icons.md`, uključujući
    sportske ikone iz Hobija.
 7. **Scout AI mobile** — kad postoji React Native paket.
+8. Stranica „Usage” u katalogu — plan u `docs/usage-plan.md` (nakon `0.1.0`).
 
 ## Pravila nakon prve objave
 
