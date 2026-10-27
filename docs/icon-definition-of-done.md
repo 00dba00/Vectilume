@@ -39,7 +39,12 @@
 - ✅ Pretraga po ključnim riječima.
 - ✅ Copy JSX i import naredba (`import { Trash } from "@vectilume/react"`).
 - ⏳ Download SVG / PNG.
-- ⏳ Prikaz verzije dodavanja (`since`).
+- ⏳ Prikaz verzije dodavanja (`since`) i oznaka **New** — radi se **nakon prve objave na npm**:
+  - Ikone iz prve objave (`0.1.0`) nikad nemaju „New”.
+  - „New” imaju samo ikone čiji je `since` jednak **zadnjoj objavljenoj verziji** (npr. kolekcija
+    dodana u `0.2.0` je „New” dok je `0.2.0` zadnja objava).
+  - Kad izađe iduća verzija s novim ikonama, prethodne gube „New”, a nove ga dobivaju.
+  - Izvor podataka: `since` iz `manifest.json` zadnje objavljene verzije `@vectilume/icons`.
 
 ## Redoslijed
 
