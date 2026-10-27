@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -6 126 36" color="#ffffff" role="img" aria-label="Vectilume">
+  <g fill="none" stroke="#b4d0ff" stroke-linecap="round">
+    
+    <g opacity="0.5" stroke-width="0.05">
+      <path d="M0 -5V29M5 -5V29M10 -5V29M13 -5V29M19 -5V29M25 -5V29M28 -5V29M34 -5V29M40 -5V29M42 -5V29M45 -5V29M49 -5V29M53 -5V29M57 -5V29M60 -5V29M66 -5V29M72 -5V29M75 -5V29M79 -5V29M83 -5V29M87 -5V29M91 -5V29M94 -5V29M100 -5V29M106 -5V29M-10 14H116" stroke-dasharray="0.4 0.4"/>
+      <path d="M-4.17 -2L7.08 25M14.17 -2L2.92 25M13 8h12v12h-12zM13 8l12 12M25 8l-12 12M28 8h12v12h-12zM28 8l12 12M40 8l-12 12M60 8h12v12h-12zM60 8l12 12M72 8l-12 12M94 8h12v12h-12zM94 8l12 12M106 8l-12 12M19 14l9 9M34 14l9 -9M34 14l9 9M100 14l9 9"/>
+      <circle cx="19" cy="14" r="8.5"/><circle cx="19" cy="14" r="3"/><circle cx="34" cy="14" r="8.5"/><circle cx="34" cy="14" r="3"/><circle cx="66" cy="14" r="8.5"/><circle cx="66" cy="14" r="3"/><circle cx="100" cy="14" r="8.5"/><circle cx="100" cy="14" r="3"/>
+      <circle cx="53" cy="14" r="53.34"/><circle cx="53" cy="11" r="9"/>
+    </g>
+    <g opacity="0.8" stroke-width="0.08">
+      <path d="M-10 2H116M-10 8H116M-10 20H116M17.8 14h2.4M19 12.8v2.4M32.8 14h2.4M34 12.8v2.4M64.8 14h2.4M66 12.8v2.4M77.8 12h2.4M79 10.8v2.4M85.8 12h2.4M87 10.8v2.4M98.8 14h2.4M100 12.8v2.4M47.8 16h2.4M49 14.8v2.4M-6 0V24M-6.6 0h1.2M-6.6 24h1.2M-6.6 2h1.2M-6.6 8h1.2M-6.6 20h1.2M0 27H106M0 26.4v1.2M106 26.4v1.2"/>
+      <circle cx="19" cy="14" r="6"/><circle cx="34" cy="14" r="6"/><circle cx="66" cy="14" r="6"/><circle cx="79" cy="12" r="4"/><circle cx="87" cy="12" r="4"/><circle cx="100" cy="14" r="6"/><circle cx="49" cy="16" r="4"/>
+    </g>
+    <g fill="#b4d0ff" stroke="none" opacity="0.75" font-family="ui-monospace, Menlo, monospace" font-size="1.1" letter-spacing="0.04"><text x="115.4" y="1.6" text-anchor="end">ascender</text><text x="115.4" y="7.6" text-anchor="end">x-height</text><text x="115.4" y="19.6" text-anchor="end">baseline</text><text x="-7" y="12.4" text-anchor="end">24</text><text x="53" y="25.8" text-anchor="middle">106</text><text x="25.6" y="7.4" text-anchor="start">r 6</text><text x="83" y="5.6" text-anchor="middle">r 4</text><text x="8.2" y="-1.6" text-anchor="middle">67.4°</text><text x="-9.4" y="-4.4" text-anchor="start">VECTILUME · 24 × 24 · 1.75</text></g>
+  </g>
+  <path d="M0 8l5 12 5-12M13 14h12a6 6 0 1 0-1.76 4.24M38.24 9.76a6 6 0 1 0 0 8.48M42 8h7M45 4v12a4 4 0 0 0 4 4h1M53 8v12M53 4v.01M57 2v18M60 8v6a6 6 0 0 0 12 0M72 8v12M75 20v-8a4 4 0 0 1 8 0v8m0-8a4 4 0 0 1 8 0v8M94 14h12a6 6 0 1 0-1.76 4.24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

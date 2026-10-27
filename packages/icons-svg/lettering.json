@@ -1,0 +1,6470 @@
+[
+  {
+    "id": "letter-uppercase-a",
+    "label": "A · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "A",
+    "form": "plain",
+    "keywords": [
+      "A",
+      "a",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-a-circle",
+    "label": "A · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "A",
+    "form": "circle",
+    "keywords": [
+      "A",
+      "a",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-a-square",
+    "label": "A · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "A",
+    "form": "square",
+    "keywords": [
+      "A",
+      "a",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-b",
+    "label": "B · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "B",
+    "form": "plain",
+    "keywords": [
+      "B",
+      "b",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-b-circle",
+    "label": "B · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "B",
+    "form": "circle",
+    "keywords": [
+      "B",
+      "b",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-b-square",
+    "label": "B · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "B",
+    "form": "square",
+    "keywords": [
+      "B",
+      "b",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c",
+    "label": "C · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "C",
+    "form": "plain",
+    "keywords": [
+      "C",
+      "c",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-circle",
+    "label": "C · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "C",
+    "form": "circle",
+    "keywords": [
+      "C",
+      "c",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-square",
+    "label": "C · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "C",
+    "form": "square",
+    "keywords": [
+      "C",
+      "c",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-d",
+    "label": "D · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "D",
+    "form": "plain",
+    "keywords": [
+      "D",
+      "d",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-d-circle",
+    "label": "D · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "D",
+    "form": "circle",
+    "keywords": [
+      "D",
+      "d",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-d-square",
+    "label": "D · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "D",
+    "form": "square",
+    "keywords": [
+      "D",
+      "d",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-e",
+    "label": "E · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "E",
+    "form": "plain",
+    "keywords": [
+      "E",
+      "e",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-e-circle",
+    "label": "E · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "E",
+    "form": "circle",
+    "keywords": [
+      "E",
+      "e",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-e-square",
+    "label": "E · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "E",
+    "form": "square",
+    "keywords": [
+      "E",
+      "e",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-f",
+    "label": "F · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "F",
+    "form": "plain",
+    "keywords": [
+      "F",
+      "f",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-f-circle",
+    "label": "F · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "F",
+    "form": "circle",
+    "keywords": [
+      "F",
+      "f",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-f-square",
+    "label": "F · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "F",
+    "form": "square",
+    "keywords": [
+      "F",
+      "f",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-g",
+    "label": "G · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "G",
+    "form": "plain",
+    "keywords": [
+      "G",
+      "g",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-g-circle",
+    "label": "G · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "G",
+    "form": "circle",
+    "keywords": [
+      "G",
+      "g",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-g-square",
+    "label": "G · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "G",
+    "form": "square",
+    "keywords": [
+      "G",
+      "g",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-h",
+    "label": "H · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "H",
+    "form": "plain",
+    "keywords": [
+      "H",
+      "h",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-h-circle",
+    "label": "H · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "H",
+    "form": "circle",
+    "keywords": [
+      "H",
+      "h",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-h-square",
+    "label": "H · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "H",
+    "form": "square",
+    "keywords": [
+      "H",
+      "h",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-i",
+    "label": "I · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "I",
+    "form": "plain",
+    "keywords": [
+      "I",
+      "i",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-i-circle",
+    "label": "I · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "I",
+    "form": "circle",
+    "keywords": [
+      "I",
+      "i",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-i-square",
+    "label": "I · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "I",
+    "form": "square",
+    "keywords": [
+      "I",
+      "i",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-j",
+    "label": "J · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "J",
+    "form": "plain",
+    "keywords": [
+      "J",
+      "j",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-j-circle",
+    "label": "J · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "J",
+    "form": "circle",
+    "keywords": [
+      "J",
+      "j",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-j-square",
+    "label": "J · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "J",
+    "form": "square",
+    "keywords": [
+      "J",
+      "j",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-k",
+    "label": "K · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "K",
+    "form": "plain",
+    "keywords": [
+      "K",
+      "k",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-k-circle",
+    "label": "K · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "K",
+    "form": "circle",
+    "keywords": [
+      "K",
+      "k",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-k-square",
+    "label": "K · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "K",
+    "form": "square",
+    "keywords": [
+      "K",
+      "k",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-l",
+    "label": "L · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "L",
+    "form": "plain",
+    "keywords": [
+      "L",
+      "l",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-l-circle",
+    "label": "L · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "L",
+    "form": "circle",
+    "keywords": [
+      "L",
+      "l",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-l-square",
+    "label": "L · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "L",
+    "form": "square",
+    "keywords": [
+      "L",
+      "l",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-m",
+    "label": "M · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "M",
+    "form": "plain",
+    "keywords": [
+      "M",
+      "m",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-m-circle",
+    "label": "M · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "M",
+    "form": "circle",
+    "keywords": [
+      "M",
+      "m",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-m-square",
+    "label": "M · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "M",
+    "form": "square",
+    "keywords": [
+      "M",
+      "m",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-n",
+    "label": "N · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "N",
+    "form": "plain",
+    "keywords": [
+      "N",
+      "n",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-n-circle",
+    "label": "N · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "N",
+    "form": "circle",
+    "keywords": [
+      "N",
+      "n",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-n-square",
+    "label": "N · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "N",
+    "form": "square",
+    "keywords": [
+      "N",
+      "n",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-o",
+    "label": "O · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "O",
+    "form": "plain",
+    "keywords": [
+      "O",
+      "o",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-o-circle",
+    "label": "O · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "O",
+    "form": "circle",
+    "keywords": [
+      "O",
+      "o",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-o-square",
+    "label": "O · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "O",
+    "form": "square",
+    "keywords": [
+      "O",
+      "o",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-p",
+    "label": "P · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "P",
+    "form": "plain",
+    "keywords": [
+      "P",
+      "p",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-p-circle",
+    "label": "P · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "P",
+    "form": "circle",
+    "keywords": [
+      "P",
+      "p",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-p-square",
+    "label": "P · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "P",
+    "form": "square",
+    "keywords": [
+      "P",
+      "p",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-q",
+    "label": "Q · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Q",
+    "form": "plain",
+    "keywords": [
+      "Q",
+      "q",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-q-circle",
+    "label": "Q · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Q",
+    "form": "circle",
+    "keywords": [
+      "Q",
+      "q",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-q-square",
+    "label": "Q · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Q",
+    "form": "square",
+    "keywords": [
+      "Q",
+      "q",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-r",
+    "label": "R · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "R",
+    "form": "plain",
+    "keywords": [
+      "R",
+      "r",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-r-circle",
+    "label": "R · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "R",
+    "form": "circle",
+    "keywords": [
+      "R",
+      "r",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-r-square",
+    "label": "R · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "R",
+    "form": "square",
+    "keywords": [
+      "R",
+      "r",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-s",
+    "label": "S · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "S",
+    "form": "plain",
+    "keywords": [
+      "S",
+      "s",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-s-circle",
+    "label": "S · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "S",
+    "form": "circle",
+    "keywords": [
+      "S",
+      "s",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-s-square",
+    "label": "S · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "S",
+    "form": "square",
+    "keywords": [
+      "S",
+      "s",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-t",
+    "label": "T · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "T",
+    "form": "plain",
+    "keywords": [
+      "T",
+      "t",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-t-circle",
+    "label": "T · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "T",
+    "form": "circle",
+    "keywords": [
+      "T",
+      "t",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-t-square",
+    "label": "T · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "T",
+    "form": "square",
+    "keywords": [
+      "T",
+      "t",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-u",
+    "label": "U · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "U",
+    "form": "plain",
+    "keywords": [
+      "U",
+      "u",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-u-circle",
+    "label": "U · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "U",
+    "form": "circle",
+    "keywords": [
+      "U",
+      "u",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-u-square",
+    "label": "U · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "U",
+    "form": "square",
+    "keywords": [
+      "U",
+      "u",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-v",
+    "label": "V · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "V",
+    "form": "plain",
+    "keywords": [
+      "V",
+      "v",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-v-circle",
+    "label": "V · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "V",
+    "form": "circle",
+    "keywords": [
+      "V",
+      "v",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-v-square",
+    "label": "V · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "V",
+    "form": "square",
+    "keywords": [
+      "V",
+      "v",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-w",
+    "label": "W · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "W",
+    "form": "plain",
+    "keywords": [
+      "W",
+      "w",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-w-circle",
+    "label": "W · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "W",
+    "form": "circle",
+    "keywords": [
+      "W",
+      "w",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-w-square",
+    "label": "W · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "W",
+    "form": "square",
+    "keywords": [
+      "W",
+      "w",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-x",
+    "label": "X · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "X",
+    "form": "plain",
+    "keywords": [
+      "X",
+      "x",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-x-circle",
+    "label": "X · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "X",
+    "form": "circle",
+    "keywords": [
+      "X",
+      "x",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-x-square",
+    "label": "X · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "X",
+    "form": "square",
+    "keywords": [
+      "X",
+      "x",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-y",
+    "label": "Y · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Y",
+    "form": "plain",
+    "keywords": [
+      "Y",
+      "y",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-y-circle",
+    "label": "Y · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Y",
+    "form": "circle",
+    "keywords": [
+      "Y",
+      "y",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-y-square",
+    "label": "Y · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Y",
+    "form": "square",
+    "keywords": [
+      "Y",
+      "y",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-z",
+    "label": "Z · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Z",
+    "form": "plain",
+    "keywords": [
+      "Z",
+      "z",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-z-circle",
+    "label": "Z · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Z",
+    "form": "circle",
+    "keywords": [
+      "Z",
+      "z",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-z-square",
+    "label": "Z · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Z",
+    "form": "square",
+    "keywords": [
+      "Z",
+      "z",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-caron",
+    "label": "Č · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Č",
+    "form": "plain",
+    "keywords": [
+      "Č",
+      "c-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-caron-circle",
+    "label": "Č · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Č",
+    "form": "circle",
+    "keywords": [
+      "Č",
+      "c-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-caron-square",
+    "label": "Č · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Č",
+    "form": "square",
+    "keywords": [
+      "Č",
+      "c-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-acute",
+    "label": "Ć · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Ć",
+    "form": "plain",
+    "keywords": [
+      "Ć",
+      "c-acute",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-acute-circle",
+    "label": "Ć · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Ć",
+    "form": "circle",
+    "keywords": [
+      "Ć",
+      "c-acute",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-c-acute-square",
+    "label": "Ć · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Ć",
+    "form": "square",
+    "keywords": [
+      "Ć",
+      "c-acute",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-s-caron",
+    "label": "Š · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Š",
+    "form": "plain",
+    "keywords": [
+      "Š",
+      "s-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-s-caron-circle",
+    "label": "Š · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Š",
+    "form": "circle",
+    "keywords": [
+      "Š",
+      "s-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-s-caron-square",
+    "label": "Š · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Š",
+    "form": "square",
+    "keywords": [
+      "Š",
+      "s-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-z-caron",
+    "label": "Ž · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Ž",
+    "form": "plain",
+    "keywords": [
+      "Ž",
+      "z-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-z-caron-circle",
+    "label": "Ž · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Ž",
+    "form": "circle",
+    "keywords": [
+      "Ž",
+      "z-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-z-caron-square",
+    "label": "Ž · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Ž",
+    "form": "square",
+    "keywords": [
+      "Ž",
+      "z-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-d-stroke",
+    "label": "Đ · Uppercase",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Đ",
+    "form": "plain",
+    "keywords": [
+      "Đ",
+      "d-stroke",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-d-stroke-circle",
+    "label": "Đ · Uppercase · Circle",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Đ",
+    "form": "circle",
+    "keywords": [
+      "Đ",
+      "d-stroke",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-d-stroke-square",
+    "label": "Đ · Uppercase · Square",
+    "group": "uppercase",
+    "groupLabel": "Uppercase",
+    "glyph": "Đ",
+    "form": "square",
+    "keywords": [
+      "Đ",
+      "d-stroke",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "uppercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-a",
+    "label": "a · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "a",
+    "form": "plain",
+    "keywords": [
+      "a",
+      "a",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-a-circle",
+    "label": "a · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "a",
+    "form": "circle",
+    "keywords": [
+      "a",
+      "a",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-a-square",
+    "label": "a · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "a",
+    "form": "square",
+    "keywords": [
+      "a",
+      "a",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-b",
+    "label": "b · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "b",
+    "form": "plain",
+    "keywords": [
+      "b",
+      "b",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-b-circle",
+    "label": "b · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "b",
+    "form": "circle",
+    "keywords": [
+      "b",
+      "b",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-b-square",
+    "label": "b · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "b",
+    "form": "square",
+    "keywords": [
+      "b",
+      "b",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c",
+    "label": "c · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "c",
+    "form": "plain",
+    "keywords": [
+      "c",
+      "c",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-circle",
+    "label": "c · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "c",
+    "form": "circle",
+    "keywords": [
+      "c",
+      "c",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-square",
+    "label": "c · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "c",
+    "form": "square",
+    "keywords": [
+      "c",
+      "c",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-d",
+    "label": "d · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "d",
+    "form": "plain",
+    "keywords": [
+      "d",
+      "d",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-d-circle",
+    "label": "d · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "d",
+    "form": "circle",
+    "keywords": [
+      "d",
+      "d",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-d-square",
+    "label": "d · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "d",
+    "form": "square",
+    "keywords": [
+      "d",
+      "d",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-e",
+    "label": "e · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "e",
+    "form": "plain",
+    "keywords": [
+      "e",
+      "e",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-e-circle",
+    "label": "e · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "e",
+    "form": "circle",
+    "keywords": [
+      "e",
+      "e",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-e-square",
+    "label": "e · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "e",
+    "form": "square",
+    "keywords": [
+      "e",
+      "e",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-f",
+    "label": "f · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "f",
+    "form": "plain",
+    "keywords": [
+      "f",
+      "f",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-f-circle",
+    "label": "f · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "f",
+    "form": "circle",
+    "keywords": [
+      "f",
+      "f",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-f-square",
+    "label": "f · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "f",
+    "form": "square",
+    "keywords": [
+      "f",
+      "f",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-g",
+    "label": "g · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "g",
+    "form": "plain",
+    "keywords": [
+      "g",
+      "g",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-g-circle",
+    "label": "g · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "g",
+    "form": "circle",
+    "keywords": [
+      "g",
+      "g",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-g-square",
+    "label": "g · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "g",
+    "form": "square",
+    "keywords": [
+      "g",
+      "g",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-h",
+    "label": "h · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "h",
+    "form": "plain",
+    "keywords": [
+      "h",
+      "h",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-h-circle",
+    "label": "h · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "h",
+    "form": "circle",
+    "keywords": [
+      "h",
+      "h",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-h-square",
+    "label": "h · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "h",
+    "form": "square",
+    "keywords": [
+      "h",
+      "h",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-i",
+    "label": "i · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "i",
+    "form": "plain",
+    "keywords": [
+      "i",
+      "i",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-i-circle",
+    "label": "i · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "i",
+    "form": "circle",
+    "keywords": [
+      "i",
+      "i",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-i-square",
+    "label": "i · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "i",
+    "form": "square",
+    "keywords": [
+      "i",
+      "i",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-j",
+    "label": "j · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "j",
+    "form": "plain",
+    "keywords": [
+      "j",
+      "j",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-j-circle",
+    "label": "j · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "j",
+    "form": "circle",
+    "keywords": [
+      "j",
+      "j",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-j-square",
+    "label": "j · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "j",
+    "form": "square",
+    "keywords": [
+      "j",
+      "j",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-k",
+    "label": "k · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "k",
+    "form": "plain",
+    "keywords": [
+      "k",
+      "k",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-k-circle",
+    "label": "k · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "k",
+    "form": "circle",
+    "keywords": [
+      "k",
+      "k",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-k-square",
+    "label": "k · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "k",
+    "form": "square",
+    "keywords": [
+      "k",
+      "k",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-l",
+    "label": "l · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "l",
+    "form": "plain",
+    "keywords": [
+      "l",
+      "l",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-l-circle",
+    "label": "l · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "l",
+    "form": "circle",
+    "keywords": [
+      "l",
+      "l",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-l-square",
+    "label": "l · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "l",
+    "form": "square",
+    "keywords": [
+      "l",
+      "l",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-m",
+    "label": "m · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "m",
+    "form": "plain",
+    "keywords": [
+      "m",
+      "m",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-m-circle",
+    "label": "m · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "m",
+    "form": "circle",
+    "keywords": [
+      "m",
+      "m",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-m-square",
+    "label": "m · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "m",
+    "form": "square",
+    "keywords": [
+      "m",
+      "m",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-n",
+    "label": "n · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "n",
+    "form": "plain",
+    "keywords": [
+      "n",
+      "n",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-n-circle",
+    "label": "n · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "n",
+    "form": "circle",
+    "keywords": [
+      "n",
+      "n",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-n-square",
+    "label": "n · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "n",
+    "form": "square",
+    "keywords": [
+      "n",
+      "n",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-o",
+    "label": "o · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "o",
+    "form": "plain",
+    "keywords": [
+      "o",
+      "o",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-o-circle",
+    "label": "o · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "o",
+    "form": "circle",
+    "keywords": [
+      "o",
+      "o",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-o-square",
+    "label": "o · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "o",
+    "form": "square",
+    "keywords": [
+      "o",
+      "o",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-p",
+    "label": "p · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "p",
+    "form": "plain",
+    "keywords": [
+      "p",
+      "p",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-p-circle",
+    "label": "p · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "p",
+    "form": "circle",
+    "keywords": [
+      "p",
+      "p",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-p-square",
+    "label": "p · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "p",
+    "form": "square",
+    "keywords": [
+      "p",
+      "p",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-q",
+    "label": "q · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "q",
+    "form": "plain",
+    "keywords": [
+      "q",
+      "q",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-q-circle",
+    "label": "q · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "q",
+    "form": "circle",
+    "keywords": [
+      "q",
+      "q",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-q-square",
+    "label": "q · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "q",
+    "form": "square",
+    "keywords": [
+      "q",
+      "q",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-r",
+    "label": "r · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "r",
+    "form": "plain",
+    "keywords": [
+      "r",
+      "r",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-r-circle",
+    "label": "r · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "r",
+    "form": "circle",
+    "keywords": [
+      "r",
+      "r",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-r-square",
+    "label": "r · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "r",
+    "form": "square",
+    "keywords": [
+      "r",
+      "r",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-s",
+    "label": "s · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "s",
+    "form": "plain",
+    "keywords": [
+      "s",
+      "s",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-s-circle",
+    "label": "s · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "s",
+    "form": "circle",
+    "keywords": [
+      "s",
+      "s",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-s-square",
+    "label": "s · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "s",
+    "form": "square",
+    "keywords": [
+      "s",
+      "s",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-t",
+    "label": "t · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "t",
+    "form": "plain",
+    "keywords": [
+      "t",
+      "t",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-t-circle",
+    "label": "t · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "t",
+    "form": "circle",
+    "keywords": [
+      "t",
+      "t",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-t-square",
+    "label": "t · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "t",
+    "form": "square",
+    "keywords": [
+      "t",
+      "t",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-u",
+    "label": "u · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "u",
+    "form": "plain",
+    "keywords": [
+      "u",
+      "u",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-u-circle",
+    "label": "u · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "u",
+    "form": "circle",
+    "keywords": [
+      "u",
+      "u",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-u-square",
+    "label": "u · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "u",
+    "form": "square",
+    "keywords": [
+      "u",
+      "u",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-v",
+    "label": "v · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "v",
+    "form": "plain",
+    "keywords": [
+      "v",
+      "v",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-v-circle",
+    "label": "v · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "v",
+    "form": "circle",
+    "keywords": [
+      "v",
+      "v",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-v-square",
+    "label": "v · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "v",
+    "form": "square",
+    "keywords": [
+      "v",
+      "v",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-w",
+    "label": "w · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "w",
+    "form": "plain",
+    "keywords": [
+      "w",
+      "w",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-w-circle",
+    "label": "w · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "w",
+    "form": "circle",
+    "keywords": [
+      "w",
+      "w",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-w-square",
+    "label": "w · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "w",
+    "form": "square",
+    "keywords": [
+      "w",
+      "w",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-x",
+    "label": "x · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "x",
+    "form": "plain",
+    "keywords": [
+      "x",
+      "x",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-x-circle",
+    "label": "x · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "x",
+    "form": "circle",
+    "keywords": [
+      "x",
+      "x",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-x-square",
+    "label": "x · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "x",
+    "form": "square",
+    "keywords": [
+      "x",
+      "x",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-y",
+    "label": "y · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "y",
+    "form": "plain",
+    "keywords": [
+      "y",
+      "y",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-y-circle",
+    "label": "y · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "y",
+    "form": "circle",
+    "keywords": [
+      "y",
+      "y",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-y-square",
+    "label": "y · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "y",
+    "form": "square",
+    "keywords": [
+      "y",
+      "y",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-z",
+    "label": "z · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "z",
+    "form": "plain",
+    "keywords": [
+      "z",
+      "z",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-z-circle",
+    "label": "z · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "z",
+    "form": "circle",
+    "keywords": [
+      "z",
+      "z",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-z-square",
+    "label": "z · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "z",
+    "form": "square",
+    "keywords": [
+      "z",
+      "z",
+      "letter",
+      "alphabet",
+      "slovo",
+      "latin",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-caron",
+    "label": "č · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "č",
+    "form": "plain",
+    "keywords": [
+      "č",
+      "c-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-caron-circle",
+    "label": "č · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "č",
+    "form": "circle",
+    "keywords": [
+      "č",
+      "c-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-caron-square",
+    "label": "č · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "č",
+    "form": "square",
+    "keywords": [
+      "č",
+      "c-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-acute",
+    "label": "ć · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "ć",
+    "form": "plain",
+    "keywords": [
+      "ć",
+      "c-acute",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-acute-circle",
+    "label": "ć · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "ć",
+    "form": "circle",
+    "keywords": [
+      "ć",
+      "c-acute",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-c-acute-square",
+    "label": "ć · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "ć",
+    "form": "square",
+    "keywords": [
+      "ć",
+      "c-acute",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-s-caron",
+    "label": "š · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "š",
+    "form": "plain",
+    "keywords": [
+      "š",
+      "s-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-s-caron-circle",
+    "label": "š · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "š",
+    "form": "circle",
+    "keywords": [
+      "š",
+      "s-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-s-caron-square",
+    "label": "š · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "š",
+    "form": "square",
+    "keywords": [
+      "š",
+      "s-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-z-caron",
+    "label": "ž · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "ž",
+    "form": "plain",
+    "keywords": [
+      "ž",
+      "z-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-z-caron-circle",
+    "label": "ž · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "ž",
+    "form": "circle",
+    "keywords": [
+      "ž",
+      "z-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-z-caron-square",
+    "label": "ž · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "ž",
+    "form": "square",
+    "keywords": [
+      "ž",
+      "z-caron",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-d-stroke",
+    "label": "đ · Lowercase",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "đ",
+    "form": "plain",
+    "keywords": [
+      "đ",
+      "d-stroke",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-d-stroke-circle",
+    "label": "đ · Lowercase · Circle",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "đ",
+    "form": "circle",
+    "keywords": [
+      "đ",
+      "d-stroke",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-d-stroke-square",
+    "label": "đ · Lowercase · Square",
+    "group": "lowercase",
+    "groupLabel": "Lowercase",
+    "glyph": "đ",
+    "form": "square",
+    "keywords": [
+      "đ",
+      "d-stroke",
+      "letter",
+      "alphabet",
+      "slovo",
+      "croatian",
+      "lowercase",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-dz-caron",
+    "label": "DŽ · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "DŽ",
+    "form": "plain",
+    "keywords": [
+      "DŽ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-dz-caron-circle",
+    "label": "DŽ · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "DŽ",
+    "form": "circle",
+    "keywords": [
+      "DŽ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-dz-caron-square",
+    "label": "DŽ · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "DŽ",
+    "form": "square",
+    "keywords": [
+      "DŽ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-lj",
+    "label": "LJ · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "LJ",
+    "form": "plain",
+    "keywords": [
+      "LJ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-lj-circle",
+    "label": "LJ · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "LJ",
+    "form": "circle",
+    "keywords": [
+      "LJ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-lj-square",
+    "label": "LJ · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "LJ",
+    "form": "square",
+    "keywords": [
+      "LJ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-nj",
+    "label": "NJ · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "NJ",
+    "form": "plain",
+    "keywords": [
+      "NJ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-uppercase-nj-circle",
+    "label": "NJ · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "NJ",
+    "form": "circle",
+    "keywords": [
+      "NJ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-uppercase-nj-square",
+    "label": "NJ · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "NJ",
+    "form": "square",
+    "keywords": [
+      "NJ",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "uppercase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-dz-caron",
+    "label": "dž · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "dž",
+    "form": "plain",
+    "keywords": [
+      "dž",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-dz-caron-circle",
+    "label": "dž · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "dž",
+    "form": "circle",
+    "keywords": [
+      "dž",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-dz-caron-square",
+    "label": "dž · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "dž",
+    "form": "square",
+    "keywords": [
+      "dž",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-lj",
+    "label": "lj · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "lj",
+    "form": "plain",
+    "keywords": [
+      "lj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-lj-circle",
+    "label": "lj · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "lj",
+    "form": "circle",
+    "keywords": [
+      "lj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-lj-square",
+    "label": "lj · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "lj",
+    "form": "square",
+    "keywords": [
+      "lj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-nj",
+    "label": "nj · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "nj",
+    "form": "plain",
+    "keywords": [
+      "nj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-lowercase-nj-circle",
+    "label": "nj · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "nj",
+    "form": "circle",
+    "keywords": [
+      "nj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-lowercase-nj-square",
+    "label": "nj · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "nj",
+    "form": "square",
+    "keywords": [
+      "nj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "lowercase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-titlecase-dz-caron",
+    "label": "Dž · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Dž",
+    "form": "plain",
+    "keywords": [
+      "Dž",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-titlecase-dz-caron-circle",
+    "label": "Dž · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Dž",
+    "form": "circle",
+    "keywords": [
+      "Dž",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-titlecase-dz-caron-square",
+    "label": "Dž · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Dž",
+    "form": "square",
+    "keywords": [
+      "Dž",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-titlecase-lj",
+    "label": "Lj · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Lj",
+    "form": "plain",
+    "keywords": [
+      "Lj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-titlecase-lj-circle",
+    "label": "Lj · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Lj",
+    "form": "circle",
+    "keywords": [
+      "Lj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-titlecase-lj-square",
+    "label": "Lj · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Lj",
+    "form": "square",
+    "keywords": [
+      "Lj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-titlecase-nj",
+    "label": "Nj · Croatian digraphs",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Nj",
+    "form": "plain",
+    "keywords": [
+      "Nj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "letter-titlecase-nj-circle",
+    "label": "Nj · Croatian digraphs · Circle",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Nj",
+    "form": "circle",
+    "keywords": [
+      "Nj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "letter-titlecase-nj-square",
+    "label": "Nj · Croatian digraphs · Square",
+    "group": "digraphs",
+    "groupLabel": "Croatian digraphs",
+    "glyph": "Nj",
+    "form": "square",
+    "keywords": [
+      "Nj",
+      "digraph",
+      "dvoslov",
+      "croatian",
+      "titlecase",
+      "digraphs",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-0",
+    "label": "0 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "0",
+    "form": "plain",
+    "keywords": [
+      "0",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-0-circle",
+    "label": "0 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "0",
+    "form": "circle",
+    "keywords": [
+      "0",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-0-square",
+    "label": "0 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "0",
+    "form": "square",
+    "keywords": [
+      "0",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-1",
+    "label": "1 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "1",
+    "form": "plain",
+    "keywords": [
+      "1",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-1-circle",
+    "label": "1 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "1",
+    "form": "circle",
+    "keywords": [
+      "1",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-1-square",
+    "label": "1 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "1",
+    "form": "square",
+    "keywords": [
+      "1",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-2",
+    "label": "2 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "2",
+    "form": "plain",
+    "keywords": [
+      "2",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-2-circle",
+    "label": "2 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "2",
+    "form": "circle",
+    "keywords": [
+      "2",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-2-square",
+    "label": "2 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "2",
+    "form": "square",
+    "keywords": [
+      "2",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-3",
+    "label": "3 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "3",
+    "form": "plain",
+    "keywords": [
+      "3",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-3-circle",
+    "label": "3 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "3",
+    "form": "circle",
+    "keywords": [
+      "3",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-3-square",
+    "label": "3 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "3",
+    "form": "square",
+    "keywords": [
+      "3",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-4",
+    "label": "4 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "4",
+    "form": "plain",
+    "keywords": [
+      "4",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-4-circle",
+    "label": "4 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "4",
+    "form": "circle",
+    "keywords": [
+      "4",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-4-square",
+    "label": "4 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "4",
+    "form": "square",
+    "keywords": [
+      "4",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-5",
+    "label": "5 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "5",
+    "form": "plain",
+    "keywords": [
+      "5",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-5-circle",
+    "label": "5 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "5",
+    "form": "circle",
+    "keywords": [
+      "5",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-5-square",
+    "label": "5 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "5",
+    "form": "square",
+    "keywords": [
+      "5",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-6",
+    "label": "6 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "6",
+    "form": "plain",
+    "keywords": [
+      "6",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-6-circle",
+    "label": "6 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "6",
+    "form": "circle",
+    "keywords": [
+      "6",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-6-square",
+    "label": "6 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "6",
+    "form": "square",
+    "keywords": [
+      "6",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-7",
+    "label": "7 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "7",
+    "form": "plain",
+    "keywords": [
+      "7",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-7-circle",
+    "label": "7 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "7",
+    "form": "circle",
+    "keywords": [
+      "7",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-7-square",
+    "label": "7 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "7",
+    "form": "square",
+    "keywords": [
+      "7",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-8",
+    "label": "8 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "8",
+    "form": "plain",
+    "keywords": [
+      "8",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-8-circle",
+    "label": "8 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "8",
+    "form": "circle",
+    "keywords": [
+      "8",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-8-square",
+    "label": "8 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "8",
+    "form": "square",
+    "keywords": [
+      "8",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-9",
+    "label": "9 · Numbers",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "9",
+    "form": "plain",
+    "keywords": [
+      "9",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "number-9-circle",
+    "label": "9 · Numbers · Circle",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "9",
+    "form": "circle",
+    "keywords": [
+      "9",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "number-9-square",
+    "label": "9 · Numbers · Square",
+    "group": "numbers",
+    "groupLabel": "Numbers",
+    "glyph": "9",
+    "form": "square",
+    "keywords": [
+      "9",
+      "number",
+      "digit",
+      "broj",
+      "numbers",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-period",
+    "label": ". · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ".",
+    "form": "plain",
+    "keywords": [
+      ".",
+      "period",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-period-circle",
+    "label": ". · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ".",
+    "form": "circle",
+    "keywords": [
+      ".",
+      "period",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-period-square",
+    "label": ". · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ".",
+    "form": "square",
+    "keywords": [
+      ".",
+      "period",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-comma",
+    "label": ", · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ",",
+    "form": "plain",
+    "keywords": [
+      ",",
+      "comma",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-comma-circle",
+    "label": ", · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ",",
+    "form": "circle",
+    "keywords": [
+      ",",
+      "comma",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-comma-square",
+    "label": ", · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ",",
+    "form": "square",
+    "keywords": [
+      ",",
+      "comma",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-colon",
+    "label": ": · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ":",
+    "form": "plain",
+    "keywords": [
+      ":",
+      "colon",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-colon-circle",
+    "label": ": · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ":",
+    "form": "circle",
+    "keywords": [
+      ":",
+      "colon",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-colon-square",
+    "label": ": · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ":",
+    "form": "square",
+    "keywords": [
+      ":",
+      "colon",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-semicolon",
+    "label": "; · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ";",
+    "form": "plain",
+    "keywords": [
+      ";",
+      "semicolon",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-semicolon-circle",
+    "label": "; · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ";",
+    "form": "circle",
+    "keywords": [
+      ";",
+      "semicolon",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-semicolon-square",
+    "label": "; · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ";",
+    "form": "square",
+    "keywords": [
+      ";",
+      "semicolon",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-exclamation",
+    "label": "! · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "!",
+    "form": "plain",
+    "keywords": [
+      "!",
+      "exclamation",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-exclamation-circle",
+    "label": "! · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "!",
+    "form": "circle",
+    "keywords": [
+      "!",
+      "exclamation",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-exclamation-square",
+    "label": "! · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "!",
+    "form": "square",
+    "keywords": [
+      "!",
+      "exclamation",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-question",
+    "label": "? · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "?",
+    "form": "plain",
+    "keywords": [
+      "?",
+      "question",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-question-circle",
+    "label": "? · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "?",
+    "form": "circle",
+    "keywords": [
+      "?",
+      "question",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-question-square",
+    "label": "? · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "?",
+    "form": "square",
+    "keywords": [
+      "?",
+      "question",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-apostrophe",
+    "label": "' · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "'",
+    "form": "plain",
+    "keywords": [
+      "'",
+      "apostrophe",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-apostrophe-circle",
+    "label": "' · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "'",
+    "form": "circle",
+    "keywords": [
+      "'",
+      "apostrophe",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-apostrophe-square",
+    "label": "' · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "'",
+    "form": "square",
+    "keywords": [
+      "'",
+      "apostrophe",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-quotation",
+    "label": "\" · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "\"",
+    "form": "plain",
+    "keywords": [
+      "\"",
+      "quotation",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-quotation-circle",
+    "label": "\" · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "\"",
+    "form": "circle",
+    "keywords": [
+      "\"",
+      "quotation",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-quotation-square",
+    "label": "\" · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "\"",
+    "form": "square",
+    "keywords": [
+      "\"",
+      "quotation",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-hyphen",
+    "label": "- · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "-",
+    "form": "plain",
+    "keywords": [
+      "-",
+      "hyphen",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-hyphen-circle",
+    "label": "- · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "-",
+    "form": "circle",
+    "keywords": [
+      "-",
+      "hyphen",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-hyphen-square",
+    "label": "- · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "-",
+    "form": "square",
+    "keywords": [
+      "-",
+      "hyphen",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-en-dash",
+    "label": "– · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "–",
+    "form": "plain",
+    "keywords": [
+      "–",
+      "en-dash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-en-dash-circle",
+    "label": "– · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "–",
+    "form": "circle",
+    "keywords": [
+      "–",
+      "en-dash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-en-dash-square",
+    "label": "– · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "–",
+    "form": "square",
+    "keywords": [
+      "–",
+      "en-dash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-em-dash",
+    "label": "— · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "—",
+    "form": "plain",
+    "keywords": [
+      "—",
+      "em-dash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-em-dash-circle",
+    "label": "— · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "—",
+    "form": "circle",
+    "keywords": [
+      "—",
+      "em-dash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-em-dash-square",
+    "label": "— · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "—",
+    "form": "square",
+    "keywords": [
+      "—",
+      "em-dash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-underscore",
+    "label": "_ · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "_",
+    "form": "plain",
+    "keywords": [
+      "_",
+      "underscore",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-underscore-circle",
+    "label": "_ · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "_",
+    "form": "circle",
+    "keywords": [
+      "_",
+      "underscore",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-underscore-square",
+    "label": "_ · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "_",
+    "form": "square",
+    "keywords": [
+      "_",
+      "underscore",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-slash",
+    "label": "/ · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "/",
+    "form": "plain",
+    "keywords": [
+      "/",
+      "slash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-slash-circle",
+    "label": "/ · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "/",
+    "form": "circle",
+    "keywords": [
+      "/",
+      "slash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-slash-square",
+    "label": "/ · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "/",
+    "form": "square",
+    "keywords": [
+      "/",
+      "slash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-backslash",
+    "label": "\\ · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "\\",
+    "form": "plain",
+    "keywords": [
+      "\\",
+      "backslash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-backslash-circle",
+    "label": "\\ · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "\\",
+    "form": "circle",
+    "keywords": [
+      "\\",
+      "backslash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-backslash-square",
+    "label": "\\ · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "\\",
+    "form": "square",
+    "keywords": [
+      "\\",
+      "backslash",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-parenthesis-left",
+    "label": "( · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "(",
+    "form": "plain",
+    "keywords": [
+      "(",
+      "parenthesis-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-parenthesis-left-circle",
+    "label": "( · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "(",
+    "form": "circle",
+    "keywords": [
+      "(",
+      "parenthesis-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-parenthesis-left-square",
+    "label": "( · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "(",
+    "form": "square",
+    "keywords": [
+      "(",
+      "parenthesis-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-parenthesis-right",
+    "label": ") · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ")",
+    "form": "plain",
+    "keywords": [
+      ")",
+      "parenthesis-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-parenthesis-right-circle",
+    "label": ") · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ")",
+    "form": "circle",
+    "keywords": [
+      ")",
+      "parenthesis-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-parenthesis-right-square",
+    "label": ") · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": ")",
+    "form": "square",
+    "keywords": [
+      ")",
+      "parenthesis-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-bracket-left",
+    "label": "[ · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "[",
+    "form": "plain",
+    "keywords": [
+      "[",
+      "bracket-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-bracket-left-circle",
+    "label": "[ · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "[",
+    "form": "circle",
+    "keywords": [
+      "[",
+      "bracket-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-bracket-left-square",
+    "label": "[ · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "[",
+    "form": "square",
+    "keywords": [
+      "[",
+      "bracket-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-bracket-right",
+    "label": "] · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "]",
+    "form": "plain",
+    "keywords": [
+      "]",
+      "bracket-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-bracket-right-circle",
+    "label": "] · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "]",
+    "form": "circle",
+    "keywords": [
+      "]",
+      "bracket-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-bracket-right-square",
+    "label": "] · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "]",
+    "form": "square",
+    "keywords": [
+      "]",
+      "bracket-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-brace-left",
+    "label": "{ · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "{",
+    "form": "plain",
+    "keywords": [
+      "{",
+      "brace-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-brace-left-circle",
+    "label": "{ · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "{",
+    "form": "circle",
+    "keywords": [
+      "{",
+      "brace-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-brace-left-square",
+    "label": "{ · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "{",
+    "form": "square",
+    "keywords": [
+      "{",
+      "brace-left",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-brace-right",
+    "label": "} · Punctuation",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "}",
+    "form": "plain",
+    "keywords": [
+      "}",
+      "brace-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-brace-right-circle",
+    "label": "} · Punctuation · Circle",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "}",
+    "form": "circle",
+    "keywords": [
+      "}",
+      "brace-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-brace-right-square",
+    "label": "} · Punctuation · Square",
+    "group": "punctuation",
+    "groupLabel": "Punctuation",
+    "glyph": "}",
+    "form": "square",
+    "keywords": [
+      "}",
+      "brace-right",
+      "symbol",
+      "znak",
+      "punctuation",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-plus",
+    "label": "+ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "+",
+    "form": "plain",
+    "keywords": [
+      "+",
+      "plus",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-plus-circle",
+    "label": "+ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "+",
+    "form": "circle",
+    "keywords": [
+      "+",
+      "plus",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-plus-square",
+    "label": "+ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "+",
+    "form": "square",
+    "keywords": [
+      "+",
+      "plus",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-minus",
+    "label": "− · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "−",
+    "form": "plain",
+    "keywords": [
+      "−",
+      "minus",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-minus-circle",
+    "label": "− · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "−",
+    "form": "circle",
+    "keywords": [
+      "−",
+      "minus",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-minus-square",
+    "label": "− · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "−",
+    "form": "square",
+    "keywords": [
+      "−",
+      "minus",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-multiply",
+    "label": "× · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "×",
+    "form": "plain",
+    "keywords": [
+      "×",
+      "multiply",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-multiply-circle",
+    "label": "× · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "×",
+    "form": "circle",
+    "keywords": [
+      "×",
+      "multiply",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-multiply-square",
+    "label": "× · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "×",
+    "form": "square",
+    "keywords": [
+      "×",
+      "multiply",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-divide",
+    "label": "÷ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "÷",
+    "form": "plain",
+    "keywords": [
+      "÷",
+      "divide",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-divide-circle",
+    "label": "÷ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "÷",
+    "form": "circle",
+    "keywords": [
+      "÷",
+      "divide",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-divide-square",
+    "label": "÷ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "÷",
+    "form": "square",
+    "keywords": [
+      "÷",
+      "divide",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-equals",
+    "label": "= · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "=",
+    "form": "plain",
+    "keywords": [
+      "=",
+      "equals",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-equals-circle",
+    "label": "= · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "=",
+    "form": "circle",
+    "keywords": [
+      "=",
+      "equals",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-equals-square",
+    "label": "= · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "=",
+    "form": "square",
+    "keywords": [
+      "=",
+      "equals",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-not-equal",
+    "label": "≠ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "≠",
+    "form": "plain",
+    "keywords": [
+      "≠",
+      "not-equal",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-not-equal-circle",
+    "label": "≠ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "≠",
+    "form": "circle",
+    "keywords": [
+      "≠",
+      "not-equal",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-not-equal-square",
+    "label": "≠ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "≠",
+    "form": "square",
+    "keywords": [
+      "≠",
+      "not-equal",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-less-than",
+    "label": "< · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "<",
+    "form": "plain",
+    "keywords": [
+      "<",
+      "less-than",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-less-than-circle",
+    "label": "< · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "<",
+    "form": "circle",
+    "keywords": [
+      "<",
+      "less-than",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-less-than-square",
+    "label": "< · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "<",
+    "form": "square",
+    "keywords": [
+      "<",
+      "less-than",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-greater-than",
+    "label": "> · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": ">",
+    "form": "plain",
+    "keywords": [
+      ">",
+      "greater-than",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-greater-than-circle",
+    "label": "> · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": ">",
+    "form": "circle",
+    "keywords": [
+      ">",
+      "greater-than",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-greater-than-square",
+    "label": "> · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": ">",
+    "form": "square",
+    "keywords": [
+      ">",
+      "greater-than",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-at",
+    "label": "@ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "@",
+    "form": "plain",
+    "keywords": [
+      "@",
+      "at",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-at-circle",
+    "label": "@ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "@",
+    "form": "circle",
+    "keywords": [
+      "@",
+      "at",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-at-square",
+    "label": "@ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "@",
+    "form": "square",
+    "keywords": [
+      "@",
+      "at",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-hash",
+    "label": "# · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "#",
+    "form": "plain",
+    "keywords": [
+      "#",
+      "hash",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-hash-circle",
+    "label": "# · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "#",
+    "form": "circle",
+    "keywords": [
+      "#",
+      "hash",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-hash-square",
+    "label": "# · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "#",
+    "form": "square",
+    "keywords": [
+      "#",
+      "hash",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-ampersand",
+    "label": "& · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "&",
+    "form": "plain",
+    "keywords": [
+      "&",
+      "ampersand",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-ampersand-circle",
+    "label": "& · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "&",
+    "form": "circle",
+    "keywords": [
+      "&",
+      "ampersand",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-ampersand-square",
+    "label": "& · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "&",
+    "form": "square",
+    "keywords": [
+      "&",
+      "ampersand",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-percent",
+    "label": "% · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "%",
+    "form": "plain",
+    "keywords": [
+      "%",
+      "percent",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-percent-circle",
+    "label": "% · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "%",
+    "form": "circle",
+    "keywords": [
+      "%",
+      "percent",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-percent-square",
+    "label": "% · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "%",
+    "form": "square",
+    "keywords": [
+      "%",
+      "percent",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-asterisk",
+    "label": "* · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "*",
+    "form": "plain",
+    "keywords": [
+      "*",
+      "asterisk",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-asterisk-circle",
+    "label": "* · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "*",
+    "form": "circle",
+    "keywords": [
+      "*",
+      "asterisk",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-asterisk-square",
+    "label": "* · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "*",
+    "form": "square",
+    "keywords": [
+      "*",
+      "asterisk",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-degree",
+    "label": "° · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "°",
+    "form": "plain",
+    "keywords": [
+      "°",
+      "degree",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-degree-circle",
+    "label": "° · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "°",
+    "form": "circle",
+    "keywords": [
+      "°",
+      "degree",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-degree-square",
+    "label": "° · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "°",
+    "form": "square",
+    "keywords": [
+      "°",
+      "degree",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-euro",
+    "label": "€ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "€",
+    "form": "plain",
+    "keywords": [
+      "€",
+      "euro",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-euro-circle",
+    "label": "€ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "€",
+    "form": "circle",
+    "keywords": [
+      "€",
+      "euro",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-euro-square",
+    "label": "€ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "€",
+    "form": "square",
+    "keywords": [
+      "€",
+      "euro",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-dollar",
+    "label": "$ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "$",
+    "form": "plain",
+    "keywords": [
+      "$",
+      "dollar",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-dollar-circle",
+    "label": "$ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "$",
+    "form": "circle",
+    "keywords": [
+      "$",
+      "dollar",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-dollar-square",
+    "label": "$ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "$",
+    "form": "square",
+    "keywords": [
+      "$",
+      "dollar",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-pound",
+    "label": "£ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "£",
+    "form": "plain",
+    "keywords": [
+      "£",
+      "pound",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-pound-circle",
+    "label": "£ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "£",
+    "form": "circle",
+    "keywords": [
+      "£",
+      "pound",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-pound-square",
+    "label": "£ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "£",
+    "form": "square",
+    "keywords": [
+      "£",
+      "pound",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-yen",
+    "label": "¥ · Math & symbols",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "¥",
+    "form": "plain",
+    "keywords": [
+      "¥",
+      "yen",
+      "symbol",
+      "znak",
+      "symbols",
+      "plain",
+      "standalone"
+    ]
+  },
+  {
+    "id": "symbol-yen-circle",
+    "label": "¥ · Math & symbols · Circle",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "¥",
+    "form": "circle",
+    "keywords": [
+      "¥",
+      "yen",
+      "symbol",
+      "znak",
+      "symbols",
+      "circle",
+      "badge"
+    ]
+  },
+  {
+    "id": "symbol-yen-square",
+    "label": "¥ · Math & symbols · Square",
+    "group": "symbols",
+    "groupLabel": "Math & symbols",
+    "glyph": "¥",
+    "form": "square",
+    "keywords": [
+      "¥",
+      "yen",
+      "symbol",
+      "znak",
+      "symbols",
+      "square",
+      "badge"
+    ]
+  }
+]

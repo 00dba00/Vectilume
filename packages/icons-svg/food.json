@@ -1,0 +1,625 @@
+[
+  {
+    "id": "coffee",
+    "label": "Coffee",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "kava",
+      "espresso",
+      "cappuccino",
+      "cafe",
+      "cup",
+      "hot drink",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "teapot",
+    "label": "Teapot",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "caj",
+      "čaj",
+      "cajnik",
+      "čajnik",
+      "tea",
+      "kettle",
+      "hot drink",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "wine",
+    "label": "Wine",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "vino",
+      "glass",
+      "goblet",
+      "alcohol",
+      "restaurant",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "water-glass",
+    "label": "Water glass",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "voda",
+      "čaša",
+      "casa",
+      "water",
+      "hydration",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "juice",
+    "label": "Juice",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "sok",
+      "orange",
+      "naranca",
+      "naranča",
+      "straw",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "beer",
+    "label": "Beer",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "pivo",
+      "mug",
+      "pub",
+      "alcohol",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "cocktail",
+    "label": "Cocktail",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "koktel",
+      "martini",
+      "bar",
+      "alcohol",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "milk-carton",
+    "label": "Milk carton",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "mlijeko",
+      "milk",
+      "dairy",
+      "carton",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "soda-can",
+    "label": "Soda can",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "soda",
+      "cola",
+      "limenka",
+      "gazirano",
+      "can",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "takeaway-coffee",
+    "label": "Takeaway coffee",
+    "group": "drinks",
+    "groupLabel": "Drinks",
+    "keywords": [
+      "coffee",
+      "kava",
+      "takeaway",
+      "za van",
+      "cup",
+      "drink",
+      "piće",
+      "pića",
+      "napitak"
+    ]
+  },
+  {
+    "id": "apple",
+    "label": "Apple",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "jabuka",
+      "fruit",
+      "voce",
+      "voće",
+      "fresh",
+      "healthy",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "lemon",
+    "label": "Lemon",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "limun",
+      "citrus",
+      "fruit",
+      "voće",
+      "sour",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "carrot",
+    "label": "Carrot",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "mrkva",
+      "vegetable",
+      "povrce",
+      "povrće",
+      "root",
+      "healthy",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "banana",
+    "label": "Banana",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "banana",
+      "fruit",
+      "voće",
+      "tropical",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "strawberry",
+    "label": "Strawberry",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "jagoda",
+      "berry",
+      "fruit",
+      "voće",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "grapes",
+    "label": "Grapes",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "grožđe",
+      "grozdje",
+      "grape",
+      "fruit",
+      "voće",
+      "vine",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "pear",
+    "label": "Pear",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "kruška",
+      "kruska",
+      "fruit",
+      "voće",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "cherries",
+    "label": "Cherries",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "trešnje",
+      "tresnje",
+      "cherry",
+      "fruit",
+      "voće",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "broccoli",
+    "label": "Broccoli",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "brokula",
+      "vegetable",
+      "povrće",
+      "greens",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "bell-pepper",
+    "label": "Bell pepper",
+    "group": "produce",
+    "groupLabel": "Fruit & vegetables",
+    "keywords": [
+      "paprika",
+      "pepper",
+      "vegetable",
+      "povrće",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "pizza",
+    "label": "Pizza",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "slice",
+      "cheese",
+      "sir",
+      "italian",
+      "pizzeria",
+      "food",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "burger",
+    "label": "Burger",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "hamburger",
+      "sandwich",
+      "fast food",
+      "meal",
+      "sendvic",
+      "sendvič",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "sandwich",
+    "label": "Sandwich",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "sendvič",
+      "sendvic",
+      "toast",
+      "lunch",
+      "ručak",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "soup",
+    "label": "Soup",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "juha",
+      "bowl",
+      "hot",
+      "lunch",
+      "zdjela",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "salad",
+    "label": "Salad",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "salata",
+      "vegetarian",
+      "healthy",
+      "bowl",
+      "zdjela",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "sushi",
+    "label": "Sushi",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "sushi",
+      "maki",
+      "rice",
+      "riža",
+      "japanese",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "taco",
+    "label": "Taco",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "taco",
+      "tortilla",
+      "mexican",
+      "wrap",
+      "tortilja",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "fried-egg",
+    "label": "Fried egg",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "jaje",
+      "egg",
+      "breakfast",
+      "doručak",
+      "protein",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "chicken-drumstick",
+    "label": "Chicken drumstick",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "piletina",
+      "batak",
+      "chicken",
+      "meat",
+      "meso",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "french-fries",
+    "label": "French fries",
+    "group": "meals",
+    "groupLabel": "Meals",
+    "keywords": [
+      "pomfrit",
+      "fries",
+      "chips",
+      "potato",
+      "krumpir",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "croissant",
+    "label": "Croissant",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "kroasan",
+      "pastry",
+      "breakfast",
+      "dorucak",
+      "doručak",
+      "bakery",
+      "pekara",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "ice-cream",
+    "label": "Ice cream",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "sladoled",
+      "cone",
+      "kornet",
+      "scoop",
+      "dessert",
+      "summer",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "bread-loaf",
+    "label": "Bread loaf",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "kruh",
+      "loaf",
+      "bread",
+      "bakery",
+      "pekara",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "baguette",
+    "label": "Baguette",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "baget",
+      "baguette",
+      "kruh",
+      "bread",
+      "french",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "pretzel",
+    "label": "Pretzel",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "perec",
+      "pretzel",
+      "bakery",
+      "pekara",
+      "snack",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "cake",
+    "label": "Cake",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "torta",
+      "birthday",
+      "rođendan",
+      "rodjendan",
+      "celebration",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "cupcake",
+    "label": "Cupcake",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "muffin",
+      "cupcake",
+      "kolač",
+      "kolac",
+      "frosting",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "donut",
+    "label": "Donut",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "krafna",
+      "donut",
+      "doughnut",
+      "dessert",
+      "sweet",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "cookie",
+    "label": "Cookie",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "keks",
+      "cookie",
+      "biscuit",
+      "chocolate",
+      "sweet",
+      "food",
+      "hrana"
+    ]
+  },
+  {
+    "id": "chocolate",
+    "label": "Chocolate",
+    "group": "bakery-desserts",
+    "groupLabel": "Bakery & desserts",
+    "keywords": [
+      "čokolada",
+      "cokolada",
+      "chocolate",
+      "bar",
+      "cocoa",
+      "food",
+      "hrana"
+    ]
+  }
+]

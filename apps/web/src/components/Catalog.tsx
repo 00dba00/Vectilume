@@ -5,6 +5,7 @@ import { Icon } from "./Icon";
 import type { Selection } from "./Inspector";
 import { STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
 import { themeVars, type Theme } from "@/lib/theme";
+import { catalogMatcher } from "@/lib/catalog-search";
 import styles from "./Catalog.module.css";
 
 export interface CatalogItem {
@@ -13,6 +14,8 @@ export interface CatalogItem {
   group: string;
   groupLabel: string;
   keywords: string[];
+  glyph?: string;
+  form?: string;
 }
 
 interface CatalogProps {
@@ -28,22 +31,21 @@ interface CatalogProps {
   onSelect: (selection: Selection) => void;
 }
 
-const fold = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
-
 export function Catalog({ id, eyebrow, title, description, searchLabel, placeholder, items, lookup, theme, onSelect }: CatalogProps) {
   const [query, setQuery] = useState("");
   const [group, setGroup] = useState("all");
   const [style, setStyle] = useState<IconStyle>("outline");
+  const [form, setForm] = useState(items.some((item) => item.form) ? "plain" : "all");
+  const forms = useMemo(() => ["plain", "circle", "square"].filter((value) => items.some((item) => item.form === value)), [items]);
   const groups = useMemo(() => [...new Map(items.map((item) => [item.group, item.groupLabel])).entries()], [items]);
   const visible = useMemo(() => {
-    // every word of the query must match the name, label, group or a keyword
-    const terms = fold(query).split(/\s+/).filter(Boolean);
+    const matches = catalogMatcher(query);
     return items.filter((item) => {
       if (group !== "all" && item.group !== group) return false;
-      const haystack = fold(`${item.label} ${item.id} ${item.groupLabel} ${item.keywords.join(" ")}`);
-      return terms.every((term) => haystack.includes(term));
+      if (form !== "all" && item.form !== form) return false;
+      return matches(item);
     });
-  }, [items, query, group]);
+  }, [items, query, group, form]);
 
   return (
     <section id={id} className={styles.section} aria-labelledby={`${id}-heading`}>
@@ -76,6 +78,17 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
           <button key={groupId} type="button" aria-pressed={group === groupId} onClick={() => setGroup(groupId)}>{label}</button>
         ))}
       </div>
+
+      {forms.length > 0 && (
+        <div className={styles.groups} role="group" aria-label="Character form">
+          <button type="button" aria-pressed={form === "all"} onClick={() => setForm("all")}>All forms</button>
+          {forms.map((value) => (
+            <button key={value} type="button" aria-pressed={form === value} onClick={() => setForm(value)}>
+              {value[0].toUpperCase() + value.slice(1)}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className={styles.grid} data-bg={theme.background} style={themeVars(theme)}>
         {visible.map((item) => (

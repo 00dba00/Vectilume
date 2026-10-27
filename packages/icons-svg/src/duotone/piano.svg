@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3Z"/><path d="M8 5v14"/><path d="M12 5v14"/><path d="M16 5v14"/><g stroke="var(--icon-secondary, currentColor)"><path d="M6 5v7"/><path d="M10 5v7"/><path d="M14 5v7"/><path d="M18 5v7"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5.5 5H18.5A2.5 2.5 0 0 1 21 7.5V18A1 1 0 0 1 20 19H4A1 1 0 0 1 3 18V7.5A2.5 2.5 0 0 1 5.5 5Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M5.5 5H18.5A2.5 2.5 0 0 1 21 7.5V18A1 1 0 0 1 20 19H4A1 1 0 0 1 3 18V7.5A2.5 2.5 0 0 1 5.5 5Z"/>
+  <path d="M3 8H21"/>
+  <path d="M7.00 19.07L7.07 19.25L7.15 19.35L7.31 19.46L7.50 19.50L7.69 19.46L7.85 19.35L7.93 19.25L8.00 19.07L8.00 12.93L7.93 12.75L7.85 12.65L7.69 12.54L7.57 12.50L7.37 12.52L7.20 12.60L7.07 12.75L7.00 12.93ZM11.52 19.13L11.60 19.30L11.70 19.40L11.81 19.46L12.00 19.50L12.19 19.46L12.35 19.35L12.46 19.19L12.50 19.07L12.50 12.93L12.46 12.81L12.35 12.65L12.19 12.54L12.07 12.50L11.87 12.52L11.70 12.60L11.57 12.75L11.50 12.93L11.50 19.00ZM16.02 19.13L16.07 19.25L16.20 19.40L16.31 19.46L16.50 19.50L16.69 19.46L16.80 19.40L16.93 19.25L17.00 19.07L17.00 12.93L16.93 12.75L16.85 12.65L16.69 12.54L16.57 12.50L16.37 12.52L16.20 12.60L16.07 12.75L16.00 12.93L16.00 19.00Z" fill="var(--icon-primary, currentColor)" stroke="none"/>
+  <path d="M7.5 8V13M12 8V13M16.5 8V13"/>
+</svg>

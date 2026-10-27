@@ -9,12 +9,20 @@
     "src",
     "hobbies.json",
     "general.json",
+    "content.json",
+    "lettering.json",
+    "food.json",
+    "transport.json",
     "dist"
   ],
   "exports": {
     "./manifest.json": "./dist/manifest.json",
     "./hobbies.json": "./hobbies.json",
     "./general.json": "./general.json",
+    "./content.json": "./content.json",
+    "./lettering.json": "./lettering.json",
+    "./food.json": "./food.json",
+    "./transport.json": "./transport.json",
     "./release.json": "./release.json",
     "./src/*": "./src/*"
   },

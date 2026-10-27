@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 10H20V21H4Z" fill="var(--icon-secondary, currentColor)" stroke="none" fill-rule="evenodd"/>
+  <path d="M4 10H20V21H4Z"/>
+  <path d="M12 10V7"/>
+  <path d="M12 3Q9 6 12 6Q15 6 12 3Z"/>
+  <path d="M4 14Q6 17 8 14Q10 17 12 14Q14 17 16 14Q18 17 20 14"/>
+</svg>

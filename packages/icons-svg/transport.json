@@ -1,0 +1,569 @@
+[
+  {
+    "id": "bus",
+    "label": "Bus",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "autobus",
+      "public transport",
+      "coach",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "taxi",
+    "label": "Taxi",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "taksi",
+      "cab",
+      "ride",
+      "car",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "truck",
+    "label": "Truck",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "kamion",
+      "delivery",
+      "dostava",
+      "cargo",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "van",
+    "label": "Van",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "kombi",
+      "minivan",
+      "shuttle",
+      "passenger",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "tram",
+    "label": "Tram",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "tramvaj",
+      "streetcar",
+      "public transport",
+      "city",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "electric-car",
+    "label": "Electric car",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "električni auto",
+      "ev",
+      "charging",
+      "punjenje",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "caravan",
+    "label": "Caravan",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "kamp prikolica",
+      "camper",
+      "rv",
+      "camping",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "cable-car",
+    "label": "Cable car",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "žičara",
+      "zicara",
+      "gondola",
+      "mountain",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "traffic-light",
+    "label": "Traffic light",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "semafor",
+      "signal",
+      "road",
+      "stop",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "fuel-pump",
+    "label": "Fuel pump",
+    "group": "road",
+    "groupLabel": "Road transport",
+    "keywords": [
+      "benzinska",
+      "gorivo",
+      "petrol",
+      "gas station",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "train",
+    "label": "Train",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "vlak",
+      "railway",
+      "rail",
+      "station",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "metro",
+    "label": "Metro",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "podzemna",
+      "subway",
+      "underground",
+      "station",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "railway-track",
+    "label": "Railway track",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "tračnice",
+      "tracnice",
+      "rail",
+      "track",
+      "željeznica",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "helicopter",
+    "label": "Helicopter",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "helikopter",
+      "flight",
+      "aircraft",
+      "air",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "ferry",
+    "label": "Ferry",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "trajekt",
+      "ship",
+      "brod",
+      "sea",
+      "port",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "speedboat",
+    "label": "Speedboat",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "gliser",
+      "boat",
+      "brod",
+      "motorboat",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "anchor",
+    "label": "Anchor",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "sidro",
+      "nautical",
+      "harbor",
+      "luka",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "lighthouse",
+    "label": "Lighthouse",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "svjetionik",
+      "coast",
+      "obala",
+      "beacon",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "airport",
+    "label": "Airport tower",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "aerodrom",
+      "zračna luka",
+      "airport",
+      "control tower",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "hot-air-balloon",
+    "label": "Hot air balloon",
+    "group": "rail-air-sea",
+    "groupLabel": "Rail, air & sea",
+    "keywords": [
+      "balon",
+      "balloon",
+      "air",
+      "flight",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "rolling-suitcase",
+    "label": "Rolling suitcase",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "kofer",
+      "suitcase",
+      "luggage",
+      "prtljaga",
+      "wheels",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "backpack",
+    "label": "Backpack",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "ruksak",
+      "backpack",
+      "bag",
+      "torba",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "passport",
+    "label": "Passport",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "putovnica",
+      "passport",
+      "identity",
+      "border",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "boarding-pass",
+    "label": "Boarding pass",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "ukrcajna propusnica",
+      "boarding",
+      "ticket",
+      "karta",
+      "flight",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "luggage-tag",
+    "label": "Luggage tag",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "oznaka prtljage",
+      "tag",
+      "label",
+      "kofer",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "duffel-bag",
+    "label": "Duffel bag",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "putna torba",
+      "duffel",
+      "weekend",
+      "gym bag",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "luggage-cart",
+    "label": "Luggage cart",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "kolica za prtljagu",
+      "trolley",
+      "baggage",
+      "airport",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "baggage-claim",
+    "label": "Baggage claim",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "preuzimanje prtljage",
+      "conveyor",
+      "luggage",
+      "airport",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "travel-adapter",
+    "label": "Travel adapter",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "adapter",
+      "utikač",
+      "utikac",
+      "plug",
+      "power",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "customs",
+    "label": "Customs",
+    "group": "luggage-documents",
+    "groupLabel": "Luggage & documents",
+    "keywords": [
+      "carina",
+      "customs",
+      "border",
+      "kontrola",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "hotel",
+    "label": "Hotel",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "hotel",
+      "accommodation",
+      "smještaj",
+      "smjestaj",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "reception",
+    "label": "Reception bell",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "recepcija",
+      "bell",
+      "service",
+      "check in",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "room-key",
+    "label": "Room key",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "ključ sobe",
+      "kljuc",
+      "key card",
+      "hotel",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "door-hanger",
+    "label": "Door hanger",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "ne smetaj",
+      "do not disturb",
+      "door",
+      "hotel",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "route",
+    "label": "Route",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "ruta",
+      "itinerary",
+      "putanja",
+      "navigation",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "signpost",
+    "label": "Signpost",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "putokaz",
+      "direction",
+      "sign",
+      "smjer",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "beach-umbrella",
+    "label": "Beach umbrella",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "suncobran",
+      "plaža",
+      "plaza",
+      "beach",
+      "holiday",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "cabin",
+    "label": "Cabin",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "koliba",
+      "cottage",
+      "chalet",
+      "smještaj",
+      "mountain",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "swimming-pool",
+    "label": "Swimming pool",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "bazen",
+      "pool",
+      "hotel",
+      "resort",
+      "travel",
+      "putovanje"
+    ]
+  },
+  {
+    "id": "rest-area",
+    "label": "Rest area",
+    "group": "stay-navigation",
+    "groupLabel": "Stay & navigation",
+    "keywords": [
+      "odmorište",
+      "odmoriste",
+      "picnic",
+      "table",
+      "stol",
+      "travel",
+      "putovanje"
+    ]
+  }
+]

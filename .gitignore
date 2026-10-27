@@ -13,3 +13,4 @@ Thumbs.db
 next-env.d.ts
 .vercel
 .playwright-mcp/
+__pycache__/

@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3Z"/><path d="M8 10a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path d="M16 11h3"/><g stroke="var(--icon-secondary, currentColor)"><path d="M8 13v2"/><path d="M16 16h3"/><path d="M15 4h4"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5.5 5H18.5A2.5 2.5 0 0 1 21 7.5V18A1 1 0 0 1 20 19H4A1 1 0 0 1 3 18V7.5A2.5 2.5 0 0 1 5.5 5Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M5.5 5H18.5A2.5 2.5 0 0 1 21 7.5V18A1 1 0 0 1 20 19H4A1 1 0 0 1 3 18V7.5A2.5 2.5 0 0 1 5.5 5Z"/>
+  <path d="M9 12h.01"/>
+  <path d="M5.5 12a3.5 3.5 0 1 0 7.0 0a3.5 3.5 0 1 0 -7.0 0Z"/>
+  <path d="M16 8H18.5L17 13"/>
+  <path d="M16 16H18.5"/>
+</svg>

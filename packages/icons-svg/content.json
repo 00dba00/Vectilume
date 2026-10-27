@@ -1,0 +1,787 @@
+[
+  {
+    "id": "file",
+    "label": "File",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "document",
+      "page",
+      "blank",
+      "new"
+    ]
+  },
+  {
+    "id": "file-plus",
+    "label": "File plus",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "new file",
+      "add",
+      "create",
+      "document"
+    ]
+  },
+  {
+    "id": "file-minus",
+    "label": "File minus",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "remove",
+      "delete",
+      "document"
+    ]
+  },
+  {
+    "id": "file-check",
+    "label": "File check",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "approved",
+      "done",
+      "verified",
+      "document"
+    ]
+  },
+  {
+    "id": "file-search",
+    "label": "File search",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "find",
+      "lookup",
+      "document",
+      "magnifier"
+    ]
+  },
+  {
+    "id": "file-image",
+    "label": "File image",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "picture",
+      "photo",
+      "jpg",
+      "png"
+    ]
+  },
+  {
+    "id": "file-video",
+    "label": "File video",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "movie",
+      "clip",
+      "mp4",
+      "film"
+    ]
+  },
+  {
+    "id": "file-audio",
+    "label": "File audio",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "sound",
+      "music",
+      "mp3",
+      "track"
+    ]
+  },
+  {
+    "id": "file-zip",
+    "label": "File zip",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "archive",
+      "compressed",
+      "zip",
+      "rar"
+    ]
+  },
+  {
+    "id": "file-code",
+    "label": "File code",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "source",
+      "script",
+      "developer",
+      "html"
+    ]
+  },
+  {
+    "id": "file-spreadsheet",
+    "label": "File spreadsheet",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "sheet",
+      "excel",
+      "csv",
+      "table"
+    ]
+  },
+  {
+    "id": "files",
+    "label": "Files",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "documents",
+      "copies",
+      "pages",
+      "multiple"
+    ]
+  },
+  {
+    "id": "folder",
+    "label": "Folder",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "directory",
+      "collection",
+      "group"
+    ]
+  },
+  {
+    "id": "folder-plus",
+    "label": "Folder plus",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "new folder",
+      "add",
+      "create",
+      "directory"
+    ]
+  },
+  {
+    "id": "archive",
+    "label": "Archive",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "box",
+      "storage",
+      "store",
+      "backup"
+    ]
+  },
+  {
+    "id": "cloud",
+    "label": "Cloud",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "storage",
+      "online",
+      "sync",
+      "weather"
+    ]
+  },
+  {
+    "id": "cloud-upload",
+    "label": "Cloud upload",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "upload",
+      "backup",
+      "sync",
+      "send"
+    ]
+  },
+  {
+    "id": "cloud-download",
+    "label": "Cloud download",
+    "group": "files",
+    "groupLabel": "Files & folders",
+    "keywords": [
+      "download",
+      "restore",
+      "sync",
+      "save"
+    ]
+  },
+  {
+    "id": "bold",
+    "label": "Bold",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "strong",
+      "text",
+      "format",
+      "weight"
+    ]
+  },
+  {
+    "id": "italic",
+    "label": "Italic",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "slanted",
+      "emphasis",
+      "text",
+      "format"
+    ]
+  },
+  {
+    "id": "underline",
+    "label": "Underline",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "text",
+      "format",
+      "line"
+    ]
+  },
+  {
+    "id": "strikethrough",
+    "label": "Strikethrough",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "strike",
+      "cross out",
+      "text",
+      "format"
+    ]
+  },
+  {
+    "id": "heading",
+    "label": "Heading",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "title",
+      "h1",
+      "text",
+      "header"
+    ]
+  },
+  {
+    "id": "type",
+    "label": "Type",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "text",
+      "font",
+      "typography",
+      "letter"
+    ]
+  },
+  {
+    "id": "quote",
+    "label": "Quote",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "blockquote",
+      "citation",
+      "testimonial",
+      "speech"
+    ]
+  },
+  {
+    "id": "pilcrow",
+    "label": "Pilcrow",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "paragraph",
+      "text",
+      "formatting marks"
+    ]
+  },
+  {
+    "id": "align-left",
+    "label": "Align left",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "text",
+      "paragraph",
+      "alignment"
+    ]
+  },
+  {
+    "id": "align-center",
+    "label": "Align center",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "text",
+      "paragraph",
+      "alignment",
+      "centre"
+    ]
+  },
+  {
+    "id": "align-right",
+    "label": "Align right",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "text",
+      "paragraph",
+      "alignment"
+    ]
+  },
+  {
+    "id": "align-justify",
+    "label": "Align justify",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "text",
+      "paragraph",
+      "alignment",
+      "justified"
+    ]
+  },
+  {
+    "id": "indent",
+    "label": "Indent",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "increase indent",
+      "tab",
+      "text",
+      "paragraph"
+    ]
+  },
+  {
+    "id": "outdent",
+    "label": "Outdent",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "decrease indent",
+      "text",
+      "paragraph"
+    ]
+  },
+  {
+    "id": "highlighter",
+    "label": "Highlighter",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "marker",
+      "highlight",
+      "emphasis",
+      "pen"
+    ]
+  },
+  {
+    "id": "eraser",
+    "label": "Eraser",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "rubber",
+      "clear",
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "id": "unlink",
+    "label": "Unlink",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "break link",
+      "remove link",
+      "chain",
+      "disconnect"
+    ]
+  },
+  {
+    "id": "code-block",
+    "label": "Code block",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "snippet",
+      "source",
+      "pre",
+      "developer"
+    ]
+  },
+  {
+    "id": "image-plus",
+    "label": "Image plus",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "add image",
+      "upload photo",
+      "picture",
+      "insert"
+    ]
+  },
+  {
+    "id": "pause",
+    "label": "Pause",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "hold",
+      "media",
+      "player",
+      "break"
+    ]
+  },
+  {
+    "id": "stop",
+    "label": "Stop",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "end",
+      "media",
+      "player",
+      "square"
+    ]
+  },
+  {
+    "id": "skip-forward",
+    "label": "Skip forward",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "next",
+      "track",
+      "media",
+      "player"
+    ]
+  },
+  {
+    "id": "skip-back",
+    "label": "Skip back",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "previous",
+      "track",
+      "media",
+      "player"
+    ]
+  },
+  {
+    "id": "fast-forward",
+    "label": "Fast forward",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "forward",
+      "speed",
+      "media",
+      "player"
+    ]
+  },
+  {
+    "id": "rewind",
+    "label": "Rewind",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "back",
+      "reverse",
+      "media",
+      "player"
+    ]
+  },
+  {
+    "id": "shuffle",
+    "label": "Shuffle",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "random",
+      "mix",
+      "playlist",
+      "order"
+    ]
+  },
+  {
+    "id": "volume",
+    "label": "Volume",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "sound",
+      "audio",
+      "speaker",
+      "loud"
+    ]
+  },
+  {
+    "id": "volume-low",
+    "label": "Volume low",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "sound",
+      "audio",
+      "speaker",
+      "quiet"
+    ]
+  },
+  {
+    "id": "volume-x",
+    "label": "Volume x",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "mute",
+      "silent",
+      "sound off",
+      "audio"
+    ]
+  },
+  {
+    "id": "mic",
+    "label": "Microphone",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "record",
+      "voice",
+      "audio",
+      "speak"
+    ]
+  },
+  {
+    "id": "mic-off",
+    "label": "Microphone off",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "mute",
+      "voice off",
+      "audio",
+      "silent"
+    ]
+  },
+  {
+    "id": "video",
+    "label": "Video",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "camera",
+      "film",
+      "record",
+      "call"
+    ]
+  },
+  {
+    "id": "video-off",
+    "label": "Video off",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "camera off",
+      "no video",
+      "call",
+      "disabled"
+    ]
+  },
+  {
+    "id": "headphones",
+    "label": "Headphones",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "audio",
+      "listen",
+      "music",
+      "headset"
+    ]
+  },
+  {
+    "id": "music",
+    "label": "Music",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "note",
+      "song",
+      "audio",
+      "melody"
+    ]
+  },
+  {
+    "id": "playlist",
+    "label": "Playlist",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "queue",
+      "list",
+      "songs",
+      "music"
+    ]
+  },
+  {
+    "id": "captions",
+    "label": "Captions",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "subtitles",
+      "cc",
+      "transcript",
+      "accessibility"
+    ]
+  },
+  {
+    "id": "minimize",
+    "label": "Minimize",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "exit fullscreen",
+      "shrink",
+      "collapse",
+      "reduce"
+    ]
+  },
+  {
+    "id": "cast",
+    "label": "Cast",
+    "group": "media",
+    "groupLabel": "Media & audio",
+    "keywords": [
+      "screen mirroring",
+      "stream",
+      "airplay",
+      "tv"
+    ]
+  },
+  {
+    "id": "laptop",
+    "label": "Laptop",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "computer",
+      "notebook",
+      "macbook",
+      "device"
+    ]
+  },
+  {
+    "id": "tablet",
+    "label": "Tablet",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "ipad",
+      "device",
+      "screen",
+      "mobile"
+    ]
+  },
+  {
+    "id": "watch",
+    "label": "Watch",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "smartwatch",
+      "wearable",
+      "time",
+      "wrist"
+    ]
+  },
+  {
+    "id": "printer",
+    "label": "Printer",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "print",
+      "paper",
+      "office",
+      "document"
+    ]
+  },
+  {
+    "id": "keyboard",
+    "label": "Keyboard",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "type",
+      "keys",
+      "input",
+      "computer"
+    ]
+  },
+  {
+    "id": "mouse",
+    "label": "Mouse",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "pointer",
+      "click",
+      "computer",
+      "input"
+    ]
+  },
+  {
+    "id": "speaker",
+    "label": "Speaker",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "audio",
+      "sound",
+      "loudspeaker",
+      "music"
+    ]
+  },
+  {
+    "id": "tv",
+    "label": "TV",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "television",
+      "screen",
+      "display",
+      "watch"
+    ]
+  },
+  {
+    "id": "hard-drive",
+    "label": "Hard drive",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "storage",
+      "disk",
+      "hdd",
+      "server"
+    ]
+  }
+]

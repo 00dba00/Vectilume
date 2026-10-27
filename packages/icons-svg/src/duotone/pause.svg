@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5.5 6a1.5 1.5 0 0 1 1.5-1.5h2.0A1.5 1.5 0 0 1 10.5 6v12a1.5 1.5 0 0 1-1.5 1.5h-2.0A1.5 1.5 0 0 1 5.5 18Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M13.5 6a1.5 1.5 0 0 1 1.5-1.5h2.0A1.5 1.5 0 0 1 18.5 6v12a1.5 1.5 0 0 1-1.5 1.5h-2.0A1.5 1.5 0 0 1 13.5 18Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M5.5 6a1.5 1.5 0 0 1 1.5-1.5h2.0A1.5 1.5 0 0 1 10.5 6v12a1.5 1.5 0 0 1-1.5 1.5h-2.0A1.5 1.5 0 0 1 5.5 18Z"/>
+  <path d="M13.5 6a1.5 1.5 0 0 1 1.5-1.5h2.0A1.5 1.5 0 0 1 18.5 6v12a1.5 1.5 0 0 1-1.5 1.5h-2.0A1.5 1.5 0 0 1 13.5 18Z"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 13L12 21L17 13" fill="var(--icon-secondary, currentColor)" stroke="none" fill-rule="evenodd"/>
+  <path d="M6.8 12A6 6 0 1 1 17.2 12Q15.8 14 14 12Q12 14 10 12Q8.2 14 6.8 12Z" fill="var(--icon-secondary, currentColor)" stroke="none" fill-rule="evenodd"/>
+  <path d="M7 13L12 21L17 13"/>
+  <path d="M6.8 12A6 6 0 1 1 17.2 12Q15.8 14 14 12Q12 14 10 12Q8.2 14 6.8 12Z"/>
+  <path d="M9 8A3 3 0 0 1 11 6"/>
+</svg>
