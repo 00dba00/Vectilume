@@ -20,7 +20,7 @@
 | SVG × 3 stila (outline, duotone, solid) | svi | ✅ |
 | React komponenta (`@vectilume/react`) | React aplikacije | ✅ |
 | React Native komponenta | mobilne aplikacije | ⏳ |
-| SVG sprite | statični HTML, e-mail | ⏳ |
+| SVG sprite (`sprite/<stil>.svg`, `<use href="…#ime">`) | statični HTML | ✅ |
 | PNG 1× / 2× (24, 48 px) | prezentacije, alati bez SVG-a | ⏳ |
 | Figma biblioteka | dizajneri | ⏳ |
 

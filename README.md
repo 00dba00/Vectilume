@@ -53,6 +53,13 @@ npm install @vectilume/icons
 import trash from "@vectilume/icons/outline/trash.svg";
 ```
 
+For plain HTML there is one sprite per style (`sprite/outline.svg`, `sprite/duotone.svg`,
+`sprite/solid.svg`); icons drawn with `<use>` inherit the colour and the duotone variables:
+
+```html
+<svg width="24" height="24"><use href="/sprite/outline.svg#trash"/></svg>
+```
+
 Files live at `<style>/<name>.svg`. `manifest.json` lists every icon with its collection, group,
 label, keywords and the version it first shipped in. Outline and Solid use `currentColor`; Duotone
 uses `var(--icon-primary)` and `var(--icon-secondary)`, both falling back to `currentColor`:

@@ -4,6 +4,7 @@ import path from "node:path";
 import { STYLES, type IconStyle } from "./svg-rules.ts";
 import { buildReactSources, componentName } from "./react.ts";
 import { optimizeSvg } from "./optimize.ts";
+import { buildSprite } from "./sprite.ts";
 
 export interface Release {
   version: string;
@@ -156,20 +157,25 @@ async function main(): Promise<void> {
   await rm(out, { recursive: true, force: true });
   type ManifestEntry = Omit<ReleaseIcon, "aliases"> & { style: IconStyle; since: string; deprecated?: true; replacedBy?: string };
   const manifest: ManifestEntry[] = [];
+  await mkdir(path.join(out, "sprite"), { recursive: true });
   for (const style of STYLES) {
     await mkdir(path.join(out, style), { recursive: true });
+    const symbols: { id: string; svg: string }[] = [];
     for (const { aliases = [], ...icon } of icons) {
       const source = path.join(root, "src", style, `${icon.id}.svg`);
       if (!existsSync(source)) throw new Error(`missing ${style}/${icon.id}.svg`);
       const svg = optimizeSvg(await readFile(source, "utf8"));
       await writeFile(path.join(out, style, `${icon.id}.svg`), svg);
+      symbols.push({ id: icon.id, svg });
       manifest.push({ ...icon, style, since: sinceOf(icon.id, release.version, published) });
       for (const alias of aliases) {
         await writeFile(path.join(out, style, `${alias}.svg`), svg);
+        symbols.push({ id: alias, svg });
         const since = sinceOf(alias, release.version, published);
         manifest.push({ ...icon, id: alias, style, since, deprecated: true, replacedBy: icon.id });
       }
     }
+    await writeFile(path.join(out, "sprite", `${style}.svg`), buildSprite(symbols));
   }
 
   const repoRoot = path.resolve(root, "../..");
@@ -200,6 +206,12 @@ async function main(): Promise<void> {
       "",
       "```js",
       'import check from "@vectilume/icons/outline/check.svg";',
+      "```",
+      "",
+      "One sprite per style for plain HTML: `sprite/outline.svg`, `sprite/duotone.svg`, `sprite/solid.svg`.",
+      "",
+      "```html",
+      '<svg width="24" height="24"><use href="/sprite/outline.svg#check"/></svg>',
       "```",
       "",
       "Outline and solid use `currentColor`; duotone uses `--icon-primary` and `--icon-secondary`.",
