@@ -108,6 +108,14 @@ export function checkAgainstPublished(published: Published, version: string, nam
 
 const PACKAGE = "@vectilume/icons";
 
+const PACKAGE_META = {
+  license: "MIT",
+  repository: "github:00dba00/Vectilume",
+  homepage: "https://github.com/00dba00/Vectilume#readme",
+  bugs: "https://github.com/00dba00/Vectilume/issues",
+};
+const KEYWORDS = ["icons", "icon-set", "outline", "duotone", "solid", "vectilume"];
+
 /** Latest published version and its icon names, or null before the first publish. */
 async function fetchPublished(): Promise<Published | null> {
   const meta = await fetch(`https://registry.npmjs.org/${PACKAGE.replace("/", "%2F")}`);
@@ -172,8 +180,8 @@ async function main(): Promise<void> {
         name: "@vectilume/icons",
         version: release.version,
         description: "Vectilume Icons — free, consistent, themeable SVG icons (outline, duotone, solid)",
-        license: "MIT",
-        repository: "github:00dba00/Vectilume",
+        ...PACKAGE_META,
+        keywords: [...KEYWORDS, "svg"],
         type: "module",
         exports: { "./manifest.json": "./manifest.json", "./*.svg": "./*.svg" },
       },
@@ -217,8 +225,8 @@ async function main(): Promise<void> {
         name: "@vectilume/react",
         version: release.version,
         description: "Vectilume Icons as React components (outline, duotone, solid)",
-        license: "MIT",
-        repository: "github:00dba00/Vectilume",
+        ...PACKAGE_META,
+        keywords: [...KEYWORDS, "react", "react-icons"],
         type: "module",
         sideEffects: false,
         exports: { ".": { types: "./index.d.ts", default: "./index.js" } },

@@ -13,7 +13,7 @@
 
 ## Što nedostaje
 
-1. **Objava na npm** — kolekcije se potvrđuju u katalogu (panel „Objava na npm”), paket se
+1. **Objava na npm** — koraci u `docs/release-checklist.md`. Kolekcije se potvrđuju u katalogu (panel „Objava na npm”), paket se
    slaže s `pnpm --filter @vectilume/icons-svg release` i objavljuje iz `dist/npm`.
 2. **React paket `@vectilume/react`** — aplikacije koriste ikone kao React komponente
    (`<TrendingUp size={16} />`). Gole SVG datoteke nisu dovoljne: kao `<img>` ne nasljeđuju boju
