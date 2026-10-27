@@ -1,4 +1,11 @@
 {
   "version": "0.1.0",
-  "collections": []
+  "collections": [
+    "hobbies",
+    "general",
+    "content",
+    "lettering",
+    "food",
+    "transport"
+  ]
 }
