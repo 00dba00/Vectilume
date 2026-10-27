@@ -30,7 +30,7 @@
 - ✅ Gloss pravila: razmak odsjaja ≥ 0.5, granice 2–22, solid ne gubi dijelove crteža.
 - ✅ Pristupačnost u komponentama: `title` / `aria-label`, bez naslova `aria-hidden`.
 - ⏳ Optimizacija veličine (SVGO) bez vidljive promjene.
-- ⏳ Vizualni regresijski test: usporedba slika pri svakoj promjeni ikone.
+- ✅ Vizualni regresijski test: `pnpm --filter @vectilume/icons-svg visual-diff` (usporedba piksela sa zadnjom objavom na npm-u, HTML izvještaj).
 
 ## Katalog, po ikoni
 

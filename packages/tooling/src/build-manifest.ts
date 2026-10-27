@@ -44,4 +44,7 @@ async function main(): Promise<void> {
   console.log(`${icons.length} icons → ${path.relative(process.cwd(), outFile)}`);
 }
 
-await main();
+// Run only as a script, so other tools can import normalizeSvg.
+if (process.argv[1]?.endsWith("build-manifest.ts")) {
+  await main();
+}
