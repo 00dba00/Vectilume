@@ -2,7 +2,24 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { buildReactSources, componentName } from "./react.ts";
 import { STYLES } from "./svg-rules.ts";
-import { componentName as catalogName } from "../../../apps/web/src/lib/react-snippet.ts";
+import { componentName as catalogName, reactSnippet } from "../../../apps/web/src/lib/react-snippet.ts";
+
+describe("reactSnippet", () => {
+  const props = { size: 24, color: "", strokeWidth: 1.75, primary: "", secondary: "", title: "" };
+
+  it("leaves defaults out", () => {
+    assert.equal(reactSnippet("trash", "outline", props).jsx, "<Trash />");
+  });
+
+  it("writes only the props that apply to the style", () => {
+    const tried = { size: 16, color: "#f00", strokeWidth: 2, primary: "#00f", secondary: "", title: 'Say "hi"' };
+    assert.equal(
+      reactSnippet("trash", "duotone", tried).jsx,
+      '<TrashDuotone size={16} color="#f00" strokeWidth={2} style={{ "--icon-primary": "#00f" }} title={"Say \\"hi\\""} />',
+    );
+    assert.equal(reactSnippet("trash", "solid", tried).jsx, '<TrashSolid size={16} color="#f00" title={"Say \\"hi\\""} />');
+  });
+});
 
 const svg = (body: string) =>
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><!-- c -->${body}</svg>`;

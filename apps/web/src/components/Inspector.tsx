@@ -6,7 +6,7 @@ import { IconShowcase } from "./IconShowcase";
 import styles from "./Lab.module.css";
 import { SIZES, STYLES, iconId, type IconLookup, type IconStyle } from "@/lib/icons";
 import { themeVars, type Background, type Theme } from "@/lib/theme";
-import { reactSnippet } from "@/lib/react-snippet";
+import { ReactPlayground } from "./ReactPlayground";
 
 export interface Selection {
   collection: string;
@@ -41,8 +41,6 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
   }, [selection]);
 
   const svg = selection ? lookup[iconId(style, selection.name)] : undefined;
-
-  const react = selection ? reactSnippet(selection.name, style) : undefined;
 
   const copy = async (what: string, text: string | undefined) => {
     if (!text) return;
@@ -130,20 +128,7 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
             <pre>{svg ?? "Not drawn yet."}</pre>
           </div>
 
-          <div className={styles.source}>
-            <div className={styles.sourceHeader}>
-              <span>React</span>
-              <div className={styles.sourceActions}>
-                <button type="button" className={styles.reset} onClick={() => copy("import", react?.importLine)}>
-                  {copied === "import" ? "Copied" : "Copy import"}
-                </button>
-                <button type="button" className={styles.reset} onClick={() => copy("jsx", react?.jsx)}>
-                  {copied === "jsx" ? "Copied" : "Copy JSX"}
-                </button>
-              </div>
-            </div>
-            <pre>{react && `${react.importLine}\n\n${react.jsx}`}</pre>
-          </div>
+          <ReactPlayground name={selection.name} style={style} svg={svg} theme={theme} />
           </div>
 
           <div className={styles.inspectorUse}>

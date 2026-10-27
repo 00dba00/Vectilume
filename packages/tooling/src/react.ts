@@ -42,9 +42,11 @@ function icon(displayName, attrs, nodes) {
 }
 `;
 
-const TYPES = `import type { ForwardRefExoticComponent, RefAttributes, SVGProps } from "react";
+const TYPES = `import type { CSSProperties, ForwardRefExoticComponent, RefAttributes, SVGProps } from "react";
 
-export interface IconProps extends Omit<SVGProps<SVGSVGElement>, "ref"> {
+export interface IconProps extends Omit<SVGProps<SVGSVGElement>, "ref" | "style"> {
+  /** Also takes CSS variables, e.g. the duotone colours --icon-primary and --icon-secondary. */
+  style?: CSSProperties & { [variable: \`--\${string}\`]: string | number };
   /** Width and height; default 24. */
   size?: number | string;
   /** Accessible name. Without it (or aria-label) the icon is decorative and aria-hidden. */
