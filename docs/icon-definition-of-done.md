@@ -29,7 +29,7 @@
 - ✅ Validator: mreža 24×24, stroke 1.75, `currentColor` / CSS varijable, bez hardkodiranih boja.
 - ✅ Gloss pravila: razmak odsjaja ≥ 0.5, granice 2–22, solid ne gubi dijelove crteža.
 - ✅ Pristupačnost u komponentama: `title` / `aria-label`, bez naslova `aria-hidden`.
-- ⏳ Optimizacija veličine (SVGO) bez vidljive promjene.
+- ✅ Optimizacija veličine (SVGO) bez vidljive promjene — samo u release izlazu (izvori ostaju čitljivi), samo lossless postavke (`packages/tooling/src/optimize.ts`); `visual-diff` na 0.1.0: 0 vidljivih promjena, paketi −31 % / −38 %.
 - ✅ Vizualni regresijski test: `pnpm --filter @vectilume/icons-svg visual-diff` (usporedba piksela sa zadnjom objavom na npm-u, HTML izvještaj).
 
 ## Katalog, po ikoni
@@ -52,6 +52,6 @@
 2. React paket s pristupačnošću ✅
 3. Katalog: Copy JSX, import naredba, Download
 4. `since`, `deprecated`, alias — prije prve objave na npm ✅
-5. SVGO
+5. SVGO ✅
 6. Sprite, PNG, vizualni regresijski testovi
 7. Figma

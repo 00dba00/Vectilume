@@ -5,12 +5,15 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import sharp from "sharp";
 import { normalizeSvg } from "./build-manifest.ts";
+import { optimizeSvg } from "./optimize.ts";
 import { STYLES } from "./svg-rules.ts";
 
 const PACKAGE = "@vectilume/icons";
 const SIZE = 96;
 /** Per-channel difference that still counts as anti-aliasing noise rather than a change. */
 const TOLERANCE = 48;
+
+// The source goes through the same optimisation as a release, so only what would ship is compared.
 
 /** Fixed colours for the CSS variables and currentColor, which a rasterizer cannot resolve. */
 export function paint(svg: string): string {
@@ -87,7 +90,7 @@ async function main(): Promise<void> {
           missing.push(id);
           continue;
         }
-        const [before, after] = await Promise.all([readFile(path.join(dir, style, file), "utf8"), readFile(source, "utf8")]);
+        const [before, after] = await Promise.all([readFile(path.join(dir, style, file), "utf8"), readFile(source, "utf8").then(optimizeSvg)]);
         if (normalizeSvg(before) === normalizeSvg(after)) continue;
         const [a, b] = await Promise.all([render(before), render(after)]);
         const changed = changedPixels(a, b);

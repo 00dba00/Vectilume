@@ -11,13 +11,13 @@ Objavljuju se dva paketa iz istih potvrđenih kolekcija i s istom verzijom:
 3. Vizualna provjera: `pnpm --filter @vectilume/icons-svg visual-diff` uspoređuje izvorne SVG-ove sa
    zadnjom objavljenom verzijom i piše `packages/icons-svg/dist/visual-diff.html` (staro / novo /
    promijenjeni pikseli). Svaka „visible change” mora biti namjerna; „code-only” znači da se crtež
-   nije promijenio (npr. nakon SVGO-a).
+   nije promijenio. Izvor prolazi istu SVGO optimizaciju kao release, pa se uspoređuje točno ono što bi se objavilo.
 4. Složi pakete: `pnpm --filter @vectilume/icons-svg release`
    → `packages/icons-svg/dist/npm` i `packages/icons-svg/dist/react`.
    Skripta s npm-a čita zadnju objavljenu verziju (treba mreža) i ruši release ako bi ikona nestala
    bez breaking verzije; kod breaking verzije ispiše aliase koji se mogu obrisati.
 5. Pregledaj sadržaj: `npm pack --dry-run` u oba `dist/` direktorija
-   (orijentacijski za 835 ikona: icons ≈ 570 kB, react ≈ 450 kB).
+   (orijentacijski za 835 ikona sa SVGO-om: icons ≈ 390 kB, react ≈ 280 kB).
 
 ## Objava
 

@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { STYLES, type IconStyle } from "./svg-rules.ts";
 import { buildReactSources, componentName } from "./react.ts";
+import { optimizeSvg } from "./optimize.ts";
 
 export interface Release {
   version: string;
@@ -160,10 +161,11 @@ async function main(): Promise<void> {
     for (const { aliases = [], ...icon } of icons) {
       const source = path.join(root, "src", style, `${icon.id}.svg`);
       if (!existsSync(source)) throw new Error(`missing ${style}/${icon.id}.svg`);
-      await copyFile(source, path.join(out, style, `${icon.id}.svg`));
+      const svg = optimizeSvg(await readFile(source, "utf8"));
+      await writeFile(path.join(out, style, `${icon.id}.svg`), svg);
       manifest.push({ ...icon, style, since: sinceOf(icon.id, release.version, published) });
       for (const alias of aliases) {
-        await copyFile(source, path.join(out, style, `${alias}.svg`));
+        await writeFile(path.join(out, style, `${alias}.svg`), svg);
         const since = sinceOf(alias, release.version, published);
         manifest.push({ ...icon, id: alias, style, since, deprecated: true, replacedBy: icon.id });
       }
@@ -215,7 +217,7 @@ async function main(): Promise<void> {
   await mkdir(react, { recursive: true });
   const sources = buildReactSources(
     icons,
-    (style, id) => readFileSync(path.join(root, "src", style, `${id}.svg`), "utf8"),
+    (style, id) => optimizeSvg(readFileSync(path.join(root, "src", style, `${id}.svg`), "utf8")),
   );
   await writeFile(path.join(react, "index.js"), sources.js);
   await writeFile(path.join(react, "index.d.ts"), sources.dts);
