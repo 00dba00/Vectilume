@@ -110,7 +110,7 @@ const PACKAGE = "@vectilume/icons";
 
 const PACKAGE_META = {
   license: "MIT",
-  repository: "github:00dba00/Vectilume",
+  repository: { type: "git", url: "git+https://github.com/00dba00/Vectilume.git" },
   homepage: "https://github.com/00dba00/Vectilume#readme",
   bugs: "https://github.com/00dba00/Vectilume/issues",
 };
