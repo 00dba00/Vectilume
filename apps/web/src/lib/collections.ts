@@ -11,6 +11,8 @@ export interface CollectionItem {
   group: string;
   groupLabel: string;
   keywords: string[];
+  /** Former names of a renamed icon, still published as deprecated aliases. */
+  aliases?: string[];
   glyph?: string;
   form?: string;
 }

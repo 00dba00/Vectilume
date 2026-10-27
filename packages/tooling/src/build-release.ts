@@ -60,6 +60,16 @@ export interface Published {
 /** Every name the package exports: icon ids and their deprecated aliases. */
 export const releaseNames = (icons: ReleaseIcon[]) => icons.flatMap((icon) => [icon.id, ...(icon.aliases ?? [])]);
 
+/**
+ * Published aliases a breaking release may drop, as `old → new`. Only listed: deleting them from the
+ * collection JSON stays a deliberate edit.
+ */
+export function removableAliases(published: Published | null, version: string, icons: ReleaseIcon[]): string[] {
+  if (!published || !isBreakingBump(published.version, version)) return [];
+  const shipped = new Set(published.names);
+  return icons.flatMap((icon) => (icon.aliases ?? []).filter((alias) => shipped.has(alias)).map((alias) => `${alias} → ${icon.id}`));
+}
+
 /** A name keeps the version it first shipped in; anything new ships in this release. */
 export const sinceOf = (name: string, version: string, published: Published | null) => published?.since[name] ?? version;
 
@@ -128,6 +138,10 @@ async function main(): Promise<void> {
   if (published) {
     const { removed } = checkAgainstPublished(published, release.version, releaseNames(icons));
     if (removed.length > 0) console.warn(`breaking release: removes ${removed.join(", ")}`);
+    const stale = removableAliases(published, release.version, icons);
+    if (stale.length > 0) {
+      console.warn(`breaking release: these aliases can now be deleted from the collection JSON: ${stale.join(", ")}`);
+    }
   }
 
   await rm(out, { recursive: true, force: true });

@@ -14,6 +14,8 @@ export interface CatalogItem {
   group: string;
   groupLabel: string;
   keywords: string[];
+  /** Former names of a renamed icon, still published as deprecated aliases. */
+  aliases?: string[];
   glyph?: string;
   form?: string;
 }
@@ -96,7 +98,7 @@ export function Catalog({ id, eyebrow, title, description, searchLabel, placehol
             key={item.id}
             type="button"
             className={styles.card}
-            onClick={() => onSelect({ collection: title, style, name: item.id, label: item.label, keywords: item.keywords })}
+            onClick={() => onSelect({ collection: title, style, name: item.id, label: item.label, keywords: item.keywords, aliases: item.aliases })}
             aria-label={`Preview ${item.label}, ${style}`}
           >
             <Icon svg={lookup[iconId(style, item.id)]} size={40} />

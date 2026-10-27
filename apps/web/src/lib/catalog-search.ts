@@ -3,6 +3,7 @@ interface SearchableItem {
   label: string;
   groupLabel: string;
   keywords: string[];
+  aliases?: string[];
   glyph?: string;
 }
 
@@ -13,7 +14,7 @@ export function catalogMatcher(query: string): (item: SearchableItem) => boolean
   const terms = query.normalize("NFC").trim().split(/\s+/).filter(Boolean);
   const explicitCase = terms.some((term) => /^(upper|lower|title)case$/i.test(term));
   return (item) => {
-    const haystack = fold(`${item.label} ${item.id} ${item.groupLabel} ${item.keywords.join(" ")}`);
+    const haystack = fold(`${item.label} ${item.id} ${item.groupLabel} ${item.keywords.join(" ")} ${item.aliases?.join(" ") ?? ""}`);
     return terms.every((term) => {
       if (item.glyph && (Array.from(term).length === 1 || /^(dž|lj|nj)$/i.test(term))) {
         return explicitCase ? item.glyph.toLowerCase() === term.toLowerCase() : item.glyph === term;

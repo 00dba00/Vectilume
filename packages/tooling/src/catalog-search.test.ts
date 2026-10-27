@@ -34,4 +34,9 @@ describe("character catalog search", () => {
     assert.equal(catalogMatcher("flower cooking")(icon), false);
     assert.equal(catalogMatcher("")(icon), true);
   });
+
+  it("finds a renamed icon by its former name", () => {
+    const icon = { id: "trash", label: "Trash", groupLabel: "Actions", keywords: ["delete"], aliases: ["bin"] };
+    assert.equal(catalogMatcher("bin")(icon), true);
+  });
 });

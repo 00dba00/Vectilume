@@ -14,6 +14,7 @@ export interface Selection {
   name: string;
   label: string;
   keywords: string[];
+  aliases?: string[];
 }
 
 interface InspectorProps {
@@ -62,6 +63,7 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
             <div>
               <p className={styles.eyebrow}>
                 {selection.collection} · {selection.name}
+                {selection.aliases?.length ? ` · formerly ${selection.aliases.join(", ")}` : ""}
               </p>
               <h2 id="inspector-title">{selection.label}</h2>
               <ul className={styles.keywords} aria-label="Keywords">

@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { checkAgainstPublished, releaseNames, selectReleaseIcons, sinceOf } from "./build-release.ts";
+import { checkAgainstPublished, releaseNames, removableAliases, selectReleaseIcons, sinceOf } from "./build-release.ts";
 
 const entry = (id: string) => ({ id, label: id, group: "g", groupLabel: "G", keywords: ["k"] });
 const catalogs = { general: [entry("check"), entry("close")], hobbies: [entry("chess")] };
@@ -58,6 +58,14 @@ describe("aliases and since", () => {
     const late = { general: [entry("close"), { ...entry("trash"), aliases: ["close"] }] };
     assert.throws(() => selectReleaseIcons(release, late), /already a name/);
     assert.throws(() => selectReleaseIcons(release, { general: [{ ...entry("trash"), aliases: ["Bin"] }] }), /kebab-case/);
+  });
+
+  it("lists published aliases only when the release is breaking", () => {
+    const icons = selectReleaseIcons(release, { general: [{ ...entry("trash"), aliases: ["bin", "waste"] }] });
+    const published = { version: "0.2.0", names: ["bin", "trash"], since: {} };
+    assert.deepEqual(removableAliases(published, "0.3.0", icons), ["bin → trash"]);
+    assert.deepEqual(removableAliases(published, "0.2.1", icons), []);
+    assert.deepEqual(removableAliases(null, "0.1.0", icons), []);
   });
 
   it("keeps the first published version and gives new names this one", () => {
