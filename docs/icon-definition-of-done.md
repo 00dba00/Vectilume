@@ -18,7 +18,7 @@
 | Format | Za koga | Stanje |
 |---|---|---|
 | SVG × 3 stila (outline, duotone, solid) | svi | ✅ |
-| React komponenta (`@vectilume/react`) | React aplikacije | ⏳ |
+| React komponenta (`@vectilume/react`) | React aplikacije | ✅ |
 | React Native komponenta | mobilne aplikacije | ⏳ |
 | SVG sprite | statični HTML, e-mail | ⏳ |
 | PNG 1× / 2× (24, 48 px) | prezentacije, alati bez SVG-a | ⏳ |
@@ -28,7 +28,7 @@
 
 - ✅ Validator: mreža 24×24, stroke 1.75, `currentColor` / CSS varijable, bez hardkodiranih boja.
 - ✅ Gloss pravila: razmak odsjaja ≥ 0.5, granice 2–22, solid ne gubi dijelove crteža.
-- ⏳ Pristupačnost u komponentama: `title` / `aria-label`, bez naslova `aria-hidden`.
+- ✅ Pristupačnost u komponentama: `title` / `aria-label`, bez naslova `aria-hidden`.
 - ⏳ Optimizacija veličine (SVGO) bez vidljive promjene.
 - ⏳ Vizualni regresijski test: usporedba slika pri svakoj promjeni ikone.
 
@@ -44,7 +44,7 @@
 ## Redoslijed
 
 1. Ključne riječi ✅
-2. React paket s pristupačnošću
+2. React paket s pristupačnošću ✅
 3. Katalog: Copy JSX, import naredba, Download
 4. `since`, `deprecated`, alias — prije prve objave na npm
 5. SVGO

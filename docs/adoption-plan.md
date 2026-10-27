@@ -29,7 +29,7 @@
 
 1. Završiti redizajn Hobija.
 2. Pregledati Općenito i Hobije u katalogu; ispraviti što treba.
-3. Napraviti `@vectilume/react`.
+3. Napraviti `@vectilume/react`. ✅ Slaže ga isti `release` korak u `dist/react` (iz istih potvrđenih kolekcija).
 4. Potvrditi Općenito i Hobije u panelu, objaviti `@vectilume/icons` i `@vectilume/react`
    verzije `0.1.0`.
 5. **Scout AI web** — prvi prelazi (sve ikone su u Općenito). Zamjena importa po tablici iz

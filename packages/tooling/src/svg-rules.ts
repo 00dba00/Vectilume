@@ -80,7 +80,7 @@ interface XmlNode {
   ":@"?: Record<string, string>;
 }
 
-interface Element {
+export interface Element {
   tag: string;
   attrs: Record<string, string>;
   children: Element[];
@@ -107,6 +107,11 @@ function toElements(nodes: XmlNode[]): Element[] {
     });
   }
   return elements;
+}
+
+/** Top-level elements of an SVG source, without comments and the XML declaration. */
+export function parseSvg(source: string): Element[] {
+  return toElements(parser.parse(source) as XmlNode[]);
 }
 
 function hasText(nodes: XmlNode[]): boolean {

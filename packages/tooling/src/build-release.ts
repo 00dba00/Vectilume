@@ -1,7 +1,8 @@
 import { copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { STYLES, type IconStyle } from "./svg-rules.ts";
+import { buildReactSources, componentName } from "./react.ts";
 
 export interface Release {
   version: string;
@@ -158,6 +159,59 @@ async function main(): Promise<void> {
     ].join("\n"),
   );
   console.log(`${icons.length} icons × ${STYLES.length} styles → ${path.relative(process.cwd(), out)}`);
+
+  const react = path.join(root, "dist/react");
+  await rm(react, { recursive: true, force: true });
+  await mkdir(react, { recursive: true });
+  const sources = buildReactSources(
+    icons.map((icon) => icon.id),
+    (style, id) => readFileSync(path.join(root, "src", style, `${id}.svg`), "utf8"),
+  );
+  await writeFile(path.join(react, "index.js"), sources.js);
+  await writeFile(path.join(react, "index.d.ts"), sources.dts);
+  await copyFile(path.join(repoRoot, "LICENSE"), path.join(react, "LICENSE"));
+  await writeFile(
+    path.join(react, "package.json"),
+    `${JSON.stringify(
+      {
+        name: "@vectilume/react",
+        version: release.version,
+        description: "Vectilume Icons as React components (outline, duotone, solid)",
+        license: "MIT",
+        repository: "github:00dba00/Vectilume",
+        type: "module",
+        sideEffects: false,
+        exports: { ".": { types: "./index.d.ts", default: "./index.js" } },
+        peerDependencies: { react: ">=18" },
+      },
+      null,
+      2,
+    )}\n`,
+  );
+  const example = icons[0]!.id;
+  await writeFile(
+    path.join(react, "README.md"),
+    [
+      "# @vectilume/react",
+      "",
+      `${icons.length} icons × outline, duotone and solid as React components (${release.collections.join(", ")}).`,
+      "",
+      "```jsx",
+      `import { ${componentName(example, "outline")}, ${componentName(example, "duotone")}, ${componentName(example, "solid")} } from "@vectilume/react";`,
+      "",
+      `<${componentName(example, "outline")} size={16} color="tomato" />`,
+      `<${componentName(example, "duotone")} title="${icons[0]!.label}" className="brand" />`,
+      "```",
+      "",
+      "- Names are the icon id in PascalCase plus `Duotone` / `Solid`; ids starting with a digit get an `Icon` prefix.",
+      "- `size` sets width and height (default 24); `color` sets `currentColor`; every other SVG prop is passed through.",
+      "- Without `title` or `aria-label` an icon is decorative (`aria-hidden`).",
+      "- Duotone colours come from CSS variables, e.g. `.brand { --icon-primary: #2563eb; --icon-secondary: #bfdbfe; }`;",
+      "  without them both layers fall back to `currentColor`.",
+      "",
+    ].join("\n"),
+  );
+  console.log(`${icons.length * STYLES.length} React components → ${path.relative(process.cwd(), react)}`);
 }
 
 // Run only as a script, so the test can import selectReleaseIcons.
