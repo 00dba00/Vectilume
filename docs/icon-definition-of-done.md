@@ -38,7 +38,7 @@
 - ✅ Copy SVG.
 - ✅ Pretraga po ključnim riječima.
 - ✅ Copy JSX i import naredba (`import { Trash } from "@vectilume/react"`).
-- ⏳ Download SVG / PNG.
+- ✅ Download SVG (izvorni, s `currentColor` / varijablama) i PNG 1× / 2× (boje, debljina i veličina iz playgrounda).
 - ⏳ Prikaz verzije dodavanja (`since`) i oznaka **New** — radi se **nakon prve objave na npm**:
   - Ikone iz prve objave (`0.1.0`) nikad nemaju „New”.
   - „New” imaju samo ikone čiji je `since` jednak **zadnjoj objavljenoj verziji** (npr. kolekcija

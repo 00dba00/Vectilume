@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, type CSSProperties, type ReactNode } from "react";
+import { useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { Icon } from "./Icon";
 import styles from "./Lab.module.css";
 import { SIZES, type IconStyle } from "@/lib/icons";
 import { DEFAULT_SIZE, DEFAULT_STROKE, reactSnippet, type SnippetProps } from "@/lib/react-snippet";
+import { bakeSvg } from "@/lib/bake-svg";
+import { download, svgToPng } from "@/lib/export-icon";
 import type { Theme } from "@/lib/theme";
 
 interface ReactPlaygroundProps {
@@ -37,6 +39,7 @@ export function ReactPlayground({ name, style, svg, theme }: ReactPlaygroundProp
     title: "",
   });
   const [copied, setCopied] = useState<string | null>(null);
+  const previewRef = useRef<HTMLDivElement>(null);
   const set = <K extends keyof SnippetProps>(key: K, value: SnippetProps[K]) => setProps((old) => ({ ...old, [key]: value }));
   const snippet = reactSnippet(name, style, props);
 
@@ -44,6 +47,24 @@ export function ReactPlayground({ name, style, svg, theme }: ReactPlaygroundProp
     await navigator.clipboard.writeText(text);
     setCopied(what);
     setTimeout(() => setCopied(null), 1500);
+  };
+
+  const file = `${name}-${style}`;
+  const downloadSvg = () => svg && download(new Blob([svg], { type: "image/svg+xml" }), `${file}.svg`);
+  const downloadPng = async (scale: number) => {
+    if (!svg || !previewRef.current) return;
+    const size = props.size * scale;
+    // The preview's computed text colour is what currentColor resolves to on screen.
+    const color = getComputedStyle(previewRef.current).color;
+    const duotone = style === "duotone";
+    const baked = bakeSvg(svg, {
+      size,
+      color,
+      primary: duotone ? props.primary : "",
+      secondary: duotone ? props.secondary : "",
+      strokeWidth: props.strokeWidth,
+    });
+    download(await svgToPng(baked, size), `${file}-${size}px.png`);
   };
 
   // Mirrors what the component does: color sets currentColor, the duotone layers read the CSS variables.
@@ -75,9 +96,22 @@ export function ReactPlayground({ name, style, svg, theme }: ReactPlaygroundProp
         <span className={styles.badge}>@vectilume/react</span>
       </div>
 
-      <div className={styles.playgroundPreview} style={preview}>
+      <div ref={previewRef} className={styles.playgroundPreview} style={preview}>
         <Icon svg={svg} size={props.size} label={props.title || undefined} />
         <span className={styles.previewSize}>{props.size} px</span>
+      </div>
+
+      <div className={styles.downloads} role="group" aria-label="Download">
+        <span>Download</span>
+        <button type="button" onClick={downloadSvg} disabled={!svg}>
+          SVG
+        </button>
+        <button type="button" onClick={() => downloadPng(1)} disabled={!svg}>
+          PNG {props.size}px
+        </button>
+        <button type="button" onClick={() => downloadPng(2)} disabled={!svg}>
+          PNG {props.size * 2}px <small>2×</small>
+        </button>
       </div>
 
       <div className={styles.propList}>
