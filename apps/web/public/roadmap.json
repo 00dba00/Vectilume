@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-28-b (#request-api-keys, #request-web-ui, #request-email-notifications planned)",
+  "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
+  "entries": [
+    {
+      "id": "request-api-keys",
+      "title": "Icon requests: own API with developer tokens on Neon Postgres",
+      "phase": "1",
+      "track": "requests",
+      "status": "planned",
+      "start": "2026-10-28",
+      "end": "2026-11-04",
+      "observe_until": null,
+      "summary": "Owner: an icon request \"is not really an issue\", so requests move off GitHub issues into our own API. A developer registers with an email and gets a token; the token is used to submit requests and to list and follow their statuses (\"ubaci token i vidiš\"). Leaked tokens are low risk: they only reveal which icons were requested and their status.",
+      "spec": "Neon Postgres via the Vercel Marketplace (DATABASE_URL set by the integration), queried with @neondatabase/serverless, no ORM. Tables: api_keys (id, email, token_hash = SHA-256 of the token, created_at, revoked_at) and icon_requests (serial id, key_id, name, description, keywords, status open|in-progress|declined, decline_reason, created_at, updated_at). Tokens look like vl_<32 random bytes base64url>, are shown once and stored only as a hash. Endpoints: POST /api/keys {email} -> 201 {token}; POST /api/requests (Authorization: Bearer) -> 201 {id, status, statusUrl}; GET /api/requests -> the token's requests with statuses; GET /api/requests/{id} -> status, only for the owning token. Done still comes from the published npm manifest (entry.request = request id), which keeps the manifest format; only the meaning of the number changes from issue number to request id (no icon-request issues exist yet, so nothing to migrate). Rate limits move from per-instance memory to the database: keys per IP per hour, requests per token per hour. Validation (parseIconRequest) stays; the Markdown stripping for issues can go. Removes GITHUB_TOKEN usage and apps/web/src/lib/github.ts. Risks: Neon cold start (~0.5 s on the first query after 5 min idle); email is not verified in this phase. Out of scope: web form, admin page, email delivery (see #request-web-ui, #request-email-notifications).",
+      "plan": "1. Create the Neon database through Vercel Storage and pull env vars locally. 2. SQL migration file for both tables. 3. Token helpers (generate, hash, read Bearer header) with tests. 4. Rewrite the requests routes and add /api/keys. 5. Admin status change via an endpoint guarded by ADMIN_TOKEN until #request-web-ui adds the page. 6. Update README API section and docs/icon-definition-of-done.md (request = request id). 7. Release minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "request-web-ui",
+      "title": "Icon requests on the website: get a token, submit, track, admin",
+      "phase": "2",
+      "track": "requests",
+      "status": "planned",
+      "start": "2026-11-04",
+      "end": "2026-11-11",
+      "observe_until": null,
+      "summary": "The site on Vercel needs a form for new icon requests and a page where a developer pastes their token and sees what they asked for and its status.",
+      "spec": "Pages on the existing Next.js app, using the same API endpoints as developers (one validation path): /request (get a token by email, then submit a request with it), /requests (paste token, list of own requests with status, final icon name and version when done; token kept in localStorage as a convenience only), /admin/requests (all requests, change status and decline reason; guarded by ADMIN_TOKEN). Icons from @vectilume/react / @vectilume/icons only. Out of scope: email notifications.",
+      "plan": "1. /request form. 2. /requests token view. 3. /admin/requests. 4. Link from the home page. 5. Release minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "request-email-notifications",
+      "title": "Email the developer when their icon ships",
+      "phase": "3",
+      "track": "requests",
+      "status": "planned",
+      "start": "2026-11-11",
+      "end": "2026-11-18",
+      "observe_until": null,
+      "summary": "Developers should be told when a requested icon is delivered, not only find out by polling.",
+      "spec": "Resend (free plan). After an npm release, compare the published manifest's request ids with requests not yet notified and send one email each with the icon name and version; store notified_at. Also lets a lost token be re-sent and verifies the email. Needs a domain we own for sending: Resend cannot send to arbitrary addresses from vectilume.vercel.app. If no domain is available, this item becomes blocked.",
+      "plan": "1. Decide the sending domain. 2. Resend account and DNS records. 3. notified_at column and a release hook or cron that sends. 4. Release minor.",
+      "deploy_note": null
+    }
+  ]
+}

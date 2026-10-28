@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Roadmap and review queue</title>
+<style>
+  :root {
+    --bg: #111315; --card: #1A1D20; --border: #2E3236; --text: #ECEBE7;
+    --sub: #B9B7B1; --muted: #8E8C86; --accent: #8AB4FF; --caution: #E0B45C; --win: #7FC79A;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #F4F3EF; --card: #FFFFFF; --border: #DAD8D2; --text: #1B1D1F;
+      --sub: #4A4C4F; --muted: #76777A; --accent: #2457C5; --caution: #9A6A00; --win: #2E7D4F;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+  main { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 26px; margin: 0; }
+  .meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  nav { display: flex; gap: 4px; margin: 20px 0 8px; border-bottom: 1px solid var(--border); }
+  nav button { background: none; border: 0; border-bottom: 2px solid transparent; color: var(--sub); font: inherit; font-weight: 600; padding: 8px 12px; cursor: pointer; }
+  nav button[aria-selected="true"] { color: var(--text); border-color: var(--accent); }
+  .note { color: var(--sub); font-size: 13px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--sub); margin: 24px 0 0; padding-bottom: 6px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
+  h2 span { color: var(--muted); font-weight: 400; }
+  details { border-bottom: 1px solid var(--border); }
+  summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 14px; padding: 12px 0; align-items: baseline; }
+  summary::-webkit-details-marker { display: none; }
+  .lead { font-size: 13px; font-weight: 600; color: var(--sub); }
+  .lead small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+  .due .lead, .due .lead small { color: var(--accent); }
+  .title { font-weight: 600; }
+  .quiet .title { color: var(--sub); }
+  .sub { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .body { padding: 0 0 14px 134px; display: grid; gap: 10px; font-size: 13px; }
+  .body b { display: block; font-size: 12px; color: var(--sub); }
+  .body div { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .body a { color: var(--accent); }
+  .empty, .err { color: var(--muted); margin-top: 20px; }
+  @media (max-width: 600px) {
+    summary { grid-template-columns: 1fr; gap: 4px; }
+    .body { padding-left: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Workflow</h1>
+  <div class="meta" id="meta"></div>
+  <nav role="tablist">
+    <button role="tab" data-tab="roadmap" aria-selected="true">Roadmap</button>
+    <button role="tab" data-tab="queue" aria-selected="false">Review queue</button>
+  </nav>
+  <section id="roadmap"></section>
+  <section id="queue" hidden></section>
+</main>
+<script>
+  const today = new Date().toLocaleDateString('sv-SE')
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
+  const days = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 86400000)
+  const plural = n => `${n} ${n === 1 ? 'day' : 'days'}`
+  const field = (label, value) => value ? `<div><b>${label}</b>${esc(value)}</div>` : ''
+  const docOrText = (label, value) => {
+    if (!value) return ''
+    if (/^[\w./-]+\.(md|html|pdf|txt)$/i.test(value)) return `<div><b>${label}</b><a href="/${esc(value)}" target="_blank" rel="noopener">${esc(value)}</a></div>`
+    return field(label, value)
+  }
+  const group = (title, rows) => rows.length ? `<h2>${title}<span>${rows.length}</span></h2>${rows.join('')}` : ''
+  const load = file => fetch(file, { cache: 'no-store' }).then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
+
+  const ROADMAP = [
+    ['in_progress', 'In progress'], ['observing', 'Observing'], ['deployed', 'Deployed'],
+    ['planned', 'Planned'], ['blocked', 'Blocked'], ['done', 'Done'],
+  ]
+
+  function timing(e) {
+    if (e.status === 'observing' && e.observe_until) {
+      const left = days(today, e.observe_until)
+      return left > 0 ? `Observing until ${e.observe_until}, ${plural(left)} left` : `Observe period ended ${e.observe_until}`
+    }
+    if (e.status === 'in_progress' && !e.end) return `Since ${e.start || '?'}`
+    return `${e.start || '?'} → ${e.end || '?'}`
+  }
+
+  function renderRoadmap(data) {
+    const el = document.getElementById('roadmap')
+    const entries = data.entries || []
+    if (!entries.length) { el.innerHTML = '<p class="empty">Nothing planned yet.</p>'; return }
+    const known = new Set(ROADMAP.map(r => r[0]))
+    el.innerHTML = (data.note ? `<p class="note">${esc(data.note)}</p>` : '') + ROADMAP.map(([status, label]) => {
+      const rows = entries
+        .filter(e => (known.has(e.status) ? e.status : 'planned') === status)
+        .sort((a, b) => String(a.start || '').localeCompare(String(b.start || '')))
+        .map(e => `<details class="${status === 'done' ? 'quiet' : ''}">
+          <summary><span class="lead">${esc(e.track || label)}</span>
+            <span><span class="title">${esc(e.title)}</span><span class="sub">${esc(timing(e))}${e.phase ? `, ${esc(e.phase)}` : ''} · #${esc(e.id)}</span></span></summary>
+          <div class="body">${field('Summary', e.summary)}${docOrText('Spec', e.spec)}${docOrText('Plan', e.plan)}${field('Deploy notes', e.deploy_note)}</div>
+        </details>`)
+      return group(label, rows)
+    }).join('')
+  }
+
+  function renderQueue(data) {
+    const el = document.getElementById('queue')
+    const items = data.items || []
+    if (!items.length) { el.innerHTML = '<p class="empty">Nothing deferred.</p>'; return }
+    const open = i => i.status === 'waiting' || i.status === 'extended'
+    const LABEL = { decided_go: 'Go', decided_drop: 'Dropped', done: 'Done', waiting: 'Waiting', extended: 'Extended' }
+    const row = i => {
+      const d = days(today, i.review_on)
+      const when = open(i) ? (d < 0 ? `${-d}d overdue` : d === 0 ? 'Today' : `in ${d}d`) : (LABEL[i.status] || i.status)
+      return `<details class="${open(i) && d <= 0 ? 'due' : ''} ${open(i) ? '' : 'quiet'}">
+        <summary><span class="lead">${esc(i.review_on)}<small>${esc(when)}</small></span>
+          <span><span class="title">${esc(i.title)}</span><span class="sub">${esc(i.area)}${i.source ? `, from #${esc(i.source)}` : ''}, added ${esc(i.added)}</span></span></summary>
+        <div class="body">${field('Why it was parked', i.context)}${field('What to check', i.check)}${field('Decide', i.decide_if)}${field('Outcome', i.outcome)}</div>
+      </details>`
+    }
+    const openItems = items.filter(open).sort((a, b) => a.review_on.localeCompare(b.review_on))
+    el.innerHTML = (data.note ? `<p class="note">${esc(data.note)}</p>` : '')
+      + group('Due for review', openItems.filter(i => i.review_on <= today).map(row))
+      + group('Upcoming', openItems.filter(i => i.review_on > today).map(row))
+      + group('Decided', items.filter(i => !open(i)).map(row))
+  }
+
+  document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('nav button').forEach(x => x.setAttribute('aria-selected', String(x === b)))
+    document.getElementById('roadmap').hidden = b.dataset.tab !== 'roadmap'
+    document.getElementById('queue').hidden = b.dataset.tab !== 'queue'
+    try { localStorage.setItem('wf-tab', b.dataset.tab) } catch {}
+  }))
+  try { const t = localStorage.getItem('wf-tab'); if (t) document.querySelector(`nav [data-tab="${t}"]`)?.click() } catch {}
+
+  const updated = []
+  Promise.allSettled([load('roadmap.json'), load('review-queue.json')]).then(([r, q]) => {
+    if (r.status === 'fulfilled') { renderRoadmap(r.value); updated.push(`roadmap ${String(r.value.updated_at || '').slice(0, 10)}`) }
+    else document.getElementById('roadmap').innerHTML = `<p class="err">Could not load roadmap.json (${esc(r.reason.message)}).</p>`
+    if (q.status === 'fulfilled') { renderQueue(q.value); updated.push(`queue ${String(q.value.updated_at || '').slice(0, 10)}`) }
+    else document.getElementById('queue').innerHTML = `<p class="err">Could not load review-queue.json (${esc(q.reason.message)}).</p>`
+    document.getElementById('meta').textContent = `Today ${today}${updated.length ? `, updated: ${updated.join(', ')}` : ''}`
+  })
+  fetch('/version.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(v => {
+    if (v?.version) document.querySelector('h1').textContent = `Workflow · v${v.version}`
+  }).catch(() => {})
+</script>
+</body>
+</html>
