@@ -53,8 +53,12 @@ export default function RequestIconsPage() {
   -H "content-type: application/json" \\
   -d '{"email":"you@example.com"}'
 
-# → 201 {"token":"vl_…","note":"Store this token now; it is not shown again."}`}</pre>
-        <p>The token is shown once, so keep it, e.g. in <code>VECTILUME_TOKEN</code>. It only shows the requests made with it.</p>
+# → 202 {"sent":true,"note":"We sent a confirmation link to that address. …"}`}</pre>
+        <p>
+          Open the link from the email within 15 minutes: this page shows your token, once, so keep it, e.g. in{" "}
+          <code>VECTILUME_TOKEN</code>. It shows every request made with your email and nobody else&apos;s. Until email confirmation is
+          switched on, the answer is <code>201</code> with the token straight away.
+        </p>
       </section>
 
       <section aria-labelledby="send">

@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.5.0 (2026-10-28)
+
+- Requests: confirm your email by a link to get a token, and see every request you made with that email
+- Requests: tokens are sent only to the owner of the address once email is switched on
+
 ## v0.4.0 (2026-10-28)
 
 - Requests: request an icon and follow its status right on /request-icons
