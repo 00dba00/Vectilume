@@ -22,11 +22,11 @@ describe("selectReleaseIcons", () => {
     assert.throws(() => selectReleaseIcons({ version: "0.1.0", collections: ["general"] }, bare), /no keywords/);
   });
 
-  it("requires request to be a GitHub issue number", () => {
+  it("requires request to be an icon request id", () => {
     const linked = { general: [{ ...entry("check"), request: 42 }] };
     assert.equal(selectReleaseIcons({ version: "0.1.0", collections: ["general"] }, linked)[0]?.request, 42);
     const bad = { general: [{ ...entry("check"), request: "42" as unknown as number }] };
-    assert.throws(() => selectReleaseIcons({ version: "0.1.0", collections: ["general"] }, bad), /issue number/);
+    assert.throws(() => selectReleaseIcons({ version: "0.1.0", collections: ["general"] }, bad), /request id/);
   });
 });
 

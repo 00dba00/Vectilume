@@ -1,7 +1,5 @@
-/** Icon requests are GitHub issues with this label; the issue number is the request id. */
-export const REQUEST_LABEL = "icon-request";
-/** Put on an open request while the icon is being drawn. */
-export const IN_PROGRESS_LABEL = "in-progress";
+export const STORED_STATUSES = ["open", "in-progress", "declined"] as const;
+export type StoredStatus = (typeof STORED_STATUSES)[number];
 
 export interface IconRequest {
   name: string;
@@ -9,18 +7,19 @@ export interface IconRequest {
   keywords: string[];
 }
 
-export type RequestStatus =
-  | { id: number; status: "open" | "in-progress" | "declined"; url: string }
-  | { id: number; status: "done"; url: string; icon: string; version: string };
-
-export interface GithubIssue {
-  number: number;
-  html_url: string;
-  state: "open" | "closed";
-  state_reason?: string | null;
-  labels: (string | { name?: string })[];
-  pull_request?: unknown;
+/** A row of icon_requests as the status routes select it. */
+export interface RequestRow {
+  id: number;
+  name: string;
+  status: StoredStatus;
+  decline_reason: string | null;
+  created_at: Date | string;
 }
+
+export type RequestStatus =
+  | { id: number; name: string; status: "open" | "in-progress"; createdAt: string }
+  | { id: number; name: string; status: "declined"; reason: string | null; createdAt: string }
+  | { id: number; name: string; status: "done"; icon: string; version: string; createdAt: string };
 
 export interface PublishedIcon {
   id: string;
@@ -30,8 +29,7 @@ export interface PublishedIcon {
 }
 
 const NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
-// Issues render Markdown, so the text fields drop anything that could become markup or a mention.
-const plain = (text: string) => text.replace(/[<>`@\\]/g, "").replace(/\s+/g, " ").trim();
+const plain = (text: string) => text.replace(/\s+/g, " ").trim();
 
 /** Validates an untrusted request body; throws a message that is safe to send back. */
 export function parseIconRequest(input: unknown): IconRequest {
@@ -47,28 +45,21 @@ export function parseIconRequest(input: unknown): IconRequest {
   return { name, description, keywords: raw.map((k: string) => plain(k).toLowerCase()) };
 }
 
-export function issueFor(request: IconRequest): { title: string; body: string; labels: string[] } {
-  const keywords = request.keywords.length > 0 ? request.keywords.join(", ") : "—";
-  return {
-    title: `Icon request: ${request.name}`,
-    body: `**Name:** ${request.name}\n\n**What it shows / where it is used:**\n${request.description}\n\n**Keywords:** ${keywords}\n\n_Submitted through the Vectilume requests API._`,
-    labels: [REQUEST_LABEL],
-  };
+/** Validates an admin status change; "done" is not settable, it comes from the npm release. */
+export function parseStatusChange(input: unknown): { status: StoredStatus; reason: string | null } {
+  const body = (input ?? {}) as Record<string, unknown>;
+  const status = STORED_STATUSES.find((s) => s === body.status);
+  if (!status) throw new Error(`status must be one of ${STORED_STATUSES.join(", ")}; done comes from the npm release`);
+  const reason = typeof body.reason === "string" && status === "declined" ? plain(body.reason).slice(0, 500) || null : null;
+  return { status, reason };
 }
 
-const labelNames = (issue: GithubIssue) => issue.labels.map((label) => (typeof label === "string" ? label : label.name));
-
-/** Null when the issue is not an icon request, so the API cannot be used to read other issues. */
-export function requestStatus(issue: GithubIssue, published: PublishedIcon[]): RequestStatus | null {
-  const labels = labelNames(issue);
-  if (issue.pull_request || !labels.includes(REQUEST_LABEL)) return null;
-  const base = { id: issue.number, url: issue.html_url };
-  // The published package is the source of truth: done means installable, whatever the issue says.
+export function requestStatus(row: RequestRow, published: PublishedIcon[]): RequestStatus {
+  const base = { id: row.id, name: row.name, createdAt: new Date(row.created_at).toISOString() };
+  // The published package is the source of truth: done means installable, whatever the stored status says.
   // Deprecated aliases of a renamed icon carry the same request, so skip them for the current name.
-  const icon = published.find((entry) => entry.request === issue.number && !entry.deprecated);
+  const icon = published.find((entry) => entry.request === row.id && !entry.deprecated);
   if (icon) return { ...base, status: "done", icon: icon.id, version: icon.since };
-  if (issue.state === "closed" && issue.state_reason !== "completed") return { ...base, status: "declined" };
-  // Closed as completed but not on npm yet: still waiting for the release.
-  if (issue.state === "closed" || labels.includes(IN_PROGRESS_LABEL)) return { ...base, status: "in-progress" };
-  return { ...base, status: "open" };
+  if (row.status === "declined") return { ...base, status: "declined", reason: row.decline_reason };
+  return { ...base, status: row.status };
 }

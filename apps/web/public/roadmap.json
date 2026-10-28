@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-b (#request-api-keys, #request-web-ui, #request-email-notifications planned)",
+  "updated_at": "2026-10-28-c (#request-api-keys in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -8,7 +8,7 @@
       "title": "Icon requests: own API with developer tokens on Neon Postgres",
       "phase": "1",
       "track": "requests",
-      "status": "planned",
+      "status": "in_progress",
       "start": "2026-10-28",
       "end": "2026-11-04",
       "observe_until": null,

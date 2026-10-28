@@ -1,27 +1,43 @@
-import { cacheLife } from "next/cache";
-import { github } from "@/lib/github";
-import { requestStatus, type GithubIssue, type PublishedIcon } from "@/lib/icon-requests";
+import { isAdmin } from "@/lib/api-keys";
+import { db, keyId, unauthorized } from "@/lib/db";
+import { parseStatusChange, requestStatus, type RequestRow } from "@/lib/icon-requests";
+import { publishedIcons } from "@/lib/published-icons";
 
-/** Icons of the latest @vectilume/icons on npm, which is what "done" means. */
-async function publishedIcons(): Promise<PublishedIcon[]> {
-  "use cache";
-  cacheLife("hours");
-  const response = await fetch("https://unpkg.com/@vectilume/icons@latest/manifest.json");
-  if (!response.ok) throw new Error(`unpkg answered ${response.status}`);
-  return ((await response.json()) as { icons: PublishedIcon[] }).icons;
+const validId = (id: string) => /^\d{1,9}$/.test(id);
+const notFound = () => Response.json({ error: "no such request" }, { status: 404 });
+
+/** Status of one request; only the token that made it can read it. */
+export async function GET(request: Request, ctx: RouteContext<"/api/requests/[id]">) {
+  const { id } = await ctx.params;
+  if (!validId(id)) return Response.json({ error: "id must be a number" }, { status: 400 });
+  const key = await keyId(request);
+  if (key === null) return unauthorized();
+
+  const [row] = (await db()`
+    select id, name, status, decline_reason, created_at from icon_requests
+    where id = ${Number(id)} and key_id = ${key}`) as RequestRow[];
+  if (!row) return notFound();
+  return Response.json(requestStatus(row, await publishedIcons()));
 }
 
-export async function GET(_request: Request, ctx: RouteContext<"/api/requests/[id]">) {
+/** Admin only (Authorization: Bearer <ADMIN_TOKEN>): set open, in-progress or declined with an optional reason. */
+export async function PATCH(request: Request, ctx: RouteContext<"/api/requests/[id]">) {
+  if (!isAdmin(request)) return Response.json({ error: "admin token required" }, { status: 401 });
   const { id } = await ctx.params;
-  if (!/^\d{1,9}$/.test(id)) return Response.json({ error: "id must be a number" }, { status: 400 });
+  if (!validId(id)) return Response.json({ error: "id must be a number" }, { status: 400 });
 
-  const response = await github(`/issues/${id}`);
-  if (response.status === 404) return Response.json({ error: "no such request" }, { status: 404 });
-  if (!response.ok) {
-    console.error(`GitHub issue read failed: ${response.status} ${await response.text()}`);
-    return Response.json({ error: "could not read the request, try again later" }, { status: 502 });
+  let change;
+  try {
+    change = parseStatusChange(await request.json());
+  } catch (error) {
+    const message = error instanceof SyntaxError ? "body must be JSON" : (error as Error).message;
+    return Response.json({ error: message }, { status: 400 });
   }
-  const status = requestStatus((await response.json()) as GithubIssue, await publishedIcons());
-  if (!status) return Response.json({ error: "no such request" }, { status: 404 });
-  return Response.json(status);
+
+  const [row] = (await db()`
+    update icon_requests set status = ${change.status}, decline_reason = ${change.reason}, updated_at = now()
+    where id = ${Number(id)}
+    returning id, name, status, decline_reason, created_at`) as RequestRow[];
+  if (!row) return notFound();
+  return Response.json(requestStatus(row, await publishedIcons()));
 }

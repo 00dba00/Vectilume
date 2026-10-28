@@ -20,7 +20,7 @@ export interface CatalogEntry {
   keywords: string[];
   /** Former names of a renamed icon; they ship as deprecated aliases until the next breaking release. */
   aliases?: string[];
-  /** GitHub issue number of the icon request it answers; the requests API reports it done once published. */
+  /** Id of the icon request it answers (from the requests API); the API reports it done once published. */
   request?: number;
 }
 
@@ -40,7 +40,7 @@ export function selectReleaseIcons(release: Release, catalogs: Record<string, Ca
     for (const entry of entries) {
       if (!entry.keywords?.length) throw new Error(`icon "${entry.id}" has no keywords`);
       if (entry.request !== undefined && !(Number.isInteger(entry.request) && entry.request > 0)) {
-        throw new Error(`icon "${entry.id}" has request ${JSON.stringify(entry.request)}; expected a GitHub issue number`);
+        throw new Error(`icon "${entry.id}" has request ${JSON.stringify(entry.request)}; expected an icon request id`);
       }
       const other = seen.get(entry.id);
       if (other) throw new Error(`icon "${entry.id}" is in both "${other}" and "${collection}"`);
