@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-g (#request-web-ui developer guide)",
+  "updated_at": "2026-10-28-h (#request-web-ui developer guide deployed, v0.3.1)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -29,7 +29,7 @@
       "summary": "The site on Vercel needs a form for new icon requests and a page where a developer pastes their token and sees what they asked for and its status. Admin first (owner, 2026-10-28): \"admin dio di vidim koliko korisnika koristi te tokene, da vidim prijave za ikone ... da mogu tamo označiti što je gotovo i dodano\".",
       "spec": "Pages on the existing Next.js app. /admin: login with ADMIN_TOKEN (httpOnly cookie holding its SHA-256, 30 days), token usage stats (active tokens, distinct emails, tokens that made requests), token list with request counts and revoke, all requests with email, description, keywords and status; status change via server actions. New stored status ready = drawn and added to the library, waiting for the npm release (owner wants to mark work as done and added); done stays automatic from the npm manifest so the API never reports an icon that cannot be installed yet. /request (get a token by email, then submit a request with it) and /requests (paste token, list of own requests; token kept in localStorage as a convenience only) use the same API endpoints as developers. Out of scope: email notifications.",
       "plan": "1. ready status (schema constraint, API, README). 2. /admin with login, stats, tokens, requests, status actions. 3. Release minor. 4. /request form. 5. /requests token view. 6. Link from the home page. 7. Release minor. Added 2026-10-28 (owner: guide for developers on the web, GitHub and npm): /request-icons guide page linked from the home page, /icon-requests.md for AI assistants, README and npm README links; released as a patch before steps 4-5.",
-      "deploy_note": "[DEPLOYED v0.3.0, 2026-10-28] Admin part (steps 1-3): /admin with login, stats, tokens with revoke, requests with status filter and status form; ready status migrated. Checked locally: login wrong/right, actions refused without session, status ready/declined with reason, revoke. Production /admin serves the login form; signing in there not checked (owner's token)."
+      "deploy_note": "[DEPLOYED v0.3.0, 2026-10-28] Admin part (steps 1-3): /admin with login, stats, tokens with revoke, requests with status filter and status form; ready status migrated. Checked locally: login wrong/right, actions refused without session, status ready/declined with reason, revoke. Production /admin serves the login form; signing in there not checked (owner's token). [DEPLOYED v0.3.1, 2026-10-28] Developer guide: /request-icons and /icon-requests.md answer 200 in production, home page links to it; npm READMEs get the link with the next npm publish."
     },
     {
       "id": "request-email-notifications",
