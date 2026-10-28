@@ -31,3 +31,20 @@ create index if not exists icon_requests_key_created on icon_requests (key_id, c
 -- v0.3.0: "ready" = drawn and added to the library, waiting for the npm release.
 alter table icon_requests drop constraint if exists icon_requests_status_check;
 alter table icon_requests add constraint icon_requests_status_check check (status in ('open', 'in-progress', 'ready', 'declined'));
+
+-- v0.5.0: tokens issued after confirming the email by a mailed link see every request of that email.
+alter table api_keys add column if not exists verified_at timestamptz;
+create index if not exists api_keys_email on api_keys (email);
+
+create table if not exists email_confirmations (
+  id serial primary key,
+  email text not null,
+  -- SHA-256 of the one-time code in the mailed link; valid 15 minutes, used once.
+  code_hash text not null unique,
+  ip_hash text not null,
+  created_at timestamptz not null default now(),
+  used_at timestamptz
+);
+
+create index if not exists email_confirmations_email_created on email_confirmations (email, created_at);
+create index if not exists email_confirmations_ip_created on email_confirmations (ip_hash, created_at);

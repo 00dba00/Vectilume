@@ -16,11 +16,17 @@ POST /api/keys
 content-type: application/json
 
 {"email": "you@example.com"}
-→ 201 {"token": "vl_…", "note": "Store this token now; it is not shown again."}
+→ 202 {"sent": true, "note": "We sent a confirmation link to that address. …"}
 ```
 
-The token is shown once. Keep it, e.g. in an env variable `VECTILUME_TOKEN`. At most 3 tokens per
-hour from one IP.
+The email holds a link to https://vectilume.vercel.app/request-icons?confirm=…; the person who owns
+the address opens it within 15 minutes and the page shows the token. An AI assistant cannot finish
+this step: ask the user to open the link and give you the token. Until email confirmation is
+switched on, the answer is `201 {"token": "vl_…"}` straight away.
+
+The token is shown once. Keep it, e.g. in an env variable `VECTILUME_TOKEN`. At most 3 confirmation
+emails per hour per address or IP. A token from a confirmed email sees every request made with that
+email, also with older tokens.
 
 ## 3. Request an icon
 
@@ -44,7 +50,7 @@ content-type: application/json
 ## 4. Follow the status
 
 ```
-GET /api/requests            → {"requests": [...]}   every request made with this token, newest first
+GET /api/requests            → {"requests": [...]}   your requests (this token, or every token of its confirmed email), newest first
 GET /api/requests/42         → one request
 authorization: Bearer vl_…
 ```

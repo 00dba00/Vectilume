@@ -1,21 +1,22 @@
 import { isAdmin } from "@/lib/api-keys";
-import { db, keyId, unauthorized } from "@/lib/db";
+import { apiKey, db, unauthorized } from "@/lib/db";
 import { parseStatusChange, requestStatus, type RequestRow } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
 
 const validId = (id: string) => /^\d{1,9}$/.test(id);
 const notFound = () => Response.json({ error: "no such request" }, { status: 404 });
 
-/** Status of one request; only the token that made it can read it. */
+/** Status of one request; only the token that made it, or a token from the same confirmed email, can read it. */
 export async function GET(request: Request, ctx: RouteContext<"/api/requests/[id]">) {
   const { id } = await ctx.params;
   if (!validId(id)) return Response.json({ error: "id must be a number" }, { status: 400 });
-  const key = await keyId(request);
+  const key = await apiKey(request);
   if (key === null) return unauthorized();
 
   const [row] = (await db()`
-    select id, name, status, decline_reason, created_at from icon_requests
-    where id = ${Number(id)} and key_id = ${key}`) as RequestRow[];
+    select r.id, r.name, r.status, r.decline_reason, r.created_at from icon_requests r
+    join api_keys k on k.id = r.key_id
+    where r.id = ${Number(id)} and (r.key_id = ${key.id} or k.email = ${key.verifiedEmail})`) as RequestRow[];
   if (!row) return notFound();
   return Response.json(requestStatus(row, await publishedIcons()));
 }

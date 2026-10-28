@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-b (token-email-verification added)",
+  "updated_at": "2026-10-28-c (token-email-verification decided go by owner)",
   "note": "Decisions deferred on purpose. Each item has a review date: on that date, run the check and decide go, drop or extend. Decided items stay listed with their outcome.",
   "items": [
     {
@@ -10,10 +10,11 @@
       "source": "request-api-keys",
       "added": "2026-10-28",
       "review_on": "2026-12-01",
-      "status": "waiting",
+      "status": "decided_go",
       "context": "Phase 1 returns the token straight from POST /api/keys without checking the email, because sending mail needs a domain (#request-email-notifications). A leaked or fake-email token only exposes request statuses, so the risk is spam requests, which per-token and per-IP limits should contain.",
       "check": "Count keys issued, requests per key, and requests declined as spam or nonsense since release.",
-      "decide_if": "Go (verify by email link before the token works) if more than 10% of requests are spam or one IP created more than 20 keys; otherwise drop and keep direct tokens."
+      "decide_if": "Go (verify by email link before the token works) if more than 10% of requests are spam or one IP created more than 20 keys; otherwise drop and keep direct tokens.",
+      "outcome": "2026-10-28: decided go early by the owner (no data needed): tokens only after confirming the email, see #request-email-confirm."
     }
   ]
 }

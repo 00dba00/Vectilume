@@ -80,14 +80,27 @@ export function RequestForm() {
     };
   }, [token, reload, signOut]);
 
-  const signIn = (value: string, isNew = false) => {
+  const signIn = useCallback((value: string, isNew = false) => {
     setError(null);
     setFresh(isNew);
     setList(null);
     // Only developer tokens are remembered on this browser.
     store(value.startsWith("vl_") ? value : null);
     setSession(value);
-  };
+  }, []);
+
+  // The link from the confirmation email: /request-icons?confirm=<code>.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const code = url.searchParams.get("confirm");
+    if (!code) return;
+    url.searchParams.delete("confirm");
+    history.replaceState(null, "", url);
+    call("/api/keys/confirm", { method: "POST", body: JSON.stringify({ code }) }).then(({ ok, data }) => {
+      if (ok) signIn(data.token, true);
+      else setError(data.error ?? "Could not confirm your email, ask for a new link.");
+    });
+  }, [signIn]);
 
   // Never show a list fetched for a previous token.
   const current = list?.token === token ? list : null;
@@ -118,6 +131,7 @@ function SignIn({ onToken, error }: { onToken: (token: string, isNew?: boolean) 
   const [pasted, setPasted] = useState("");
   const [busy, setBusy] = useState(false);
   const [issueError, setIssueError] = useState<string | null>(null);
+  const [sent, setSent] = useState<string | null>(null);
 
   const issue = async (event: FormEvent) => {
     event.preventDefault();
@@ -125,7 +139,8 @@ function SignIn({ onToken, error }: { onToken: (token: string, isNew?: boolean) 
     setIssueError(null);
     const { ok, data } = await call("/api/keys", { method: "POST", body: JSON.stringify({ email }) });
     setBusy(false);
-    if (ok) onToken(data.token, true);
+    if (ok && data.token) onToken(data.token, true);
+    else if (ok) setSent(email);
     else setIssueError(data.error ?? "Could not create a token, try again.");
   };
 
@@ -139,12 +154,22 @@ function SignIn({ onToken, error }: { onToken: (token: string, isNew?: boolean) 
       {error && <p className={styles.error}>{error}</p>}
       <div className={styles.columns}>
         <form className={styles.card} onSubmit={issue}>
-          <h3>New here? Get a token</h3>
-          <label>
-            Email
-            <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
-          </label>
-          <button type="submit" disabled={busy}>{busy ? "Creating…" : "Get a token"}</button>
+          <h3>Continue with your email</h3>
+          {sent ? (
+            <p className={styles.success}>
+              We sent a link to <strong>{sent}</strong>. Open it within 15 minutes, in this or any browser, to get your token and see
+              every request you made with this email.
+            </p>
+          ) : (
+            <>
+              <label>
+                Email
+                <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
+              </label>
+              <button type="submit" disabled={busy}>{busy ? "Sending…" : "Continue"}</button>
+              <p className={styles.hint}>New or back: works for both. Lost your token? This gets you a new one.</p>
+            </>
+          )}
           {issueError && <p className={styles.error}>{issueError}</p>}
         </form>
         <form className={styles.card} onSubmit={paste}>
@@ -154,7 +179,7 @@ function SignIn({ onToken, error }: { onToken: (token: string, isNew?: boolean) 
             <input required autoComplete="off" spellCheck={false} value={pasted} onChange={(e) => setPasted(e.target.value)} placeholder="vl_…" />
           </label>
           <button type="submit">Show my requests</button>
-          <p className={styles.hint}>You only ever see the requests made with your token.</p>
+          <p className={styles.hint}>A token shows only your own requests, never anyone else&apos;s.</p>
         </form>
       </div>
     </div>
