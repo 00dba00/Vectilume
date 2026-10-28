@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-c (token-email-verification decided go by owner)",
+  "updated_at": "2026-10-28-d (primary-domain, revoke-chat-token for 2026-10-29)",
   "note": "Decisions deferred on purpose. Each item has a review date: on that date, run the check and decide go, drop or extend. Decided items stay listed with their outcome.",
   "items": [
     {
@@ -15,6 +15,30 @@
       "check": "Count keys issued, requests per key, and requests declined as spam or nonsense since release.",
       "decide_if": "Go (verify by email link before the token works) if more than 10% of requests are spam or one IP created more than 20 keys; otherwise drop and keep direct tokens.",
       "outcome": "2026-10-28: decided go early by the owner (no data needed): tokens only after confirming the email, see #request-email-confirm."
+    },
+    {
+      "id": "primary-domain",
+      "title": "Should the docs and links use www.vectilume.dev, with vectilume.vercel.app redirecting to it?",
+      "area": "web",
+      "source": "request-email-confirm",
+      "added": "2026-10-28",
+      "review_on": "2026-10-29",
+      "status": "waiting",
+      "context": "vectilume.dev is live on Vercel with www as primary (the apex redirects to www). /request-icons, public/icon-requests.md, README and the npm READMEs still use https://vectilume.vercel.app; confirmation links already use the host the visitor came from. Owner has not chosen www vs apex yet.",
+      "check": "Ask the owner: www.vectilume.dev or vectilume.dev as primary, and whether vectilume.vercel.app should redirect.",
+      "decide_if": "Go: replace the base URL everywhere (BASE in request-icons/page.tsx, icon-requests.md, README, package READMEs with the next npm publish) and add the redirect in Vercel Domains. Drop: keep vercel.app as the documented address."
+    },
+    {
+      "id": "revoke-chat-token",
+      "title": "Has the owner's token printed in the 2026-10-28 chat (vl_TTK5…) been revoked?",
+      "area": "requests",
+      "source": "request-email-confirm",
+      "added": "2026-10-28",
+      "review_on": "2026-10-29",
+      "status": "waiting",
+      "context": "A token for dragan.bajlovic@gmail.com was issued through the API and shown in a Claude chat before email confirmation existed. The owner now has a verified token from the email link, so the chat one is not needed.",
+      "check": "In /admin, look for an active unverified token of dragan.bajlovic@gmail.com created 2026-10-28 around 21:50.",
+      "decide_if": "Go: revoke it in /admin (owner). Done once it shows as revoked."
     }
   ]
 }
