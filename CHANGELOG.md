@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.0 (2026-10-28)
+
+- Requests: request an icon and follow its status right on /request-icons
+- Requests: the admin token lists every request with its email
+
 ## v0.3.3 (2026-10-28)
 
 - Requests: up to 20 icon requests per hour per token (was 5)

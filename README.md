@@ -77,7 +77,7 @@ right away. While on 0.x, breaking releases bump the minor version.
 
 ## Missing an icon?
 
-Request it from your terminal, your app or your AI assistant. Get a token once, then send it with
+Request it right on the website, or from your terminal, your app or your AI assistant. Get a token once, then send it with
 every call; at most 20 requests per hour per token. Full guide:
 **[vectilume.vercel.app/request-icons](https://vectilume.vercel.app/request-icons)**, and as plain
 Markdown for AI assistants: [icon-requests.md](https://vectilume.vercel.app/icon-requests.md).
@@ -99,7 +99,8 @@ curl https://vectilume.vercel.app/api/requests -H "authorization: Bearer vl_…"
 `status` is `open`, `in-progress`, `ready` (drawn and added, ships with the next npm release),
 `declined` (with an optional `reason`) or `done`. `done` means
 the icon is in the latest `@vectilume/icons` on npm; `icon` is its final name, which may differ
-from the one you asked for. A token only shows the requests made with it.
+from the one you asked for. A token only shows the requests made with it; the admin token lists
+every request, with its email.
 
 ## Design rules
 

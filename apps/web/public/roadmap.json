@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-j (#request-email-notifications moved to 2026-10-29)",
+  "updated_at": "2026-10-28-k (#request-form in progress, admin sees all; email sign-in via magic link in #request-email-notifications)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -36,12 +36,12 @@
       "title": "Request an icon straight from /request-icons: token by email, form, own statuses",
       "phase": "2",
       "track": "requests",
-      "status": "planned",
-      "start": "2026-10-29",
+      "status": "in_progress",
+      "start": "2026-10-28",
       "end": "2026-10-29",
       "observe_until": null,
-      "summary": "Owner, 2026-10-28: on https://vectilume.vercel.app/request-icons add a form so a user can send a request right on the web; they first give their email, get the token shown on the page, save it, and use it to follow their statuses.",
-      "spec": "Client section on /request-icons above the curl guide, calling the same API as developers (one validation path, same limits: 3 tokens/hour per IP, 20 requests/hour per token). Step 1: email -> POST /api/keys; the token is shown once with a copy button and a clear 'save it now' note, and kept in localStorage on that browser as a convenience (it is the only copy we hand out; the server stores just the hash). Step 2: request form (name, description, keywords) -> POST /api/requests with the token, field rules shown inline, API error messages shown as returned. Step 3: 'My requests': paste or reuse the stored token -> GET /api/requests, list with status, reason when declined, icon name and version when done; 'use another token' clears it. Name field suggests kebab-case from free text. Icons from the Vectilume set only. Risks: token lost when localStorage is cleared and not saved (no email delivery yet, see #request-email-notifications); a browser on a shared IP may hit the tokens-per-hour limit. Out of scope: email verification, editing or deleting a request.",
+      "summary": "Owner, 2026-10-28: on https://vectilume.vercel.app/request-icons add a form so a user can send a request right on the web; they first give their email, get the token shown on the page, save it, and use it to follow their statuses. Owner, 2026-10-28: the user reaches the list \"upisivanjem tokena ili svoje mail adrese\" and sees only what they submitted, never anyone else's, unless they are the admin. Email access must not let someone who knows another person's address see their requests, so the owner chose a magic link (see #request-email-notifications).",
+      "spec": "Client section on /request-icons above the curl guide, calling the same API as developers (one validation path, same limits: 3 tokens/hour per IP, 20 requests/hour per token). Step 1: email -> POST /api/keys; the token is shown once with a copy button and a clear 'save it now' note, and kept in localStorage on that browser as a convenience (it is the only copy we hand out; the server stores just the hash). Step 2: request form (name, description, keywords) -> POST /api/requests with the token, field rules shown inline, API error messages shown as returned. Step 3: 'My requests': paste or reuse the stored token -> GET /api/requests, list with status, reason when declined, icon name and version when done; 'use another token' clears it. Admin: GET /api/requests with Authorization: Bearer <ADMIN_TOKEN> returns every request with its email, so the owner can use the same screen. Name field suggests kebab-case from free text. Icons from the Vectilume set only. Risks: token lost when localStorage is cleared and not saved (no email delivery yet, see #request-email-notifications); a browser on a shared IP may hit the tokens-per-hour limit. Out of scope: email sign-in (magic link, needs email delivery: #request-email-notifications), editing or deleting a request.",
       "plan": "1. Token step with copy and localStorage. 2. Request form. 3. My requests list. 4. Check on phone width and both error paths (400, 429). 5. Release minor.",
       "deploy_note": null
     },
@@ -56,7 +56,7 @@
       "observe_until": null,
       "summary": "Developers should be told when a requested icon is delivered, not only find out by polling. Owner, 2026-10-28: add email sending tomorrow \"pa da dobiju na mail svi info\" (moved up from 2026-11-11, together with #request-form).",
       "spec": "Resend (free plan) from a domain we own; the API key in RESEND_API_KEY on Vercel. Emails: (1) token on registration (POST /api/keys and the #request-form token step), so a token saved nowhere else is not lost; (2) request received, with id, name and a link to follow it; (3) status change made in /admin (in-progress, ready, declined with reason); (4) done: after an npm release, compare the published manifest's request ids with requests not yet notified, send icon name, version and the import line, store notified_at; a Vercel cron (daily) or a check on admin load triggers it. Plus 'resend my token' by email: issues a new token, revokes the old one, mails it (rate limited), since only hashes are stored. Plain, short English emails with the Vectilume name, no tracking. A failed send never fails the API call; it is logged. Risks: needs DNS access to the sending domain (SPF/DKIM); without a domain Resend only delivers to the account owner, so this item becomes blocked. Out of scope: email preferences or unsubscribe beyond a one-line note, HTML templates.",
-      "plan": "1. Decide the sending domain (owner). 2. Resend account, DNS records, RESEND_API_KEY on Vercel. 3. lib/email.ts with the four messages. 4. Hook into /api/keys, POST /api/requests and the admin status action. 5. notified_at column and the done check (cron). 6. Resend-token endpoint. 7. Update /request-icons, icon-requests.md and README. 8. Release minor.",
+      "plan": "1. Decide the sending domain (owner). 2. Resend account, DNS records, RESEND_API_KEY on Vercel. 3. lib/email.ts with the four messages. 4. Hook into /api/keys, POST /api/requests and the admin status action. 5. notified_at column and the done check (cron). 6. Resend-token endpoint. 6b. Sign in by email on /request-icons (owner, 2026-10-28, chose magic link over showing requests for any typed address): POST /api/sessions {email} mails a one-time link valid 15 minutes (only a hash stored, rate limited per email and IP, same answer whether the address is known or not); opening it lists every request made with any token of that email. 7. Update /request-icons, icon-requests.md and README. 8. Release minor.",
       "deploy_note": null
     }
   ]
