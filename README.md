@@ -77,19 +77,26 @@ right away. While on 0.x, breaking releases bump the minor version.
 
 ## Missing an icon?
 
-Request it from your terminal or app. No account needed; at most 5 requests per hour.
+Request it from your terminal or app. Get a token once, then send it with every call;
+at most 5 requests per hour per token.
 
 ```sh
-curl -X POST https://vectilume.vercel.app/api/requests   -H "content-type: application/json"   -d '{"name":"basketball-hoop","description":"Hoop with net, shown next to the live score","keywords":["nba","score"]}'
-# → 201 {"id":42,"status":"open","url":"https://github.com/00dba00/Vectilume/issues/42","statusUrl":"…/api/requests/42"}
+curl -X POST https://vectilume.vercel.app/api/keys   -H "content-type: application/json"   -d '{"email":"you@example.com"}'
+# → 201 {"token":"vl_…","note":"Store this token now; it is not shown again."}
 
-curl https://vectilume.vercel.app/api/requests/42
-# → {"id":42,"status":"done","icon":"basketball-hoop","version":"0.2.0","url":"…"}
+curl -X POST https://vectilume.vercel.app/api/requests   -H "authorization: Bearer vl_…"   -H "content-type: application/json"   -d '{"name":"basketball-hoop","description":"Hoop with net, shown next to the live score","keywords":["nba","score"]}'
+# → 201 {"id":42,"status":"open","statusUrl":"…/api/requests/42"}
+
+curl https://vectilume.vercel.app/api/requests/42 -H "authorization: Bearer vl_…"
+# → {"id":42,"name":"basketball-hoop","status":"done","icon":"basketball-hoop","version":"0.2.0","createdAt":"…"}
+
+curl https://vectilume.vercel.app/api/requests -H "authorization: Bearer vl_…"
+# → {"requests":[…]}  every request made with this token, newest first
 ```
 
-`status` is `open`, `in-progress`, `declined` or `done`. `done` means the icon is in the latest
-`@vectilume/icons` on npm; `icon` is its final name, which may differ from the one you asked for.
-Each request is a public GitHub issue, so you can also follow it there.
+`status` is `open`, `in-progress`, `declined` (with an optional `reason`) or `done`. `done` means
+the icon is in the latest `@vectilume/icons` on npm; `icon` is its final name, which may differ
+from the one you asked for. A token only shows the requests made with it.
 
 ## Design rules
 
