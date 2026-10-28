@@ -94,7 +94,8 @@ curl https://vectilume.vercel.app/api/requests -H "authorization: Bearer vl_…"
 # → {"requests":[…]}  every request made with this token, newest first
 ```
 
-`status` is `open`, `in-progress`, `declined` (with an optional `reason`) or `done`. `done` means
+`status` is `open`, `in-progress`, `ready` (drawn and added, ships with the next npm release),
+`declined` (with an optional `reason`) or `done`. `done` means
 the icon is in the latest `@vectilume/icons` on npm; `icon` is its final name, which may differ
 from the one you asked for. A token only shows the requests made with it.
 

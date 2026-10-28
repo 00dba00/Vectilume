@@ -27,3 +27,7 @@ create table if not exists icon_requests (
 );
 
 create index if not exists icon_requests_key_created on icon_requests (key_id, created_at);
+
+-- v0.3.0: "ready" = drawn and added to the library, waiting for the npm release.
+alter table icon_requests drop constraint if exists icon_requests_status_check;
+alter table icon_requests add constraint icon_requests_status_check check (status in ('open', 'in-progress', 'ready', 'declined'));
