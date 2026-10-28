@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-i (#request-web-ui deployed, new #request-form for 2026-10-29)",
+  "updated_at": "2026-10-28-j (#request-email-notifications moved to 2026-10-29)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -47,16 +47,16 @@
     },
     {
       "id": "request-email-notifications",
-      "title": "Email the developer when their icon ships",
+      "title": "Emails for icon requests: token, request received, status changes, shipped",
       "phase": "3",
       "track": "requests",
       "status": "planned",
-      "start": "2026-11-11",
-      "end": "2026-11-18",
+      "start": "2026-10-29",
+      "end": "2026-10-29",
       "observe_until": null,
-      "summary": "Developers should be told when a requested icon is delivered, not only find out by polling.",
-      "spec": "Resend (free plan). After an npm release, compare the published manifest's request ids with requests not yet notified and send one email each with the icon name and version; store notified_at. Also lets a lost token be re-sent and verifies the email. Needs a domain we own for sending: Resend cannot send to arbitrary addresses from vectilume.vercel.app. If no domain is available, this item becomes blocked.",
-      "plan": "1. Decide the sending domain. 2. Resend account and DNS records. 3. notified_at column and a release hook or cron that sends. 4. Release minor.",
+      "summary": "Developers should be told when a requested icon is delivered, not only find out by polling. Owner, 2026-10-28: add email sending tomorrow \"pa da dobiju na mail svi info\" (moved up from 2026-11-11, together with #request-form).",
+      "spec": "Resend (free plan) from a domain we own; the API key in RESEND_API_KEY on Vercel. Emails: (1) token on registration (POST /api/keys and the #request-form token step), so a token saved nowhere else is not lost; (2) request received, with id, name and a link to follow it; (3) status change made in /admin (in-progress, ready, declined with reason); (4) done: after an npm release, compare the published manifest's request ids with requests not yet notified, send icon name, version and the import line, store notified_at; a Vercel cron (daily) or a check on admin load triggers it. Plus 'resend my token' by email: issues a new token, revokes the old one, mails it (rate limited), since only hashes are stored. Plain, short English emails with the Vectilume name, no tracking. A failed send never fails the API call; it is logged. Risks: needs DNS access to the sending domain (SPF/DKIM); without a domain Resend only delivers to the account owner, so this item becomes blocked. Out of scope: email preferences or unsubscribe beyond a one-line note, HTML templates.",
+      "plan": "1. Decide the sending domain (owner). 2. Resend account, DNS records, RESEND_API_KEY on Vercel. 3. lib/email.ts with the four messages. 4. Hook into /api/keys, POST /api/requests and the admin status action. 5. notified_at column and the done check (cron). 6. Resend-token endpoint. 7. Update /request-icons, icon-requests.md and README. 8. Release minor.",
       "deploy_note": null
     }
   ]
