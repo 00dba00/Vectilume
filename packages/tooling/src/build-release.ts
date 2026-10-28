@@ -225,6 +225,8 @@ async function main(): Promise<void> {
       "`manifest.json` lists every icon with its style, collection, group, label and `since` version.",
       "Renamed icons keep their old file name until the next breaking release (`deprecated`, `replacedBy`).",
       "",
+      "Missing an icon? Request it through the API: https://vectilume.vercel.app/request-icons",
+      "",
     ].join("\n"),
   );
   console.log(`${icons.length} icons × ${STYLES.length} styles → ${path.relative(process.cwd(), out)}`);
@@ -280,6 +282,8 @@ async function main(): Promise<void> {
       "- Without `title` or `aria-label` an icon is decorative (`aria-hidden`).",
       "- Duotone colours come from CSS variables, e.g. `.brand { --icon-primary: #2563eb; --icon-secondary: #bfdbfe; }`;",
       "  without them both layers fall back to `currentColor`.",
+      "",
+      "Missing an icon? Request it through the API: https://vectilume.vercel.app/request-icons",
       "",
     ].join("\n"),
   );
