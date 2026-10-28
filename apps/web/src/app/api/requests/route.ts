@@ -1,3 +1,4 @@
+import { isAdmin } from "@/lib/api-keys";
 import { db, keyId, unauthorized } from "@/lib/db";
 import { parseIconRequest, requestStatus, type RequestRow } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
@@ -29,8 +30,15 @@ export async function POST(request: Request) {
   return Response.json({ id, status: "open", statusUrl }, { status: 201 });
 }
 
-/** All requests made with this token, newest first. */
+/** All requests made with this token, newest first. The admin token gets every request, with its email. */
 export async function GET(request: Request) {
+  if (isAdmin(request)) {
+    const rows = (await db()`
+      select r.id, r.name, r.status, r.decline_reason, r.created_at, k.email from icon_requests r
+      join api_keys k on k.id = r.key_id order by r.id desc limit 500`) as (RequestRow & { email: string })[];
+    const published = await publishedIcons();
+    return Response.json({ admin: true, requests: rows.map((row) => ({ ...requestStatus(row, published), email: row.email })) });
+  }
   const key = await keyId(request);
   if (key === null) return unauthorized();
   const rows = (await db()`

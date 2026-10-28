@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RequestForm } from "./RequestForm";
 import styles from "./request-icons.module.css";
 
 export const metadata: Metadata = {
   title: "Request an icon · Vectilume",
-  description: "Missing an icon? Get a token and request it through the Vectilume API, then follow its status until it ships on npm.",
+  description: "Missing an icon? Request it here or through the Vectilume API, then follow its status until it ships on npm.",
 };
 
 const BASE = "https://vectilume.vercel.app";
@@ -23,9 +24,20 @@ export default function RequestIconsPage() {
       <p className={styles.back}><Link href="/">← Vectilume icons</Link></p>
       <h1>Request an icon</h1>
       <p className={styles.lede}>
-        Missing an icon? Ask for it from your terminal, your app or your AI assistant. You get a token once, send requests with it
-        and follow each one until it ships on npm.
+        Missing an icon? Ask for it right here, or from your terminal, your app or your AI assistant. You get a token once, send
+        requests with it and follow each one until it ships on npm.
       </p>
+
+      <section aria-labelledby="form">
+        <h2 id="form">Request it here</h2>
+        <p>
+          First <Link href="/">search the catalog</Link>, it may already be there. Then get a token with your email, or paste the one
+          you have.
+        </p>
+        <RequestForm />
+      </section>
+
+      <h2 className={styles.divider}>Or use the API</h2>
 
       <section aria-labelledby="check">
         <h2 id="check"><span>1</span> Check it is not there yet</h2>
