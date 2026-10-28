@@ -57,7 +57,7 @@ export default function RequestIconsPage() {
           <li><code>name</code>: kebab-case, up to 40 characters.</li>
           <li><code>description</code>: 10–500 characters, what the icon shows and where you use it.</li>
           <li><code>keywords</code>: optional, up to 10 words.</li>
-          <li>One icon per request, at most 5 requests per hour per token.</li>
+          <li>One icon per request, at most 20 requests per hour per token.</li>
           <li>Generic symbols only: no logos, trademarks or real people.</li>
         </ul>
       </section>

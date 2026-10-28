@@ -38,7 +38,7 @@ content-type: application/json
 - `name`: kebab-case, lowercase letters, digits and hyphens, up to 40 characters.
 - `description`: 10–500 characters: what the icon shows and where it is used.
 - `keywords`: optional, up to 10 words, each up to 30 characters.
-- One icon per request. At most 5 requests per hour per token.
+- One icon per request. At most 20 requests per hour per token.
 - Generic symbols only: no logos, trademarks or likenesses of real people or teams.
 
 ## 4. Follow the status

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.3 (2026-10-28)
+
+- Requests: up to 20 icon requests per hour per token (was 5)
+
 ## v0.3.2 (2026-10-28)
 
 - Catalog: five new icons from requests: model-training, linear-scale, scroll-quill, auto-mode, new-badge

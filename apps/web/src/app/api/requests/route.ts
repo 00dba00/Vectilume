@@ -2,7 +2,7 @@ import { db, keyId, unauthorized } from "@/lib/db";
 import { parseIconRequest, requestStatus, type RequestRow } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
 
-const LIMIT = 5;
+const LIMIT = 20;
 
 /** Stores an icon request for the token's owner; the returned id is the one GET /api/requests/{id} takes. */
 export async function POST(request: Request) {
