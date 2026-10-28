@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.2 (2026-10-28)
+
+- Catalog: five new icons from requests: model-training, linear-scale, scroll-quill, auto-mode, new-badge
+
 ## v0.3.1 (2026-10-28)
 
 - Docs: /request-icons guide for requesting icons, linked from the home page

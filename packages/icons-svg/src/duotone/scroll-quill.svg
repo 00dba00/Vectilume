@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--icon-primary, currentColor)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 6.75h7v10.5h-7Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M5 3.25h7a1.75 1.75 0 0 1 0 3.5h-7a1.75 1.75 0 0 1 0-3.5Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M5 17.25h7a1.75 1.75 0 0 1 0 3.5h-7a1.75 1.75 0 0 1 0-3.5Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M20.75 3c-3 1.25-4.5 5-4.25 10.75c3-1.75 4.6-5.5 4.25-10.75Z" fill="var(--icon-secondary, currentColor)" stroke="none"/>
+  <path d="M5 3.25h7a1.75 1.75 0 0 1 0 3.5h-7a1.75 1.75 0 0 1 0-3.5Z"/>
+  <path d="M5 6.75v10.5"/>
+  <path d="M12 6.75v10.5"/>
+  <path d="M5 17.25h7a1.75 1.75 0 0 1 0 3.5h-7a1.75 1.75 0 0 1 0-3.5Z"/>
+  <path d="M7.5 10.25h2"/>
+  <path d="M7.5 13.25h2"/>
+  <path d="M20.75 3c-3 1.25-4.5 5-4.25 10.75c3-1.75 4.6-5.5 4.25-10.75Z"/>
+  <path d="M18.25 9.5L16.25 20.25"/>
+</svg>

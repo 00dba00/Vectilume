@@ -3,7 +3,7 @@
 > *Make every pixel count.*
 
 Free, consistent, themeable icons in three styles — **Outline**, **Duotone** and **Solid** — drawn on
-one 24 × 24 grid. 835 icons, MIT licensed.
+one 24 × 24 grid. 840 icons, MIT licensed.
 
 **[Browse the catalog → vectilume.vercel.app](https://vectilume.vercel.app)** — search, preview in every style and size,
 try the React props and copy SVG or JSX.
@@ -14,10 +14,10 @@ try the React props and copy SVG or JSX.
 
 | Collection | Icons | What's in it |
 |---|---:|---|
-| General | 192 | navigation, actions, status, people, analytics, time, AI |
+| General | 196 | navigation, actions, status, people, analytics, time, AI |
 | Hobbies | 140 | sports, music, crafts and everyday activities |
 | Letters & Numbers | 357 | upper- and lowercase letters, Croatian characters and digraphs, numbers and symbols; plain, circle and square forms |
-| Content | 66 | files and folders, text editing, media controls, devices |
+| Content | 67 | files and folders, text editing, media controls, devices |
 | Food & Drink | 40 | drinks, fruit and vegetables, meals, pastries, desserts |
 | Travel & Transport | 40 | road, rail, air and sea, luggage, documents, accommodation |
 

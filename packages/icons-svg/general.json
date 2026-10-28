@@ -2326,5 +2326,62 @@
       "judge",
       "verdict"
     ]
+  },
+  {
+    "id": "model-training",
+    "label": "Model training",
+    "group": "ai",
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "ml",
+      "training",
+      "retrain",
+      "model",
+      "ai",
+      "neural network"
+    ],
+    "request": 4
+  },
+  {
+    "id": "linear-scale",
+    "label": "Linear scale",
+    "group": "status",
+    "groupLabel": "Status & system",
+    "keywords": [
+      "scale",
+      "range",
+      "steps",
+      "slider",
+      "stepped"
+    ],
+    "request": 5
+  },
+  {
+    "id": "auto-mode",
+    "label": "Auto mode",
+    "group": "status",
+    "groupLabel": "Status & system",
+    "keywords": [
+      "auto",
+      "automatic",
+      "mode",
+      "auto refresh",
+      "toggle"
+    ],
+    "request": 7
+  },
+  {
+    "id": "new-badge",
+    "label": "New badge",
+    "group": "status",
+    "groupLabel": "Status & system",
+    "keywords": [
+      "new",
+      "release",
+      "badge",
+      "feature",
+      "announcement"
+    ],
+    "request": 8
   }
 ]
