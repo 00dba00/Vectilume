@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-c (#request-api-keys in progress)",
+  "updated_at": "2026-10-28-d (#request-api-keys deployed, v0.2.0)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -8,14 +8,14 @@
       "title": "Icon requests: own API with developer tokens on Neon Postgres",
       "phase": "1",
       "track": "requests",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-28",
       "end": "2026-11-04",
       "observe_until": null,
       "summary": "Owner: an icon request \"is not really an issue\", so requests move off GitHub issues into our own API. A developer registers with an email and gets a token; the token is used to submit requests and to list and follow their statuses (\"ubaci token i vidiš\"). Leaked tokens are low risk: they only reveal which icons were requested and their status.",
       "spec": "Neon Postgres via the Vercel Marketplace (DATABASE_URL set by the integration), queried with @neondatabase/serverless, no ORM. Tables: api_keys (id, email, token_hash = SHA-256 of the token, created_at, revoked_at) and icon_requests (serial id, key_id, name, description, keywords, status open|in-progress|declined, decline_reason, created_at, updated_at). Tokens look like vl_<32 random bytes base64url>, are shown once and stored only as a hash. Endpoints: POST /api/keys {email} -> 201 {token}; POST /api/requests (Authorization: Bearer) -> 201 {id, status, statusUrl}; GET /api/requests -> the token's requests with statuses; GET /api/requests/{id} -> status, only for the owning token. Done still comes from the published npm manifest (entry.request = request id), which keeps the manifest format; only the meaning of the number changes from issue number to request id (no icon-request issues exist yet, so nothing to migrate). Rate limits move from per-instance memory to the database: keys per IP per hour, requests per token per hour. Validation (parseIconRequest) stays; the Markdown stripping for issues can go. Removes GITHUB_TOKEN usage and apps/web/src/lib/github.ts. Risks: Neon cold start (~0.5 s on the first query after 5 min idle); email is not verified in this phase. Out of scope: web form, admin page, email delivery (see #request-web-ui, #request-email-notifications).",
-      "plan": "1. Create the Neon database through Vercel Storage and pull env vars locally. 2. SQL migration file for both tables. 3. Token helpers (generate, hash, read Bearer header) with tests. 4. Rewrite the requests routes and add /api/keys. 5. Admin status change via an endpoint guarded by ADMIN_TOKEN until #request-web-ui adds the page. 6. Update README API section and docs/icon-definition-of-done.md (request = request id). 7. Release minor.",
-      "deploy_note": null
+      "plan": "1. Create the Neon database through Vercel Storage and pull env vars locally. 2. SQL migration file for both tables. 3. Token helpers (generate, hash, read Bearer header) with tests. 4. Rewrite the requests routes and add /api/keys. 5. Admin status change via an endpoint guarded by ADMIN_TOKEN until #request-web-ui adds the page. 6. Update README API section and docs/icon-definition-of-done.md (request = request id). 7. Release minor. Done: Neon (fra1, no preview branches, DATABASE_ prefix; functions moved to fra1), apps/web/db/schema.sql + db:migrate, lib/api-keys.ts, lib/db.ts, /api/keys, /api/requests (POST, GET list), /api/requests/[id] (GET, admin PATCH), github.ts removed. Limits: 3 tokens/hour per IP, 5 requests/hour per token. Local dev uses the production database.",
+      "deploy_note": "[DEPLOYED v0.2.0, 2026-10-28] Production checked: 401 without token, token issued, request stored and listed; check rows removed. ADMIN_TOKEN still to be set on Vercel by the owner; until then PATCH answers 401."
     },
     {
       "id": "request-web-ui",
