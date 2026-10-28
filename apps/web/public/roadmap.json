@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-k (#request-form in progress, admin sees all; email sign-in via magic link in #request-email-notifications)",
+  "updated_at": "2026-10-28-l (#request-form deployed, v0.4.0)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -36,14 +36,14 @@
       "title": "Request an icon straight from /request-icons: token by email, form, own statuses",
       "phase": "2",
       "track": "requests",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-28",
-      "end": "2026-10-29",
+      "end": "2026-10-28",
       "observe_until": null,
       "summary": "Owner, 2026-10-28: on https://vectilume.vercel.app/request-icons add a form so a user can send a request right on the web; they first give their email, get the token shown on the page, save it, and use it to follow their statuses. Owner, 2026-10-28: the user reaches the list \"upisivanjem tokena ili svoje mail adrese\" and sees only what they submitted, never anyone else's, unless they are the admin. Email access must not let someone who knows another person's address see their requests, so the owner chose a magic link (see #request-email-notifications).",
       "spec": "Client section on /request-icons above the curl guide, calling the same API as developers (one validation path, same limits: 3 tokens/hour per IP, 20 requests/hour per token). Step 1: email -> POST /api/keys; the token is shown once with a copy button and a clear 'save it now' note, and kept in localStorage on that browser as a convenience (it is the only copy we hand out; the server stores just the hash). Step 2: request form (name, description, keywords) -> POST /api/requests with the token, field rules shown inline, API error messages shown as returned. Step 3: 'My requests': paste or reuse the stored token -> GET /api/requests, list with status, reason when declined, icon name and version when done; 'use another token' clears it. Admin: GET /api/requests with Authorization: Bearer <ADMIN_TOKEN> returns every request with its email, so the owner can use the same screen. Name field suggests kebab-case from free text. Icons from the Vectilume set only. Risks: token lost when localStorage is cleared and not saved (no email delivery yet, see #request-email-notifications); a browser on a shared IP may hit the tokens-per-hour limit. Out of scope: email sign-in (magic link, needs email delivery: #request-email-notifications), editing or deleting a request.",
-      "plan": "1. Token step with copy and localStorage. 2. Request form. 3. My requests list. 4. Check on phone width and both error paths (400, 429). 5. Release minor.",
-      "deploy_note": null
+      "plan": "1. Token step with copy and localStorage. 2. Request form. 3. My requests list. 4. Check on phone width and both error paths (400, 429). 5. Release minor. Done: RequestForm.tsx on /request-icons (email -> token with copy, paste token, request form with kebab-case name, list with statuses), token remembered in localStorage only when it is a developer token; admin branch in GET /api/requests.",
+      "deploy_note": "[DEPLOYED v0.4.0, 2026-10-28] Checked locally against the production database: token issued and shown, 400 and 429 messages shown, request stored and listed, a second token sees neither the list entry nor GET /api/requests/{id} (404), invalid token returns to sign-in, admin token lists all requests with emails and is not stored, no horizontal scroll at 390 px; check rows deleted. Production /request-icons serves the form. Email sign-in waits for #request-email-notifications."
     },
     {
       "id": "request-email-notifications",
