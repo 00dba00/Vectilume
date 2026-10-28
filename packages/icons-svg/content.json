@@ -783,5 +783,20 @@
       "hdd",
       "server"
     ]
+  },
+  {
+    "id": "scroll-quill",
+    "label": "Scroll and quill",
+    "group": "editor",
+    "groupLabel": "Text & editor",
+    "keywords": [
+      "history",
+      "notes",
+      "scroll",
+      "records",
+      "quill",
+      "editorial"
+    ],
+    "request": 6
   }
 ]
