@@ -11,6 +11,7 @@
 | `keywords` (`delete`, `remove`, `bin`) | pretraga po značenju | ✅ |
 | `since` (`0.1.0`) | changelog, oznaka „novo” — release ga sam upisuje u `manifest.json` (prva objavljena verzija imena) | ✅ |
 | `aliases` → `deprecated`, `replacedBy` | preimenovanje bez pucanja koda (alias do iduće breaking verzije) | ✅ |
+| `request` (`42`) | broj GitHub issuea ako je ikona nastala iz zahtjeva — `GET /api/requests/42` je javlja kao `done` čim izađe na npm | ✅ |
 | `author` | zasluge doprinositeljima | ⏳ |
 
 ## Isporuka
