@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-d (#request-api-keys deployed, v0.2.0)",
+  "updated_at": "2026-10-28-e (#request-web-ui in progress, admin first)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -22,13 +22,13 @@
       "title": "Icon requests on the website: get a token, submit, track, admin",
       "phase": "2",
       "track": "requests",
-      "status": "planned",
-      "start": "2026-11-04",
+      "status": "in_progress",
+      "start": "2026-10-28",
       "end": "2026-11-11",
       "observe_until": null,
-      "summary": "The site on Vercel needs a form for new icon requests and a page where a developer pastes their token and sees what they asked for and its status.",
-      "spec": "Pages on the existing Next.js app, using the same API endpoints as developers (one validation path): /request (get a token by email, then submit a request with it), /requests (paste token, list of own requests with status, final icon name and version when done; token kept in localStorage as a convenience only), /admin/requests (all requests, change status and decline reason; guarded by ADMIN_TOKEN). Icons from @vectilume/react / @vectilume/icons only. Out of scope: email notifications.",
-      "plan": "1. /request form. 2. /requests token view. 3. /admin/requests. 4. Link from the home page. 5. Release minor.",
+      "summary": "The site on Vercel needs a form for new icon requests and a page where a developer pastes their token and sees what they asked for and its status. Admin first (owner, 2026-10-28): \"admin dio di vidim koliko korisnika koristi te tokene, da vidim prijave za ikone ... da mogu tamo označiti što je gotovo i dodano\".",
+      "spec": "Pages on the existing Next.js app. /admin: login with ADMIN_TOKEN (httpOnly cookie holding its SHA-256, 30 days), token usage stats (active tokens, distinct emails, tokens that made requests), token list with request counts and revoke, all requests with email, description, keywords and status; status change via server actions. New stored status ready = drawn and added to the library, waiting for the npm release (owner wants to mark work as done and added); done stays automatic from the npm manifest so the API never reports an icon that cannot be installed yet. /request (get a token by email, then submit a request with it) and /requests (paste token, list of own requests; token kept in localStorage as a convenience only) use the same API endpoints as developers. Out of scope: email notifications.",
+      "plan": "1. ready status (schema constraint, API, README). 2. /admin with login, stats, tokens, requests, status actions. 3. Release minor. 4. /request form. 5. /requests token view. 6. Link from the home page. 7. Release minor.",
       "deploy_note": null
     },
     {

@@ -1,4 +1,5 @@
-export const STORED_STATUSES = ["open", "in-progress", "declined"] as const;
+/** ready = drawn and added to the library, waiting for the npm release that makes it done. */
+export const STORED_STATUSES = ["open", "in-progress", "ready", "declined"] as const;
 export type StoredStatus = (typeof STORED_STATUSES)[number];
 
 export interface IconRequest {
@@ -17,7 +18,7 @@ export interface RequestRow {
 }
 
 export type RequestStatus =
-  | { id: number; name: string; status: "open" | "in-progress"; createdAt: string }
+  | { id: number; name: string; status: "open" | "in-progress" | "ready"; createdAt: string }
   | { id: number; name: string; status: "declined"; reason: string | null; createdAt: string }
   | { id: number; name: string; status: "done"; icon: string; version: string; createdAt: string };
 

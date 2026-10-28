@@ -11,13 +11,21 @@ export function bearerToken(request: Request): string | null {
   return match ? match[1] : null;
 }
 
+/** SHA-256 of ADMIN_TOKEN, or null when it is not set. The admin session cookie holds this value. */
+export const adminTokenHash = () => (process.env.ADMIN_TOKEN ? sha256(process.env.ADMIN_TOKEN) : null);
+
+/** Constant-time check of a hex SHA-256 against the admin token's. */
+export function isAdminHash(given: string | undefined): boolean {
+  const expected = adminTokenHash();
+  if (!expected || !given || given.length !== expected.length) return false;
+  return timingSafeEqual(Buffer.from(given), Buffer.from(expected));
+}
+
 /** True when the request carries `Authorization: Bearer <ADMIN_TOKEN>`. */
 export function isAdmin(request: Request): boolean {
-  const expected = process.env.ADMIN_TOKEN;
   const given = /^Bearer (.+)$/.exec(request.headers.get("authorization")?.trim() ?? "")?.[1];
-  if (!expected || !given) return false;
   // Compare hashes so the lengths match and the check takes the same time either way.
-  return timingSafeEqual(Buffer.from(sha256(given)), Buffer.from(sha256(expected)));
+  return given !== undefined && isAdminHash(sha256(given));
 }
 
 export const clientIp = (request: Request) => request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";

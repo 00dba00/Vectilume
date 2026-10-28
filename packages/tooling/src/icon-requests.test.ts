@@ -49,6 +49,7 @@ describe("requestStatus", () => {
   it("reports the stored status when the icon is not published", () => {
     assert.deepEqual(requestStatus(row, []), { ...base, status: "open" });
     assert.deepEqual(requestStatus({ ...row, status: "in-progress" }, []), { ...base, status: "in-progress" });
+    assert.deepEqual(requestStatus({ ...row, status: "ready" }, []), { ...base, status: "ready" });
     assert.deepEqual(requestStatus({ ...row, status: "declined", decline_reason: "exists as hoop" }, []),
       { ...base, status: "declined", reason: "exists as hoop" });
   });
