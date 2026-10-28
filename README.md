@@ -77,8 +77,10 @@ right away. While on 0.x, breaking releases bump the minor version.
 
 ## Missing an icon?
 
-Request it from your terminal or app. Get a token once, then send it with every call;
-at most 5 requests per hour per token.
+Request it from your terminal, your app or your AI assistant. Get a token once, then send it with
+every call; at most 5 requests per hour per token. Full guide:
+**[vectilume.vercel.app/request-icons](https://vectilume.vercel.app/request-icons)**, and as plain
+Markdown for AI assistants: [icon-requests.md](https://vectilume.vercel.app/icon-requests.md).
 
 ```sh
 curl -X POST https://vectilume.vercel.app/api/keys   -H "content-type: application/json"   -d '{"email":"you@example.com"}'

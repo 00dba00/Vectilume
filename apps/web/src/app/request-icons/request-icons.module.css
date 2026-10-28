@@ -1,0 +1,27 @@
+.page { max-width: 760px; margin: 0 auto; padding: 32px 16px 96px; }
+.page h1 { margin: 8px 0 12px; font-size: 40px; font-weight: 700; line-height: 1.1; }
+.page h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 12px; font-size: 21px; font-weight: 700; }
+.page h2 span { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 14px; }
+.page section { margin: 40px 0 0; }
+.page p { margin: 0 0 12px; }
+.page a { color: var(--accent); }
+.page code { font-size: 14px; overflow-wrap: anywhere; }
+.page pre { margin: 0 0 12px; padding: 16px 20px; overflow-x: auto; border-radius: var(--radius); background: var(--surface-2); color: var(--text); font-size: 13px; line-height: 1.6; }
+.page ul { margin: 0; padding-left: 20px; }
+.page li { margin: 4px 0; }
+
+.back { font-size: 15px; }
+.back a { text-decoration: none; }
+.lede { color: var(--text-muted); font-size: 18px; }
+
+.statuses { display: grid; gap: 8px; margin: 0 0 12px; }
+.statuses div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; }
+.statuses dt { color: var(--text); }
+.statuses dd { margin: 0; }
+
+.note { padding: 20px 24px; border-radius: var(--radius); background: var(--surface-2); }
+.note p { margin: 0; }
+
+@media (max-width: 480px) {
+  .statuses div { grid-template-columns: 1fr; gap: 0; }
+}
