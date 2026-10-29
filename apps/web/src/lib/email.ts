@@ -102,7 +102,7 @@ function row(update: RequestUpdate): string {
         pill: `On npm · ${escapeHtml(update.version)}`,
         pillColour: "#1b7f3b",
         body: `<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:8px"><tr>
-<td valign="middle" style="padding:8px;border-radius:12px;background:#f5f5f7"><img src="${SITE}/email/${update.icon}.png" width="48" height="48" alt="${escapeHtml(update.icon)} icon" style="display:block;border:0"></td>
+<td valign="middle" style="padding:8px;border-radius:12px;background:#f5f5f7"><img src="${SITE}/email/${update.icon}.png?outline" width="48" height="48" alt="${escapeHtml(update.icon)} icon" style="display:block;border:0"></td>
 <td valign="middle" style="padding-left:12px;font-size:14px;color:#454547">${update.icon === update.name ? "Ready to install." : `Named <strong>${escapeHtml(update.icon)}</strong>.`}</td>
 </tr></table>${code(importLine(update.icon))}`,
       });
