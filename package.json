@@ -20,5 +20,5 @@
     "turbo": "^2.11.7",
     "typescript": "^7.0.2"
   },
-  "version": "0.10.0"
+  "version": "0.10.1"
 }

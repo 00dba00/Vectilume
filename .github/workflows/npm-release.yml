@@ -53,9 +53,12 @@ jobs:
         run: echo "version=$(node -p "require('./packages/icons-svg/release.json').version")" >> "$GITHUB_OUTPUT"
 
       # SVG package first: the next release reads its manifest.
-      - run: npm publish --access public
+      # /admin reads these step names to tell "published, a later step failed" from a failed release.
+      - name: Publish @vectilume/icons
+        run: npm publish --access public
         working-directory: packages/icons-svg/dist/npm
-      - run: npm publish --access public
+      - name: Publish @vectilume/react
+        run: npm publish --access public
         working-directory: packages/icons-svg/dist/react
 
       - name: Commit release.json and tag

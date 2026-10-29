@@ -279,7 +279,13 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
 
 function ReleaseStatus({ run }: { run: ReleaseRun }) {
   const state =
-    run.status !== "completed" ? "is running" : run.conclusion === "success" ? "finished" : `ended: ${run.conclusion ?? "unknown"}`;
+    run.status !== "completed"
+      ? "is running"
+      : run.conclusion === "success"
+        ? "finished"
+        : run.published
+          ? "published to npm, last step failed"
+          : `ended: ${run.conclusion ?? "unknown"}`;
   return (
     <p className={styles.meta}>
       Last npm release {state} (started {date.format(new Date(run.startedAt))}) · <a href={run.url}>log on GitHub</a>
