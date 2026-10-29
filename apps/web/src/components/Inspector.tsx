@@ -123,6 +123,7 @@ export function Inspector({ selection, lookup, theme, onClose }: InspectorProps)
           <div className={styles.source}>
             <div className={styles.sourceHeader}>
               <span>SVG source</span>
+              <a className={styles.reset} href={`/studio?icon=${selection.name}`}>Edit in studio</a>
               <button type="button" className={styles.reset} onClick={() => copy("svg", svg)} disabled={!svg}>
                 {copied === "svg" ? "Copied" : "Copy SVG"}
               </button>

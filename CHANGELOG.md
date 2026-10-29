@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.12.0 (2026-10-29)
+
+- Studio: draw new icons or edit existing ones in the browser on the 24×24 grid, with pen, shapes, the three styles, live checks and previews
+- Catalog: Edit in studio next to each icon's SVG
+
 ## v0.11.1 (2026-10-29)
 
 - Site: while the admin dashboard or your request list loads, a V icon is drawn on a design grid instead of plain loading text
