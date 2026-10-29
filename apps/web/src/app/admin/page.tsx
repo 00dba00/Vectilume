@@ -5,6 +5,7 @@ import { isAdminSession } from "@/lib/admin";
 import { bakeSvg } from "@/lib/bake-svg";
 import { db } from "@/lib/db";
 import { Icon } from "@/components/Icon";
+import { Spinner } from "@/components/Spinner";
 import { lastNpmRelease, releaseEnabled, type ReleaseRun } from "@/lib/github";
 import { ICON_STYLES, requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus, type ReviewSvgs } from "@/lib/icon-requests";
 import { buildLookup, iconId, icons } from "@/lib/icons";
@@ -36,7 +37,7 @@ const date = new Intl.DateTimeFormat("en-GB", { dateStyle: "medium", timeStyle: 
 export default function AdminPage({ searchParams }: PageProps<"/admin">) {
   return (
     <main className={styles.page}>
-      <Suspense fallback={<p className={`${styles.muted} ${styles.loading}`}>Loading…</p>}>
+      <Suspense fallback={<div className={styles.loading}><Spinner size={72} label="Loading the dashboard…" showLabel /></div>}>
         <Admin searchParams={searchParams} />
       </Suspense>
     </main>

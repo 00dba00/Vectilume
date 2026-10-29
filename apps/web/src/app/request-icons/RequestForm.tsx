@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState, useSyncExternalStore, type FormEvent } from "react";
+import { Spinner } from "@/components/Spinner";
 import type { RequestStatus } from "@/lib/icon-requests";
 import styles from "./request-icons.module.css";
 
@@ -333,7 +334,7 @@ function NewRequest({ token, onSent }: { token: string; onSent: () => void }) {
 }
 
 function MyRequests({ requests, admin }: { requests: Listed[] | null; admin: boolean }) {
-  if (!requests) return <p className={styles.hint}>Loading requests…</p>;
+  if (!requests) return <Spinner label="Loading requests…" showLabel />;
   return (
     <div>
       <h3 className={styles.listTitle}>{admin ? "All requests" : "Your requests"}</h3>

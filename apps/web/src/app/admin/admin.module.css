@@ -33,7 +33,7 @@
 .page code { padding: 1px 6px; border-radius: 6px; background: var(--surface-3); color: var(--text); font-size: 13px; overflow-wrap: anywhere; }
 .page a { color: var(--text); }
 .muted { color: var(--text-muted); }
-.loading { padding: 48px 24px; }
+.loading { display: grid; place-items: center; min-height: 100vh; padding: 24px; }
 
 /* Layout */
 .shell { display: grid; grid-template-columns: 248px minmax(0, 1fr); min-height: 100vh; }
