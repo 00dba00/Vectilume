@@ -798,5 +798,21 @@
       "editorial"
     ],
     "request": 6
+  },
+  {
+    "id": "devices",
+    "label": "Devices",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "devices",
+      "phone",
+      "desktop",
+      "monitor",
+      "sessions",
+      "account",
+      "screen"
+    ],
+    "request": 11
   }
 ]

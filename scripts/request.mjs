@@ -1,8 +1,10 @@
 // Codex's side of icon requests. Usage: pnpm request <sync|start|review> [id]
 //   sync         writes icon-queue/: one file per request the owner accepted and nobody finished yet
 //   start <id>   marks it in-progress (the developer gets an email)
-//   review <id>  sends the drawn icon (found by "request": <id> in a collection) to the owner and drops its queue file
+//   review <id>  commits and pushes the drawn icon (found by "request": <id> in a collection), sends it to the owner
+//                and drops its queue file; the npm release ships it only after the owner approves it
 // Needs VECTILUME_WORKER_TOKEN, e.g. in .env.worker at the repo root.
+import { execFileSync } from "node:child_process";
 import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -22,6 +24,8 @@ async function call(method, url, body) {
   if (!response.ok) throw new Error(`${method} ${url || "/"}: ${response.status} ${data.error ?? ""}`);
   return data;
 }
+
+const STYLES = ["outline", "duotone", "solid"];
 
 const queueFile = (request) => path.join(QUEUE, `${request.id}-${request.name}.md`);
 
@@ -58,20 +62,34 @@ async function collectionEntry(id) {
     if (!file.endsWith(".json") || file === "package.json" || file === "release.json") continue;
     const items = JSON.parse(await readFile(path.join(ICONS, file), "utf8"));
     const entry = Array.isArray(items) && items.find((item) => item.request === id);
-    if (entry) return entry;
+    if (entry) return { entry, file };
   }
   throw new Error(`no collection entry has "request": ${id}; add it to the icon's entry first`);
 }
 
+const git = (...args) => execFileSync("git", args, { cwd: ROOT, encoding: "utf8" }).trim();
+
+/** Commits only this icon (its SVGs and collection file) and pushes, so the npm release on GitHub can ship it once approved. */
+function commitIcon(id, entry, file) {
+  const files = [...STYLES.map((style) => `packages/icons-svg/src/${style}/${entry.id}.svg`), `packages/icons-svg/${file}`];
+  git("add", "--", ...files);
+  const staged = git("diff", "--cached", "--name-only");
+  const other = staged.split("\n").filter((name) => name && !files.includes(name));
+  if (other.length) throw new Error(`other staged files would ride along: ${other.join(", ")}; unstage them first`);
+  if (staged) git("commit", "-m", `Icons: #${id} ${entry.id} for review`, "--", ...files);
+  git("push", "origin", "HEAD:main");
+}
+
 async function review(id) {
-  const entry = await collectionEntry(id);
+  const { entry, file } = await collectionEntry(id);
   const svgs = {};
-  for (const style of ["outline", "duotone", "solid"]) {
+  for (const style of STYLES) {
     svgs[style] = await readFile(path.join(ICONS, "src", style, `${entry.id}.svg`), "utf8");
   }
+  commitIcon(id, entry, file);
   const result = await call("PATCH", `/${id}`, { status: "review", icon: entry.id, svgs });
   for (const file of await queueFiles(id)) await rm(path.join(QUEUE, file));
-  console.log(`#${id} ${result.name}: ${result.previous} → review, icon ${entry.id}. The owner approves it in /admin.`);
+  console.log(`#${id} ${result.name}: ${result.previous} → review, icon ${entry.id} (pushed ${git("rev-parse", "--short", "HEAD")}). The owner approves it in /admin.`);
 }
 
 const [command, rawId] = process.argv.slice(2);

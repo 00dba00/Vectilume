@@ -2338,6 +2338,7 @@
       "retrain",
       "model",
       "ai",
+      "brain",
       "neural network"
     ],
     "request": 4
@@ -2383,5 +2384,114 @@
       "announcement"
     ],
     "request": 8
+  },
+  {
+    "id": "shield-plus",
+    "label": "Shield plus",
+    "group": "status",
+    "groupLabel": "Status & system",
+    "keywords": [
+      "health",
+      "safety",
+      "medical",
+      "protection",
+      "injury",
+      "cross"
+    ],
+    "request": 9
+  },
+  {
+    "id": "mail-open",
+    "label": "Mail open",
+    "group": "people",
+    "groupLabel": "People & communication",
+    "keywords": [
+      "mail",
+      "draft",
+      "envelope",
+      "email",
+      "read",
+      "message",
+      "notification"
+    ],
+    "request": 10
+  },
+  {
+    "id": "chart-search",
+    "label": "Chart search",
+    "group": "analytics",
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "stats",
+      "query",
+      "analytics",
+      "statistics",
+      "search",
+      "analysis",
+      "graph"
+    ],
+    "request": 12
+  },
+  {
+    "id": "list-clear",
+    "label": "List clear",
+    "group": "actions",
+    "groupLabel": "Actions",
+    "keywords": [
+      "clear",
+      "list",
+      "remove",
+      "dismiss",
+      "filters",
+      "notifications",
+      "reset"
+    ],
+    "request": 13
+  },
+  {
+    "id": "widgets",
+    "label": "Widgets",
+    "group": "ai",
+    "groupLabel": "AI & misc",
+    "keywords": [
+      "widgets",
+      "modules",
+      "blocks",
+      "dashboard",
+      "tiles",
+      "layout"
+    ],
+    "request": 14
+  },
+  {
+    "id": "cart-plus",
+    "label": "Cart plus",
+    "group": "analytics",
+    "groupLabel": "Analytics & money",
+    "keywords": [
+      "cart",
+      "add",
+      "slip",
+      "shopping",
+      "basket",
+      "pick",
+      "checkout"
+    ],
+    "request": 15
+  },
+  {
+    "id": "restart",
+    "label": "Restart",
+    "group": "actions",
+    "groupLabel": "Actions",
+    "keywords": [
+      "restart",
+      "reset",
+      "replay",
+      "simulation",
+      "process",
+      "counter-clockwise"
+    ],
+    "request": 16
   }
 ]

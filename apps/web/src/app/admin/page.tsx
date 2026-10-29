@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Suspense } from "react";
+import { Suspense, type CSSProperties } from "react";
 import { isAdminSession } from "@/lib/admin";
 import { bakeSvg } from "@/lib/bake-svg";
 import { db } from "@/lib/db";
+import { Icon } from "@/components/Icon";
+import { lastNpmRelease, releaseEnabled, type ReleaseRun } from "@/lib/github";
 import { ICON_STYLES, requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus, type ReviewSvgs } from "@/lib/icon-requests";
+import { buildLookup, iconId, icons } from "@/lib/icons";
 import { publishedIcons } from "@/lib/published-icons";
-import { login, logout, requestChanges, revokeKey, sendUpdateEmails, setRequestStatus } from "./actions";
+import { login, logout, releaseToNpm, requestChanges, revokeKey, sendUpdateEmails, setRequestStatus } from "./actions";
+import { ActivityChart, CountUp, type DayPoint } from "./charts";
 import styles from "./admin.module.css";
+
+const lookup = buildLookup(icons);
+const glyph = (name: string, size = 20) => <Icon svg={lookup[iconId("duotone", name)]} size={size} />;
 
 export const metadata: Metadata = { title: "Admin · Vectilume", robots: { index: false, follow: false } };
 
@@ -29,8 +36,7 @@ const date = new Intl.DateTimeFormat("en-GB", { dateStyle: "medium", timeStyle: 
 export default function AdminPage({ searchParams }: PageProps<"/admin">) {
   return (
     <main className={styles.page}>
-      <h1>Icon requests</h1>
-      <Suspense fallback={<p className={styles.muted}>Loading…</p>}>
+      <Suspense fallback={<p className={`${styles.muted} ${styles.loading}`}>Loading…</p>}>
         <Admin searchParams={searchParams} />
       </Suspense>
     </main>
@@ -43,7 +49,7 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
   const filter: Filter = FILTERS.find((f) => f === params.status) ?? "all";
 
   const sql = db();
-  const [[stats], keys, rows, published, [pending]] = await Promise.all([
+  const [[stats], keys, rows, published, [pending], run, days] = await Promise.all([
     sql`select
       (select count(*)::int from api_keys where revoked_at is null) as active_keys,
       (select count(distinct email)::int from api_keys) as emails,
@@ -57,7 +63,18 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
     publishedIcons(),
     sql`select count(*)::int as updates, count(distinct k.email)::int as people from request_updates u
       join icon_requests r on r.id = u.request_id join api_keys k on k.id = r.key_id where u.sent_at is null`,
+    releaseEnabled() ? lastNpmRelease() : null,
+    // Last 30 days in Zagreb time, one row per day even when nothing happened.
+    sql`select to_char(g.d, 'YYYY-MM-DD') as day,
+      (select count(*)::int from icon_requests where (created_at at time zone 'Europe/Zagreb')::date = g.d::date) as requests,
+      (select count(*)::int from api_keys where (created_at at time zone 'Europe/Zagreb')::date = g.d::date) as tokens
+      from generate_series((now() at time zone 'Europe/Zagreb')::date - 29, (now() at time zone 'Europe/Zagreb')::date, interval '1 day') as g(d)
+      order by g.d`,
   ]);
+  const series = days as DayPoint[];
+  const week = series.slice(-7);
+  const weekRequests = week.reduce((sum, d) => sum + d.requests, 0);
+  const weekTokens = week.reduce((sum, d) => sum + d.tokens, 0);
   const emailed = typeof params.emailed === "string" ? params.emailed.split("-").map(Number) : null;
 
   const requests = rows.map((row) => ({
@@ -69,17 +86,60 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
   const ready = requests.filter((r) => r.status.status === "ready");
   const toReview = requests.filter((r) => r.status.status === "review");
 
-  return (
-    <>
-      <form action={logout} className={styles.logout}>
-        <button type="submit" className={styles.secondary}>Sign out</button>
-      </form>
+  const done = counts.done;
+  const pipeline = requests.length - counts.open - counts.declined;
+  const shippedShare = pipeline > 0 ? Math.round((done / pipeline) * 100) : 0;
+  const statusMax = Math.max(1, ...STORED_STATUSES.map((s) => counts[s]), done);
 
-      {ready.length > 0 && (
-        <p className={styles.banner} role="status">
-          <strong>{ready.length === 1 ? "1 icon is" : `${ready.length} icons are`} done and waiting for the npm release:</strong>{" "}
-          {ready.map((r) => r.row.review_icon ?? r.row.name).join(", ")}.
+  return (
+    <div className={styles.shell}>
+      <aside className={styles.sidebar}>
+        <p className={styles.brand}>
+          {glyph("sparkles", 28)}
+          <span>Vectilume <em>Admin</em></span>
         </p>
+        <nav aria-label="Admin sections" className={styles.nav}>
+          <a href="#overview">{glyph("dashboard")} Overview</a>
+          {toReview.length > 0 && (
+            <a href="#review">{glyph("eye")} Review <span className={styles.count}>{toReview.length}</span></a>
+          )}
+          <a href="#requests">{glyph("inbox")} Requests <span className={styles.count}>{requests.length}</span></a>
+          <a href="#tokens">{glyph("key")} Tokens <span className={styles.count}>{keys.length}</span></a>
+          <Link href="/">{glyph("home")} Icon catalog</Link>
+        </nav>
+        <form action={logout} className={styles.logout}>
+          <button type="submit">{glyph("log-out")} Sign out</button>
+        </form>
+      </aside>
+
+      <div className={styles.main}>
+        <header className={styles.topbar}>
+          <div>
+            <p className={styles.crumbs}>Admin / Dashboard</p>
+            <h1>Icon requests</h1>
+          </div>
+        </header>
+
+      {(ready.length > 0 || run || params.released === "1") && (
+        <div className={styles.banner} role="status">
+          {ready.length > 0 && (
+            <p>
+              <strong>{ready.length === 1 ? "1 icon is" : `${ready.length} icons are`} done and waiting for the npm release:</strong>{" "}
+              {ready.map((r) => r.row.review_icon ?? r.row.name).join(", ")}.
+            </p>
+          )}
+          {params.released === "1" && <p>Release started on GitHub; it takes a few minutes, reload to follow it.</p>}
+          {run && <ReleaseStatus run={run} />}
+          {releaseEnabled() && ready.length > 0 && run?.status !== "queued" && run?.status !== "in_progress" && (
+            <form action={releaseToNpm} className={styles.releaseForm}>
+              <select name="bump" defaultValue="patch" aria-label="Version step">
+                <option value="patch">patch: new icons</option>
+                <option value="minor">minor: breaking change</option>
+              </select>
+              <button type="submit">Release to npm</button>
+            </form>
+          )}
+        </div>
       )}
 
       {(pending.updates > 0 || emailed) && (
@@ -93,6 +153,59 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
         </form>
       )}
 
+      <section id="overview" aria-label="Overview" className={styles.section}>
+        <dl className={styles.stats}>
+          <Stat i={0} icon="inbox" tone="pink" label="Requests" value={stats.requests} note={`+${weekRequests} in the last 7 days`} />
+          <Stat i={1} icon="key" tone="violet" label="Active tokens" value={stats.active_keys} note={`+${weekTokens} issued in the last 7 days`} />
+          <Stat i={2} icon="users" tone="blue" label="Developers (emails)" value={stats.emails} note={`${stats.requesting_keys} tokens sent requests`} />
+          <Stat i={3} icon="rocket" tone="teal" label="Shipped on npm" value={done} note={`${counts.review} in review · ${counts.ready} ready`} />
+        </dl>
+
+        <div className={styles.charts}>
+          <article className={styles.panel} style={{ "--i": 4 } as CSSProperties}>
+            <header className={styles.panelHead}>
+              <h2>Activity</h2>
+              <p className={styles.meta}>Last 30 days</p>
+            </header>
+            <ActivityChart data={series} />
+          </article>
+
+          <article className={styles.panel} style={{ "--i": 5 } as CSSProperties}>
+            <header className={styles.panelHead}>
+              <h2>Pipeline</h2>
+              <p className={styles.meta}>Accepted requests that shipped</p>
+            </header>
+            <div className={styles.ring} style={{ "--share": shippedShare } as CSSProperties}>
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ring-fill" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="var(--series-2)" />
+                    <stop offset="100%" stopColor="var(--series-1)" />
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="50" className={styles.ringTrack} />
+                <circle cx="60" cy="60" r="50" className={styles.ringValue} pathLength={100} />
+              </svg>
+              <p>
+                <strong>{shippedShare}%</strong>
+                <span>{done} of {pipeline}</span>
+              </p>
+            </div>
+            <ul className={styles.bars}>
+              {[...STORED_STATUSES, "done" as const].map((s, n) => (
+                <li key={s} style={{ "--w": counts[s] / statusMax, "--n": n } as CSSProperties}>
+                  <Link href={`/admin?status=${s}#requests`}>
+                    <span>{STATUS_LABEL[s]}</span>
+                    <b>{counts[s]}</b>
+                    <i aria-hidden="true" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
       {toReview.length > 0 && (
         <section aria-labelledby="review" className={styles.section}>
           <h2 id="review">Waiting for your review</h2>
@@ -104,21 +217,11 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
         </section>
       )}
 
-      <section aria-labelledby="usage" className={styles.section}>
-        <h2 id="usage">Token usage</h2>
-        <dl className={styles.stats}>
-          <Stat label="Active tokens" value={stats.active_keys} />
-          <Stat label="Developers (emails)" value={stats.emails} />
-          <Stat label="Tokens that sent requests" value={stats.requesting_keys} />
-          <Stat label="Requests" value={stats.requests} />
-        </dl>
-      </section>
-
       <section aria-labelledby="requests" className={styles.section}>
         <h2 id="requests">Requests</h2>
         <nav className={styles.filters} aria-label="Filter by status">
           {FILTERS.map((f) => (
-            <Link key={f} href={f === "all" ? "/admin" : `/admin?status=${f}`} aria-current={f === filter ? "page" : undefined}>
+            <Link key={f} href={f === "all" ? "/admin#requests" : `/admin?status=${f}#requests`} aria-current={f === filter ? "page" : undefined}>
               {f === "all" ? "All" : STATUS_LABEL[f]} <span>{counts[f]}</span>
             </Link>
           ))}
@@ -168,15 +271,31 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
           </div>
         )}
       </section>
-    </>
+      </div>
+    </div>
   );
 }
 
-function Stat({ label, value }: { label: string; value: number }) {
+function ReleaseStatus({ run }: { run: ReleaseRun }) {
+  const state =
+    run.status !== "completed" ? "is running" : run.conclusion === "success" ? "finished" : `ended: ${run.conclusion ?? "unknown"}`;
   return (
-    <div className={styles.stat}>
+    <p className={styles.meta}>
+      Last npm release {state} (started {date.format(new Date(run.startedAt))}) · <a href={run.url}>log on GitHub</a>
+      {run.status !== "completed" && " · reload to see the result"}
+    </p>
+  );
+}
+
+function Stat({ i, icon, tone, label, value, note }: { i: number; icon: string; tone: string; label: string; value: number; note: string }) {
+  return (
+    <div className={styles.stat} style={{ "--i": i } as CSSProperties}>
       <dt>{label}</dt>
-      <dd>{value}</dd>
+      <dd>
+        <CountUp value={value} />
+      </dd>
+      <dd className={styles.statNote}>{note}</dd>
+      <span className={styles.chip} data-tone={tone} aria-hidden="true">{glyph(icon, 22)}</span>
     </div>
   );
 }
@@ -295,6 +414,11 @@ function RequestCard({ row, status }: { row: AdminRow; status: RequestStatus }) 
 function LoginForm({ error }: { error: boolean }) {
   return (
     <form action={login} className={styles.login}>
+      <p className={styles.brand}>
+        {glyph("sparkles", 28)}
+        <span>Vectilume <em>Admin</em></span>
+      </p>
+      <h1>Sign in</h1>
       <label>
         <span>Admin token</span>
         <input name="token" type="password" autoComplete="current-password" required />

@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.9.0 (2026-10-29)
+
+- Admin: release both npm packages with one button
+- GitHub publishes only approved icons and tells developers in the next update email
+- Catalog: eight new icons from requests (shield-plus, mail-open, devices, chart-search, list-clear, widgets, cart-plus, restart) and redrawn model-training and scroll-quill
+- Admin: activity chart and counters for requests and tokens
+- Tooling: pnpm request review commits and pushes the drawn icon before it goes to review
+
 ## v0.8.0 (2026-10-29)
 
 - Requests: developers get at most one email a day with what changed on all their requests, instead of one email per change

@@ -18,8 +18,12 @@ Icons that developers requested are drawn from a queue the owner fills by accept
 2. Before drawing: `pnpm request start <id>`.
 3. Draw the icon in all three styles under `packages/icons-svg/src/{outline,duotone,solid}/<id>.svg`, add its entry to the
    right collection JSON with `"request": <request id>`, and run `pnpm validate`.
-4. When done: `pnpm request review <id>`. It sends the SVGs to the owner and removes the queue file.
+4. When done: `pnpm request review <id>`. It commits only that icon (its three SVGs and the collection file) as
+   `Icons: #<id> <icon> for review`, pushes to main, sends the SVGs to the owner and removes the queue file. Work on
+   one request at a time, so the collection file holds no half-done entry of another icon. Changes asked by the owner:
+   fix them and run `review` again (a new commit).
 5. Always end your answer with what the script printed for each request (e.g. `#42 basketball-hoop: in-progress → review`).
 
-Never publish to npm or change statuses any other way; the owner approves drawn icons and decides when to release.
+Never publish to npm or change statuses any other way. The owner approves drawn icons in /admin and starts the npm
+release from there (GitHub Actions); icons not approved yet are left out of the package even though they are on main.
 The script needs `VECTILUME_WORKER_TOKEN` in `.env.worker` at the repo root; if it is missing, stop and say so.

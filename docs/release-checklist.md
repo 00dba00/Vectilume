@@ -3,6 +3,20 @@
 Objavljuju se dva paketa iz istih potvrđenih kolekcija i s istom verzijom:
 `@vectilume/icons` (SVG + `manifest.json`) i `@vectilume/react` (komponente).
 
+## Uobičajeno: gumb u /admin
+
+`/admin` → **Release to npm** (patch za nove ikone, minor za breaking na 0.x) pokreće
+`.github/workflows/npm-release.yml`: uzme odobrene zahtjeve (status `ready`), verziju = zadnja na npm-u + korak,
+`validate` i testovi, složi oba paketa (ikona vezana uz zahtjev koji nije odobren ostaje izvan paketa), objavi ih kroz
+npm Trusted Publishing (bez tokena i 2FA), commita `release.json`, tagira `npm-v<verzija>` i zabilježi objavljene
+zahtjeve za e-mail developerima. Admin prikazuje zadnje pokretanje i link na log.
+
+Jednokratno postavljeno: na npmjs.com za oba paketa trusted publisher (GitHub, `00dba00/Vectilume`,
+`npm-release.yml`); u GitHub secrets `VECTILUME_WORKER_TOKEN`; na Vercelu `GITHUB_RELEASE_TOKEN` (fine-grained,
+samo ovaj repo, Actions read/write).
+
+## Ručno (rezervni put)
+
 ## Prije objave
 
 1. U katalogu, panel za objavu: potvrdi kolekcije i verziju (upisuje se u
@@ -31,7 +45,7 @@ Objavljuju se dva paketa iz istih potvrđenih kolekcija i s istom verzijom:
    ```
 8. Provjera: `npm view @vectilume/icons version`, `npm view @vectilume/react version`,
    i da se otvara `https://unpkg.com/@vectilume/icons@<verzija>/manifest.json`.
-9. Tag: `git tag v<verzija> && git push origin v<verzija>`.
+9. Tag: `git tag npm-v<verzija> && git push origin npm-v<verzija>` (tagovi `v*` su verzije weba).
 
 ## Sljedeće verzije
 

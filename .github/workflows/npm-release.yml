@@ -1,0 +1,73 @@
+# Publishes @vectilume/icons and @vectilume/react. Started from /admin ("Release to npm") or by hand in GitHub Actions.
+# npm Trusted Publishing: npm trusts this workflow through OIDC, so there is no npm token and no 2FA code.
+name: npm release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: patch for new icons, minor for a breaking change while on 0.x
+        type: choice
+        options: [patch, minor]
+        default: patch
+
+permissions:
+  contents: write # commit release.json and push the tag
+  id-token: write # npm trusted publishing
+
+concurrency: npm-release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      SITE: https://vectilume.dev
+      WORKER_TOKEN: ${{ secrets.VECTILUME_WORKER_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - name: npm with trusted publishing (11.5.1 or newer)
+        run: npm install -g npm@latest
+      - run: pnpm install --frozen-lockfile
+
+      - name: Approved icon requests
+        # Icons drawn for a request ship only once the owner approved them in /admin (status ready).
+        run: |
+          ids=$(curl -fsS "$SITE/api/worker/requests?status=ready" -H "authorization: Bearer $WORKER_TOKEN" | node -p "JSON.parse(require('fs').readFileSync(0, 'utf8')).ids.join(',')")
+          echo "approved requests: ${ids:-none}"
+          echo "APPROVED_REQUESTS=$ids" >> "$GITHUB_ENV"
+
+      - run: pnpm validate
+      - run: pnpm test
+
+      - name: Build both packages
+        run: pnpm --filter @vectilume/icons-svg release
+        env:
+          RELEASE_BUMP: ${{ inputs.bump }}
+      - id: version
+        run: echo "version=$(node -p "require('./packages/icons-svg/release.json').version")" >> "$GITHUB_OUTPUT"
+
+      # SVG package first: the next release reads its manifest.
+      - run: npm publish --access public
+        working-directory: packages/icons-svg/dist/npm
+      - run: npm publish --access public
+        working-directory: packages/icons-svg/dist/react
+
+      - name: Commit release.json and tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add packages/icons-svg/release.json
+          git commit -m "npm: @vectilume/icons and @vectilume/react ${{ steps.version.outputs.version }}"
+          git tag "npm-v${{ steps.version.outputs.version }}"
+          git pull --rebase origin main
+          git push origin HEAD:main "npm-v${{ steps.version.outputs.version }}"
+
+      - name: Record shipped requests for the update email
+        # unpkg can lag a few minutes behind npm; the daily email records whatever this misses.
+        run: curl -fsS -X POST "$SITE/api/worker/shipped" -H "authorization: Bearer $WORKER_TOKEN" || echo "not recorded yet; the daily email will"

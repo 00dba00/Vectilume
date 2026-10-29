@@ -8,7 +8,7 @@ export const sha256 = (text: string) => createHash("sha256").update(text).digest
 /** The token from `Authorization: Bearer vl_…`, or null when missing or malformed. */
 export function bearerToken(request: Request): string | null {
   const match = /^Bearer (vl_[A-Za-z0-9_-]{43})$/.exec(request.headers.get("authorization")?.trim() ?? "");
-  return match ? match[1] : null;
+  return match?.[1] ?? null;
 }
 
 /** SHA-256 of ADMIN_TOKEN, or null when it is not set. The admin session cookie holds this value. */

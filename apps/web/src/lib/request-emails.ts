@@ -44,7 +44,7 @@ export async function changeStatus(id: number, change: StatusChange): Promise<Re
 }
 
 /** Records a shipped update for every request whose icon is in the latest npm release and was not recorded yet. */
-async function recordShipped(): Promise<number> {
+export async function recordShipped(): Promise<number> {
   const shipped = new Map((await latestPublishedIcons()).filter((icon) => icon.request && !icon.deprecated).map((icon) => [icon.request!, icon]));
   if (shipped.size === 0) return 0;
   const sql = db();
