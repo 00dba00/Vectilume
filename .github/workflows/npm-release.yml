@@ -70,4 +70,5 @@ jobs:
 
       - name: Record shipped requests for the update email
         # unpkg can lag a few minutes behind npm; the daily email records whatever this misses.
-        run: curl -fsS -X POST "$SITE/api/worker/shipped" -H "authorization: Bearer $WORKER_TOKEN" || echo "not recorded yet; the daily email will"
+        run: |
+          curl -fsS -X POST "$SITE/api/worker/shipped" -H "authorization: Bearer $WORKER_TOKEN" || echo "not recorded yet; the daily email will"

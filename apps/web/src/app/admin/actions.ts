@@ -70,7 +70,12 @@ export async function sendUpdateEmails() {
 /** Starts the GitHub workflow that publishes both npm packages with the approved icons. */
 export async function releaseToNpm(formData: FormData) {
   await requireAdmin();
-  await startNpmRelease(formData.get("bump") === "minor" ? "minor" : "patch");
+  try {
+    await startNpmRelease(formData.get("bump") === "minor" ? "minor" : "patch");
+  } catch (error) {
+    console.error("npm release did not start", error);
+    redirect("/admin?released=error");
+  }
   redirect("/admin?released=1");
 }
 
