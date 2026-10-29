@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.7.1 (2026-10-29)
+
+- Admin: notes for Codex keep every letter
+- Admin: duotone previews show both colours
+
 ## v0.7.0 (2026-10-29)
 
 - Requests: new requests are accepted by the owner before they are drawn, with a new accepted status and email

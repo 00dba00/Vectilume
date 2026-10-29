@@ -18,9 +18,7 @@ export async function emailSettings(email: string): Promise<{ notify: boolean; c
 async function sendNotification(email: string, { subject, text }: { subject: string; text: string }): Promise<boolean> {
   const { notify, code } = await emailSettings(email);
   if (!notify) return false;
-  await sendEmail(email, subject, `${text}
-
-${notificationFooter(`${SITE}/request-icons?unsubscribe=${code}`)}`, {
+  await sendEmail(email, subject, `${text}\n\n${notificationFooter(`${SITE}/request-icons?unsubscribe=${code}`)}`, {
     // Mail apps show their own unsubscribe button and POST here (RFC 8058 one-click).
     "List-Unsubscribe": `<${SITE}/api/unsubscribe?code=${code}>`,
     "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
