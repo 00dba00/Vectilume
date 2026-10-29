@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-g (#admin-dark-dashboard in progress)",
+  "updated_at": "2026-10-29-g (#npm-release-button deployed, npm 0.2.0)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -106,14 +106,14 @@
       "title": "Release to npm from /admin through GitHub Actions",
       "phase": "3",
       "track": "release",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-29",
       "end": "2026-10-30",
       "observe_until": null,
       "summary": "Owner, 2026-10-29: can the npm release be started from the admin panel once everything is approved? Today it is a manual checklist with a passkey 2FA publish in the owner's terminal; release.json says 0.2.0 but npm still has 0.1.0, so 13 approved request icons (#4-#16) wait. 'ajmo složiti automatiku preko githuba'.",
       "spec": "A GitHub Actions workflow npm-release.yml (workflow_dispatch, input bump: patch|minor) publishes @vectilume/icons and @vectilume/react with npm Trusted Publishing (OIDC, no npm token, no OTP, provenance). It reads the approved request ids from the site (worker token as a GitHub secret), sets the version from npm latest + bump, runs validate and tests, builds with build-release limited to approved request icons (an icon linked to a request that is not ready and not yet on npm stays out of the package), publishes both packages, commits release.json, tags npm-v<version> (web tags v* are taken) and tells the site to record the shipped requests for the update email. /admin gets 'Release to npm' (patch or minor) that dispatches the workflow through the GitHub API (GITHUB_TOKEN on Vercel: fine-grained, this repo, Actions read/write) and shows the last run with its result and link. Codex: pnpm request review also commits the icon (3 SVGs + collection file) and pushes to main, so CI sees it; one request at a time. Risks: npm staged publishing may still ask for approval on npmjs.com; drafts in review show in the web catalog before approval. Out of scope: visual diff in CI (the owner reviews the SVGs in /admin), changelog for npm.",
       "plan": "1. build-release: allowed request ids (env), keep published ones. 2. GET /api/worker/requests?status=ready and POST /api/worker/shipped (record only). 3. .github/workflows/npm-release.yml. 4. /admin button and last-run status. 5. request review commits and pushes; AGENTS.md. 6. Owner: trusted publisher on npmjs.com for both packages, GITHUB_TOKEN on Vercel, VECTILUME_WORKER_TOKEN as a GitHub secret. 7. Release web minor; first npm release from the button (0.2.0 with #4-#16).",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED web v0.9.0 + v0.9.1, 2026-10-29] Owner set the npm trusted publisher (GitHub Actions, npm-release.yml, direct publish allowed) on both packages, VECTILUME_WORKER_TOKEN as a GitHub secret and GITHUB_RELEASE_TOKEN on Vercel. v0.9.0 shipped the workflow with a YAML error (an unquoted \"authorization: \" in a run line), so dispatch answered 422 and /admin showed an error page; v0.9.1 fixed both. [NPM 0.2.0, 2026-10-29] First release from the /admin button (minor): approved requests 4-16, validate and tests passed, both packages published with provenance and live on npm after ~5 min; 848 icons, 13 from requests. The commit step failed (release.json already said 0.2.0, nothing to commit), so the tag npm-v0.2.0 and the shipped record (13) were done by hand; the workflow now skips an empty commit."
     },
     {
       "id": "admin-dark-dashboard",
