@@ -407,6 +407,11 @@
   font-size: 14px;
 }
 
+.sourceHeader a {
+  margin: 0 8px 0 auto;
+  text-decoration: none;
+}
+
 /* React playground */
 .playground {
   display: grid;

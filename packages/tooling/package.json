@@ -5,6 +5,9 @@
   "description": "SVG validation, optimization and build tooling for Vectilume",
   "license": "MIT",
   "type": "module",
+  "exports": {
+    "./svg-rules": "./src/svg-rules.ts"
+  },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "tsx --test \"src/**/*.test.ts\""

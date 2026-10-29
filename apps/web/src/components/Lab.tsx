@@ -33,6 +33,7 @@ export function Lab({ lookup }: { lookup: IconLookup }) {
           ))}
           <a href="#context-heading">In context</a>
           <a href="/request-icons">Request an icon</a>
+          <a href="/studio">Studio</a>
           {process.env.NODE_ENV === "development" && <a href="#release-heading">npm release</a>}
         </nav>
       </header>
