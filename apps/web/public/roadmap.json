@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-n (#icon-studio-editor built, waiting for release)",
+  "updated_at": "2026-10-29-o (#icon-studio-editor deployed v0.12.0, #icon-studio-proposals starts 2026-10-30, new #icon-studio-polish and #icon-author-credits; caught up four shipped items)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -92,14 +92,14 @@
       "title": "One daily email per developer instead of one email per request change",
       "phase": "3",
       "track": "requests",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-29",
       "end": "2026-10-29",
       "observe_until": null,
       "summary": "Owner, 2026-10-29: a developer who sends several requests gets an email for every request and every change, 'nije li to malo glupo?'. Chose one email a day.",
       "spec": "No more received and in-progress emails (the page and API confirm a request at once; in-progress is an internal step). Accepted, declined (with reason), ready and shipped become rows in request_updates (request, kind, detail, created_at, sent_at) instead of emails. The daily cron (08:00 UTC) first records newly shipped requests, then sends one email per address with the latest change of each request since the last email, then marks the rows sent. Addresses that are unconfirmed or turned emails off get nothing (rows marked sent). The old admin button for shipped emails goes away. [2026-10-29, owner] /admin gets 'Send update emails now' (with how many changes for how many developers wait) for after a batch of work; an address mailed in the last 20 hours (email_settings.last_sent_at) is skipped by the morning cron, so nobody gets two in a day; its newer changes wait for the next email. Risk: news reaches a developer up to a day later. Out of scope: choosing the hour, a weekly option.",
       "plan": "1. request_updates table. 2. changeStatus and the shipped check record updates instead of mailing; drop the received and in-progress emails. 3. Digest sender and email text; cron runs shipped check + digest. 4. Remove the admin button. 5. Docs: page, icon-requests.md, README, settings label. 6. Release minor; check with a test request.",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED v0.8.0, 2026-10-29] Daily digest per developer and Send update emails now in /admin (status caught up in the roadmap on 2026-10-29)."
     },
     {
       "id": "npm-release-button",
@@ -120,14 +120,14 @@
       "title": "Admin: modern dark dashboard with charts and motion",
       "phase": "3",
       "track": "admin",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-29",
       "end": "2026-10-31",
       "observe_until": null,
       "summary": "Owner, 2026-10-29, with a reference screenshot of a dark admin template: 'želim ovako moderan tamni admin dio uz animacije, grafove ako može i sve to'.",
       "spec": "Only /admin changes; the public site stays light. Dark navy theme scoped to the admin page (own tokens in admin.module.css), a sidebar with section links (Overview, Review, Requests, Tokens) and sign out that becomes a top bar on phones. Overview: KPI cards with Vectilume icon chips and numbers that count up, each with what changed in the last 7 days; an area chart of requests and new tokens per day over the last 30 days (one axis, both are counts per day; hover crosshair with tooltip; table fallback for screen readers); a ring with the share of accepted requests that shipped and a bar per status. Cards, bars and lines animate in once on load; prefers-reduced-motion turns all motion off. Every existing action (accept, status, review, release, update emails, revoke) keeps its form and server action unchanged. Charts are hand-written SVG in small client components, no chart library. Out of scope: date range picker, light mode toggle for admin.",
       "plan": "1. Daily series query (Europe/Zagreb days) and 7-day deltas. 2. Dark admin tokens and layout with sidebar. 3. KPI cards with count-up. 4. Area chart and status ring/bars client components. 5. Restyle requests, review cards, tokens table, banners and login. 6. Typecheck, lint, look at it in the browser; release web minor.",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED v0.9.0, 2026-10-29] Dark /admin with sidebar, KPI cards, activity chart and pipeline ring (status caught up on 2026-10-29)."
     },
     {
       "id": "html-emails",
@@ -148,28 +148,28 @@
       "title": "Sign in to /admin with a link mailed to the owner",
       "phase": "3",
       "track": "admin",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-29",
       "end": "2026-10-29",
       "observe_until": null,
       "summary": "Owner, 2026-10-29: 'nismo li rekli da prijava ide email pa magic link ili token? sad je samo token?' The email link existed only for developers on /request-icons; /admin took only ADMIN_TOKEN, which the owner had to dig out of Vercel and which leaked into a chat. 'da upiši i napravi'.",
       "spec": "/admin sign-in asks for an email first. Only ADMIN_EMAIL (Vercel env) gets a one-time link (/admin?login=<code>, 15 minutes, used once, only the SHA-256 stored in admin_logins, at most 3 per hour per IP); every other address gets the same answer and nothing is sent. Opening the link shows a 'Sign in' button (POST, so mail scanners cannot use it up) that sets the same admin cookie the token sets, so changing ADMIN_TOKEN still signs everyone out. The token form stays as a fallback under 'Use the admin token instead' in case email fails. The link email uses the designed layout. Risk: without ADMIN_EMAIL set, only the token works (the form says so). Out of scope: several admins, sessions list.",
       "plan": "1. admin_logins table. 2. Actions: request link, use link; email template. 3. Login form: email first, token as fallback; the ?login page. 4. Owner: ADMIN_EMAIL on Vercel, migration. 5. Release patch; try it.",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED v0.11.0, 2026-10-29] Sign-in link mailed to the admin address, token as fallback (status caught up on 2026-10-29)."
     },
     {
       "id": "email-request-text",
       "title": "Update emails quote what the developer asked for",
       "phase": "3",
       "track": "requests",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-29",
       "end": "2026-10-29",
       "observe_until": null,
       "summary": "Owner, 2026-10-29: the email should show the developer's own request, so they see which of their inputs the delivered icon came from, especially when the icon got another name.",
       "spec": "Each row of the daily update email (HTML and text) quotes the request's description and keywords under 'You asked:', in a muted quote box. The worker already has them in icon_requests; the digest query selects them. Out of scope: showing the original request in the confirmation email.",
       "plan": "1. Select description and keywords in the digest. 2. Quote block in the row and in the text line. 3. Preview, release patch.",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED v0.11.0, 2026-10-29] Update emails quote the request under each change (status caught up on 2026-10-29)."
     },
     {
       "id": "design-spinner",
@@ -190,14 +190,14 @@
       "title": "Icon studio: a vector editor for Vectilume icons in the browser",
       "phase": "4",
       "track": "studio",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-29",
       "end": "2026-11-06",
       "observe_until": null,
       "summary": "Owner, 2026-10-29: 'stvarni svg ikona design studio za edit postojećih ikona i kreiranje novih u webu' (planned earlier in docs/web-features.md, points 1, 2 and recommendation 4). Owner's choices: developers use it from the start (phase 2 #icon-studio-proposals), a real vector editor (not code-first), the outline is drawn by hand and duotone/solid are helped (phase 3 #icon-studio-styles).",
       "spec": "New page /studio (and /studio?icon=<icon> to open an existing icon; the catalog inspector links there with Edit in studio). 24x24 canvas with the 2-22 keyline, 1-unit grid, snapping to 0.25, zoom and pan. Tools: select/move, direct select (anchors and bezier handles), pen (click = corner, drag = smooth), line, rectangle with corner radius, circle, ellipse; delete, duplicate, nudge with arrows, undo/redo, layer list with order. Paths are parsed into absolute segments that keep their type (L, C, Q, A, Z), so shapes you do not touch keep their exact source; edited numbers round to 2 decimals. SVG code panel synced both ways (edit code -> canvas, draw -> code). Live checks while drawing: validateSvg from @vectilume/tooling (moved to a browser-safe entry) plus studio checks for the 2-22 keyline and anything closer than 0.5 to the gloss. Preview at 16/20/24/32/48 on light and dark, next to neighbouring icons of the same collection. Export: copy or download the SVG. Phase 1 has no saving to the library; that is phase 2. Risks: arcs are edited by end points and radius only; very complex paths may be slow to hit-test. Out of scope here: accounts, submitting, solid auto-derivation.",
       "plan": "1. Browser-safe validator entry in tooling. 2. Path model: parse/serialize SVG elements and path d (absolute, typed segments). 3. Editor state with undo/redo. 4. Canvas: grid, keyline, shapes, selection, anchors/handles, snapping, zoom. 5. Tools: select, direct select, pen, line, rect, circle, ellipse. 6. Code panel two-way sync, layers, inspector. 7. Live checks + previews. 8. Open existing icons (/studio/<icon>, all three styles as tabs). 9. Tests for the path model; release minor. [2026-10-29, done] Path model with typed absolute segments (round-trip test over every library path), shapes path/rect/circle/ellipse plus read-only transformed groups; one Select tool for moving shapes and dragging anchors/handles (anchor carries its handles), pen with corner/curve/close, line, rect (radius 3 by default), circle, ellipse; undo/redo (100 steps), duplicate, delete point/shape, curve/straight point, closed toggle, order; paint per style (outline stroke/filled detail, duotone primary stroke/secondary fill/primary fill, solid even-odd); Gloss is marked by hand per shape (the SVG has no place for it) and kept through code edits and the draft; checks = validateSvg + keyline + Gloss gap sampled every 0.1 by the browser; previews 16-48 light/dark and neighbours from the same group; draft of a new icon in localStorage; copy/download per style. Duotone/solid tabs offer Start from the outline (copy) until #icon-studio-styles.",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED v0.12.0, 2026-10-29] /studio live with pen, shapes, three style tabs, code sync, checks (validator, keyline, Gloss gap) and previews; Edit in studio in the catalog. Not yet saving to the library: #icon-studio-proposals."
     },
     {
       "id": "icon-studio-proposals",
@@ -205,12 +205,12 @@
       "phase": "4",
       "track": "studio",
       "status": "planned",
-      "start": "2026-11-06",
-      "end": "2026-11-13",
+      "start": "2026-10-30",
+      "end": "2026-11-04",
       "observe_until": null,
-      "summary": "Owner, 2026-10-29: developers use the studio from the start; proposals go through the owner's approval (docs/web-features.md points 1 and 2).",
+      "summary": "Owner, 2026-10-29: developers use the studio from the start; proposals go through the owner's approval (docs/web-features.md points 1 and 2). [2026-10-29] Starts 2026-10-30, right after #icon-studio-editor shipped in v0.12.0.",
       "spec": "Signed-in developers (the same token/email as /request-icons) submit from the studio: a new icon (name, collection, group, keywords, three styles) or an edit of an existing one (one or all styles). Submitting requires accepting that the contribution is MIT. Stored in a new icon_proposals table with the SVGs; checks must pass before sending. /admin gets a Proposals section with old/new side by side (and overlaid) at several sizes; approve commits the SVGs and the collection entry to main through the GitHub Contents API (token with contents write), so it ships with the next npm release; ask for changes with a note; decline with a reason. Statuses and the daily update email reuse request_updates. Name is public API: the owner can rename before approving. Out of scope: author credits in the manifest (later), voting.",
-      "plan": "1. Schema icon_proposals. 2. Submit API + studio submit dialog with MIT consent. 3. Admin proposals view with diff. 4. Approve -> GitHub commit; changes asked; declined. 5. Emails through the digest. 6. Release minor.",
+      "plan": "1. Schema icon_proposals (kind new|edit, icon id, collection, group, label, keywords, svgs per style, note, status submitted|changes|approved|declined, MIT accepted_at, key_id). 2. POST /api/proposals with the developer token; server runs validateSvg on every style and refuses errors. 3. Studio: Submit dialog (name, collection, group, keywords, which styles, note, MIT checkbox); sign in with the same email/token flow as /request-icons; a list of my proposals with status. 4. /admin Proposals: old/new side by side and overlaid at 16-48, checks, rename before approving; Approve, Ask for changes (note, reopens in the studio), Decline (reason). 5. Approve commits the SVGs and the collection entry to main through the GitHub Contents API in one commit (Git Data API: blobs, tree, commit, ref) with a token that has contents write; the icon is then ready for the next npm release. 6. Emails through request_updates/digest. 7. Release minor and test with a real proposal.",
       "deploy_note": null
     },
     {
@@ -219,12 +219,40 @@
       "phase": "4",
       "track": "studio",
       "status": "planned",
-      "start": "2026-11-13",
-      "end": "2026-11-20",
+      "start": "2026-11-04",
+      "end": "2026-11-11",
       "observe_until": null,
       "summary": "Owner, 2026-10-29: the outline is drawn by hand, duotone and solid are helped and then fixed by hand.",
       "spec": "Duotone tab: mark closed shapes as 'body', the studio builds the duotone (secondary fill under, primary strokes on top, gloss stays a primary stroke). Solid tab: a suggested solid from the outline (strokes offset by 0.875 into filled silhouettes, gloss and inner details as cut-outs) using a geometry library (paper.js + offset or Clipper), opened in the editor for manual fixing. Each tab stays editable; regenerating asks before overwriting manual changes. Out of scope: perfect solids for every icon; the suggestion is a starting point.",
       "plan": "1. Body flag and duotone builder. 2. Pick and add the geometry library. 3. Solid suggestion. 4. Overwrite guard. 5. Release minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "icon-studio-polish",
+      "title": "Icon studio: editing comforts and the missing toolbar icons",
+      "phase": "4",
+      "track": "studio",
+      "status": "planned",
+      "start": "2026-11-11",
+      "end": "2026-11-14",
+      "observe_until": null,
+      "summary": "What phase 1 (v0.12.0) left out, collected on 2026-10-29 so nothing stays only in chat.",
+      "spec": "Marquee (box) selection and selecting several points at once; copy/paste shapes between styles and between icons; snapping to other anchors, the centre lines and the keyline, with a visible guide; Gloss detection when an icon is opened (a short open stroke near the top-left of the main body) so library icons do not all warn \"No Gloss marked\"; a shortcut sheet (?); touch: pinch zoom and larger handles on tablets. Toolbar icons: the owner draws select (cursor), square, ellipse, line and redo in the Vectilume set; the studio uses them instead of the text labels once they are published.",
+      "plan": "1. Owner: the five toolbar icons (blocked until then, text labels meanwhile). 2. Marquee and multi-point selection. 3. Clipboard between styles and icons. 4. Smart snapping with guides. 5. Gloss detection. 6. Shortcut sheet, touch. 7. Release minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "icon-author-credits",
+      "title": "Author credits for icons from the studio",
+      "phase": "4",
+      "track": "studio",
+      "status": "planned",
+      "start": "2026-11-16",
+      "end": "2026-11-18",
+      "observe_until": null,
+      "summary": "docs/web-features.md recommendation 8 and icon-definition-of-done.md (author ⏳): a contributor's name next to their icon. Follows #icon-studio-proposals, whose spec leaves it out.",
+      "spec": "Approved proposals store the author (display name chosen on submit, never the email). The collection entry gets \"author\", build-manifest copies it into manifest.json, the catalog shows it in the inspector. Out of scope: contributor profile pages.",
+      "plan": "1. Display name on submit. 2. author in collection entries and manifest. 3. Catalog inspector. 4. Release minor (web) and patch (npm manifest field).",
       "deploy_note": null
     }
   ]
