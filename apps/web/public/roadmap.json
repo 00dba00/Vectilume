@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-h (#html-emails in progress)",
+  "updated_at": "2026-10-29-i (#html-emails deployed, v0.10.0)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -134,14 +134,14 @@
       "title": "Designed HTML emails: confirmation link and the daily request update",
       "phase": "3",
       "track": "requests",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-10-29",
       "end": "2026-10-29",
       "observe_until": null,
       "summary": "Owner, 2026-10-29: 'složi vizualno privlačne email template ... da korisniku lijepo izgleda na mailu'.",
       "spec": "Both emails get an HTML version next to the plain text (Resend sends both). Table layout with inline styles so Gmail, Outlook and Apple Mail render it the same; light card on the site's grey, brand blue (#155bd0 / #2563eb, #93c5fd), system font stack, max 560 px, readable on phones. Images are PNGs (mail apps do not show SVG): the Vectilume logo and Vectilume icons, rendered by a route /email/<name>.png with sharp from the published @vectilume/icons SVGs (duotone in brand colours, 2x), cached for a day; only published icons, so a shipped request shows the icon itself. Daily update: one row per request with a status icon (check-circle accepted, x-circle declined, sparkles ready, rocket shipped), a coloured pill, the reason or the import line in a code box, a button to /request-icons, the stop link in the footer. Confirmation: logo, short text, a 'Get my token' button and the link as text. Preheader text for inbox previews. Risk: images blocked by default in some clients, so every image has alt text and the layout reads without them. Out of scope: dark-mode specific styling, localisation.",
       "plan": "1. sharp in apps/web; /email/[file] route (logo.png, <icon-id>.png). 2. HTML layout and both templates in lib/email.ts; sendEmail sends html + text. 3. Preview in the browser with sample data, screenshots. 4. Release patch/minor; send a test to the owner.",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED v0.10.0, 2026-10-29] Confirmation and daily update emails have an HTML part (text part unchanged in content). Tiles use the outline icons (white duotone covered the drawing), a hero tile sits above each title. Checked with headless Chrome at 640 px and in a 375 px frame; production serves /email/logo.png and icon PNGs (unknown icon 404). Not yet seen in a real inbox: the 13 shipped updates were mailed at 10:40 UTC, before this release."
     }
   ]
 }
