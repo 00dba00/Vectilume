@@ -9,7 +9,7 @@ import { lastNpmRelease, releaseEnabled, type ReleaseRun } from "@/lib/github";
 import { ICON_STYLES, requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus, type ReviewSvgs } from "@/lib/icon-requests";
 import { buildLookup, iconId, icons } from "@/lib/icons";
 import { publishedIcons } from "@/lib/published-icons";
-import { login, logout, releaseToNpm, requestChanges, revokeKey, sendUpdateEmails, setRequestStatus } from "./actions";
+import { login, logout, releaseToNpm, requestAdminLink, requestChanges, revokeKey, sendUpdateEmails, setRequestStatus, signInWithLink } from "./actions";
 import { ActivityChart, CountUp, type DayPoint } from "./charts";
 import styles from "./admin.module.css";
 
@@ -45,7 +45,10 @@ export default function AdminPage({ searchParams }: PageProps<"/admin">) {
 
 async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">) {
   const params = await searchParams;
-  if (!(await isAdminSession())) return <LoginForm error={params.error === "login"} />;
+  if (!(await isAdminSession())) {
+    const code = typeof params.login === "string" && /^[A-Za-z0-9_-]{43}$/.test(params.login) ? params.login : null;
+    return <LoginForm code={code} sent={params.sent === "1"} error={typeof params.error === "string" ? params.error : null} />;
+  }
   const filter: Filter = FILTERS.find((f) => f === params.status) ?? "all";
 
   const sql = db();
@@ -418,20 +421,59 @@ function RequestCard({ row, status }: { row: AdminRow; status: RequestStatus }) 
   );
 }
 
-function LoginForm({ error }: { error: boolean }) {
+const LOGIN_ERRORS: Record<string, string> = {
+  login: "That token is not right.",
+  link: "That link is invalid, already used or older than 15 minutes. Ask for a new one.",
+  limit: "Too many links this hour; try again later or use the token.",
+  email: "The email could not be sent; try again or use the token.",
+  session: "Your session ended; sign in again.",
+};
+
+/** Email first (a one-time link to ADMIN_EMAIL); the admin token stays as a fallback when email fails. */
+function LoginForm({ code, sent, error }: { code: string | null; sent: boolean; error: string | null }) {
+  const brand = (
+    <p className={styles.brand}>
+      {glyph("sparkles", 28)}
+      <span>Vectilume <em>Admin</em></span>
+    </p>
+  );
+  if (code) {
+    return (
+      <form action={signInWithLink} className={styles.login}>
+        {brand}
+        <h1>Sign in</h1>
+        <p className={styles.hint}>You opened your sign-in link. Press the button to continue.</p>
+        <input type="hidden" name="code" value={code} />
+        <button type="submit">Sign in</button>
+      </form>
+    );
+  }
   return (
-    <form action={login} className={styles.login}>
-      <p className={styles.brand}>
-        {glyph("sparkles", 28)}
-        <span>Vectilume <em>Admin</em></span>
-      </p>
+    <div className={styles.login}>
+      {brand}
       <h1>Sign in</h1>
-      <label>
-        <span>Admin token</span>
-        <input name="token" type="password" autoComplete="current-password" required />
-      </label>
-      <button type="submit">Sign in</button>
-      {error && <p role="alert">That token is not right.</p>}
-    </form>
+      {sent ? (
+        <p className={styles.hint}>If that is the admin address, a sign-in link is on its way. It works once, for 15 minutes.</p>
+      ) : (
+        <form action={requestAdminLink} className={styles.loginForm}>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autoComplete="email" required />
+          </label>
+          <button type="submit">Email me a sign-in link</button>
+        </form>
+      )}
+      {error && LOGIN_ERRORS[error] && <p role="alert">{LOGIN_ERRORS[error]}</p>}
+      <details className={styles.fallback} open={error === "login"}>
+        <summary>Use the admin token instead</summary>
+        <form action={login} className={styles.loginForm}>
+          <label>
+            <span>Admin token</span>
+            <input name="token" type="password" autoComplete="current-password" required />
+          </label>
+          <button type="submit" className={styles.secondary}>Sign in with token</button>
+        </form>
+      </details>
+    </div>
   );
 }

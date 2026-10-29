@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-i (#html-emails deployed, v0.10.0)",
+  "updated_at": "2026-10-29-j (#admin-magic-link and #email-request-text in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -142,6 +142,34 @@
       "spec": "Both emails get an HTML version next to the plain text (Resend sends both). Table layout with inline styles so Gmail, Outlook and Apple Mail render it the same; light card on the site's grey, brand blue (#155bd0 / #2563eb, #93c5fd), system font stack, max 560 px, readable on phones. Images are PNGs (mail apps do not show SVG): the Vectilume logo and Vectilume icons, rendered by a route /email/<name>.png with sharp from the published @vectilume/icons SVGs (duotone in brand colours, 2x), cached for a day; only published icons, so a shipped request shows the icon itself. Daily update: one row per request with a status icon (check-circle accepted, x-circle declined, sparkles ready, rocket shipped), a coloured pill, the reason or the import line in a code box, a button to /request-icons, the stop link in the footer. Confirmation: logo, short text, a 'Get my token' button and the link as text. Preheader text for inbox previews. Risk: images blocked by default in some clients, so every image has alt text and the layout reads without them. Out of scope: dark-mode specific styling, localisation.",
       "plan": "1. sharp in apps/web; /email/[file] route (logo.png, <icon-id>.png). 2. HTML layout and both templates in lib/email.ts; sendEmail sends html + text. 3. Preview in the browser with sample data, screenshots. 4. Release patch/minor; send a test to the owner.",
       "deploy_note": "[DEPLOYED v0.10.0, 2026-10-29] Confirmation and daily update emails have an HTML part (text part unchanged in content). Tiles use the outline icons (white duotone covered the drawing), a hero tile sits above each title. Checked with headless Chrome at 640 px and in a 375 px frame; production serves /email/logo.png and icon PNGs (unknown icon 404). Not yet seen in a real inbox: the 13 shipped updates were mailed at 10:40 UTC, before this release."
+    },
+    {
+      "id": "admin-magic-link",
+      "title": "Sign in to /admin with a link mailed to the owner",
+      "phase": "3",
+      "track": "admin",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-10-29",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: 'nismo li rekli da prijava ide email pa magic link ili token? sad je samo token?' The email link existed only for developers on /request-icons; /admin took only ADMIN_TOKEN, which the owner had to dig out of Vercel and which leaked into a chat. 'da upiši i napravi'.",
+      "spec": "/admin sign-in asks for an email first. Only ADMIN_EMAIL (Vercel env) gets a one-time link (/admin?login=<code>, 15 minutes, used once, only the SHA-256 stored in admin_logins, at most 3 per hour per IP); every other address gets the same answer and nothing is sent. Opening the link shows a 'Sign in' button (POST, so mail scanners cannot use it up) that sets the same admin cookie the token sets, so changing ADMIN_TOKEN still signs everyone out. The token form stays as a fallback under 'Use the admin token instead' in case email fails. The link email uses the designed layout. Risk: without ADMIN_EMAIL set, only the token works (the form says so). Out of scope: several admins, sessions list.",
+      "plan": "1. admin_logins table. 2. Actions: request link, use link; email template. 3. Login form: email first, token as fallback; the ?login page. 4. Owner: ADMIN_EMAIL on Vercel, migration. 5. Release patch; try it.",
+      "deploy_note": null
+    },
+    {
+      "id": "email-request-text",
+      "title": "Update emails quote what the developer asked for",
+      "phase": "3",
+      "track": "requests",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-10-29",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: the email should show the developer's own request, so they see which of their inputs the delivered icon came from, especially when the icon got another name.",
+      "spec": "Each row of the daily update email (HTML and text) quotes the request's description and keywords under 'You asked:', in a muted quote box. The worker already has them in icon_requests; the digest query selects them. Out of scope: showing the original request in the confirmation email.",
+      "plan": "1. Select description and keywords in the digest. 2. Quote block in the row and in the text line. 3. Preview, release patch.",
+      "deploy_note": null
     }
   ]
 }
