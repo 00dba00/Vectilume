@@ -4,7 +4,7 @@ import { emailSettings } from "@/lib/request-emails";
 // Only tokens from a confirmed email: an older unconfirmed token may carry someone else's address.
 const unconfirmed = () => Response.json({ error: "confirm your email first: get a token through the emailed link" }, { status: 403 });
 
-/** Whether the token's email gets request emails (received, status changes, shipped). */
+/** Whether the token's email gets request emails (the daily email with accepted, declined, ready and shipped requests). */
 export async function GET(request: Request) {
   const key = await apiKey(request);
   if (key === null) return unauthorized();

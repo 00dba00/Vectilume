@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.8.0 (2026-10-29)
+
+- Requests: developers get at most one email a day with what changed on all their requests, instead of one email per change
+- Admin: send the update emails right away after a batch of work, without a second email the next morning
+
 ## v0.7.1 (2026-10-29)
 
 - Admin: notes for Codex keep every letter

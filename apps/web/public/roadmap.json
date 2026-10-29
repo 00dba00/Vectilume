@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-d (#request-email-notifications and #request-review-flow deployed, v0.7.1)",
+  "updated_at": "2026-10-29-e (#request-email-digest in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -86,6 +86,20 @@
       "spec": "Stored statuses now open (new, waiting for the owner) -> accepted (owner's OK, queued for Codex, public and emailed) -> in-progress -> review -> ready. New stored status review (drawn by Codex, waiting for the owner); developers keep seeing in-progress and get no email for it. A separate WORKER_TOKEN (Vercel env) for Codex: list the queue (accepted and in-progress requests (name, description, keywords, owner's change note, no emails), set in-progress, or set review with the icon id and its outline/duotone/solid SVGs (each up to 20 KB, must start with <svg); it cannot accept, approve, decline or read emails, and gets 409 for a request the owner has not accepted. /admin: Accept button on new requests, banner 'N icons ready, waiting for the npm release' (status ready), a 'Waiting for your review' section with the three SVGs shown as <img> data URLs (no script runs), Approve (to ready, emails the developer) and Request changes with a note (back to in-progress, no email, the note goes to Codex). Root script `pnpm request <sync|start|review> [id]`: sync writes icon-queue/ (gitignored, one Markdown file per queued request, with the owner's change note), review removes the file; it finds the icon by its collection entry \"request\": id, reads the SVGs from packages/icons-svg/src and calls the API with VECTILUME_WORKER_TOKEN from a gitignored .env.worker; it prints what changed. AGENTS.md tells Codex to run it at the start and end of every request. Out of scope: Codex publishing to npm, previews on a deployed site.",
       "plan": "1. Schema: review in the status check, review_icon, review_svgs (jsonb), review_note. 2. WORKER_TOKEN check, GET/PATCH /api/worker/requests. 3. Status mapping (review shown as in-progress outside admin) and email rules. 4. /admin banner, review section, approve and request-changes actions. 5. scripts/request.mjs + root package script, .env.worker in .gitignore. 6. AGENTS.md section for Codex. 7. Owner: migration, WORKER_TOKEN on Vercel and in .env.worker. 8. Release minor.",
       "deploy_note": "[DEPLOYED v0.7.0, 2026-10-29] Migration and WORKER_TOKEN (Vercel + .env.worker) set by the owner. Checked on #22: start refused with 409 before Accept; after Accept, sync wrote icon-queue/22-email-test.md, start and review moved it to review and removed the file; Request changes put it back with the note, Approve made it ready and showed the release banner. [v0.7.1, 2026-10-29] The change note lost every letter s (regex typo) and duotone previews drew in one colour; both fixed."
+    },
+    {
+      "id": "request-email-digest",
+      "title": "One daily email per developer instead of one email per request change",
+      "phase": "3",
+      "track": "requests",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-10-29",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: a developer who sends several requests gets an email for every request and every change, 'nije li to malo glupo?'. Chose one email a day.",
+      "spec": "No more received and in-progress emails (the page and API confirm a request at once; in-progress is an internal step). Accepted, declined (with reason), ready and shipped become rows in request_updates (request, kind, detail, created_at, sent_at) instead of emails. The daily cron (08:00 UTC) first records newly shipped requests, then sends one email per address with the latest change of each request since the last email, then marks the rows sent. Addresses that are unconfirmed or turned emails off get nothing (rows marked sent). The old admin button for shipped emails goes away. [2026-10-29, owner] /admin gets 'Send update emails now' (with how many changes for how many developers wait) for after a batch of work; an address mailed in the last 20 hours (email_settings.last_sent_at) is skipped by the morning cron, so nobody gets two in a day; its newer changes wait for the next email. Risk: news reaches a developer up to a day later. Out of scope: choosing the hour, a weekly option.",
+      "plan": "1. request_updates table. 2. changeStatus and the shipped check record updates instead of mailing; drop the received and in-progress emails. 3. Digest sender and email text; cron runs shipped check + digest. 4. Remove the admin button. 5. Docs: page, icon-requests.md, README, settings label. 6. Release minor; check with a test request.",
+      "deploy_note": null
     }
   ]
 }

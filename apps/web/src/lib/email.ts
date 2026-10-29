@@ -1,3 +1,5 @@
+import { componentName } from "@/lib/react-snippet";
+
 /**
  * Email through Resend's HTTP API (RESEND_API_KEY, EMAIL_FROM such as "Vectilume <noreply@domain>").
  * EMAIL_LOG=1 outside production logs the email instead, so the confirmation flow can be tried locally.
@@ -20,7 +22,7 @@ export async function sendEmail(to: string, subject: string, text: string, heade
   if (!response.ok) throw new Error(`Resend answered ${response.status}: ${await response.text()}`);
 }
 
-/** Links in emails that are not answers to a visitor (status changes, the daily shipped check) point here. */
+/** Links in emails that are not answers to a visitor (the daily email) point here. */
 export const SITE = "https://vectilume.dev";
 
 export const confirmationEmail = (link: string) => ({
@@ -39,38 +41,38 @@ export const notificationFooter = (stopLink: string) => `You get this because yo
 Stop these emails: ${stopLink}
 Vectilume icons · ${SITE}`;
 
-const FOLLOW = `Follow your requests at ${SITE}/request-icons (or GET /api/requests with your token).`;
+export type RequestUpdate =
+  | { id: number; name: string; kind: "accepted" | "ready" }
+  | { id: number; name: string; kind: "declined"; reason?: string }
+  | { id: number; name: string; kind: "shipped"; icon: string; version: string };
 
-export const receivedEmail = (id: number, name: string, description: string) => ({
-  subject: `Icon request #${id} received: ${name}`,
-  text: `We got your request #${id} for the icon "${name}":
+const SHORT = { accepted: "accepted", declined: "declined", ready: "ready", shipped: "on npm" };
 
-${description}
+function line(update: RequestUpdate): string {
+  const head = `#${update.id} ${update.name}`;
+  switch (update.kind) {
+    case "accepted":
+      return `${head}: accepted and queued to be drawn.`;
+    case "declined":
+      return `${head}: not planned, so we declined it.${update.reason ? ` Reason: ${update.reason}` : ""}`;
+    case "ready":
+      return `${head}: drawn and added; it ships with the next npm release.`;
+    case "shipped":
+      return `${head}: on npm in ${update.version}${update.icon === update.name ? "" : ` as "${update.icon}"`}.
+  import { ${componentName(update.icon, "outline")} } from "@vectilume/react"`;
+  }
+}
 
-We will email you when it is accepted, when it is being drawn, when it is ready and when it ships on npm.
-${FOLLOW}`,
-});
+/** The daily email: the latest change of each request since the last one. */
+export function dailyEmail(updates: RequestUpdate[]) {
+  const one = updates.length === 1 ? updates[0] : null;
+  const shipped = updates.some((u) => u.kind === "shipped");
+  return {
+    subject: one ? `Icon request #${one.id} ${one.name}: ${SHORT[one.kind]}` : `${updates.length} updates on your Vectilume icon requests`,
+    text: `What changed on your icon requests since our last email:
 
-const STATUS_LINE = {
-  accepted: (name: string) => `"${name}" is accepted and queued to be drawn.`,
-  "in-progress": (name: string) => `"${name}" is being drawn.`,
-  ready: (name: string) => `"${name}" is drawn and added to the library. It ships with the next npm release; we will email you then.`,
-  declined: (name: string) => `"${name}" is not planned, so we declined the request.`,
-};
-
-export const statusEmail = (id: number, name: string, status: keyof typeof STATUS_LINE, reason: string | null) => ({
-  subject: `Icon request #${id} ${status === "accepted" ? "is accepted" : status === "in-progress" ? "is in progress" : status === "ready" ? "is ready" : "was declined"}: ${name}`,
-  text: `${STATUS_LINE[status](name)}${reason ? `\n\nReason: ${reason}` : ""}
-
-${FOLLOW}`,
-});
-
-export const shippedEmail = (id: number, name: string, icon: string, version: string, component: string) => ({
-  subject: `Your icon is on npm: ${icon} (request #${id})`,
-  text: `The icon you requested as "${name}" shipped in Vectilume ${version}${icon === name ? "" : ` under the name "${icon}"`}.
-
-npm install @vectilume/react@latest
-import { ${component}, ${component}Duotone, ${component}Solid } from "@vectilume/react";
-
-Plain SVG: @vectilume/icons/{outline,duotone,solid}/${icon}.svg`,
-});
+${updates.map(line).join("\n\n")}
+${shipped ? "\nGet them with npm install @vectilume/react@latest, or the SVGs from @vectilume/icons.\n" : ""}
+Follow your requests at ${SITE}/request-icons (or GET /api/requests with your token).`,
+  };
+}

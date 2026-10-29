@@ -6,7 +6,7 @@ import { bakeSvg } from "@/lib/bake-svg";
 import { db } from "@/lib/db";
 import { ICON_STYLES, requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus, type ReviewSvgs } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
-import { login, logout, requestChanges, revokeKey, sendShippedEmails, setRequestStatus } from "./actions";
+import { login, logout, requestChanges, revokeKey, sendUpdateEmails, setRequestStatus } from "./actions";
 import styles from "./admin.module.css";
 
 export const metadata: Metadata = { title: "Admin · Vectilume", robots: { index: false, follow: false } };
@@ -41,10 +41,9 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
   const params = await searchParams;
   if (!(await isAdminSession())) return <LoginForm error={params.error === "login"} />;
   const filter: Filter = FILTERS.find((f) => f === params.status) ?? "all";
-  const shipped = typeof params.shipped === "string" ? params.shipped.split("-").map(Number) : null;
 
   const sql = db();
-  const [[stats], keys, rows, published] = await Promise.all([
+  const [[stats], keys, rows, published, [pending]] = await Promise.all([
     sql`select
       (select count(*)::int from api_keys where revoked_at is null) as active_keys,
       (select count(distinct email)::int from api_keys) as emails,
@@ -56,7 +55,10 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
     sql`select r.id, r.name, r.description, r.keywords, r.status, r.decline_reason, r.created_at, r.review_icon, r.review_svgs, r.review_note, k.email
       from icon_requests r join api_keys k on k.id = r.key_id order by r.id desc limit 500`,
     publishedIcons(),
+    sql`select count(*)::int as updates, count(distinct k.email)::int as people from request_updates u
+      join icon_requests r on r.id = u.request_id join api_keys k on k.id = r.key_id where u.sent_at is null`,
   ]);
+  const emailed = typeof params.emailed === "string" ? params.emailed.split("-").map(Number) : null;
 
   const requests = rows.map((row) => ({
     row: row as AdminRow,
@@ -78,6 +80,17 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
           <strong>{ready.length === 1 ? "1 icon is" : `${ready.length} icons are`} done and waiting for the npm release:</strong>{" "}
           {ready.map((r) => r.row.review_icon ?? r.row.name).join(", ")}.
         </p>
+      )}
+
+      {(pending.updates > 0 || emailed) && (
+        <form action={sendUpdateEmails} className={styles.emails}>
+          <span>
+            {emailed && pending.updates === 0
+              ? `Sent ${emailed[0]} update email${emailed[0] === 1 ? "" : "s"}${emailed[1] ? `, skipped ${emailed[1]} (unconfirmed or emails off)` : ""}${emailed[2] ? `, ${emailed[2]} failed` : ""}. The morning email skips them.`
+              : `${pending.updates} change${pending.updates === 1 ? "" : "s"} for ${pending.people} developer${pending.people === 1 ? "" : "s"} wait for the daily email (08:00 UTC).`}
+          </span>
+          {pending.updates > 0 && <button type="submit" className={styles.secondary}>Send update emails now</button>}
+        </form>
       )}
 
       {toReview.length > 0 && (
@@ -103,14 +116,6 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
 
       <section aria-labelledby="requests" className={styles.section}>
         <h2 id="requests">Requests</h2>
-        <form action={sendShippedEmails} className={styles.shipped}>
-          <button type="submit" className={styles.secondary}>Email shipped requests now</button>
-          <span className={styles.hint}>
-            {shipped
-              ? `Sent ${shipped[0]}, skipped ${shipped[1]} (unconfirmed or emails off), failed ${shipped[2]}.`
-              : "Runs daily at 08:00 UTC; use it right after an npm release."}
-          </span>
-        </form>
         <nav className={styles.filters} aria-label="Filter by status">
           {FILTERS.map((f) => (
             <Link key={f} href={f === "all" ? "/admin" : `/admin?status=${f}`} aria-current={f === filter ? "page" : undefined}>

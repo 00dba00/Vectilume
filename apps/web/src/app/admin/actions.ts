@@ -7,7 +7,7 @@ import { ADMIN_COOKIE, isAdminSession } from "@/lib/admin";
 import { isAdminHash, sha256 } from "@/lib/api-keys";
 import { db } from "@/lib/db";
 import { parseStatusChange } from "@/lib/icon-requests";
-import { changeStatus, notifyShipped } from "@/lib/request-emails";
+import { changeStatus, sendDailyEmails } from "@/lib/request-emails";
 
 const MONTH = 60 * 60 * 24 * 30;
 
@@ -48,7 +48,7 @@ export async function setRequestStatus(formData: FormData) {
   refresh();
 }
 
-/** Sends a drawn icon back to Codex's queue with the owner's note (no email: the developer still sees in-progress). */
+/** Sends a drawn icon back to Codex's queue with the owner's note (the developer still sees in-progress). */
 export async function requestChanges(formData: FormData) {
   await requireAdmin();
   const id = idFrom(formData);
@@ -59,11 +59,11 @@ export async function requestChanges(formData: FormData) {
   refresh();
 }
 
-/** Right after an npm release, so developers do not wait for the daily check. */
-export async function sendShippedEmails() {
+/** The daily email right away, e.g. after a batch of reviews; the morning cron then skips these addresses. */
+export async function sendUpdateEmails() {
   await requireAdmin();
-  const { sent, skipped, failed } = await notifyShipped();
-  redirect(`/admin?shipped=${sent}-${skipped}-${failed}`);
+  const { sent, skipped, failed } = await sendDailyEmails({ fromAdmin: true });
+  redirect(`/admin?emailed=${sent}-${skipped}-${failed}`);
 }
 
 export async function revokeKey(formData: FormData) {
