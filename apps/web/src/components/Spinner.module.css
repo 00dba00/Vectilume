@@ -1,0 +1,62 @@
+/* One 2.4 s loop: anchors 0–10%, pen draws 10–48%, handles 42–62%, done flash 52–70%, erase 72–92%. */
+.spinner { --t: 2.4s; display: inline-grid; justify-items: center; gap: 12px; color: var(--text, currentColor); }
+.spinner svg { display: block; overflow: visible; }
+.label { color: var(--text-muted); font-size: 14px; }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.grid { fill: none; stroke: var(--accent); stroke-width: 0.12; opacity: 0.22; transition: opacity 0.3s; }
+.keyline { stroke-width: 0.18; stroke-dasharray: 0.6 0.6; }
+.spinner:hover .grid { opacity: 0.5; }
+
+.stroke {
+  fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw var(--t) cubic-bezier(0.45, 0, 0.25, 1) infinite;
+}
+@keyframes draw {
+  0%, 10% { stroke-dashoffset: 1; stroke: currentColor; }
+  48% { stroke-dashoffset: 0; stroke: currentColor; }
+  58%, 66% { stroke-dashoffset: 0; stroke: var(--accent); }
+  72% { stroke-dashoffset: 0; stroke: currentColor; }
+  92%, 100% { stroke-dashoffset: -1; stroke: currentColor; }
+}
+
+.anchor {
+  fill: var(--bg, #fff); stroke: var(--accent); stroke-width: 0.35;
+  transform-box: fill-box; transform-origin: center; animation: anchor var(--t) ease-out infinite;
+}
+@keyframes anchor {
+  0% { transform: scale(0); opacity: 0; }
+  5% { transform: scale(1.4); opacity: 1; }
+  9%, 64% { transform: scale(1); opacity: 1; }
+  72%, 100% { transform: scale(0); opacity: 0; }
+}
+
+.handles {
+  fill: var(--bg, #fff); stroke: var(--accent); stroke-width: 0.3;
+  transform-box: view-box; transform-origin: 12px 19px; animation: handles var(--t) cubic-bezier(0.3, 1.4, 0.5, 1) infinite;
+}
+@keyframes handles {
+  0%, 40% { transform: rotate(-24deg) scaleX(0); opacity: 0; }
+  50% { transform: rotate(-24deg) scaleX(1); opacity: 1; }
+  60%, 64% { transform: rotate(0) scaleX(1); opacity: 1; }
+  70%, 100% { transform: rotate(0) scaleX(0); opacity: 0; }
+}
+
+.pen {
+  fill: var(--bg, #fff); stroke: var(--accent); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+  offset-path: path("M5 6L12 19L19 6"); offset-rotate: 0deg; offset-anchor: 0 0;
+  animation: pen var(--t) cubic-bezier(0.45, 0, 0.25, 1) infinite;
+}
+@keyframes pen {
+  0%, 6% { offset-distance: 0%; opacity: 0; }
+  10% { offset-distance: 0%; opacity: 1; }
+  48% { offset-distance: 100%; opacity: 1; }
+  56%, 100% { offset-distance: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke, .anchor, .handles, .pen { animation: none; }
+  .stroke { stroke-dashoffset: 0; animation: pulse 1.6s ease-in-out infinite; }
+  .pen { opacity: 0; }
+  @keyframes pulse { 50% { opacity: 0.4; } }
+}

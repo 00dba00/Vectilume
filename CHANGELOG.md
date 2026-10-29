@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.11.1 (2026-10-29)
+
+- Site: while the admin dashboard or your request list loads, a V icon is drawn on a design grid instead of plain loading text
+
 ## v0.11.0 (2026-10-29)
 
 - Requests: the update email quotes what you asked for under each change, so you see which request an icon came from

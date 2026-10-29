@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-j (#admin-magic-link and #email-request-text in progress)",
+  "updated_at": "2026-10-29-k (#design-spinner in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -169,6 +169,20 @@
       "summary": "Owner, 2026-10-29: the email should show the developer's own request, so they see which of their inputs the delivered icon came from, especially when the icon got another name.",
       "spec": "Each row of the daily update email (HTML and text) quotes the request's description and keywords under 'You asked:', in a muted quote box. The worker already has them in icon_requests; the digest query selects them. Out of scope: showing the original request in the confirmation email.",
       "plan": "1. Select description and keywords in the digest. 2. Quote block in the row and in the text line. 3. Preview, release patch.",
+      "deploy_note": null
+    },
+    {
+      "id": "design-spinner",
+      "title": "Loading spinner: a V icon being designed",
+      "phase": "3",
+      "track": "brand",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-10-30",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: 'interaktivni loader... da se dizajnira ikona, na foru da je logo ali kao da ide dizajn', then: not the wordmark, 'nego kao onaj spinner dok se učitava nešto na stranici da bude kao dizajn neke ikone tipa V kako se radi'.",
+      "spec": "Spinner component (CSS only, works in server and client components): a 24x24 icon canvas with the keyline and a faint grid; anchor points of a V pop in, a pen (the Vectilume edit icon, its paths copied from the set) draws the V along the path, bezier handles come out of the bottom anchor and settle, the V flashes in the accent colour as if finished, then erases and starts again (about 2.4 s). Hover shows the grid stronger. Colours from currentColor and --accent, so it fits the light site and the dark admin. prefers-reduced-motion: the finished V with a soft opacity pulse. role=status with a label. Used for the /admin loading fallback and the requests list on /request-icons. Out of scope: button-sized inline spinners.",
+      "plan": "1. Spinner.tsx + Spinner.module.css. 2. Admin Suspense fallback and RequestForm loading. 3. Look at it in the browser on light and dark; release patch.",
       "deploy_note": null
     }
   ]
