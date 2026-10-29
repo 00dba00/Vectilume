@@ -36,11 +36,23 @@
       "source": "request-email-confirm",
       "added": "2026-10-28",
       "review_on": "2026-10-30",
-      "status": "extended",
+      "status": "done",
       "context": "A token for dragan.bajlovic@gmail.com was issued through the API and shown in a Claude chat before email confirmation existed. The owner now has a verified token from the email link, so the chat one is not needed.",
       "check": "In /admin, look for an active unverified token of dragan.bajlovic@gmail.com created 2026-10-28 around 21:50.",
       "decide_if": "Go: revoke it in /admin (owner). Done once it shows as revoked.",
-      "outcome": "2026-10-29: not revoked yet. It is api_keys id 7, dragan.bajlovic@gmail.com, issued 2026-10-28 21:51 UTC, unverified, 0 requests (the verified token is id 15). Owner to press Revoke on it in /admin."
+      "outcome": "2026-10-29: not revoked yet. It is api_keys id 7, dragan.bajlovic@gmail.com, issued 2026-10-28 21:51 UTC, unverified, 0 requests (the verified token is id 15). Owner to press Revoke on it in /admin. 2026-10-29: revoked by the owner at 08:46 UTC, together with the temporary test token (id 16)."
+    },
+    {
+      "id": "rotate-admin-token",
+      "title": "Has ADMIN_TOKEN been replaced after it reached the 2026-10-29 chat?",
+      "area": "admin",
+      "source": "request-review-flow",
+      "added": "2026-10-29",
+      "review_on": "2026-10-30",
+      "status": "waiting",
+      "context": "The owner pulled the development env into apps/web/.env.admin to sign in to /admin; a selected line with the admin token was sent along with a chat message. Anyone with it can change request statuses and see every developer's email.",
+      "check": "Ask the owner whether ADMIN_TOKEN was changed on Vercel (Production, Preview, Development) and redeployed, and whether apps/web/.env.admin is deleted.",
+      "decide_if": "Done when the token is new and the file is gone; until then remind every session."
     }
   ]
 }
