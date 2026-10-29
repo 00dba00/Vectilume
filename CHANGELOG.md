@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.10.0 (2026-10-29)
+
+- Requests: emails are designed now: the confirmation link and the daily update show the status of each request with Vectilume icons, and shipped icons appear right in the email with their import line
+
 ## v0.9.1 (2026-10-29)
 
 - Admin: Release to npm starts the GitHub workflow (its file could not be read)

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-g (#npm-release-button deployed, npm 0.2.0)",
+  "updated_at": "2026-10-29-h (#html-emails in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -127,6 +127,20 @@
       "summary": "Owner, 2026-10-29, with a reference screenshot of a dark admin template: 'želim ovako moderan tamni admin dio uz animacije, grafove ako može i sve to'.",
       "spec": "Only /admin changes; the public site stays light. Dark navy theme scoped to the admin page (own tokens in admin.module.css), a sidebar with section links (Overview, Review, Requests, Tokens) and sign out that becomes a top bar on phones. Overview: KPI cards with Vectilume icon chips and numbers that count up, each with what changed in the last 7 days; an area chart of requests and new tokens per day over the last 30 days (one axis, both are counts per day; hover crosshair with tooltip; table fallback for screen readers); a ring with the share of accepted requests that shipped and a bar per status. Cards, bars and lines animate in once on load; prefers-reduced-motion turns all motion off. Every existing action (accept, status, review, release, update emails, revoke) keeps its form and server action unchanged. Charts are hand-written SVG in small client components, no chart library. Out of scope: date range picker, light mode toggle for admin.",
       "plan": "1. Daily series query (Europe/Zagreb days) and 7-day deltas. 2. Dark admin tokens and layout with sidebar. 3. KPI cards with count-up. 4. Area chart and status ring/bars client components. 5. Restyle requests, review cards, tokens table, banners and login. 6. Typecheck, lint, look at it in the browser; release web minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "html-emails",
+      "title": "Designed HTML emails: confirmation link and the daily request update",
+      "phase": "3",
+      "track": "requests",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-10-29",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: 'složi vizualno privlačne email template ... da korisniku lijepo izgleda na mailu'.",
+      "spec": "Both emails get an HTML version next to the plain text (Resend sends both). Table layout with inline styles so Gmail, Outlook and Apple Mail render it the same; light card on the site's grey, brand blue (#155bd0 / #2563eb, #93c5fd), system font stack, max 560 px, readable on phones. Images are PNGs (mail apps do not show SVG): the Vectilume logo and Vectilume icons, rendered by a route /email/<name>.png with sharp from the published @vectilume/icons SVGs (duotone in brand colours, 2x), cached for a day; only published icons, so a shipped request shows the icon itself. Daily update: one row per request with a status icon (check-circle accepted, x-circle declined, sparkles ready, rocket shipped), a coloured pill, the reason or the import line in a code box, a button to /request-icons, the stop link in the footer. Confirmation: logo, short text, a 'Get my token' button and the link as text. Preheader text for inbox previews. Risk: images blocked by default in some clients, so every image has alt text and the layout reads without them. Out of scope: dark-mode specific styling, localisation.",
+      "plan": "1. sharp in apps/web; /email/[file] route (logo.png, <icon-id>.png). 2. HTML layout and both templates in lib/email.ts; sendEmail sends html + text. 3. Preview in the browser with sample data, screenshots. 4. Release patch/minor; send a test to the owner.",
       "deploy_note": null
     }
   ]

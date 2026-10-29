@@ -1,6 +1,6 @@
 import { newToken } from "@/lib/api-keys";
 import { db } from "@/lib/db";
-import { dailyEmail, emailEnabled, notificationFooter, sendEmail, SITE, type RequestUpdate } from "@/lib/email";
+import { dailyEmail, emailEnabled, sendEmail, SITE, type Email, type RequestUpdate } from "@/lib/email";
 import type { RequestRow, StatusChange } from "@/lib/icon-requests";
 import { latestPublishedIcons } from "@/lib/published-icons";
 
@@ -13,10 +13,10 @@ export async function emailSettings(email: string): Promise<{ notify: boolean; c
 }
 
 /** Sends a request email unless the address turned them off; false when skipped. Every email carries a stop link. */
-async function sendNotification(email: string, { subject, text }: { subject: string; text: string }): Promise<boolean> {
+async function sendNotification(email: string, build: (stopLink: string) => Email): Promise<boolean> {
   const { notify, code } = await emailSettings(email);
   if (!notify) return false;
-  await sendEmail(email, subject, `${text}\n\n${notificationFooter(`${SITE}/request-icons?unsubscribe=${code}`)}`, {
+  await sendEmail(email, build(`${SITE}/request-icons?unsubscribe=${code}`), {
     // Mail apps show their own unsubscribe button and POST here (RFC 8058 one-click).
     "List-Unsubscribe": `<${SITE}/api/unsubscribe?code=${code}>`,
     "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
@@ -84,7 +84,7 @@ export async function sendDailyEmails({ fromAdmin = false } = {}): Promise<{ shi
     // Accepted and then ready on the same day reads as ready.
     const latest = new Map(updates.map((u) => [u.request_id as number, { id: u.request_id, name: u.name, kind: u.kind, ...u.detail } as RequestUpdate]));
     try {
-      if (updates[0].confirmed && (await sendNotification(email, dailyEmail([...latest.values()])))) {
+      if (updates[0].confirmed && (await sendNotification(email, (stopLink) => dailyEmail([...latest.values()], stopLink)))) {
         await sql`update email_settings set last_sent_at = now() where email = ${email}`;
         result.sent++;
       } else result.skipped++;
