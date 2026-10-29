@@ -52,7 +52,7 @@ export async function setRequestStatus(formData: FormData) {
 export async function requestChanges(formData: FormData) {
   await requireAdmin();
   const id = idFrom(formData);
-  const note = String(formData.get("note") ?? "").replace(/s+/g, " ").trim().slice(0, 1000);
+  const note = String(formData.get("note") ?? "").replace(/\s+/g, " ").trim().slice(0, 1000);
   if (!note) throw new Error("a note is required");
   const [inReview] = await db()`update icon_requests set review_note = ${note} where id = ${id} and status = 'review' returning id`;
   if (inReview) await changeStatus(id, { status: "in-progress", reason: null });

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { isAdminSession } from "@/lib/admin";
+import { bakeSvg } from "@/lib/bake-svg";
 import { db } from "@/lib/db";
 import { ICON_STYLES, requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus, type ReviewSvgs } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
@@ -184,8 +185,10 @@ type AdminRow = RequestRow & {
   review_note: string | null;
 };
 
-// As <img>, an uploaded SVG cannot run scripts or load anything.
-const svgSrc = (svg: string) => `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+// As <img>, an uploaded SVG cannot run scripts or load anything; page CSS does not reach it either,
+// so the duotone colours are baked in (the catalog's defaults) or both layers would draw in one colour.
+const svgSrc = (svg: string) =>
+  `data:image/svg+xml;charset=utf-8,${encodeURIComponent(bakeSvg(svg, { size: 96, color: "#111827", primary: "#2563eb", secondary: "#93c5fd", strokeWidth: 1.75 }))}`;
 
 function ReviewCard({ row }: { row: AdminRow }) {
   return (
