@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-l (#design-spinner deployed, v0.11.1)",
+  "updated_at": "2026-10-29-m (new #icon-studio-editor in progress, #icon-studio-proposals and #icon-studio-styles planned)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -184,6 +184,48 @@
       "spec": "Spinner component (CSS only, works in server and client components): a 24x24 icon canvas with the keyline and a faint grid; anchor points of a V pop in, a pen (the Vectilume edit icon, its paths copied from the set) draws the V along the path, bezier handles come out of the bottom anchor and settle, the V flashes in the accent colour as if finished, then erases and starts again (about 2.4 s). Hover shows the grid stronger. Colours from currentColor and --accent, so it fits the light site and the dark admin. prefers-reduced-motion: the finished V with a soft opacity pulse. role=status with a label. Used for the /admin loading fallback and the requests list on /request-icons. Out of scope: button-sized inline spinners.",
       "plan": "1. Spinner.tsx + Spinner.module.css. 2. Admin Suspense fallback and RequestForm loading. 3. Look at it in the browser on light and dark; release patch.",
       "deploy_note": "[DEPLOYED v0.11.1, 2026-10-29] Spinner in src/components, used in the /admin Suspense fallback (72 px with label) and the /request-icons request list. Checked frames at 30/54/80% of the loop on light and dark."
+    },
+    {
+      "id": "icon-studio-editor",
+      "title": "Icon studio: a vector editor for Vectilume icons in the browser",
+      "phase": "4",
+      "track": "studio",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-11-06",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: 'stvarni svg ikona design studio za edit postojećih ikona i kreiranje novih u webu' (planned earlier in docs/web-features.md, points 1, 2 and recommendation 4). Owner's choices: developers use it from the start (phase 2 #icon-studio-proposals), a real vector editor (not code-first), the outline is drawn by hand and duotone/solid are helped (phase 3 #icon-studio-styles).",
+      "spec": "New page /studio (and /studio/<icon> to open an existing icon). 24x24 canvas with the 2-22 keyline, 1-unit grid, snapping to 0.25, zoom and pan. Tools: select/move, direct select (anchors and bezier handles), pen (click = corner, drag = smooth), line, rectangle with corner radius, circle, ellipse; delete, duplicate, nudge with arrows, undo/redo, layer list with order. Paths are parsed into absolute segments that keep their type (L, C, Q, A, Z), so shapes you do not touch keep their exact source; edited numbers round to 2 decimals. SVG code panel synced both ways (edit code -> canvas, draw -> code). Live checks while drawing: validateSvg from @vectilume/tooling (moved to a browser-safe entry) plus studio checks for the 2-22 keyline and anything closer than 0.5 to the gloss. Preview at 16/20/24/32/48 on light and dark, next to neighbouring icons of the same collection. Export: copy or download the SVG. Phase 1 has no saving to the library; that is phase 2. Risks: arcs are edited by end points and radius only; very complex paths may be slow to hit-test. Out of scope here: accounts, submitting, solid auto-derivation.",
+      "plan": "1. Browser-safe validator entry in tooling. 2. Path model: parse/serialize SVG elements and path d (absolute, typed segments). 3. Editor state with undo/redo. 4. Canvas: grid, keyline, shapes, selection, anchors/handles, snapping, zoom. 5. Tools: select, direct select, pen, line, rect, circle, ellipse. 6. Code panel two-way sync, layers, inspector. 7. Live checks + previews. 8. Open existing icons (/studio/<icon>, all three styles as tabs). 9. Tests for the path model; release minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "icon-studio-proposals",
+      "title": "Icon studio: developers propose new icons and edits, the owner approves",
+      "phase": "4",
+      "track": "studio",
+      "status": "planned",
+      "start": "2026-11-06",
+      "end": "2026-11-13",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: developers use the studio from the start; proposals go through the owner's approval (docs/web-features.md points 1 and 2).",
+      "spec": "Signed-in developers (the same token/email as /request-icons) submit from the studio: a new icon (name, collection, group, keywords, three styles) or an edit of an existing one (one or all styles). Submitting requires accepting that the contribution is MIT. Stored in a new icon_proposals table with the SVGs; checks must pass before sending. /admin gets a Proposals section with old/new side by side (and overlaid) at several sizes; approve commits the SVGs and the collection entry to main through the GitHub Contents API (token with contents write), so it ships with the next npm release; ask for changes with a note; decline with a reason. Statuses and the daily update email reuse request_updates. Name is public API: the owner can rename before approving. Out of scope: author credits in the manifest (later), voting.",
+      "plan": "1. Schema icon_proposals. 2. Submit API + studio submit dialog with MIT consent. 3. Admin proposals view with diff. 4. Approve -> GitHub commit; changes asked; declined. 5. Emails through the digest. 6. Release minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "icon-studio-styles",
+      "title": "Icon studio: duotone and solid helped from the outline",
+      "phase": "4",
+      "track": "studio",
+      "status": "planned",
+      "start": "2026-11-13",
+      "end": "2026-11-20",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: the outline is drawn by hand, duotone and solid are helped and then fixed by hand.",
+      "spec": "Duotone tab: mark closed shapes as 'body', the studio builds the duotone (secondary fill under, primary strokes on top, gloss stays a primary stroke). Solid tab: a suggested solid from the outline (strokes offset by 0.875 into filled silhouettes, gloss and inner details as cut-outs) using a geometry library (paper.js + offset or Clipper), opened in the editor for manual fixing. Each tab stays editable; regenerating asks before overwriting manual changes. Out of scope: perfect solids for every icon; the suggestion is a starting point.",
+      "plan": "1. Body flag and duotone builder. 2. Pick and add the geometry library. 3. Solid suggestion. 4. Overwrite guard. 5. Release minor.",
+      "deploy_note": null
     }
   ]
 }
