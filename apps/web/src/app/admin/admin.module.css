@@ -55,3 +55,12 @@
 
 .login { display: grid; gap: 16px; max-width: 360px; }
 .login p { color: #8a1c1c; }
+
+.banner { margin: 0 0 24px; padding: 12px 16px; border-radius: var(--radius); background: #e3edff; color: #123f8f; }
+.previews { display: flex; flex-wrap: wrap; gap: 16px; margin: 12px 0; }
+.previews figure { margin: 0; padding: 12px; border-radius: var(--radius); background: #fff; color: #555; text-align: center; }
+.previews img { display: block; }
+.previews figcaption { margin-top: 4px; color: var(--text-muted); font-size: 13px; }
+.reviewActions { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px; }
+.badge[data-status="accepted"] { background: #efe6ff; color: #4b2a8a; }
+.badge[data-status="review"] { background: #ffe8d6; color: #7a3a00; }

@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.7.0 (2026-10-29)
+
+- Requests: new requests are accepted by the owner before they are drawn, with a new accepted status and email
+- Requests: turn request emails off on the page, by the link in every email or with PATCH /api/settings
+- Admin: review drawn icons with Approve or Request changes, and see how many icons wait for the npm release
+- Tooling: pnpm request sync/start/review keeps Codex's icon-queue folder and statuses up to date
+
 ## v0.6.0 (2026-10-29)
 
 - Requests: email when your request is received, moves to in progress, ready or declined, and when it ships on npm with the import line

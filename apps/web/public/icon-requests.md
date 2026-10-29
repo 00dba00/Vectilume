@@ -57,15 +57,26 @@ authorization: Bearer vl_…
 
 | status | meaning |
 |---|---|
-| `open` | received, not started |
+| `open` | received, waiting to be accepted |
+| `accepted` | accepted and queued to be drawn |
 | `in-progress` | being drawn |
 | `ready` | drawn and added, ships with the next npm release |
 | `done` | in the latest `@vectilume/icons` / `@vectilume/react`; `icon` is the final name (may differ from the requested one), `version` the release |
 | `declined` | not planned; `reason` may say why |
 
 The email behind the token also gets a short plain-text email when a request is received, when it
-moves to `in-progress`, `ready` or `declined`, and when it ships on npm (with the version and the
-import line), so polling is optional.
+is `accepted`, moves to `in-progress`, `ready` or `declined`, and when it ships on npm (with the version and the
+import line), so polling is optional. To turn these emails off (or back on), with a token from a confirmed email:
+
+```
+PATCH /api/settings
+authorization: Bearer vl_…
+
+{"emails": false}
+→ 200 {"email": "you@example.com", "emails": false}
+```
+
+`GET /api/settings` shows the current setting. Every email also has a stop link.
 
 Then install: `npm install @vectilume/react` → `import { BasketballHoop } from "@vectilume/react"`
 (id in PascalCase, plus `Duotone` / `Solid` for the other styles), or use the SVG files from

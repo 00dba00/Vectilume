@@ -54,6 +54,7 @@
 .listHead { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .meta { margin-top: 4px; color: var(--text-muted); font-size: 13px; overflow-wrap: anywhere; }
 .status { padding: 2px 10px; border-radius: 999px; background: var(--surface-2); font-size: 13px; font-weight: 600; }
+.status[data-status="accepted"] { background: #efe6ff; color: #5b2bb5; }
 .status[data-status="in-progress"] { background: #fff4d6; color: #7a5300; }
 .status[data-status="ready"] { background: #e3edff; color: #155bd0; }
 .status[data-status="done"] { background: #dff5e6; color: #1b7f3b; }
@@ -64,3 +65,6 @@
 }
 
 .page h2.divider { margin: 64px 0 0; padding-top: 32px; border-top: 1px solid var(--border); }
+
+.checkbox { display: flex; align-items: center; gap: 8px; color: var(--text); font-size: 14px; }
+.checkbox input { width: auto; margin: 0; }
