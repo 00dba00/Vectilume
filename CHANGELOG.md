@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.10.3 (2026-10-29)
+
+- Admin: the sign-in page no longer shows a white strip above the dark background
+
 ## v0.10.2 (2026-10-29)
 
 - Requests: shipped icons in the update email are shown in the plain outline style
