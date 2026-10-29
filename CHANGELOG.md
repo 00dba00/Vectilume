@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.9.1 (2026-10-29)
+
+- Admin: Release to npm starts the GitHub workflow (its file could not be read)
+- a failed start shows a message instead of an error page
+
 ## v0.9.0 (2026-10-29)
 
 - Admin: release both npm packages with one button

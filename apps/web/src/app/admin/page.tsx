@@ -120,7 +120,7 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
           </div>
         </header>
 
-      {(ready.length > 0 || run || params.released === "1") && (
+      {(ready.length > 0 || run || params.released) && (
         <div className={styles.banner} role="status">
           {ready.length > 0 && (
             <p>
@@ -129,6 +129,7 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
             </p>
           )}
           {params.released === "1" && <p>Release started on GitHub; it takes a few minutes, reload to follow it.</p>}
+          {params.released === "error" && <p>GitHub did not start the release; the reason is in the Vercel logs.</p>}
           {run && <ReleaseStatus run={run} />}
           {releaseEnabled() && ready.length > 0 && run?.status !== "queued" && run?.status !== "in_progress" && (
             <form action={releaseToNpm} className={styles.releaseForm}>
