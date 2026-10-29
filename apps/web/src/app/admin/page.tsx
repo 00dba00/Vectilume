@@ -5,7 +5,7 @@ import { isAdminSession } from "@/lib/admin";
 import { db } from "@/lib/db";
 import { requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
-import { login, logout, revokeKey, setRequestStatus } from "./actions";
+import { login, logout, revokeKey, sendShippedEmails, setRequestStatus } from "./actions";
 import styles from "./admin.module.css";
 
 export const metadata: Metadata = { title: "Admin · Vectilume", robots: { index: false, follow: false } };
@@ -38,6 +38,7 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
   const params = await searchParams;
   if (!(await isAdminSession())) return <LoginForm error={params.error === "login"} />;
   const filter: Filter = FILTERS.find((f) => f === params.status) ?? "all";
+  const shipped = typeof params.shipped === "string" ? params.shipped.split("-").map(Number) : null;
 
   const sql = db();
   const [[stats], keys, rows, published] = await Promise.all([
@@ -79,6 +80,14 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
 
       <section aria-labelledby="requests" className={styles.section}>
         <h2 id="requests">Requests</h2>
+        <form action={sendShippedEmails} className={styles.shipped}>
+          <button type="submit" className={styles.secondary}>Email shipped requests now</button>
+          <span className={styles.hint}>
+            {shipped
+              ? `Sent ${shipped[0]}, skipped ${shipped[1]} (no confirmed email), failed ${shipped[2]}.`
+              : "Runs daily at 08:00 UTC; use it right after an npm release."}
+          </span>
+        </form>
         <nav className={styles.filters} aria-label="Filter by status">
           {FILTERS.map((f) => (
             <Link key={f} href={f === "all" ? "/admin" : `/admin?status=${f}`} aria-current={f === filter ? "page" : undefined}>

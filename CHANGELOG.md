@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.6.0 (2026-10-29)
+
+- Requests: email when your request is received, moves to in progress, ready or declined, and when it ships on npm with the import line
+- Site: vectilume.dev is the main address, www and vectilume.vercel.app redirect to it
+- Admin: button to email shipped requests right after an npm release
+
 ## v0.5.0 (2026-10-28)
 
 - Requests: confirm your email by a link to get a token, and see every request you made with that email

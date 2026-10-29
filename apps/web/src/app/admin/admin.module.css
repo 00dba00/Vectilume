@@ -8,6 +8,7 @@
 
 .section { margin: 0 0 48px; }
 .logout { display: flex; justify-content: flex-end; margin: -56px 0 24px; }
+.shipped { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 16px; }
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 0; }
 .stat { padding: 16px 20px; border-radius: var(--radius); background: var(--surface-2); }

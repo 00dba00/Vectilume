@@ -5,7 +5,7 @@
 Free, consistent, themeable icons in three styles — **Outline**, **Duotone** and **Solid** — drawn on
 one 24 × 24 grid. 840 icons, MIT licensed.
 
-**[Browse the catalog → vectilume.vercel.app](https://vectilume.vercel.app)** — search, preview in every style and size,
+**[Browse the catalog → vectilume.dev](https://vectilume.dev)** — search, preview in every style and size,
 try the React props and copy SVG or JSX.
 
 [![npm @vectilume/react](https://img.shields.io/npm/v/@vectilume/react?label=%40vectilume%2Freact)](https://www.npmjs.com/package/@vectilume/react)
@@ -79,27 +79,28 @@ right away. While on 0.x, breaking releases bump the minor version.
 
 Request it right on the website, or from your terminal, your app or your AI assistant. Get a token once, then send it with
 every call; at most 20 requests per hour per token. Full guide:
-**[vectilume.vercel.app/request-icons](https://vectilume.vercel.app/request-icons)**, and as plain
-Markdown for AI assistants: [icon-requests.md](https://vectilume.vercel.app/icon-requests.md).
+**[vectilume.dev/request-icons](https://vectilume.dev/request-icons)**, and as plain
+Markdown for AI assistants: [icon-requests.md](https://vectilume.dev/icon-requests.md).
 
 ```sh
-curl -X POST https://vectilume.vercel.app/api/keys   -H "content-type: application/json"   -d '{"email":"you@example.com"}'
+curl -X POST https://vectilume.dev/api/keys   -H "content-type: application/json"   -d '{"email":"you@example.com"}'
 # → 202 {"sent":true,…}: open the link from the email to get your token (201 {"token":"vl_…"} until email confirmation is on)
 
-curl -X POST https://vectilume.vercel.app/api/requests   -H "authorization: Bearer vl_…"   -H "content-type: application/json"   -d '{"name":"basketball-hoop","description":"Hoop with net, shown next to the live score","keywords":["nba","score"]}'
+curl -X POST https://vectilume.dev/api/requests   -H "authorization: Bearer vl_…"   -H "content-type: application/json"   -d '{"name":"basketball-hoop","description":"Hoop with net, shown next to the live score","keywords":["nba","score"]}'
 # → 201 {"id":42,"status":"open","statusUrl":"…/api/requests/42"}
 
-curl https://vectilume.vercel.app/api/requests/42 -H "authorization: Bearer vl_…"
+curl https://vectilume.dev/api/requests/42 -H "authorization: Bearer vl_…"
 # → {"id":42,"name":"basketball-hoop","status":"done","icon":"basketball-hoop","version":"0.2.0","createdAt":"…"}
 
-curl https://vectilume.vercel.app/api/requests -H "authorization: Bearer vl_…"
+curl https://vectilume.dev/api/requests -H "authorization: Bearer vl_…"
 # → {"requests":[…]}  every request made with this token, newest first
 ```
 
 `status` is `open`, `in-progress`, `ready` (drawn and added, ships with the next npm release),
 `declined` (with an optional `reason`) or `done`. `done` means
 the icon is in the latest `@vectilume/icons` on npm; `icon` is its final name, which may differ
-from the one you asked for. A token only shows your own requests: those made with it, or, when it came from a confirmed email,
+from the one you asked for. You also get an email when a request is received, changes status and
+ships on npm. A token only shows your own requests: those made with it, or, when it came from a confirmed email,
 every request of that email. The admin token lists
 every request, with its email.
 

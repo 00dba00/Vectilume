@@ -2,6 +2,7 @@ import { isAdmin } from "@/lib/api-keys";
 import { apiKey, db, unauthorized } from "@/lib/db";
 import { parseIconRequest, requestStatus, type RequestRow } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
+import { notifyReceived } from "@/lib/request-emails";
 
 const LIMIT = 20;
 
@@ -26,6 +27,7 @@ export async function POST(request: Request) {
     insert into icon_requests (key_id, name, description, keywords)
     values (${key.id}, ${parsed.name}, ${parsed.description}, ${parsed.keywords})
     returning id`;
+  notifyReceived(id);
   const statusUrl = new URL(`/api/requests/${id}`, request.url).toString();
   return Response.json({ id, status: "open", statusUrl }, { status: 201 });
 }

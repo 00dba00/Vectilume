@@ -47,7 +47,9 @@ export function parseIconRequest(input: unknown): IconRequest {
 }
 
 /** Validates an admin status change; "done" is not settable, it comes from the npm release. */
-export function parseStatusChange(input: unknown): { status: StoredStatus; reason: string | null } {
+export type StatusChange = { status: StoredStatus; reason: string | null };
+
+export function parseStatusChange(input: unknown): StatusChange {
   const body = (input ?? {}) as Record<string, unknown>;
   const status = STORED_STATUSES.find((s) => s === body.status);
   if (!status) throw new Error(`status must be one of ${STORED_STATUSES.join(", ")}; done comes from the npm release`);

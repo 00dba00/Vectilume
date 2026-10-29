@@ -7,6 +7,7 @@ import { ADMIN_COOKIE, isAdminSession } from "@/lib/admin";
 import { isAdminHash, sha256 } from "@/lib/api-keys";
 import { db } from "@/lib/db";
 import { parseStatusChange } from "@/lib/icon-requests";
+import { changeStatus, notifyShipped } from "@/lib/request-emails";
 
 const MONTH = 60 * 60 * 24 * 30;
 
@@ -43,8 +44,15 @@ export async function setRequestStatus(formData: FormData) {
   await requireAdmin();
   const id = idFrom(formData);
   const change = parseStatusChange({ status: formData.get("status"), reason: formData.get("reason") });
-  await db()`update icon_requests set status = ${change.status}, decline_reason = ${change.reason}, updated_at = now() where id = ${id}`;
+  await changeStatus(id, change);
   refresh();
+}
+
+/** Right after an npm release, so developers do not wait for the daily check. */
+export async function sendShippedEmails() {
+  await requireAdmin();
+  const { sent, skipped, failed } = await notifyShipped();
+  redirect(`/admin?shipped=${sent}-${skipped}-${failed}`);
 }
 
 export async function revokeKey(formData: FormData) {
