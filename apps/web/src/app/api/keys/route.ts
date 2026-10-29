@@ -29,9 +29,8 @@ export async function POST(request: Request) {
     const code = newToken().slice(3);
     await sql`insert into email_confirmations (email, code_hash, ip_hash) values (${email}, ${sha256(code)}, ${ipHash})`;
     const link = new URL(`/request-icons?confirm=${code}`, request.url).toString();
-    const { subject, text } = confirmationEmail(link);
     try {
-      await sendEmail(email, subject, text);
+      await sendEmail(email, confirmationEmail(link));
     } catch (error) {
       console.error("confirmation email failed", error);
       return Response.json({ error: "could not send the email, try again later" }, { status: 502 });
