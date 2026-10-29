@@ -22,7 +22,7 @@ export async function GET(request: Request, ctx: RouteContext<"/api/requests/[id
   return Response.json(requestStatus(row, await publishedIcons()));
 }
 
-/** Admin only (Authorization: Bearer <ADMIN_TOKEN>): set open, in-progress, ready or declined with an optional reason; the requester is emailed. */
+/** Admin only (Authorization: Bearer <ADMIN_TOKEN>): set open, in-progress, review, ready or declined with an optional reason; the requester is emailed. */
 export async function PATCH(request: Request, ctx: RouteContext<"/api/requests/[id]">) {
   if (!isAdmin(request)) return Response.json({ error: "admin token required" }, { status: 401 });
   const { id } = await ctx.params;
@@ -38,5 +38,5 @@ export async function PATCH(request: Request, ctx: RouteContext<"/api/requests/[
 
   const row = await changeStatus(Number(id), change);
   if (!row) return notFound();
-  return Response.json(requestStatus(row, await publishedIcons()));
+  return Response.json(requestStatus(row, await publishedIcons(), true));
 }

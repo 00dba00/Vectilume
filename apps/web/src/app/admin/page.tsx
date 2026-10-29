@@ -3,19 +3,21 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { isAdminSession } from "@/lib/admin";
 import { db } from "@/lib/db";
-import { requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus } from "@/lib/icon-requests";
+import { ICON_STYLES, requestStatus, STORED_STATUSES, type RequestRow, type RequestStatus, type ReviewSvgs } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
-import { login, logout, revokeKey, sendShippedEmails, setRequestStatus } from "./actions";
+import { login, logout, requestChanges, revokeKey, sendShippedEmails, setRequestStatus } from "./actions";
 import styles from "./admin.module.css";
 
 export const metadata: Metadata = { title: "Admin · Vectilume", robots: { index: false, follow: false } };
 
-const FILTERS = ["all", "open", "in-progress", "ready", "done", "declined"] as const;
+const FILTERS = ["all", "open", "accepted", "in-progress", "review", "ready", "done", "declined"] as const;
 type Filter = (typeof FILTERS)[number];
 
 const STATUS_LABEL: Record<RequestStatus["status"], string> = {
-  open: "Open",
+  open: "New, waiting for you",
+  accepted: "Accepted, in Codex's queue",
   "in-progress": "In progress",
+  review: "Waiting for your review",
   ready: "Ready, waiting for npm",
   done: "Done",
   declined: "Declined",
@@ -50,23 +52,43 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
     sql`select k.id, k.email, k.created_at, k.revoked_at, count(r.id)::int as requests, max(r.created_at) as last_request
       from api_keys k left join icon_requests r on r.key_id = k.id
       group by k.id order by k.id desc limit 500`,
-    sql`select r.id, r.name, r.description, r.keywords, r.status, r.decline_reason, r.created_at, k.email
+    sql`select r.id, r.name, r.description, r.keywords, r.status, r.decline_reason, r.created_at, r.review_icon, r.review_svgs, r.review_note, k.email
       from icon_requests r join api_keys k on k.id = r.key_id order by r.id desc limit 500`,
     publishedIcons(),
   ]);
 
   const requests = rows.map((row) => ({
-    row: row as RequestRow & { description: string; keywords: string[]; email: string },
-    status: requestStatus(row as RequestRow, published),
+    row: row as AdminRow,
+    status: requestStatus(row as RequestRow, published, true),
   }));
   const counts = Object.fromEntries(FILTERS.map((f) => [f, f === "all" ? requests.length : requests.filter((r) => r.status.status === f).length]));
   const shown = filter === "all" ? requests : requests.filter((r) => r.status.status === filter);
+  const ready = requests.filter((r) => r.status.status === "ready");
+  const toReview = requests.filter((r) => r.status.status === "review");
 
   return (
     <>
       <form action={logout} className={styles.logout}>
         <button type="submit" className={styles.secondary}>Sign out</button>
       </form>
+
+      {ready.length > 0 && (
+        <p className={styles.banner} role="status">
+          <strong>{ready.length === 1 ? "1 icon is" : `${ready.length} icons are`} done and waiting for the npm release:</strong>{" "}
+          {ready.map((r) => r.row.review_icon ?? r.row.name).join(", ")}.
+        </p>
+      )}
+
+      {toReview.length > 0 && (
+        <section aria-labelledby="review" className={styles.section}>
+          <h2 id="review">Waiting for your review</h2>
+          <ul className={styles.requests}>
+            {toReview.map(({ row }) => (
+              <ReviewCard key={row.id} row={row} />
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section aria-labelledby="usage" className={styles.section}>
         <h2 id="usage">Token usage</h2>
@@ -84,7 +106,7 @@ async function Admin({ searchParams }: Pick<PageProps<"/admin">, "searchParams">
           <button type="submit" className={styles.secondary}>Email shipped requests now</button>
           <span className={styles.hint}>
             {shipped
-              ? `Sent ${shipped[0]}, skipped ${shipped[1]} (no confirmed email), failed ${shipped[2]}.`
+              ? `Sent ${shipped[0]}, skipped ${shipped[1]} (unconfirmed or emails off), failed ${shipped[2]}.`
               : "Runs daily at 08:00 UTC; use it right after an npm release."}
           </span>
         </form>
@@ -153,7 +175,59 @@ function Stat({ label, value }: { label: string; value: number }) {
   );
 }
 
-function RequestCard({ row, status }: { row: RequestRow & { description: string; keywords: string[]; email: string }; status: RequestStatus }) {
+type AdminRow = RequestRow & {
+  description: string;
+  keywords: string[];
+  email: string;
+  review_icon: string | null;
+  review_svgs: ReviewSvgs | null;
+  review_note: string | null;
+};
+
+// As <img>, an uploaded SVG cannot run scripts or load anything.
+const svgSrc = (svg: string) => `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+
+function ReviewCard({ row }: { row: AdminRow }) {
+  return (
+    <li className={styles.card}>
+      <div className={styles.cardHead}>
+        <h3>
+          <span className={styles.muted}>#{row.id}</span> {row.name}
+          {row.review_icon && row.review_icon !== row.name && <> → <code>{row.review_icon}</code></>}
+        </h3>
+      </div>
+      <p>{row.description}</p>
+      {row.review_svgs && (
+        <div className={styles.previews}>
+          {ICON_STYLES.map((style) => (
+            <figure key={style}>
+              {/* eslint-disable-next-line @next/next/no-img-element -- inline data URL, nothing to optimize */}
+              <img src={svgSrc(row.review_svgs![style])} alt={`${row.review_icon} ${style}`} width={96} height={96} />
+              <figcaption>{style}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
+      <div className={styles.reviewActions}>
+        <form action={setRequestStatus}>
+          <input type="hidden" name="id" value={row.id} />
+          <input type="hidden" name="status" value="ready" />
+          <button type="submit">Approve for the next release</button>
+        </form>
+        <form action={requestChanges} className={styles.statusForm}>
+          <input type="hidden" name="id" value={row.id} />
+          <label className={styles.reason}>
+            <span>What should Codex change?</span>
+            <input name="note" required maxLength={1000} />
+          </label>
+          <button type="submit" className={styles.secondary}>Request changes</button>
+        </form>
+      </div>
+    </li>
+  );
+}
+
+function RequestCard({ row, status }: { row: AdminRow; status: RequestStatus }) {
   return (
     <li className={styles.card}>
       <div className={styles.cardHead}>
@@ -175,6 +249,14 @@ function RequestCard({ row, status }: { row: RequestRow & { description: string;
       ) : (
         <>
           {status.status === "declined" && status.reason && <p className={styles.meta}>Reason: {status.reason}</p>}
+          {status.status === "in-progress" && row.review_note && <p className={styles.meta}>Changes asked: {row.review_note}</p>}
+          {status.status === "open" && (
+            <form action={setRequestStatus}>
+              <input type="hidden" name="id" value={row.id} />
+              <input type="hidden" name="status" value="accepted" />
+              <button type="submit">Accept: queue it for Codex</button>
+            </form>
+          )}
           <form action={setRequestStatus} className={styles.statusForm}>
             <input type="hidden" name="id" value={row.id} />
             <label>

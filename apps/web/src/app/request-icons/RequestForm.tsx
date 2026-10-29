@@ -108,10 +108,16 @@ export function RequestForm() {
   const requests = current?.requests ?? null;
   const load = () => setReload((n) => n + 1);
 
-  if (!token) return <SignIn onToken={signIn} error={error} />;
+  if (!token) return (
+    <>
+      <StopEmails />
+      <SignIn onToken={signIn} error={error} />
+    </>
+  );
 
   return (
     <div className={styles.app}>
+      <StopEmails />
       {fresh && <NewToken token={token} />}
       <div className={styles.bar}>
         <span>{admin ? "Signed in as admin: all requests" : "Using your token"}</span>
@@ -119,10 +125,78 @@ export function RequestForm() {
           Use another token
         </button>
       </div>
+      {!admin && <EmailSetting token={token} />}
       {!admin && <NewRequest token={token} onSent={load} />}
       {error && <p className={styles.error}>{error}</p>}
       <MyRequests requests={requests} admin={admin} />
     </div>
+  );
+}
+
+/** The stop link from a request email: /request-icons?unsubscribe=<code>. A button, so mail scanners opening it change nothing. */
+// Read once per page load, so it survives the effect below dropping it from the address bar.
+let stopCode: string | null = null;
+const readStopCode = () => (stopCode ??= new URL(window.location.href).searchParams.get("unsubscribe"));
+const never = () => () => {};
+
+function StopEmails() {
+  const code = useSyncExternalStore(never, readStopCode, () => null);
+  const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null);
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (!url.searchParams.has("unsubscribe")) return;
+    url.searchParams.delete("unsubscribe");
+    history.replaceState(null, "", url);
+  }, []);
+
+  if (!code) return null;
+  const stop = async () => {
+    const { ok, data } = await call("/api/unsubscribe", { method: "POST", body: JSON.stringify({ code }) });
+    setMessage(ok ? { ok, text: "Done: no more emails about your icon requests. Sign in below to turn them back on." } : { ok, text: data.error ?? "Could not stop the emails, try again." });
+  };
+  return (
+    <div className={styles.card}>
+      <h3>Stop emails about your icon requests?</h3>
+      {message ? (
+        <p className={message.ok ? styles.success : styles.error}>{message.text}</p>
+      ) : (
+        <>
+          <p className={styles.hint}>You can still follow every request on this page or through the API.</p>
+          <button type="button" onClick={stop}>Stop emails</button>
+        </>
+      )}
+    </div>
+  );
+}
+
+/** The request-email switch for a token from a confirmed email; older unconfirmed tokens get no emails and see nothing here. */
+function EmailSetting({ token }: { token: string }) {
+  const [setting, setSetting] = useState<{ token: string; email: string; emails: boolean } | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    let live = true;
+    call("/api/settings", { token }).then(({ ok, data }) => {
+      if (live && ok) setSetting({ token, email: data.email, emails: data.emails });
+    });
+    return () => {
+      live = false;
+    };
+  }, [token]);
+
+  if (setting?.token !== token) return null;
+  const toggle = async (emails: boolean) => {
+    setBusy(true);
+    const { ok, data } = await call("/api/settings", { method: "PATCH", token, body: JSON.stringify({ emails }) });
+    setBusy(false);
+    if (ok) setSetting({ token, email: data.email, emails: data.emails });
+  };
+  return (
+    <label className={styles.checkbox}>
+      <input type="checkbox" checked={setting.emails} disabled={busy} onChange={(e) => toggle(e.target.checked)} />
+      Email me at <strong>{setting.email}</strong> when a request is received, changes status or ships
+    </label>
   );
 }
 

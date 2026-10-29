@@ -48,6 +48,17 @@ export async function setRequestStatus(formData: FormData) {
   refresh();
 }
 
+/** Sends a drawn icon back to Codex's queue with the owner's note (no email: the developer still sees in-progress). */
+export async function requestChanges(formData: FormData) {
+  await requireAdmin();
+  const id = idFrom(formData);
+  const note = String(formData.get("note") ?? "").replace(/s+/g, " ").trim().slice(0, 1000);
+  if (!note) throw new Error("a note is required");
+  const [inReview] = await db()`update icon_requests set review_note = ${note} where id = ${id} and status = 'review' returning id`;
+  if (inReview) await changeStatus(id, { status: "in-progress", reason: null });
+  refresh();
+}
+
 /** Right after an npm release, so developers do not wait for the daily check. */
 export async function sendShippedEmails() {
   await requireAdmin();

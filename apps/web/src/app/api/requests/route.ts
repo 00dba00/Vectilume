@@ -39,7 +39,7 @@ export async function GET(request: Request) {
       select r.id, r.name, r.status, r.decline_reason, r.created_at, k.email from icon_requests r
       join api_keys k on k.id = r.key_id order by r.id desc limit 500`) as (RequestRow & { email: string })[];
     const published = await publishedIcons();
-    return Response.json({ admin: true, requests: rows.map((row) => ({ ...requestStatus(row, published), email: row.email })) });
+    return Response.json({ admin: true, requests: rows.map((row) => ({ ...requestStatus(row, published, true), email: row.email })) });
   }
   const key = await apiKey(request);
   if (key === null) return unauthorized();

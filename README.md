@@ -96,11 +96,11 @@ curl https://vectilume.dev/api/requests -H "authorization: Bearer vl_…"
 # → {"requests":[…]}  every request made with this token, newest first
 ```
 
-`status` is `open`, `in-progress`, `ready` (drawn and added, ships with the next npm release),
+`status` is `open`, `accepted` (queued to be drawn), `in-progress`, `ready` (drawn and added, ships with the next npm release),
 `declined` (with an optional `reason`) or `done`. `done` means
 the icon is in the latest `@vectilume/icons` on npm; `icon` is its final name, which may differ
 from the one you asked for. You also get an email when a request is received, changes status and
-ships on npm. A token only shows your own requests: those made with it, or, when it came from a confirmed email,
+ships on npm; turn it off on the page, by the link in the email or with `PATCH /api/settings {"emails":false}`. A token only shows your own requests: those made with it, or, when it came from a confirmed email,
 every request of that email. The admin token lists
 every request, with its email.
 

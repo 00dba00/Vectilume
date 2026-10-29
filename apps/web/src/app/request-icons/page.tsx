@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 const BASE = "https://vectilume.dev";
 
 const STATUSES: [string, string][] = [
-  ["open", "Received, not started."],
+  ["open", "Received, waiting to be accepted."],
+  ["accepted", "Accepted and queued to be drawn."],
   ["in-progress", "Being drawn."],
   ["ready", "Drawn and added; ships with the next npm release."],
   ["done", "In the latest @vectilume/icons and @vectilume/react. icon is the final name (it may differ from the one you asked for), version the release."],
@@ -91,8 +92,9 @@ curl ${BASE}/api/requests/42 -H "authorization: Bearer $VECTILUME_TOKEN"  # one 
           ))}
         </dl>
         <p>
-          We also email you when a request is received, when it moves to <code>in-progress</code>, <code>ready</code> or{" "}
-          <code>declined</code>, and when it ships on npm, with the import line.
+          We also email you when a request is received, when it is <code>accepted</code>, moves to <code>in-progress</code>, <code>ready</code> or{" "}
+          <code>declined</code>, and when it ships on npm, with the import line. Rather not? Untick it above, use the link in any of
+          those emails, or <code>{`curl -X PATCH ${BASE}/api/settings -H "authorization: Bearer $VECTILUME_TOKEN" -d '{"emails":false}'`}</code>.
         </p>
         <p>
           When it is <code>done</code>: <code>npm install @vectilume/react</code> and import it by its id in PascalCase, e.g.{" "}

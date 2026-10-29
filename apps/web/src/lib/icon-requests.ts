@@ -1,5 +1,9 @@
-/** ready = drawn and added to the library, waiting for the npm release that makes it done. */
-export const STORED_STATUSES = ["open", "in-progress", "ready", "declined"] as const;
+/**
+ * accepted = the owner approved the request, it waits in Codex's queue;
+ * review = drawn by Codex, waiting for the owner's approval (developers see in-progress);
+ * ready = approved and added to the library, waiting for the npm release that makes it done.
+ */
+export const STORED_STATUSES = ["open", "accepted", "in-progress", "review", "ready", "declined"] as const;
 export type StoredStatus = (typeof STORED_STATUSES)[number];
 
 export interface IconRequest {
@@ -18,7 +22,7 @@ export interface RequestRow {
 }
 
 export type RequestStatus =
-  | { id: number; name: string; status: "open" | "in-progress" | "ready"; createdAt: string }
+  | { id: number; name: string; status: "open" | "accepted" | "in-progress" | "review" | "ready"; createdAt: string }
   | { id: number; name: string; status: "declined"; reason: string | null; createdAt: string }
   | { id: number; name: string; status: "done"; icon: string; version: string; createdAt: string };
 
@@ -57,12 +61,37 @@ export function parseStatusChange(input: unknown): StatusChange {
   return { status, reason };
 }
 
-export function requestStatus(row: RequestRow, published: PublishedIcon[]): RequestStatus {
+/** review is an internal step: everyone but the admin sees in-progress. */
+export function requestStatus(row: RequestRow, published: PublishedIcon[], admin = false): RequestStatus {
   const base = { id: row.id, name: row.name, createdAt: new Date(row.created_at).toISOString() };
   // The published package is the source of truth: done means installable, whatever the stored status says.
   // Deprecated aliases of a renamed icon carry the same request, so skip them for the current name.
   const icon = published.find((entry) => entry.request === row.id && !entry.deprecated);
   if (icon) return { ...base, status: "done", icon: icon.id, version: icon.since };
   if (row.status === "declined") return { ...base, status: "declined", reason: row.decline_reason };
-  return { ...base, status: row.status };
+  return { ...base, status: row.status === "review" && !admin ? "in-progress" : row.status };
+}
+
+export const ICON_STYLES = ["outline", "duotone", "solid"] as const;
+export type ReviewSvgs = Record<(typeof ICON_STYLES)[number], string>;
+
+export type WorkerChange = { status: "in-progress" } | { status: "review"; icon: string; svgs: ReviewSvgs };
+
+const SVG = /^\s*<svg[\s>][\s\S]*<\/svg>\s*$/;
+
+/** Validates what Codex sends: in-progress, or review with the icon id and its three SVGs (shown in /admin as images only). */
+export function parseWorkerChange(input: unknown): WorkerChange {
+  const body = (input ?? {}) as Record<string, unknown>;
+  if (body.status === "in-progress") return { status: "in-progress" };
+  if (body.status !== "review") throw new Error("status must be in-progress or review");
+  const icon = typeof body.icon === "string" ? body.icon : "";
+  if (!NAME.test(icon) || icon.length > 40) throw new Error("icon must be the kebab-case id of the drawn icon");
+  const raw = (body.svgs ?? {}) as Record<string, unknown>;
+  const svgs = {} as ReviewSvgs;
+  for (const style of ICON_STYLES) {
+    const svg = raw[style];
+    if (typeof svg !== "string" || svg.length > 20_000 || !SVG.test(svg)) throw new Error(`svgs.${style} must be one <svg> element up to 20 KB`);
+    svgs[style] = svg.trim();
+  }
+  return { status: "review", icon, svgs };
 }
