@@ -26,13 +26,15 @@ export const code = (text: string) =>
   `<div style="margin-top:10px;padding:10px 12px;border-radius:10px;background:#f5f5f7;font-family:${MONO};font-size:13px;line-height:1.5;color:${INK};overflow-wrap:break-word">${escapeHtml(text)}</div>`;
 
 /** A status tile (Vectilume icon, white on colour), the request's name with a pill, and what changed. */
-export function updateRow(site: string, { tile, icon, title, pill, pillColour, body }: {
+export function updateRow(site: string, { tile, icon, title, pill, pillColour, body, asked = "" }: {
   tile: string;
   icon: string;
   title: string;
   pill: string;
   pillColour: string;
   body: string;
+  /** The developer's own request, quoted under the change. */
+  asked?: string;
 }): string {
   return `<tr><td style="padding:16px 0;border-top:1px solid #ececf0">
 <table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tr>
@@ -40,7 +42,7 @@ export function updateRow(site: string, { tile, icon, title, pill, pillColour, b
 <td valign="top" style="font-family:${FONT}">
 <div style="font-size:15px;font-weight:600;line-height:1.4;color:${INK}">${title}
 <span style="display:inline-block;margin-left:6px;padding:2px 10px;border-radius:999px;background:${pillColour}1a;color:${pillColour};font-size:12px;font-weight:600;vertical-align:1px">${pill}</span></div>
-<div style="margin-top:4px;font-size:14px;line-height:1.55;color:${BODY}">${body}</div>
+<div style="margin-top:4px;font-size:14px;line-height:1.55;color:${BODY}">${body}</div>${asked}
 </td></tr></table>
 </td></tr>`;
 }

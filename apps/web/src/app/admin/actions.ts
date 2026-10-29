@@ -1,20 +1,20 @@
 "use server";
 
 import { refresh } from "next/cache";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { ADMIN_COOKIE, isAdminSession } from "@/lib/admin";
-import { isAdminHash, sha256 } from "@/lib/api-keys";
+import { adminTokenHash, isAdminHash, newToken, sha256 } from "@/lib/api-keys";
 import { db } from "@/lib/db";
+import { adminLoginEmail, emailEnabled, sendEmail, SITE } from "@/lib/email";
 import { startNpmRelease } from "@/lib/github";
 import { parseStatusChange } from "@/lib/icon-requests";
 import { changeStatus, sendDailyEmails } from "@/lib/request-emails";
 
 const MONTH = 60 * 60 * 24 * 30;
 
-export async function login(formData: FormData) {
-  const hash = sha256(String(formData.get("token") ?? "").trim());
-  if (!isAdminHash(hash)) redirect("/admin?error=login");
+/** The session cookie holds the SHA-256 of ADMIN_TOKEN, whichever way the admin signed in. */
+async function startSession(hash: string) {
   (await cookies()).set(ADMIN_COOKIE, hash, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
@@ -22,6 +22,51 @@ export async function login(formData: FormData) {
     path: "/admin",
     maxAge: MONTH,
   });
+}
+
+export async function login(formData: FormData) {
+  const hash = sha256(String(formData.get("token") ?? "").trim());
+  if (!isAdminHash(hash)) redirect("/admin?error=login");
+  await startSession(hash);
+  redirect("/admin");
+}
+
+const LINKS_PER_HOUR = 3;
+
+/** Mails a one-time sign-in link, but only to ADMIN_EMAIL; any other address gets the same answer and nothing is sent. */
+export async function requestAdminLink(formData: FormData) {
+  const email = String(formData.get("email") ?? "").trim().toLowerCase();
+  const admin = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+  if (admin && email === admin && emailEnabled()) {
+    const sql = db();
+    const ipHash = sha256((await headers()).get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown");
+    const [{ count }] = await sql`select count(*)::int as count from admin_logins where ip_hash = ${ipHash} and created_at > now() - interval '1 hour'`;
+    if (count >= LINKS_PER_HOUR) redirect("/admin?error=limit");
+    const code = newToken().slice(3);
+    await sql`insert into admin_logins (code_hash, ip_hash) values (${sha256(code)}, ${ipHash})`;
+    try {
+      await sendEmail(admin, adminLoginEmail(`${SITE}/admin?login=${code}`));
+    } catch (error) {
+      console.error("admin sign-in email failed", error);
+      redirect("/admin?error=email");
+    }
+  }
+  redirect("/admin?sent=1");
+}
+
+/** The button behind the mailed link (a POST, so mail scanners that open links do not use it up). */
+export async function signInWithLink(formData: FormData) {
+  const code = String(formData.get("code") ?? "");
+  const hash = adminTokenHash();
+  const [row] =
+    hash && /^[A-Za-z0-9_-]{43}$/.test(code)
+      ? await db()`
+          update admin_logins set used_at = now()
+          where code_hash = ${sha256(code)} and used_at is null and created_at > now() - interval '15 minutes'
+          returning id`
+      : [];
+  if (!row || !hash) redirect("/admin?error=link");
+  await startSession(hash);
   redirect("/admin");
 }
 

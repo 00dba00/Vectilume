@@ -53,16 +53,41 @@ ${small(`The button works once, for 15 minutes. If it does not open, paste this 
   }),
 });
 
-export type RequestUpdate =
-  | { id: number; name: string; kind: "accepted" | "ready" }
-  | { id: number; name: string; kind: "declined"; reason?: string }
-  | { id: number; name: string; kind: "shipped"; icon: string; version: string };
+export const adminLoginEmail = (link: string): Email => ({
+  subject: "Sign in to Vectilume admin",
+  text: `Open this link within 15 minutes to sign in to Vectilume admin:
+
+${link}
+
+The link works once. If you did not ask for it, ignore this email; nobody signs in without it.`,
+  html: layout(SITE, {
+    preheader: "Your one-time sign-in link, valid for 15 minutes.",
+    hero: "on-violet-key",
+    title: "Sign in to admin",
+    content: `${paragraph("Someone, hopefully you, asked to sign in to Vectilume admin with this address.")}
+${button(link, "Sign in")}
+${small(`The button works once, for 15 minutes. If it does not open, paste this into your browser:<br><a href="${escapeHtml(link)}" style="color:#155bd0;word-break:break-all">${escapeHtml(link)}</a>`)}`,
+    footer: `If you did not ask for this, ignore it: nobody signs in without the link.<br>${footerLink(SITE, "vectilume.dev")}`,
+  }),
+});
+
+/** What the developer asked for, quoted in the email so they recognise the request behind each change. */
+type Asked = { id: number; name: string; description: string; keywords: string[] };
+
+export type RequestUpdate = Asked &
+  ({ kind: "accepted" | "ready" } | { kind: "declined"; reason?: string } | { kind: "shipped"; icon: string; version: string });
+
+const askedText = ({ description, keywords }: Asked) => `  You asked: ${description}${keywords.length ? ` (${keywords.join(", ")})` : ""}`;
 
 const SHORT = { accepted: "accepted", declined: "declined", ready: "ready", shipped: "on npm" };
 
 const importLine = (icon: string) => `import { ${componentName(icon, "outline")} } from "@vectilume/react"`;
 
 function line(update: RequestUpdate): string {
+  return `${change(update)}\n${askedText(update)}`;
+}
+
+function change(update: RequestUpdate): string {
   const head = `#${update.id} ${update.name}`;
   switch (update.kind) {
     case "accepted":
@@ -77,25 +102,37 @@ function line(update: RequestUpdate): string {
   }
 }
 
-/** Tile colour, Vectilume icon, pill and text of each kind of change. */
+/** Tile colour, Vectilume icon, pill and text of each kind of change, with the request quoted under it. */
 function row(update: RequestUpdate): string {
+  return updateRow(SITE, { ...rowParts(update), asked: askedHtml(update) });
+}
+
+function askedHtml({ description, keywords }: Asked): string {
+  const tags = keywords.map((k) => `<span style="display:inline-block;margin:6px 4px 0 0;padding:1px 8px;border-radius:999px;background:#ffffff;border:1px solid #e3e3e8;font-size:12px;color:#6e6e73">${escapeHtml(k)}</span>`).join("");
+  return `<div style="margin-top:10px;padding:10px 12px;border-left:3px solid #d2d2d7;border-radius:0 10px 10px 0;background:#fafafc">
+<div style="font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:#6e6e73">You asked</div>
+<div style="margin-top:2px;font-size:14px;line-height:1.5;color:#454547">${escapeHtml(description)}</div>${tags ? `<div>${tags}</div>` : ""}
+</div>`;
+}
+
+function rowParts(update: RequestUpdate) {
   const title = `<span style="color:#6e6e73;font-weight:500">#${update.id}</span> ${escapeHtml(update.name)}`;
   switch (update.kind) {
     case "accepted":
-      return updateRow(SITE, { tile: "violet", icon: "check-circle", title, pill: "Accepted", pillColour: "#5b2bb5", body: "Accepted and queued to be drawn." });
+      return { tile: "violet", icon: "check-circle", title, pill: "Accepted", pillColour: "#5b2bb5", body: "Accepted and queued to be drawn." };
     case "declined":
-      return updateRow(SITE, {
+      return {
         tile: "red",
         icon: "x-circle",
         title,
         pill: "Declined",
         pillColour: "#b42318",
         body: `Not planned, so we declined it.${update.reason ? `<br><span style="color:#6e6e73">Reason:</span> ${escapeHtml(update.reason)}` : ""}`,
-      });
+      };
     case "ready":
-      return updateRow(SITE, { tile: "blue", icon: "sparkles", title, pill: "Ready", pillColour: "#155bd0", body: "Drawn and added to the library. It ships with the next npm release." });
+      return { tile: "blue", icon: "sparkles", title, pill: "Ready", pillColour: "#155bd0", body: "Drawn and added to the library. It ships with the next npm release." };
     case "shipped":
-      return updateRow(SITE, {
+      return {
         tile: "green",
         icon: "rocket",
         title,
@@ -105,7 +142,7 @@ function row(update: RequestUpdate): string {
 <td valign="middle" style="padding:8px;border-radius:12px;background:#f5f5f7"><img src="${SITE}/email/${update.icon}.png?outline" width="48" height="48" alt="${escapeHtml(update.icon)} icon" style="display:block;border:0"></td>
 <td valign="middle" style="padding-left:12px;font-size:14px;color:#454547">${update.icon === update.name ? "Ready to install." : `Named <strong>${escapeHtml(update.icon)}</strong>.`}</td>
 </tr></table>${code(importLine(update.icon))}`,
-      });
+      };
   }
 }
 

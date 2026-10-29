@@ -69,7 +69,7 @@ export async function sendDailyEmails({ fromAdmin = false } = {}): Promise<{ shi
 
   const sql = db();
   const rows = await sql`
-    select u.id, u.request_id, u.kind, u.detail, r.name, k.email,
+    select u.id, u.request_id, u.kind, u.detail, r.name, r.description, r.keywords, k.email,
       exists (select 1 from api_keys v where v.email = k.email and v.verified_at is not null) as confirmed,
       coalesce(s.last_sent_at > now() - interval '20 hours', false) as mailed_recently
     from request_updates u join icon_requests r on r.id = u.request_id join api_keys k on k.id = r.key_id
@@ -82,7 +82,7 @@ export async function sendDailyEmails({ fromAdmin = false } = {}): Promise<{ shi
       continue;
     }
     // Accepted and then ready on the same day reads as ready.
-    const latest = new Map(updates.map((u) => [u.request_id as number, { id: u.request_id, name: u.name, kind: u.kind, ...u.detail } as RequestUpdate]));
+    const latest = new Map(updates.map((u) => [u.request_id as number, { id: u.request_id, name: u.name, description: u.description, keywords: u.keywords, kind: u.kind, ...u.detail } as RequestUpdate]));
     try {
       if (updates[0].confirmed && (await sendNotification(email, (stopLink) => dailyEmail([...latest.values()], stopLink)))) {
         await sql`update email_settings set last_sent_at = now() where email = ${email}`;

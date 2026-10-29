@@ -81,3 +81,12 @@ create index if not exists request_updates_unsent on request_updates (id) where 
 
 -- v0.8.0: when the address last got the daily email; the morning cron skips addresses mailed in the last 20 hours.
 alter table email_settings add column if not exists last_sent_at timestamptz;
+
+-- v0.11.0: one-time sign-in links for /admin, mailed only to ADMIN_EMAIL; SHA-256 of the code, 15 minutes, used once.
+create table if not exists admin_logins (
+  id serial primary key,
+  code_hash text not null unique,
+  ip_hash text not null,
+  created_at timestamptz not null default now(),
+  used_at timestamptz
+);

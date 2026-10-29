@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.11.0 (2026-10-29)
+
+- Requests: the update email quotes what you asked for under each change, so you see which request an icon came from
+- Admin: sign in with a one-time link mailed to the admin address, the token stays as a fallback
+
 ## v0.10.3 (2026-10-29)
 
 - Admin: the sign-in page no longer shows a white strip above the dark background
