@@ -17,6 +17,8 @@
   --icon-primary: currentColor;
   --icon-secondary: color-mix(in srgb, currentColor 28%, transparent);
   color-scheme: dark;
+  /* Keeps a child's top margin (the login card's) inside the dark page instead of pushing it down past a white strip. */
+  display: flow-root;
   min-height: 100vh;
   background:
     radial-gradient(1200px 600px at 85% -10%, rgba(99, 102, 241, 0.16), transparent 60%),
