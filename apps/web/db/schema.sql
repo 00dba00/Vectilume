@@ -65,3 +65,19 @@ create table if not exists email_settings (
   unsubscribe_code text not null unique,
   updated_at timestamptz not null default now()
 );
+
+-- v0.8.0: changes developers hear about in the daily email; sent_at once mailed (or skipped: unconfirmed, emails off).
+-- done_notified_at on icon_requests now means "shipped update recorded".
+create table if not exists request_updates (
+  id serial primary key,
+  request_id integer not null references icon_requests (id) on delete cascade,
+  kind text not null check (kind in ('accepted', 'declined', 'ready', 'shipped')),
+  detail jsonb not null default '{}',
+  created_at timestamptz not null default now(),
+  sent_at timestamptz
+);
+
+create index if not exists request_updates_unsent on request_updates (id) where sent_at is null;
+
+-- v0.8.0: when the address last got the daily email; the morning cron skips addresses mailed in the last 20 hours.
+alter table email_settings add column if not exists last_sent_at timestamptz;

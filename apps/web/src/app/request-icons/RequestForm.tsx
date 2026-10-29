@@ -195,7 +195,7 @@ function EmailSetting({ token }: { token: string }) {
   return (
     <label className={styles.checkbox}>
       <input type="checkbox" checked={setting.emails} disabled={busy} onChange={(e) => toggle(e.target.checked)} />
-      Email me at <strong>{setting.email}</strong> when a request is received, changes status or ships
+      Email me at <strong>{setting.email}</strong> once a day when my requests are accepted, declined, ready or shipped
     </label>
   );
 }

@@ -64,9 +64,9 @@ authorization: Bearer vl_…
 | `done` | in the latest `@vectilume/icons` / `@vectilume/react`; `icon` is the final name (may differ from the requested one), `version` the release |
 | `declined` | not planned; `reason` may say why |
 
-The email behind the token also gets a short plain-text email when a request is received, when it
-is `accepted`, moves to `in-progress`, `ready` or `declined`, and when it ships on npm (with the version and the
-import line), so polling is optional. To turn these emails off (or back on), with a token from a confirmed email:
+The email behind the token also gets at most one short plain-text email a day, covering all its requests:
+which were `accepted`, `declined` or became `ready`, and which shipped on npm (with the version and the import
+line), so polling is optional. To turn these emails off (or back on), with a token from a confirmed email:
 
 ```
 PATCH /api/settings

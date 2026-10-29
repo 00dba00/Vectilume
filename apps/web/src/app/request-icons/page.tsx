@@ -92,9 +92,9 @@ curl ${BASE}/api/requests/42 -H "authorization: Bearer $VECTILUME_TOKEN"  # one 
           ))}
         </dl>
         <p>
-          We also email you when a request is received, when it is <code>accepted</code>, moves to <code>in-progress</code>, <code>ready</code> or{" "}
-          <code>declined</code>, and when it ships on npm, with the import line. Rather not? Untick it above, use the link in any of
-          those emails, or <code>{`curl -X PATCH ${BASE}/api/settings -H "authorization: Bearer $VECTILUME_TOKEN" -d '{"emails":false}'`}</code>.
+          Once a day at most, we also email you what changed: requests <code>accepted</code>, <code>declined</code> or{" "}
+          <code>ready</code>, and icons that shipped on npm, with the import line. One email for all your requests. Rather not?
+          Untick it above, use the link in the email, or <code>{`curl -X PATCH ${BASE}/api/settings -H "authorization: Bearer $VECTILUME_TOKEN" -d '{"emails":false}'`}</code>.
         </p>
         <p>
           When it is <code>done</code>: <code>npm install @vectilume/react</code> and import it by its id in PascalCase, e.g.{" "}
