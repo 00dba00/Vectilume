@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-o (#request-email-confirm live with Resend)",
+  "updated_at": "2026-10-29 (#request-email-notifications in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -64,13 +64,13 @@
       "title": "Emails for icon requests: token, request received, status changes, shipped",
       "phase": "3",
       "track": "requests",
-      "status": "planned",
+      "status": "in_progress",
       "start": "2026-10-29",
       "end": "2026-10-29",
       "observe_until": null,
       "summary": "Developers should be told when a requested icon is delivered, not only find out by polling. Owner, 2026-10-28: add email sending tomorrow \"pa da dobiju na mail svi info\" (moved up from 2026-11-11, together with #request-form).",
       "spec": "Resend (free plan) from a domain we own; the API key in RESEND_API_KEY on Vercel. Emails: (1) token on registration (POST /api/keys and the #request-form token step), so a token saved nowhere else is not lost; (2) request received, with id, name and a link to follow it; (3) status change made in /admin (in-progress, ready, declined with reason); (4) done: after an npm release, compare the published manifest's request ids with requests not yet notified, send icon name, version and the import line, store notified_at; a Vercel cron (daily) or a check on admin load triggers it. Plus 'resend my token' by email: issues a new token, revokes the old one, mails it (rate limited), since only hashes are stored. Plain, short English emails with the Vectilume name, no tracking. A failed send never fails the API call; it is logged. Risks: needs DNS access to the sending domain (SPF/DKIM); without a domain Resend only delivers to the account owner, so this item becomes blocked. Out of scope: email preferences or unsubscribe beyond a one-line note, HTML templates.",
-      "plan": "1. Decide the sending domain (owner). 2. Resend account, DNS records, RESEND_API_KEY on Vercel. 3. lib/email.ts with the four messages. 4. Hook into /api/keys, POST /api/requests and the admin status action. 5. notified_at column and the done check (cron). 6. Resend-token endpoint. 6b. Sign in by email on /request-icons (owner, 2026-10-28, chose magic link over showing requests for any typed address): POST /api/sessions {email} mails a one-time link valid 15 minutes (only a hash stored, rate limited per email and IP, same answer whether the address is known or not); opening it lists every request made with any token of that email. 7. Update /request-icons, icon-requests.md and README. 8. Release minor.",
+      "plan": "1. Decide the sending domain (owner). 2. Resend account, DNS records, RESEND_API_KEY on Vercel. 3. lib/email.ts with the four messages. 4. Hook into /api/keys, POST /api/requests and the admin status action. 5. notified_at column and the done check (cron). 6. Resend-token endpoint. 6b. Sign in by email on /request-icons (owner, 2026-10-28, chose magic link over showing requests for any typed address): POST /api/sessions {email} mails a one-time link valid 15 minutes (only a hash stored, rate limited per email and IP, same answer whether the address is known or not); opening it lists every request made with any token of that email. 7. Update /request-icons, icon-requests.md and README. 8. Release minor. [2026-10-29] Steps 1, 2, 6 and 6b are covered by #request-email-confirm: Resend on vectilume.dev; 'Continue with your email' mails a one-time link that issues a new verified token, which lists every request of that email. Left: request received, status change and shipped emails (3-5), docs (7), release (8). Emails go only to addresses confirmed at least once (any verified token of that email), so the older unconfirmed tokens cannot mail a stranger. Shipped emails: done_notified_at column, a daily Vercel cron plus a button in /admin for right after an npm release; requests already done before the launch are marked notified without an email.",
       "deploy_note": null
     }
   ]

@@ -118,7 +118,7 @@ const PACKAGE = "@vectilume/icons";
 const PACKAGE_META = {
   license: "MIT",
   repository: { type: "git", url: "git+https://github.com/00dba00/Vectilume.git" },
-  homepage: "https://vectilume.vercel.app",
+  homepage: "https://vectilume.dev",
   bugs: "https://github.com/00dba00/Vectilume/issues",
 };
 const KEYWORDS = ["icons", "icon-set", "outline", "duotone", "solid", "vectilume"];
@@ -220,12 +220,12 @@ async function main(): Promise<void> {
       "```",
       "",
       "Outline and solid use `currentColor`; duotone uses `--icon-primary` and `--icon-secondary`.",
-      "Browse and search every icon: https://vectilume.vercel.app",
+      "Browse and search every icon: https://vectilume.dev",
       "",
       "`manifest.json` lists every icon with its style, collection, group, label and `since` version.",
       "Renamed icons keep their old file name until the next breaking release (`deprecated`, `replacedBy`).",
       "",
-      "Missing an icon? Request it through the API: https://vectilume.vercel.app/request-icons",
+      "Missing an icon? Request it through the API: https://vectilume.dev/request-icons",
       "",
     ].join("\n"),
   );
@@ -274,7 +274,7 @@ async function main(): Promise<void> {
       `<${componentName(example, "duotone")} title="${icons[0]!.label}" className="brand" />`,
       "```",
       "",
-      "Browse icons and try the props: https://vectilume.vercel.app",
+      "Browse icons and try the props: https://vectilume.dev",
       "",
       "- Names are the icon id in PascalCase plus `Duotone` / `Solid`; ids starting with a digit get an `Icon` prefix.",
       "- Renamed icons keep their old name as a `@deprecated` alias until the next breaking release.",
@@ -283,7 +283,7 @@ async function main(): Promise<void> {
       "- Duotone colours come from CSS variables, e.g. `.brand { --icon-primary: #2563eb; --icon-secondary: #bfdbfe; }`;",
       "  without them both layers fall back to `currentColor`.",
       "",
-      "Missing an icon? Request it through the API: https://vectilume.vercel.app/request-icons",
+      "Missing an icon? Request it through the API: https://vectilume.dev/request-icons",
       "",
     ].join("\n"),
   );

@@ -2,6 +2,7 @@ import { isAdmin } from "@/lib/api-keys";
 import { apiKey, db, unauthorized } from "@/lib/db";
 import { parseStatusChange, requestStatus, type RequestRow } from "@/lib/icon-requests";
 import { publishedIcons } from "@/lib/published-icons";
+import { changeStatus } from "@/lib/request-emails";
 
 const validId = (id: string) => /^\d{1,9}$/.test(id);
 const notFound = () => Response.json({ error: "no such request" }, { status: 404 });
@@ -21,7 +22,7 @@ export async function GET(request: Request, ctx: RouteContext<"/api/requests/[id
   return Response.json(requestStatus(row, await publishedIcons()));
 }
 
-/** Admin only (Authorization: Bearer <ADMIN_TOKEN>): set open, in-progress or declined with an optional reason. */
+/** Admin only (Authorization: Bearer <ADMIN_TOKEN>): set open, in-progress, ready or declined with an optional reason; the requester is emailed. */
 export async function PATCH(request: Request, ctx: RouteContext<"/api/requests/[id]">) {
   if (!isAdmin(request)) return Response.json({ error: "admin token required" }, { status: 401 });
   const { id } = await ctx.params;
@@ -35,10 +36,7 @@ export async function PATCH(request: Request, ctx: RouteContext<"/api/requests/[
     return Response.json({ error: message }, { status: 400 });
   }
 
-  const [row] = (await db()`
-    update icon_requests set status = ${change.status}, decline_reason = ${change.reason}, updated_at = now()
-    where id = ${Number(id)}
-    returning id, name, status, decline_reason, created_at`) as RequestRow[];
+  const row = await changeStatus(Number(id), change);
   if (!row) return notFound();
   return Response.json(requestStatus(row, await publishedIcons()));
 }

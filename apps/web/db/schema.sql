@@ -48,3 +48,6 @@ create table if not exists email_confirmations (
 
 create index if not exists email_confirmations_email_created on email_confirmations (email, created_at);
 create index if not exists email_confirmations_ip_created on email_confirmations (ip_hash, created_at);
+
+-- v0.6.0: set once the "your icon is on npm" email went out (or was skipped), so it is sent once.
+alter table icon_requests add column if not exists done_notified_at timestamptz;

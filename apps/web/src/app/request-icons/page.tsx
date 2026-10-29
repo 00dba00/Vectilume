@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Missing an icon? Request it here or through the Vectilume API, then follow its status until it ships on npm.",
 };
 
-const BASE = "https://vectilume.vercel.app";
+const BASE = "https://vectilume.dev";
 
 const STATUSES: [string, string][] = [
   ["open", "Received, not started."],
@@ -90,6 +90,10 @@ curl ${BASE}/api/requests/42 -H "authorization: Bearer $VECTILUME_TOKEN"  # one 
             </div>
           ))}
         </dl>
+        <p>
+          We also email you when a request is received, when it moves to <code>in-progress</code>, <code>ready</code> or{" "}
+          <code>declined</code>, and when it ships on npm, with the import line.
+        </p>
         <p>
           When it is <code>done</code>: <code>npm install @vectilume/react</code> and import it by its id in PascalCase, e.g.{" "}
           <code>{`import { BasketballHoop } from "@vectilume/react"`}</code>.

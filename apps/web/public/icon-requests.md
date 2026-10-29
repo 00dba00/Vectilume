@@ -1,13 +1,13 @@
 # Requesting a Vectilume icon
 
-Vectilume (https://vectilume.vercel.app) is a free MIT icon set: outline, duotone and solid on a
+Vectilume (https://vectilume.dev) is a free MIT icon set: outline, duotone and solid on a
 24 × 24 grid. When an icon you need is missing, request it through this API. Plain HTTP + JSON,
-base URL `https://vectilume.vercel.app`.
+base URL `https://vectilume.dev`.
 
 ## 1. Check that the icon does not exist yet
 
 Search the published manifest by `id`, `label` and `keywords`:
-`https://unpkg.com/@vectilume/icons@latest/manifest.json`, or browse https://vectilume.vercel.app.
+`https://unpkg.com/@vectilume/icons@latest/manifest.json`, or browse https://vectilume.dev.
 
 ## 2. Get a token (once per developer)
 
@@ -19,7 +19,7 @@ content-type: application/json
 → 202 {"sent": true, "note": "We sent a confirmation link to that address. …"}
 ```
 
-The email holds a link to https://vectilume.vercel.app/request-icons?confirm=…; the person who owns
+The email holds a link to https://vectilume.dev/request-icons?confirm=…; the person who owns
 the address opens it within 15 minutes and the page shows the token. An AI assistant cannot finish
 this step: ask the user to open the link and give you the token. Until email confirmation is
 switched on, the answer is `201 {"token": "vl_…"}` straight away.
@@ -38,7 +38,7 @@ content-type: application/json
 {"name": "basketball-hoop",
  "description": "Hoop with net, shown next to the live score",
  "keywords": ["nba", "score"]}
-→ 201 {"id": 42, "status": "open", "statusUrl": "https://vectilume.vercel.app/api/requests/42"}
+→ 201 {"id": 42, "status": "open", "statusUrl": "https://vectilume.dev/api/requests/42"}
 ```
 
 - `name`: kebab-case, lowercase letters, digits and hyphens, up to 40 characters.
@@ -62,6 +62,10 @@ authorization: Bearer vl_…
 | `ready` | drawn and added, ships with the next npm release |
 | `done` | in the latest `@vectilume/icons` / `@vectilume/react`; `icon` is the final name (may differ from the requested one), `version` the release |
 | `declined` | not planned; `reason` may say why |
+
+The email behind the token also gets a short plain-text email when a request is received, when it
+moves to `in-progress`, `ready` or `declined`, and when it ships on npm (with the version and the
+import line), so polling is optional.
 
 Then install: `npm install @vectilume/react` → `import { BasketballHoop } from "@vectilume/react"`
 (id in PascalCase, plus `Duotone` / `Solid` for the other styles), or use the SVG files from
