@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-e (#request-email-digest in progress)",
+  "updated_at": "2026-10-29-g (#admin-dark-dashboard in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -99,6 +99,34 @@
       "summary": "Owner, 2026-10-29: a developer who sends several requests gets an email for every request and every change, 'nije li to malo glupo?'. Chose one email a day.",
       "spec": "No more received and in-progress emails (the page and API confirm a request at once; in-progress is an internal step). Accepted, declined (with reason), ready and shipped become rows in request_updates (request, kind, detail, created_at, sent_at) instead of emails. The daily cron (08:00 UTC) first records newly shipped requests, then sends one email per address with the latest change of each request since the last email, then marks the rows sent. Addresses that are unconfirmed or turned emails off get nothing (rows marked sent). The old admin button for shipped emails goes away. [2026-10-29, owner] /admin gets 'Send update emails now' (with how many changes for how many developers wait) for after a batch of work; an address mailed in the last 20 hours (email_settings.last_sent_at) is skipped by the morning cron, so nobody gets two in a day; its newer changes wait for the next email. Risk: news reaches a developer up to a day later. Out of scope: choosing the hour, a weekly option.",
       "plan": "1. request_updates table. 2. changeStatus and the shipped check record updates instead of mailing; drop the received and in-progress emails. 3. Digest sender and email text; cron runs shipped check + digest. 4. Remove the admin button. 5. Docs: page, icon-requests.md, README, settings label. 6. Release minor; check with a test request.",
+      "deploy_note": null
+    },
+    {
+      "id": "npm-release-button",
+      "title": "Release to npm from /admin through GitHub Actions",
+      "phase": "3",
+      "track": "release",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-10-30",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29: can the npm release be started from the admin panel once everything is approved? Today it is a manual checklist with a passkey 2FA publish in the owner's terminal; release.json says 0.2.0 but npm still has 0.1.0, so 13 approved request icons (#4-#16) wait. 'ajmo složiti automatiku preko githuba'.",
+      "spec": "A GitHub Actions workflow npm-release.yml (workflow_dispatch, input bump: patch|minor) publishes @vectilume/icons and @vectilume/react with npm Trusted Publishing (OIDC, no npm token, no OTP, provenance). It reads the approved request ids from the site (worker token as a GitHub secret), sets the version from npm latest + bump, runs validate and tests, builds with build-release limited to approved request icons (an icon linked to a request that is not ready and not yet on npm stays out of the package), publishes both packages, commits release.json, tags npm-v<version> (web tags v* are taken) and tells the site to record the shipped requests for the update email. /admin gets 'Release to npm' (patch or minor) that dispatches the workflow through the GitHub API (GITHUB_TOKEN on Vercel: fine-grained, this repo, Actions read/write) and shows the last run with its result and link. Codex: pnpm request review also commits the icon (3 SVGs + collection file) and pushes to main, so CI sees it; one request at a time. Risks: npm staged publishing may still ask for approval on npmjs.com; drafts in review show in the web catalog before approval. Out of scope: visual diff in CI (the owner reviews the SVGs in /admin), changelog for npm.",
+      "plan": "1. build-release: allowed request ids (env), keep published ones. 2. GET /api/worker/requests?status=ready and POST /api/worker/shipped (record only). 3. .github/workflows/npm-release.yml. 4. /admin button and last-run status. 5. request review commits and pushes; AGENTS.md. 6. Owner: trusted publisher on npmjs.com for both packages, GITHUB_TOKEN on Vercel, VECTILUME_WORKER_TOKEN as a GitHub secret. 7. Release web minor; first npm release from the button (0.2.0 with #4-#16).",
+      "deploy_note": null
+    },
+    {
+      "id": "admin-dark-dashboard",
+      "title": "Admin: modern dark dashboard with charts and motion",
+      "phase": "3",
+      "track": "admin",
+      "status": "in_progress",
+      "start": "2026-10-29",
+      "end": "2026-10-31",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-29, with a reference screenshot of a dark admin template: 'želim ovako moderan tamni admin dio uz animacije, grafove ako može i sve to'.",
+      "spec": "Only /admin changes; the public site stays light. Dark navy theme scoped to the admin page (own tokens in admin.module.css), a sidebar with section links (Overview, Review, Requests, Tokens) and sign out that becomes a top bar on phones. Overview: KPI cards with Vectilume icon chips and numbers that count up, each with what changed in the last 7 days; an area chart of requests and new tokens per day over the last 30 days (one axis, both are counts per day; hover crosshair with tooltip; table fallback for screen readers); a ring with the share of accepted requests that shipped and a bar per status. Cards, bars and lines animate in once on load; prefers-reduced-motion turns all motion off. Every existing action (accept, status, review, release, update emails, revoke) keeps its form and server action unchanged. Charts are hand-written SVG in small client components, no chart library. Out of scope: date range picker, light mode toggle for admin.",
+      "plan": "1. Daily series query (Europe/Zagreb days) and 7-day deltas. 2. Dark admin tokens and layout with sidebar. 3. KPI cards with count-up. 4. Area chart and status ring/bars client components. 5. Restyle requests, review cards, tokens table, banners and login. 6. Typecheck, lint, look at it in the browser; release web minor.",
       "deploy_note": null
     }
   ]

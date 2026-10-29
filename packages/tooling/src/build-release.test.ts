@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { checkAgainstPublished, releaseNames, removableAliases, selectReleaseIcons, sinceOf } from "./build-release.ts";
+import { bumpVersion, checkAgainstPublished, onlyApprovedRequests, releaseNames, removableAliases, selectReleaseIcons, sinceOf } from "./build-release.ts";
 
 const entry = (id: string) => ({ id, label: id, group: "g", groupLabel: "G", keywords: ["k"] });
 const catalogs = { general: [entry("check"), entry("close")], hobbies: [entry("chess")] };
@@ -80,5 +80,27 @@ describe("aliases and since", () => {
     assert.equal(sinceOf("bin", "0.3.0", published), "0.1.0");
     assert.equal(sinceOf("trash", "0.3.0", published), "0.3.0");
     assert.equal(sinceOf("trash", "0.1.0", null), "0.1.0");
+  });
+});
+
+describe("bumpVersion", () => {
+  it("bumps patch or minor from the published version", () => {
+    assert.equal(bumpVersion("0.1.0", "patch"), "0.1.1");
+    assert.equal(bumpVersion("0.1.3", "minor"), "0.2.0");
+  });
+});
+
+describe("onlyApprovedRequests", () => {
+  const icons = selectReleaseIcons({ version: "0.2.0", collections: ["general"] }, {
+    general: [entry("check"), { ...entry("hoop"), request: 7 }, { ...entry("kite"), request: 8 }, { ...entry("old"), request: 2 }],
+  });
+  const published = { version: "0.1.0", names: ["check", "old"], since: {} };
+
+  it("keeps icons without a request, approved ones and those already on npm", () => {
+    assert.deepEqual(onlyApprovedRequests(icons, new Set([7]), published).map((i) => i.id), ["check", "hoop", "old"]);
+  });
+
+  it("filters nothing without an approved list", () => {
+    assert.equal(onlyApprovedRequests(icons, null, published).length, 4);
   });
 });

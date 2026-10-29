@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { ADMIN_COOKIE, isAdminSession } from "@/lib/admin";
 import { isAdminHash, sha256 } from "@/lib/api-keys";
 import { db } from "@/lib/db";
+import { startNpmRelease } from "@/lib/github";
 import { parseStatusChange } from "@/lib/icon-requests";
 import { changeStatus, sendDailyEmails } from "@/lib/request-emails";
 
@@ -64,6 +65,13 @@ export async function sendUpdateEmails() {
   await requireAdmin();
   const { sent, skipped, failed } = await sendDailyEmails({ fromAdmin: true });
   redirect(`/admin?emailed=${sent}-${skipped}-${failed}`);
+}
+
+/** Starts the GitHub workflow that publishes both npm packages with the approved icons. */
+export async function releaseToNpm(formData: FormData) {
+  await requireAdmin();
+  await startNpmRelease(formData.get("bump") === "minor" ? "minor" : "patch");
+  redirect("/admin?released=1");
 }
 
 export async function revokeKey(formData: FormData) {

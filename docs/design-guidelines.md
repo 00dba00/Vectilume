@@ -105,12 +105,19 @@ catching the surface:
 - Bodies too busy for a 0.5 gap skip the gloss: `target` (rings), `medal` (star), `globe`
   (meridians), and `circle` by design (a bare contour).
 - Slashed icons (`eye-off`, `bell-off`, `wifi-off`) cut a 1.75 gap around the slash in Solid.
-- Requested icons (requests API #4–8): `model-training` and `auto-mode` reuse the `refresh`
-  arrows around a three-node network or a font-independent A; `linear-scale` follows `sliders`
-  (filled dots, primary-only duotone); none of the three has a body, so no gloss.
-  `scroll-quill` gives the text lines priority over a gloss; Solid separates the rolls from the
-  sheet and opens a 1-unit rachis in the quill. `new-badge` is the `badge-check` rosette with
+- Requested icons (requests API #4–8): `model-training` uses the brain silhouette with two
+  hemispheres and curved folds, as requested in owner review. The folds take priority over gloss.
+  `auto-mode` reuses the `refresh` arrows around a font-independent A; `linear-scale` follows
+  `sliders` (filled dots); both are primary-only Duotone without gloss.
+  `scroll-quill` has a broad parchment sheet, a curled upper corner and lower roll, with a
+  diagonal quill separated from the sheet. Solid cuts out the folds, text and 1-unit rachis.
+  `new-badge` is the `badge-check` rosette with
   its gloss and an exclamation mark set 0.75 lower so it clears the gloss.
+- Requested icons #9–16 keep the existing shield, mail, monitor, cart and grid geometry.
+  `shield-plus`, `mail-open` and `devices` retain upper-left highlights. The compact tiles,
+  cart cross and chart magnifier prioritize identifying details over an extra gloss.
+  Solid keeps the devices separated and the cart wheels and magnifier open; `list-clear`
+  and `restart` are line-only, with primary-only Duotone and matching Solid silhouettes.
 
 Rejected directions (Soft Geometric, Modern Duotone, Spark, Cut, Break, Leaf, Overshoot)
 are in git history (`git log -- packages/icons-svg/src`).

@@ -86,6 +86,22 @@ const parseVersion = (version: string) => {
   return match.slice(1, 4).map(Number) as [number, number, number];
 };
 
+/** The next version after the published one (CI release); minor is the breaking step while on 0.x. */
+export function bumpVersion(published: string, bump: "patch" | "minor"): string {
+  const [major, minor, patch] = parseVersion(published);
+  return bump === "minor" ? `${major}.${minor + 1}.0` : `${major}.${minor}.${patch + 1}`;
+}
+
+/**
+ * Leaves out icons drawn for a request the owner has not approved yet (`approved` = ready request ids, given by the
+ * npm release workflow; null = no filter, as in a local release). Icons already on npm stay, so none disappears.
+ */
+export function onlyApprovedRequests(icons: ReleaseIcon[], approved: Set<number> | null, published: Published | null): ReleaseIcon[] {
+  if (!approved) return icons;
+  const live = new Set(published?.names ?? []);
+  return icons.filter((icon) => icon.request === undefined || approved.has(icon.request) || live.has(icon.id));
+}
+
 /** A breaking release bumps the major version, or the minor one while still on 0.x (semver). */
 export function isBreakingBump(from: string, to: string): boolean {
   const [fromMajor, fromMinor] = parseVersion(from);
@@ -147,9 +163,20 @@ async function main(): Promise<void> {
     const file = path.join(root, `${collection}.json`);
     if (existsSync(file)) catalogs[collection] = JSON.parse(await readFile(file, "utf8")) as CatalogEntry[];
   }
-  const icons = selectReleaseIcons(release, catalogs);
-
   const published = await fetchPublished();
+  // The GitHub workflow passes RELEASE_BUMP and APPROVED_REQUESTS; a local release keeps release.json as it is.
+  const bump = process.env.RELEASE_BUMP;
+  if (bump === "patch" || bump === "minor") {
+    if (!published) throw new Error("RELEASE_BUMP needs a published version to bump from");
+    release.version = bumpVersion(published.version, bump);
+    await writeFile(path.join(root, "release.json"), `${JSON.stringify(release, null, 2)}\n`);
+  }
+  const approved = process.env.APPROVED_REQUESTS === undefined ? null : new Set(process.env.APPROVED_REQUESTS.split(",").filter(Boolean).map(Number));
+  const all = selectReleaseIcons(release, catalogs);
+  const icons = onlyApprovedRequests(all, approved, published);
+  const held = all.filter((icon) => !icons.includes(icon)).map((icon) => `${icon.id} (request ${icon.request})`);
+  if (held.length > 0) console.warn(`not approved yet, left out: ${held.join(", ")}`);
+
   if (published) {
     const { removed } = checkAgainstPublished(published, release.version, releaseNames(icons));
     if (removed.length > 0) console.warn(`breaking release: removes ${removed.join(", ")}`);
