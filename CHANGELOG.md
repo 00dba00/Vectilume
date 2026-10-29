@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.10.2 (2026-10-29)
+
+- Requests: shipped icons in the update email are shown in the plain outline style
+
 ## v0.10.1 (2026-10-29)
 
 - Admin: a release whose packages reached npm but whose last step failed says so instead of just failure
