@@ -137,7 +137,7 @@ const PACKAGE_META = {
   homepage: "https://vectilume.dev",
   bugs: "https://github.com/00dba00/Vectilume/issues",
 };
-const KEYWORDS = ["icons", "icon-set", "outline", "duotone", "solid", "vectilume"];
+const KEYWORDS = ["icons", "icon-set", "icon-library", "free-icons", "svg-icons", "outline", "duotone", "solid", "vectilume"];
 
 /** Latest published version and its icon names, or null before the first publish. */
 async function fetchPublished(): Promise<Published | null> {
@@ -274,7 +274,7 @@ async function main(): Promise<void> {
       {
         name: "@vectilume/react",
         version: release.version,
-        description: "Vectilume Icons as React components (outline, duotone, solid)",
+        description: "Vectilume Icons for React — free, MIT-licensed, tree-shakeable icon components (outline, duotone, solid)",
         ...PACKAGE_META,
         keywords: [...KEYWORDS, "react", "react-icons"],
         type: "module",

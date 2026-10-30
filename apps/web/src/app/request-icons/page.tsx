@@ -6,6 +6,7 @@ import styles from "./request-icons.module.css";
 export const metadata: Metadata = {
   title: "Request an icon · Vectilume",
   description: "Missing an icon? Request it here or through the Vectilume API, then follow its status until it ships on npm.",
+  alternates: { canonical: "/request-icons" },
 };
 
 const BASE = "https://vectilume.dev";

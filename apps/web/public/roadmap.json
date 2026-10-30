@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29-o (#icon-studio-editor deployed v0.12.0, #icon-studio-proposals starts 2026-10-30, new #icon-studio-polish and #icon-author-credits; caught up four shipped items)",
+  "updated_at": "2026-10-30-a (new #discoverability-basics, #discoverability-icon-pages)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -253,6 +253,34 @@
       "summary": "docs/web-features.md recommendation 8 and icon-definition-of-done.md (author ⏳): a contributor's name next to their icon. Follows #icon-studio-proposals, whose spec leaves it out.",
       "spec": "Approved proposals store the author (display name chosen on submit, never the email). The collection entry gets \"author\", build-manifest copies it into manifest.json, the catalog shows it in the inspector. Out of scope: contributor profile pages.",
       "plan": "1. Display name on submit. 2. author in collection entries and manifest. 3. Catalog inspector. 4. Release minor (web) and patch (npm manifest field).",
+      "deploy_note": null
+    },
+    {
+      "id": "discoverability-basics",
+      "title": "Discoverability: search engines and GitHub can tell what Vectilume is",
+      "phase": "1",
+      "track": "discoverability",
+      "status": "in_progress",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "observe_until": null,
+      "summary": "Owner, 2026-10-30: searching Google for \"npm vectilume\" finds nothing and the AI answer says it does not exist. Measured the same day: the npm search API does return both packages (229 and 243 downloads in the last month), so they exist on npm; a web search returns neither. The packages are three days old, the site has no robots.txt or sitemap (both 404), its title is the bare word \"Vectilume\", there is no canonical, Open Graph or structured data, and the GitHub repo has no description, no topics and still points at vectilume.vercel.app.",
+      "spec": "Site: root metadata with metadataBase, a descriptive title and description, canonical, Open Graph and Twitter tags; generated robots.txt and sitemap.xml (home, /request-icons, /studio; /admin stays out); SoftwareSourceCode JSON-LD on the home page linking npm and GitHub; a verification tag for Google Search Console once the owner has the value. GitHub: description, topics, homepage vectilume.dev. npm: clearer descriptions and keywords in build-release.ts; these reach npm only with the next package release. Risks: none for users, the metadata is invisible in the UI. Out of scope: per-icon pages (#discoverability-icon-pages), directory listings and launch posts, which are the owner's to publish.",
+      "plan": "1. Metadata, robots, sitemap, JSON-LD. 2. GitHub repo settings. 3. npm descriptions and keywords. 4. Release minor. 5. Owner: Search Console verification, submit the sitemap. 6. Review queue item to check indexing.",
+      "deploy_note": null
+    },
+    {
+      "id": "discoverability-icon-pages",
+      "title": "A crawlable page for every icon",
+      "phase": "2",
+      "track": "discoverability",
+      "status": "planned",
+      "start": "2026-11-02",
+      "end": "2026-11-05",
+      "observe_until": null,
+      "summary": "The whole catalog is one URL, so searches like \"trash icon svg react\" have nothing to land on. A page per icon is how icon sets are usually found. Follows #discoverability-basics.",
+      "spec": "Static /icons/[id] pages for all 848 icons: name, keywords, the three styles, install and import snippets, with own title and description, listed in the sitemap. Check the size of the home page HTML (3 MB) while there. Out of scope: redesigning the catalog.",
+      "plan": "1. Static route from the manifest. 2. Metadata and sitemap entries. 3. Links from the catalog inspector. 4. Release minor.",
       "deploy_note": null
     }
   ]
