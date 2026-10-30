@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28-d (primary-domain, revoke-chat-token for 2026-10-29)",
+  "updated_at": "2026-10-30-a (new google-indexing)",
   "note": "Decisions deferred on purpose. Each item has a review date: on that date, run the check and decide go, drop or extend. Decided items stay listed with their outcome.",
   "items": [
     {
@@ -53,6 +53,18 @@
       "context": "The owner pulled the development env into apps/web/.env.admin to sign in to /admin; a selected line with the admin token was sent along with a chat message. Anyone with it can change request statuses and see every developer's email.",
       "check": "Ask the owner whether ADMIN_TOKEN was changed on Vercel (Production, Preview, Development) and redeployed, and whether apps/web/.env.admin is deleted.",
       "decide_if": "Done when the token is new and the file is gone; until then remind every session."
+    },
+    {
+      "id": "google-indexing",
+      "title": "Does Google find Vectilume two weeks after the discoverability release?",
+      "area": "web",
+      "source": "discoverability-basics",
+      "added": "2026-10-30",
+      "review_on": "2026-11-13",
+      "status": "waiting",
+      "context": "On 2026-10-30 a web search for \"npm vectilume icons\" returned neither the site nor the packages, and the owner saw nothing on Google. v0.13.0 added metadata, robots.txt and a sitemap; the npm packages were then three days old.",
+      "check": "In Search Console: is the home page indexed, and how many impressions and clicks are there? On Google: search \"vectilume\", \"npm vectilume\" and \"site:vectilume.dev\".",
+      "decide_if": "Go on to outreach as planned if the home page is indexed. If it is not, read the reason in Search Console's URL Inspection and fix that first; extend if the owner has not verified the site yet."
     }
   ]
 }
