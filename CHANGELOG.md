@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.13.0 (2026-10-30)
+
+- Site: search engines can now read what Vectilume is, with a clear title and description, a sitemap and links to npm and GitHub
+
 ## v0.12.0 (2026-10-29)
 
 - Studio: draw new icons or edit existing ones in the browser on the 24×24 grid, with pen, shapes, the three styles, live checks and previews

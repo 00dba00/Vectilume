@@ -10,6 +10,7 @@ import styles from "./studio.module.css";
 export const metadata: Metadata = {
   title: "Studio · Vectilume",
   description: "Draw new Vectilume icons or edit existing ones on the 24×24 grid, with the library's checks as you draw.",
+  alternates: { canonical: "/studio" },
 };
 
 const lookup = buildLookup(icons);

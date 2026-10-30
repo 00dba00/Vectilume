@@ -8,6 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vectilume.dev"),
   title: "Vectilume",
   description: "Vectilume icons: collections, styles and in-context previews.",
 };
