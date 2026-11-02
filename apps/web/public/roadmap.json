@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-30-b (#discoverability-basics deployed v0.13.0)",
+  "updated_at": "2026-11-02 (#request-owner-alerts in progress)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -281,6 +281,20 @@
       "summary": "The whole catalog is one URL, so searches like \"trash icon svg react\" have nothing to land on. A page per icon is how icon sets are usually found. Follows #discoverability-basics.",
       "spec": "Static /icons/[id] pages for all 848 icons: name, keywords, the three styles, install and import snippets, with own title and description, listed in the sitemap. Check the size of the home page HTML (3 MB) while there. Out of scope: redesigning the catalog.",
       "plan": "1. Static route from the manifest. 2. Metadata and sitemap entries. 3. Links from the catalog inspector. 4. Release minor.",
+      "deploy_note": null
+    },
+    {
+      "id": "request-owner-alerts",
+      "title": "Owner gets an email for new and waiting icon requests",
+      "phase": "3",
+      "track": "requests",
+      "status": "in_progress",
+      "start": "2026-11-02",
+      "end": "2026-11-02",
+      "observe_until": null,
+      "summary": "Owner, 2026-11-02: new requests reached nobody, they only showed in /admin. \"možeš li mi poslati info na dragan.bajlovic@gmail.com?? tako da odmah mogu reagirati ako ima nešto što čeka\".",
+      "spec": "Every new request mails REQUEST_ALERT_EMAIL at once, with all open requests listed; a morning cron (/api/cron/waiting) mails the same list when something is open, and the admin token can trigger it for a test, also with an empty queue. A separate variable, because setting ADMIN_EMAIL would also turn on sign-in by email. A failed alert is logged and never fails the request. Risks: the owner's inbox gets one email per request (at most 20 an hour per token). Out of scope: batching, per-developer settings.",
+      "plan": "1. Email template and alertOwner. 2. Call it from POST /api/requests, add the cron route. 3. Set REQUEST_ALERT_EMAIL on Vercel. 4. Release minor. 5. Send a test email through production.",
       "deploy_note": null
     }
   ]
