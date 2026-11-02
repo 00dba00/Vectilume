@@ -1,6 +1,6 @@
 import { newToken } from "@/lib/api-keys";
 import { db } from "@/lib/db";
-import { dailyEmail, emailEnabled, sendEmail, SITE, type Email, type RequestUpdate } from "@/lib/email";
+import { dailyEmail, emailEnabled, ownerAlertEmail, sendEmail, SITE, type Email, type RequestUpdate, type WaitingRequest } from "@/lib/email";
 import type { RequestRow, StatusChange } from "@/lib/icon-requests";
 import { latestPublishedIcons } from "@/lib/published-icons";
 
@@ -22,6 +22,26 @@ async function sendNotification(email: string, build: (stopLink: string) => Emai
     "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
   });
   return true;
+}
+
+/**
+ * Mails the owner (REQUEST_ALERT_EMAIL) the open requests: for a new one (newId), or as a summary when any wait.
+ * always sends an empty summary too, for testing. Logs a failure instead of throwing, so a request never fails on it.
+ */
+export async function alertOwner({ newId, always = false }: { newId?: number; always?: boolean } = {}): Promise<{ waiting: number; sent: boolean }> {
+  const to = process.env.REQUEST_ALERT_EMAIL?.trim();
+  if (!to || !emailEnabled()) return { waiting: 0, sent: false };
+  try {
+    const waiting = (await db()`
+      select r.id, r.name, r.description, r.keywords, k.email from icon_requests r
+      join api_keys k on k.id = r.key_id where r.status = 'open' order by r.id desc`) as WaitingRequest[];
+    if (waiting.length === 0 && !always) return { waiting: 0, sent: false };
+    await sendEmail(to, ownerAlertEmail(waiting, newId));
+    return { waiting: waiting.length, sent: true };
+  } catch (error) {
+    console.error("owner alert failed", error);
+    return { waiting: 0, sent: false };
+  }
 }
 
 /** Changes worth telling the developer; in-progress and review are internal steps. */

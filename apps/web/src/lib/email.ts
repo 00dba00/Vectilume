@@ -71,6 +71,39 @@ ${small(`The button works once, for 15 minutes. If it does not open, paste this 
   }),
 });
 
+/** An open request as the owner sees it in an alert. */
+export type WaitingRequest = { id: number; name: string; description: string; keywords: string[]; email: string | null };
+
+/** To the owner: every open request; newId marks the one that triggered it, without it this is the plain summary. */
+export function ownerAlertEmail(waiting: WaitingRequest[], newId?: number): Email {
+  const fresh = waiting.find((r) => r.id === newId);
+  const count = `${waiting.length} icon ${waiting.length === 1 ? "request" : "requests"} waiting`;
+  const admin = `${SITE}/admin`;
+  const about = (r: WaitingRequest) => `${r.description}${r.keywords.length ? ` (${r.keywords.join(", ")})` : ""}`;
+  return {
+    subject: fresh ? `New icon request #${fresh.id} ${fresh.name}` : waiting.length ? count : "No icon requests waiting",
+    text: `${waiting.length ? `${count}:` : "Nothing is waiting right now."}
+
+${waiting.map((r) => `#${r.id} ${r.name}${r.id === newId ? " (new)" : ""}\n  ${about(r)}\n  From: ${r.email ?? "unknown"}`).join("\n\n")}
+
+Review them at ${admin}`,
+    html: layout(SITE, {
+      preheader: fresh ? `${fresh.name}: ${fresh.description}` : count,
+      hero: "on-blue-mail",
+      title: fresh ? "New icon request" : waiting.length ? count : "Nothing is waiting",
+      content: `${paragraph(waiting.length ? `${count}.` : "There are no open icon requests right now.")}
+${waiting
+  .map(
+    (r) =>
+      `<div style="padding:12px 0;border-top:1px solid #ececf0;font-size:14px;line-height:1.5;color:#454547"><strong>#${r.id} ${escapeHtml(r.name)}</strong>${r.id === newId ? " · new" : ""}<br>${escapeHtml(about(r))}<br><span style="color:#6e6e73">From: ${escapeHtml(r.email ?? "unknown")}</span></div>`,
+  )
+  .join("\n")}
+${button(admin, "Open admin")}`,
+      footer: "Sent to the owner of Vectilume.",
+    }),
+  };
+}
+
 /** What the developer asked for, quoted in the email so they recognise the request behind each change. */
 type Asked = { id: number; name: string; description: string; keywords: string[] };
 

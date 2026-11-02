@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.14.0 (2026-11-02)
+
+- Requests: the owner gets an email for every new icon request and a morning summary of what is waiting
+
 ## v0.13.0 (2026-10-30)
 
 - Site: search engines can now read what Vectilume is, with a clear title and description, a sitemap and links to npm and GitHub
