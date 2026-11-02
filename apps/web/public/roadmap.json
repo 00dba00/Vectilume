@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02 (#request-owner-alerts in progress)",
+  "updated_at": "2026-11-02-b (#request-owner-alerts deployed v0.14.0)",
   "note": "Planned features and significant refactors, with dates, added before implementation starts. Statuses: planned | in_progress | observing | deployed | done | blocked.",
   "entries": [
     {
@@ -288,14 +288,14 @@
       "title": "Owner gets an email for new and waiting icon requests",
       "phase": "3",
       "track": "requests",
-      "status": "in_progress",
+      "status": "deployed",
       "start": "2026-11-02",
       "end": "2026-11-02",
       "observe_until": null,
       "summary": "Owner, 2026-11-02: new requests reached nobody, they only showed in /admin. \"možeš li mi poslati info na dragan.bajlovic@gmail.com?? tako da odmah mogu reagirati ako ima nešto što čeka\".",
       "spec": "Every new request mails REQUEST_ALERT_EMAIL at once, with all open requests listed; a morning cron (/api/cron/waiting) mails the same list when something is open, and the admin token can trigger it for a test, also with an empty queue. A separate variable, because setting ADMIN_EMAIL would also turn on sign-in by email. A failed alert is logged and never fails the request. Risks: the owner's inbox gets one email per request (at most 20 an hour per token). Out of scope: batching, per-developer settings.",
       "plan": "1. Email template and alertOwner. 2. Call it from POST /api/requests, add the cron route. 3. Set REQUEST_ALERT_EMAIL on Vercel. 4. Release minor. 5. Send a test email through production.",
-      "deploy_note": null
+      "deploy_note": "[DEPLOYED v0.14.0, 2026-11-02] Released by the owner; REQUEST_ALERT_EMAIL set on Production and /api/cron/waiting answers 401 without a token. No alert email has been sent yet: the owner tests it with a real request on /request-icons."
     }
   ]
 }
