@@ -846,5 +846,21 @@
       "cli"
     ],
     "request": 26
+  },
+  {
+    "id": "container",
+    "label": "Container",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "container",
+      "docker",
+      "box",
+      "deployment",
+      "image",
+      "pod",
+      "app"
+    ],
+    "request": 27
   }
 ]
