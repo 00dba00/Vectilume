@@ -830,5 +830,21 @@
       "vps"
     ],
     "request": 25
+  },
+  {
+    "id": "terminal",
+    "label": "Terminal",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "terminal",
+      "console",
+      "shell",
+      "command line",
+      "logs",
+      "prompt",
+      "cli"
+    ],
+    "request": 26
   }
 ]
