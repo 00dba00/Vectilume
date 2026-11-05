@@ -877,5 +877,21 @@
       "usage"
     ],
     "request": 28
+  },
+  {
+    "id": "network",
+    "label": "Network",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "network",
+      "traffic",
+      "bandwidth",
+      "throughput",
+      "lan",
+      "ethernet",
+      "data"
+    ],
+    "request": 29
   }
 ]
