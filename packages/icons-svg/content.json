@@ -862,5 +862,20 @@
       "app"
     ],
     "request": 27
+  },
+  {
+    "id": "memory",
+    "label": "Memory",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "memory",
+      "ram",
+      "module",
+      "dimm",
+      "hardware",
+      "usage"
+    ],
+    "request": 28
   }
 ]
