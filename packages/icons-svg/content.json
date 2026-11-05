@@ -814,5 +814,21 @@
       "screen"
     ],
     "request": 11
+  },
+  {
+    "id": "server",
+    "label": "Server",
+    "group": "devices",
+    "groupLabel": "Devices",
+    "keywords": [
+      "server",
+      "rack",
+      "host",
+      "machine",
+      "infrastructure",
+      "hosting",
+      "vps"
+    ],
+    "request": 25
   }
 ]
