@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M3 9.5A2.5 2.5 0 0 1 5.5 7H18.5A2.5 2.5 0 0 1 21 9.5V14H19.5V17H11.5V15.75H9V17H4.5V14H3Z"/>
-  <path d="M3 14H21"/>
-  <path d="M6.25 17L6.29 17.19L6.4 17.35L6.56 17.46L6.75 17.5L6.94 17.46L7.1 17.35L7.18 17.25L7.25 17.07L7.25 13.93L7.18 13.75L7.1 13.65L6.94 13.54L6.82 13.5L6.62 13.52L6.45 13.6L6.32 13.75L6.25 13.93Z" fill="currentColor" stroke="none" fill-rule="evenodd"/>
-  <path d="M13 17L13.04 17.19L13.15 17.35L13.31 17.46L13.5 17.5L13.69 17.46L13.85 17.35L13.96 17.19L14 17.07L14 13.93L13.96 13.81L13.85 13.65L13.69 13.54L13.57 13.5L13.37 13.52L13.2 13.6L13.07 13.75L13 13.93Z" fill="currentColor" stroke="none" fill-rule="evenodd"/>
-  <path d="M15.5 17L15.54 17.19L15.65 17.35L15.81 17.46L16 17.5L16.19 17.46L16.3 17.4L16.43 17.25L16.5 17.07L16.5 13.93L16.43 13.75L16.35 13.65L16.19 13.54L16.07 13.5L15.87 13.52L15.7 13.6L15.57 13.75L15.5 13.93Z" fill="currentColor" stroke="none" fill-rule="evenodd"/>
-  <path d="M17.75 17L17.79 17.19L17.9 17.35L18.06 17.46L18.25 17.5L18.44 17.46L18.55 17.4L18.68 17.25L18.75 17.07L18.75 13.93L18.68 13.75L18.6 13.65L18.44 13.54L18.32 13.5L18.12 13.52L17.95 13.6L17.82 13.75L17.75 13.93Z" fill="currentColor" stroke="none" fill-rule="evenodd"/>
-  <path d="M6.0 9.25H8.0A.5 .5 0 0 1 8.5 9.75V11.75A.5 .5 0 0 1 8.0 12.25H6.0A.5 .5 0 0 1 5.5 11.75V9.75A.5 .5 0 0 1 6.0 9.25Z" fill="currentColor" stroke="none"/>
-  <path d="M11.0 9.25H13.0A.5 .5 0 0 1 13.5 9.75V11.75A.5 .5 0 0 1 13.0 12.25H11.0A.5 .5 0 0 1 10.5 11.75V9.75A.5 .5 0 0 1 11.0 9.25Z" fill="currentColor" stroke="none"/>
-  <path d="M16.0 9.25H18.0A.5 .5 0 0 1 18.5 9.75V11.75A.5 .5 0 0 1 18.0 12.25H16.0A.5 .5 0 0 1 15.5 11.75V9.75A.5 .5 0 0 1 16.0 9.25Z" fill="currentColor" stroke="none"/>
+  <path d="M6.5 9A2.5 2.5 0 0 1 9 6.5H15A2.5 2.5 0 0 1 17.5 9V15A2.5 2.5 0 0 1 15 17.5H9A2.5 2.5 0 0 1 6.5 15Z"/>
+  <path d="M9 3v1"/>
+  <path d="M9 20v1"/>
+  <path d="M3 9h1"/>
+  <path d="M20 9h1"/>
+  <path d="M12 3v1"/>
+  <path d="M12 20v1"/>
+  <path d="M3 12h1"/>
+  <path d="M20 12h1"/>
+  <path d="M15 3v1"/>
+  <path d="M15 20v1"/>
+  <path d="M3 15h1"/>
+  <path d="M20 15h1"/>
+  <path d="M9.5 10.5A1 1 0 0 1 10.5 9.5H13.5A1 1 0 0 1 14.5 10.5V13.5A1 1 0 0 1 13.5 14.5H10.5A1 1 0 0 1 9.5 13.5Z"/>
 </svg>
