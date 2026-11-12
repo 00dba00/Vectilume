@@ -67,7 +67,17 @@ async function collectionEntry(id) {
   throw new Error(`no collection entry has "request": ${id}; add it to the icon's entry first`);
 }
 
-const git = (...args) => execFileSync("git", args, { cwd: ROOT, encoding: "utf8" }).trim();
+const git = (...args) => execFileSync("git", args, {
+  cwd: ROOT,
+  encoding: "utf8",
+  env: {
+    ...process.env,
+    GIT_AUTHOR_NAME: "00dba00",
+    GIT_AUTHOR_EMAIL: "99031136+00dba00@users.noreply.github.com",
+    GIT_COMMITTER_NAME: "00dba00",
+    GIT_COMMITTER_EMAIL: "99031136+00dba00@users.noreply.github.com",
+  },
+}).trim();
 
 /** Commits only this icon (its SVGs and collection file) and pushes, so the npm release on GitHub can ship it once approved. */
 function commitIcon(id, entry, file) {

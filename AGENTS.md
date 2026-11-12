@@ -9,6 +9,15 @@ Read `docs/README.md` inside that installed package first, then read the relevan
 This block is written and re-added by `turbo` before repository-scoped commands when an AI agent is detected. In the Turborepo source repository, its template is defined in `crates/turborepo-cli/src/cli/agent_guidance.rs`. Removing the managed block while updates are enabled means a later qualifying invocation will add it again. Set `"agentGuidance": false` in the root `turbo.json` or `turbo.jsonc` to opt out; this does not remove an existing block. Keep the block committed with your work to avoid an uncommitted change on the next agent invocation.
 <!-- END:turborepo-agent-rules -->
 
+## Git authorship and deployment
+
+- Every commit, including deploy, release, roadmap and icon-request commits, must use
+  `00dba00 <99031136+00dba00@users.noreply.github.com>` as both author and committer.
+- Before committing, configure this repository with `git config --local user.name 00dba00` and
+  `git config --local user.email 99031136+00dba00@users.noreply.github.com`.
+- Never add `Co-Authored-By` trailers or AI/bot authorship. This applies to Codex, Claude and GitHub Actions.
+- Check author, committer and message with `git log -1 --format=full` before pushing.
+
 ## Icon requests (Codex)
 
 Icons that developers requested are drawn from a queue the owner fills by accepting requests in /admin.

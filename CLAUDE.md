@@ -1,3 +1,9 @@
+## Git authorship and deployment
+
+Follow the Git authorship rules in `AGENTS.md` for every commit and deploy: author and committer must both be
+`00dba00 <99031136+00dba00@users.noreply.github.com>`. Never add `Co-Authored-By` trailers or Claude/bot authorship,
+including commits made by the workflow skill. Verify with `git log -1 --format=full` before pushing.
+
 ## Workflow (app-workflow skill)
 
 Ovaj projekt koristi globalni `app-workflow` skill: roadmap prije implementacije, review queue za odgođene odluke, verzija samo kroz release.

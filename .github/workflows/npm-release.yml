@@ -63,8 +63,8 @@ jobs:
 
       - name: Commit release.json and tag
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "00dba00"
+          git config user.email "99031136+00dba00@users.noreply.github.com"
           git add packages/icons-svg/release.json
           # Nothing to commit when release.json already named this version.
           git diff --cached --quiet || git commit -m "npm: @vectilume/icons and @vectilume/react ${{ steps.version.outputs.version }}"
